@@ -1,0 +1,10 @@
+{
+ "duration_s": 1507.76,
+ "event_count": 544,
+ "counters": {
+  "samples": 100,
+  "exp_events_copied": 1697
+ },
+ "git": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "ok": true
+}

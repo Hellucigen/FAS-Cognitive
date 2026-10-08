@@ -1,0 +1,13 @@
+condition,mode,task,seed,success,decisions,target_utilization,distractor_rate,first_action,prompt_tokens,completion_tokens,llm_calls,ctx_chars_mean,core_exceptions,step0_n_nodes,graph_edges_final,activated_edges_mean
+D-nodemand,no-demand,T1,1,1,4,0.5,0.0,gather_oak_log,1459,160,4,130.2,0,3,37,11.25
+D-nodemand,no-demand,T2,1,1,2,1.0,0.0,gather_oak_log,728,79,2,89.5,0,3,30,6.0
+D-nodemand,no-demand,T3,1,1,11,0.273,0.0,wait,4571,440,11,200.8,0,5,63,33.73
+D-nodemand,no-demand,T4,1,1,5,0.4,0.0,wait,1964,196,5,163.0,0,4,44,18.2
+D-nodemand,no-demand,T1,2,1,2,1.0,0.0,gather_oak_log,629,80,2,89.5,0,3,30,6.0
+D-nodemand,no-demand,T2,2,1,4,0.5,0.0,gather_oak_log,1658,157,4,130.2,0,3,37,11.25
+D-nodemand,no-demand,T3,2,1,3,0.667,0.0,wait,1156,120,3,164.7,0,5,52,20.33
+D-nodemand,no-demand,T4,2,1,10,0.2,0.0,wait,3803,400,10,151.1,0,4,44,15.7
+D-nodemand,no-demand,T1,3,1,2,1.0,0.0,gather_oak_log,629,78,2,89.5,0,3,30,6.0
+D-nodemand,no-demand,T2,3,1,3,0.667,0.0,gather_oak_log,1184,111,3,111.0,0,3,37,9.33
+D-nodemand,no-demand,T3,3,1,7,0.429,0.0,wait,2774,280,7,184.4,0,5,63,25.29
+D-nodemand,no-demand,T4,3,1,9,0.222,0.0,wait,3372,352,9,144.6,0,4,44,14.78

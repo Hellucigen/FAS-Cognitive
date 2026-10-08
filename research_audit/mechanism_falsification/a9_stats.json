@@ -1,0 +1,378 @@
+{
+  "manifest": {
+    "experiment": "A9 relation-direction extension",
+    "predeclared_metrics": [
+      "jcg",
+      "mrr_joint",
+      "recall@1",
+      "sink_fraction(新)",
+      "margin_vs_best_single",
+      "rho_topology"
+    ],
+    "primary_tests": "5 类目 × 4 指标 = 20 配对 Wilcoxon, Bonferroni α=0.0025",
+    "structure": "同构:同 seed/N/inputs/hops 唯一差异=方向旗标",
+    "categories": [
+      {
+        "cat": "recipe",
+        "hops": 3,
+        "zh": "配方(深链)"
+      },
+      {
+        "cat": "temporal",
+        "hops": 3,
+        "zh": "时间顺序(深链)"
+      },
+      {
+        "cat": "cognitive",
+        "hops": 2,
+        "zh": "认知(浅)"
+      },
+      {
+        "cat": "emotion",
+        "hops": 2,
+        "zh": "情绪(浅)"
+      },
+      {
+        "cat": "social",
+        "hops": 2,
+        "zh": "社交(浅)"
+      }
+    ],
+    "params": {
+      "seed_strength": 5.0,
+      "decay": 0.05,
+      "budget_ratio": 0.5,
+      "transfer": 1.0,
+      "max_steps": 3
+    },
+    "plan_size": 800,
+    "seeds": 20,
+    "predeclared": true,
+    "date": "2026-09-30",
+    "spec": "research_audit/_audits/experiment_A9_direction_extension.md"
+  },
+  "primary_tests": [
+    {
+      "category": "recipe",
+      "metric": "jcg",
+      "n_pairs": 80,
+      "mean_fwd": 0.491557,
+      "mean_bidir": 0.110887,
+      "mean_diff_bidir_minus_fwd": -0.38067,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "recipe",
+      "metric": "mrr_joint",
+      "n_pairs": 80,
+      "mean_fwd": 0.810417,
+      "mean_bidir": 0.770833,
+      "mean_diff_bidir_minus_fwd": -0.039584,
+      "wilcoxon_p": 0.1274,
+      "effect_r": 0.200168,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "recipe",
+      "metric": "recall@1",
+      "n_pairs": 80,
+      "mean_fwd": 0.625,
+      "mean_bidir": 0.625,
+      "mean_diff_bidir_minus_fwd": 0.0,
+      "wilcoxon_p": 1.0,
+      "effect_r": 0.0,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "recipe",
+      "metric": "sink_fraction",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.0,
+      "mean_diff_bidir_minus_fwd": -1.0,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "temporal",
+      "metric": "jcg",
+      "n_pairs": 80,
+      "mean_fwd": 0.491557,
+      "mean_bidir": 0.110887,
+      "mean_diff_bidir_minus_fwd": -0.38067,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "temporal",
+      "metric": "mrr_joint",
+      "n_pairs": 80,
+      "mean_fwd": 0.810417,
+      "mean_bidir": 0.770833,
+      "mean_diff_bidir_minus_fwd": -0.039584,
+      "wilcoxon_p": 0.1274,
+      "effect_r": 0.200168,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "temporal",
+      "metric": "recall@1",
+      "n_pairs": 80,
+      "mean_fwd": 0.625,
+      "mean_bidir": 0.625,
+      "mean_diff_bidir_minus_fwd": 0.0,
+      "wilcoxon_p": 1.0,
+      "effect_r": 0.0,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "temporal",
+      "metric": "sink_fraction",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.0,
+      "mean_diff_bidir_minus_fwd": -1.0,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "cognitive",
+      "metric": "jcg",
+      "n_pairs": 80,
+      "mean_fwd": 0.953684,
+      "mean_bidir": 0.19335,
+      "mean_diff_bidir_minus_fwd": -0.760334,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "cognitive",
+      "metric": "mrr_joint",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.98125,
+      "mean_diff_bidir_minus_fwd": -0.01875,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "cognitive",
+      "metric": "recall@1",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.9625,
+      "mean_diff_bidir_minus_fwd": -0.0375,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "cognitive",
+      "metric": "sink_fraction",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.0,
+      "mean_diff_bidir_minus_fwd": -1.0,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "emotion",
+      "metric": "jcg",
+      "n_pairs": 80,
+      "mean_fwd": 0.953684,
+      "mean_bidir": 0.19335,
+      "mean_diff_bidir_minus_fwd": -0.760334,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "emotion",
+      "metric": "mrr_joint",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.98125,
+      "mean_diff_bidir_minus_fwd": -0.01875,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "emotion",
+      "metric": "recall@1",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.9625,
+      "mean_diff_bidir_minus_fwd": -0.0375,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "emotion",
+      "metric": "sink_fraction",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.0,
+      "mean_diff_bidir_minus_fwd": -1.0,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "social",
+      "metric": "jcg",
+      "n_pairs": 80,
+      "mean_fwd": 0.953684,
+      "mean_bidir": 0.19335,
+      "mean_diff_bidir_minus_fwd": -0.760334,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    },
+    {
+      "category": "social",
+      "metric": "mrr_joint",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.98125,
+      "mean_diff_bidir_minus_fwd": -0.01875,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "social",
+      "metric": "recall@1",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.9625,
+      "mean_diff_bidir_minus_fwd": -0.0375,
+      "wilcoxon_p": 0.108809,
+      "effect_r": 0.654654,
+      "significant_at_0.0025": false
+    },
+    {
+      "category": "social",
+      "metric": "sink_fraction",
+      "n_pairs": 80,
+      "mean_fwd": 1.0,
+      "mean_bidir": 0.0,
+      "mean_diff_bidir_minus_fwd": -1.0,
+      "wilcoxon_p": 0.0,
+      "effect_r": 0.614271,
+      "significant_at_0.0025": true
+    }
+  ],
+  "descriptive": {
+    "recipe_N50_in2": {
+      "mean_jcg_fwd": 0.20565,
+      "mean_jcg_bidir": 0.05318,
+      "n": 20
+    },
+    "temporal_N50_in2": {
+      "mean_jcg_fwd": 0.20565,
+      "mean_jcg_bidir": 0.05318,
+      "n": 20
+    },
+    "cognitive_N50_in2": {
+      "mean_jcg_fwd": 0.38416,
+      "mean_jcg_bidir": 0.08883,
+      "n": 20
+    },
+    "emotion_N50_in2": {
+      "mean_jcg_fwd": 0.38416,
+      "mean_jcg_bidir": 0.08883,
+      "n": 20
+    },
+    "social_N50_in2": {
+      "mean_jcg_fwd": 0.38416,
+      "mean_jcg_bidir": 0.08883,
+      "n": 20
+    },
+    "recipe_N50_in5": {
+      "mean_jcg_fwd": 0.78372,
+      "mean_jcg_bidir": 0.2585,
+      "n": 20
+    },
+    "temporal_N50_in5": {
+      "mean_jcg_fwd": 0.78372,
+      "mean_jcg_bidir": 0.2585,
+      "n": 20
+    },
+    "cognitive_N50_in5": {
+      "mean_jcg_fwd": 1.47945,
+      "mean_jcg_bidir": 0.4079,
+      "n": 20
+    },
+    "emotion_N50_in5": {
+      "mean_jcg_fwd": 1.47945,
+      "mean_jcg_bidir": 0.4079,
+      "n": 20
+    },
+    "social_N50_in5": {
+      "mean_jcg_fwd": 1.47945,
+      "mean_jcg_bidir": 0.4079,
+      "n": 20
+    },
+    "recipe_N200_in2": {
+      "mean_jcg_fwd": 0.20071,
+      "mean_jcg_bidir": 0.01723,
+      "n": 20
+    },
+    "temporal_N200_in2": {
+      "mean_jcg_fwd": 0.20071,
+      "mean_jcg_bidir": 0.01723,
+      "n": 20
+    },
+    "cognitive_N200_in2": {
+      "mean_jcg_fwd": 0.40022,
+      "mean_jcg_bidir": 0.04079,
+      "n": 20
+    },
+    "emotion_N200_in2": {
+      "mean_jcg_fwd": 0.40022,
+      "mean_jcg_bidir": 0.04079,
+      "n": 20
+    },
+    "social_N200_in2": {
+      "mean_jcg_fwd": 0.40022,
+      "mean_jcg_bidir": 0.04079,
+      "n": 20
+    },
+    "recipe_N200_in5": {
+      "mean_jcg_fwd": 0.77615,
+      "mean_jcg_bidir": 0.11464,
+      "n": 20
+    },
+    "temporal_N200_in5": {
+      "mean_jcg_fwd": 0.77615,
+      "mean_jcg_bidir": 0.11464,
+      "n": 20
+    },
+    "cognitive_N200_in5": {
+      "mean_jcg_fwd": 1.55091,
+      "mean_jcg_bidir": 0.23588,
+      "n": 20
+    },
+    "emotion_N200_in5": {
+      "mean_jcg_fwd": 1.55091,
+      "mean_jcg_bidir": 0.23588,
+      "n": 20
+    },
+    "social_N200_in5": {
+      "mean_jcg_fwd": 1.55091,
+      "mean_jcg_bidir": 0.23588,
+      "n": 20
+    }
+  }
+}

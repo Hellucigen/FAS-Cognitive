@@ -1,0 +1,169 @@
+{
+  "nodes": [
+    {
+      "id": "键盘",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.7,
+      "extra_attrs": {"category": "hardware", "type": "input_device"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "W键",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {"category": "key", "key_code": "W"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "A键",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {"category": "key", "key_code": "A"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "S键",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {"category": "key", "key_code": "S"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "D键",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {"category": "key", "key_code": "D"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "按下W",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 按下W键 (单点)\nimport ctypes\nimport time\n\n# 扫描码: W = 0x11\nKEY_W = 0x11\nMAPVK_VK_TO_VSC = 0\n\n# keybd_event 参数\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\n# 按下\nuser32.keybd_event(0x57, KEY_W, KEYEVENTF_SCANCODE, 0)\ntime.sleep(0.05)\n# 释放\nuser32.keybd_event(0x57, KEY_W, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"press_w\", \"status\": \"done\"}\nprint(\"按下W键 (单点)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "single"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "长按W",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 长按W键 (2秒)\nimport ctypes\nimport time\n\nKEY_W = 0x11\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\n# 按下\nuser32.keybd_event(0x57, KEY_W, KEYEVENTF_SCANCODE, 0)\ntime.sleep(2.0)\n# 释放\nuser32.keybd_event(0x57, KEY_W, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"hold_w\", \"status\": \"done\", \"duration\": 2.0}\nprint(\"长按W键 (2秒)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "hold"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "按下A",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 按下A键 (单点)\nimport ctypes\nimport time\n\nKEY_A = 0x1E\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x41, KEY_A, KEYEVENTF_SCANCODE, 0)\ntime.sleep(0.05)\nuser32.keybd_event(0x41, KEY_A, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"press_a\", \"status\": \"done\"}\nprint(\"按下A键 (单点)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "single"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "长按A",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 长按A键 (2秒)\nimport ctypes\nimport time\n\nKEY_A = 0x1E\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x41, KEY_A, KEYEVENTF_SCANCODE, 0)\ntime.sleep(2.0)\nuser32.keybd_event(0x41, KEY_A, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"hold_a\", \"status\": \"done\", \"duration\": 2.0}\nprint(\"长按A键 (2秒)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "hold"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "按下S",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 按下S键 (单点)\nimport ctypes\nimport time\n\nKEY_S = 0x1F\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x53, KEY_S, KEYEVENTF_SCANCODE, 0)\ntime.sleep(0.05)\nuser32.keybd_event(0x53, KEY_S, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"press_s\", \"status\": \"done\"}\nprint(\"按下S键 (单点)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "single"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "长按S",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 长按S键 (2秒)\nimport ctypes\nimport time\n\nKEY_S = 0x1F\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x53, KEY_S, KEYEVENTF_SCANCODE, 0)\ntime.sleep(2.0)\nuser32.keybd_event(0x53, KEY_S, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"hold_s\", \"status\": \"done\", \"duration\": 2.0}\nprint(\"长按S键 (2秒)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "hold"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "按下D",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 按下D键 (单点)\nimport ctypes\nimport time\n\nKEY_D = 0x20\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x44, KEY_D, KEYEVENTF_SCANCODE, 0)\ntime.sleep(0.05)\nuser32.keybd_event(0x44, KEY_D, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"press_d\", \"status\": \"done\"}\nprint(\"按下D键 (单点)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "single"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "长按D",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "procedural",
+      "execution": "# Action: 长按D键 (2秒)\nimport ctypes\nimport time\n\nKEY_D = 0x20\nKEYEVENTF_SCANCODE = 0x0008\nKEYEVENTF_KEYUP = 0x0002\n\nuser32 = ctypes.windll.user32\n\nuser32.keybd_event(0x44, KEY_D, KEYEVENTF_SCANCODE, 0)\ntime.sleep(2.0)\nuser32.keybd_event(0x44, KEY_D, KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP, 0)\n\nresult = {\"action\": \"hold_d\", \"status\": \"done\", \"duration\": 2.0}\nprint(\"长按D键 (2秒)\")",
+      "confidence": 0.7,
+      "extra_attrs": {"category": "action", "action_type": "key_press", "duration": "hold"},
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    }
+  ],
+  "edges": [
+    {"src": "键盘", "dst": "W键", "relation": "has_key", "weight": 0.8, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "键盘", "dst": "A键", "relation": "has_key", "weight": 0.8, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "键盘", "dst": "S键", "relation": "has_key", "weight": 0.8, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "键盘", "dst": "D键", "relation": "has_key", "weight": 0.8, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "W键", "dst": "按下W", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "W键", "dst": "长按W", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "A键", "dst": "按下A", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "A键", "dst": "长按A", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "S键", "dst": "按下S", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "S键", "dst": "长按S", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "D键", "dst": "按下D", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "D键", "dst": "长按D", "relation": "can_do", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "按下W", "dst": "W键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "长按W", "dst": "W键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "按下A", "dst": "A键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "长按A", "dst": "A键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "按下S", "dst": "S键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "长按S", "dst": "S键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "按下D", "dst": "D键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"},
+    {"src": "长按D", "dst": "D键", "relation": "acts_on", "weight": 0.7, "activation": 0.0, "created": "2026/07/21 00:00:00", "last_access": "2026/07/21 00:00:00"}
+  ]
+}

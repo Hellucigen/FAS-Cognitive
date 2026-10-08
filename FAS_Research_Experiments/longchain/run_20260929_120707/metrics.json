@@ -1,0 +1,46 @@
+{
+ "duration_s": 4.19,
+ "event_count": 124,
+ "counters": {},
+ "episode": "lc_L3",
+ "actions_total": 65,
+ "actions_redundant": 58,
+ "actions_failed": 33,
+ "fail_reasons": [
+  "failed:timeout",
+  "failed:tool_missing:stone_pickaxe",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout",
+  "failed:timeout"
+ ],
+ "path_len_unique": 7,
+ "inventory": {},
+ "graph_delta": {
+  "nodes": 89,
+  "edges": 143
+ },
+ "writeback_promoted": [
+  "amble|self:self:amble:failed:timeout",
+  "explore_area(iron_ingot)|self:self:explore_area:failed:timeout",
+  "explore_area(iron_ingot)|self:self:explore_area:succeeded",
+  "explore_direction(east)|self:self:explore_direction:failed:timeout",
+  "explore_direction(north)|self:self:explore_direction:failed:timeout",
+  "explore_direction(north)|self:self:explore_direction:succeeded",
+  "explore_direction(south)|self:self:explore_direction:failed:timeout",
+  "explore_direction(south)|self:self:explore_direction:succeeded",
+  "explore_direction(west)|self:self:explore_direction:failed:timeout",
+  "explore_direction(west)|self:self:explore_direction:succeeded"
+ ],
+ "graph": {
+  "nodes": 306,
+  "edges": 390
+ },
+ "success": false,
+ "success_tick": null,
+ "ok": true
+}

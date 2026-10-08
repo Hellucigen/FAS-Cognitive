@@ -1,0 +1,155 @@
+{
+ "summary": {
+  "T1": {
+   "B0-direct": {
+    "n": 11,
+    "success": 11,
+    "hunger_restored": 11
+   },
+   "B1-h2048": {
+    "n": 10,
+    "success": 10,
+    "hunger_restored": 10
+   },
+   "B2-rag": {
+    "n": 10,
+    "success": 10,
+    "hunger_restored": 10
+   },
+   "FAS-full": {
+    "n": 11,
+    "success": 11,
+    "hunger_restored": 11
+   },
+   "FAS-reset": {
+    "n": 11,
+    "success": 11,
+    "hunger_restored": 11
+   },
+   "FAS-sham": {
+    "n": 10,
+    "success": 10,
+    "hunger_restored": 10
+   }
+  },
+  "T2": {
+   "B0-direct": {
+    "n": 11,
+    "success": 0,
+    "tokens_per_run": 2263
+   },
+   "B1-h128": {
+    "n": 10,
+    "success": 10,
+    "tokens_per_run": 847
+   },
+   "B1-h2048": {
+    "n": 10,
+    "success": 9,
+    "tokens_per_run": 3752
+   },
+   "B1-h512": {
+    "n": 10,
+    "success": 10,
+    "tokens_per_run": 2424
+   },
+   "B2-rag": {
+    "n": 10,
+    "success": 10,
+    "tokens_per_run": 1104
+   },
+   "FAS-full": {
+    "n": 11,
+    "success": 11,
+    "tokens_per_run": 1182
+   },
+   "FAS-reset": {
+    "n": 11,
+    "success": 0,
+    "tokens_per_run": 5579
+   },
+   "FAS-sham": {
+    "n": 10,
+    "success": 10,
+    "tokens_per_run": 1256
+   }
+  },
+  "T3": {
+   "B0-direct": {
+    "n": 11,
+    "mean_fails": 11.27,
+    "pivot": 3
+   },
+   "B1-h2048": {
+    "n": 10,
+    "mean_fails": 0.0,
+    "pivot": 2
+   },
+   "B2-rag": {
+    "n": 10,
+    "mean_fails": 0.0,
+    "pivot": 10
+   },
+   "FAS-full": {
+    "n": 11,
+    "mean_fails": 2.82,
+    "pivot": 11
+   },
+   "FAS-reset": {
+    "n": 11,
+    "mean_fails": 7.64,
+    "pivot": 11
+   }
+  }
+ },
+ "tests": [
+  {
+   "h": "H1 T2 FAS-full>FAS-reset (primary)",
+   "n": 10,
+   "wins": 10,
+   "losses": 0,
+   "p": 0.001953
+  },
+  {
+   "h": "H2 T2 FAS-full>B1-h128",
+   "n": 10,
+   "wins": 0,
+   "losses": 0,
+   "p": 1.0
+  },
+  {
+   "h": "H2 T2 FAS-full>B1-h512",
+   "n": 10,
+   "wins": 0,
+   "losses": 0,
+   "p": 1.0
+  },
+  {
+   "h": "H2 T2 FAS-full>B1-h2048",
+   "n": 10,
+   "wins": 1,
+   "losses": 0,
+   "p": 1.0
+  },
+  {
+   "h": "H3 T2 FAS-full>B0",
+   "n": 10,
+   "wins": 10,
+   "losses": 0,
+   "p": 0.001953
+  },
+  {
+   "h": "H5 T3 reset_fails>full_fails",
+   "n": 10,
+   "wilcoxon_p": 0.000977
+  },
+  {
+   "h": "L4 T2 FAS-full vs B2-rag (not required)",
+   "n": 10,
+   "wins": 0,
+   "losses": 0,
+   "p": 1.0
+  }
+ ],
+ "verdict": "FAS demonstrates a conditional behavioral advantage: persistent relational state is causally necessary (FAS-full > FAS-reset, FAS-full > Direct) and survives context removal, but history/RAG baselines that can still read the experience stream remain equal or stronger under the budgets tested here — retrieval remains stronger when external memory is available."
+}

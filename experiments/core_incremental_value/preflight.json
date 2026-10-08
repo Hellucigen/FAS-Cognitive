@@ -1,0 +1,31 @@
+{
+  "toy_fas_top": "O1",
+  "toy_expect_O1_first": true,
+  "toy_fas_order": [
+    "O1",
+    "O2",
+    "O3"
+  ],
+  "toy_b2_top": "O1",
+  "oracle_t1t4": [
+    [
+      "T1",
+      1.0
+    ],
+    [
+      "T2",
+      1.0
+    ],
+    [
+      "T3",
+      1.0
+    ],
+    [
+      "T4",
+      1.0
+    ]
+  ],
+  "oracle_ok": true,
+  "integrity_problems": 0,
+  "preflight_pass": true
+}

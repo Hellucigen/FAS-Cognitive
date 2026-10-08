@@ -1,0 +1,21 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260928_194654",
+ "family": "eventframe",
+ "label": "control-ep",
+ "mode": "sandbox",
+ "seed": 2,
+ "timestamp": "2026-09-28 19:46:54.055",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "episode": "D",
+  "condition": "control",
+  "seed": 2,
+  "inhibit": false,
+  "task": "oak_planks"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "duration_s": 2.55,
+ "event_count": 46,
+ "counters": {},
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse_a2\\A1_B2_graph_s4.json",
+ "causal": {
+  "aggregations": 6,
+  "hypotheses": 29,
+  "promoted": [
+   "craft_item(oak_fence)|self:self:craft_item:succeeded",
+   "craft_item(oak_planks)|obs:self:inventory:oak_log:count_decreased",
+   "craft_item(oak_planks)|obs:self:inventory:oak_log:count_increased",
+   "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_decreased",
+   "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased",
+   "craft_item(oak_planks)|obs:self:inventory:stick:count_decreased",
+   "craft_item(oak_planks)|obs:self:inventory:stick:count_increased",
+   "craft_item(oak_planks)|self:self:craft_item:succeeded",
+   "craft_item(stick)|obs:self:inventory:stick:count_increased",
+   "craft_item(stick)|self:self:craft_item:succeeded",
+   "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+   "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:stick:count_increased",
+   "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+  ]
+ },
+ "rounds_done": {
+  "1": 11,
+  "2": 7,
+  "3": 7,
+  "4": 7,
+  "5": 7,
+  "6": 7,
+  "7": 7,
+  "8": 7
+ },
+ "ok": true
+}

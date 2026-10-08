@@ -1,0 +1,14 @@
+{"ts": "2026-09-29 11:49:03.101", "t_rel_s": 0.018, "step": 0, "tag": "RUN_START", "event": "run 开始 mode=sandbox label=D-C1", "fields": {"experiment_id": "auto", "run_id": "run_20260929_114903"}}
+{"ts": "2026-09-29 11:49:04.695", "t_rel_s": 1.612, "step": 1, "tag": "GRAPH", "event": "快照 graph_start", "fields": {"snapshot": "graph_start", "key": "graph_start", "note": "", "graph": "graph_graph_start.json", "graph_nodes": 217}}
+{"ts": "2026-09-29 11:49:04.731", "t_rel_s": 1.648, "step": 2, "tag": "STAGE", "event": "{\"stage\": \"seed_done\", \"tick\": 4, \"episodic\": [\"物品:oak_planks\", \"物品:oak_log\", \"行动_653744719\", \"行动_653744727\"]}", "fields": {}}
+{"ts": "2026-09-29 11:49:04.742", "t_rel_s": 1.659, "step": 3, "tag": "PROGRESS", "event": "silence tick 0 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.762", "t_rel_s": 1.679, "step": 4, "tag": "EVENT", "event": "unrelated: clay 出现在视野", "fields": {}}
+{"ts": "2026-09-29 11:49:04.763", "t_rel_s": 1.68, "step": 5, "tag": "PROGRESS", "event": "silence tick 10 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.786", "t_rel_s": 1.703, "step": 6, "tag": "PROGRESS", "event": "silence tick 20 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.798", "t_rel_s": 1.714, "step": 7, "tag": "EVENT", "event": "related: oak_log 重新出现在视野", "fields": {}}
+{"ts": "2026-09-29 11:49:04.815", "t_rel_s": 1.731, "step": 8, "tag": "PROGRESS", "event": "silence tick 30 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.838", "t_rel_s": 1.754, "step": 9, "tag": "EVENT", "event": "trigger: crafting_table 出现在视野", "fields": {}}
+{"ts": "2026-09-29 11:49:04.839", "t_rel_s": 1.756, "step": 10, "tag": "PROGRESS", "event": "silence tick 40 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.853", "t_rel_s": 1.77, "step": 11, "tag": "PROGRESS", "event": "silence tick 50 cis=0", "fields": {}}
+{"ts": "2026-09-29 11:49:04.895", "t_rel_s": 1.811, "step": 12, "tag": "GRAPH", "event": "快照 graph_end", "fields": {"snapshot": "graph_end", "key": "graph_end", "note": "", "graph": "graph_graph_end.json", "graph_nodes": 242}}
+{"ts": "2026-09-29 11:49:04.897", "t_rel_s": 1.813, "step": 13, "tag": "RUN_END", "event": "run 结束 ok", "fields": {"duration_s": 1.81, "event_count": 13, "counters": "{}", "condition": "C1", "seed": 1, "seed_done_tick": 4, "cc_on": false, "ci_created": 0, "ci_statuses_final": "[]", "reactivation_hits": "[{'tick': 7, 'node': '物品:oak_planks', 'from': 4.47, 'to': 4.532}, {'tick': 7, 'node': '物品:oak_log', 'from': 3.566, 'to': 3.853}, {'tick': 8, 'node': '物品:oak_log', 'from': 3.853, 'to': 4.126}, {'tick':", "episodic_ids": "['物品:oak_planks', '物品:oak_log', '行动_653744719', '行动_653744727']", "graph": "{'nodes': 242, 'edges': 279}", "ok": true}}

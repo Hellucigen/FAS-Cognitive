@@ -1,0 +1,18 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260928_110248",
+ "family": "sandbox",
+ "label": "S7-环境变化",
+ "mode": "normal",
+ "seed": 1,
+ "timestamp": "2026-09-28 11:02:48.871",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "tick_s": 16.0,
+  "ticks": 150
+ }
+}

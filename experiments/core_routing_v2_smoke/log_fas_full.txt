@@ -1,0 +1,14 @@
+[preflight] {"graph_nodes": 37, "graph_edges": 20, "propagation_probe_seed": "物品:oak_log", "propagation_newly_lit": 1, "demand_keys": ["action", "curiosity", "emotion", "knowledge"], "gap_type": "dict", "routing_mode": "graph_only"}
+[v2] fas_full T1 seed1: succ=1 dec=9 edges=37 aedges=11.33 step0=3 exc=0
+[v2] fas_full T2 seed1: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] fas_full T3 seed1: succ=1 dec=4 edges=52 aedges=20.5 step0=5 exc=0
+[v2] fas_full T4 seed1: succ=0 dec=10 edges=53 aedges=22.8 step0=4 exc=0
+[v2] fas_full T1 seed2: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] fas_full T2 seed2: succ=1 dec=5 edges=37 aedges=11.0 step0=3 exc=0
+[v2] fas_full T3 seed2: succ=1 dec=5 edges=52 aedges=20.6 step0=5 exc=0
+[v2] fas_full T4 seed2: succ=1 dec=8 edges=44 aedges=14.75 step0=4 exc=0
+[v2] fas_full T1 seed3: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] fas_full T2 seed3: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] fas_full T3 seed3: succ=1 dec=4 edges=52 aedges=23.25 step0=5 exc=0
+[v2] fas_full T4 seed3: succ=1 dec=7 edges=53 aedges=18.43 step0=4 exc=0
+done: 12 runs -> experiments/core_routing_v2_smoke/fas_full

@@ -1,0 +1,395 @@
+{
+  "capabilities": {
+    "nlp_extraction": {
+      "id": "nlp_extraction",
+      "name": "NLP实体关系提取",
+      "description": "从自然语言中提取实体、关系和言语行为分类",
+      "status": "acquired",
+      "category": "perception",
+      "related_modules": [
+        "nlp_processor.py"
+      ],
+      "related_nodes": [
+        "NLP处理器"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "semantic_search": {
+      "id": "semantic_search",
+      "name": "语义搜索",
+      "description": "通过Embedding向量进行语义相似节点检索",
+      "status": "acquired",
+      "category": "perception",
+      "related_modules": [
+        "embedding_manager.py"
+      ],
+      "related_nodes": [
+        "Embedding检索",
+        "FAISS索引"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "ear_audio_perception": {
+      "id": "ear_audio_perception",
+      "name": "听觉感知",
+      "description": "接收音频输入，分类语音/音乐/环境声并注入图谱",
+      "status": "acquired",
+      "category": "perception",
+      "related_modules": [
+        "ear/ear_processor.py"
+      ],
+      "related_nodes": [
+        "Ear感知"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "vision_perception": {
+      "id": "vision_perception",
+      "name": "视觉感知",
+      "description": "从图像中发现对象、生成嵌入、匹配已有对象、注入图谱",
+      "status": "acquired",
+      "category": "perception",
+      "related_modules": [
+        "vision/vision_processor.py"
+      ],
+      "related_nodes": [
+        "Vision感知"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "activation_spreading": {
+      "id": "activation_spreading",
+      "name": "激活扩散",
+      "description": "基于图谱的激活扩散机制，模拟注意力转移和认知聚焦",
+      "status": "acquired",
+      "category": "cognition",
+      "related_modules": [
+        "diffusion_engine.py",
+        "graph_model.py"
+      ],
+      "related_nodes": [
+        "激活扩散引擎"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "self_awareness": {
+      "id": "self_awareness",
+      "name": "自我感知",
+      "description": "通过Self节点聚合偏好、情绪、目标、经历的自我认知",
+      "status": "acquired",
+      "category": "cognition",
+      "related_modules": [
+        "self_graph.py"
+      ],
+      "related_nodes": [
+        "Self"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "curiosity_driven_inquiry": {
+      "id": "curiosity_driven_inquiry",
+      "name": "好奇心驱动提问",
+      "description": "遇到未知概念/关系时自动产生好奇并提问",
+      "status": "acquired",
+      "category": "cognition",
+      "related_modules": [
+        "curiosity_engine.py"
+      ],
+      "related_nodes": [
+        "好奇",
+        "主动提问"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "episodic_memory": {
+      "id": "episodic_memory",
+      "name": "情景记忆",
+      "description": "短期经历存储、遗忘和晋升长期记忆",
+      "status": "acquired",
+      "category": "memory",
+      "related_modules": [
+        "episodic_buffer.py"
+      ],
+      "related_nodes": [
+        "情景缓冲区"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "conversation_gap_detection": {
+      "id": "conversation_gap_detection",
+      "name": "对话缺口检测",
+      "description": "分析对话发现知识图谱中的缺口",
+      "status": "acquired",
+      "category": "cognition",
+      "related_modules": [
+        "conversation_gap_detector.py"
+      ],
+      "related_nodes": [
+        "对话缺口检测"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "wasd_keyboard_action": {
+      "id": "wasd_keyboard_action",
+      "name": "WASD键盘操作",
+      "description": "执行WASD键盘按键的物理操作",
+      "status": "acquired",
+      "category": "action",
+      "related_modules": [
+        "Action/wasd.py",
+        "Action/__init__.py"
+      ],
+      "related_nodes": [
+        "按下W",
+        "按下A",
+        "按下S",
+        "按下D"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "action_registry": {
+      "id": "action_registry",
+      "name": "Action注册与分发",
+      "description": "Action模块的自动发现、注册和调用机制",
+      "status": "acquired",
+      "category": "action",
+      "related_modules": [
+        "Action/__init__.py"
+      ],
+      "related_nodes": [
+        "Action注册表"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "knowledge_pack_management": {
+      "id": "knowledge_pack_management",
+      "name": "Knowledge Pack管理",
+      "description": "模块化知识包的加载、合并、启用/禁用",
+      "status": "acquired",
+      "category": "knowledge",
+      "related_modules": [
+        "knowledge_pack_manager.py"
+      ],
+      "related_nodes": [
+        "KnowledgePack"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "graph_persistence": {
+      "id": "graph_persistence",
+      "name": "图谱持久化",
+      "description": "知识图谱的JSON序列化/反序列化与自动保存",
+      "status": "acquired",
+      "category": "knowledge",
+      "related_modules": [
+        "graph_model.py"
+      ],
+      "related_nodes": [
+        "知识图谱"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": ""
+    },
+    "capability_self_awareness": {
+      "id": "capability_self_awareness",
+      "name": "能力自我认知",
+      "description": "知道自己能做什么、不能做什么",
+      "status": "developing",
+      "category": "metacognition",
+      "related_modules": [
+        "capability_registry.py"
+      ],
+      "related_nodes": [
+        "能力注册表",
+        "元认知"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "刚创建，需要逐步填充和验证"
+    },
+    "development_phase_awareness": {
+      "id": "development_phase_awareness",
+      "name": "发育阶段感知",
+      "description": "知道自己在发育阶段，有外部导师在帮助",
+      "status": "developing",
+      "category": "metacognition",
+      "related_modules": [
+        "capability_registry.py"
+      ],
+      "related_nodes": [
+        "发育阶段",
+        "DevelopmentCompanion"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "刚创建，需要在交互中逐步强化"
+    },
+    "autonomous_growth": {
+      "id": "autonomous_growth",
+      "name": "自主成长",
+      "description": "不依赖外部导师，自主发现缺口、学习、长出新能力",
+      "status": "missing",
+      "category": "metacognition",
+      "related_modules": [],
+      "related_nodes": [
+        "自主成长"
+      ],
+      "dependencies": [
+        "capability_self_awareness",
+        "development_phase_awareness"
+      ],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "长期目标，需要先具备基础元认知能力"
+    },
+    "self_reflection": {
+      "id": "self_reflection",
+      "name": "自我反思",
+      "description": "定期对自身认知状态进行反思和总结",
+      "status": "partial",
+      "category": "metacognition",
+      "related_modules": [
+        "self_graph.py"
+      ],
+      "related_nodes": [
+        "反思"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "已有反思机制，但还不够系统化"
+    },
+    "tool_use_autonomy": {
+      "id": "tool_use_autonomy",
+      "name": "工具使用自主性",
+      "description": "自主发现、学习和调用新工具的能力",
+      "status": "missing",
+      "category": "metacognition",
+      "related_modules": [],
+      "related_nodes": [],
+      "dependencies": [
+        "action_registry"
+      ],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "目前工具需要手动注册"
+    },
+    "social_interaction": {
+      "id": "social_interaction",
+      "name": "社交互动识别与回应",
+      "description": "识别问候/寒暄/道别等社交仪式性表达，绕过认知激活阈值直接生成自然回复",
+      "status": "acquired",
+      "category": "social",
+      "related_modules": [
+        "nlp_processor.py",
+        "app.py"
+      ],
+      "related_nodes": [
+        "社交互动"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "通过 assertion_type=social 分流，不依赖图谱激活"
+    },
+    "knowledge_gap_auto_fill": {
+      "id": "knowledge_gap_auto_fill",
+      "name": "知识缺口自动填补",
+      "description": "发现知识缺口后自主搜索和学习填补",
+      "status": "missing",
+      "category": "metacognition",
+      "related_modules": [],
+      "related_nodes": [],
+      "dependencies": [
+        "curiosity_driven_inquiry",
+        "conversation_gap_detection"
+      ],
+      "acquired_at": "2026/07/24 11:20:44",
+      "notes": "目前只能检测缺口，不能自主填补"
+    },
+    "alias_resolution": {
+      "id": "alias_resolution",
+      "name": "输入别名解析",
+      "description": "将用户输入中的缩写/俗称/别称映射到图谱规范节点ID，通过节点extra_attrs.aliases实现",
+      "status": "acquired",
+      "category": "perception",
+      "related_modules": [
+        "app.py"
+      ],
+      "related_nodes": [
+        "Minecraft",
+        "Fascinator"
+      ],
+      "dependencies": [],
+      "acquired_at": "2026/07/24 12:48:26",
+      "notes": "别名长在节点上（extra_attrs.aliases），_fuzzy_match_node优先匹配别名"
+    },
+    "auto_knowledge_consolidation": {
+      "id": "auto_knowledge_consolidation",
+      "name": "提问驱动自动知识沉淀",
+      "description": "FAS提问（正式好奇或随口问答）后用户教学时，自动将知识写入图谱，无需人工审批",
+      "status": "acquired",
+      "category": "learning",
+      "related_modules": [
+        "app.py"
+      ],
+      "related_nodes": [
+        "好奇",
+        "知识完善",
+        "更新记忆"
+      ],
+      "dependencies": [
+        "curiosity_driven_inquiry",
+        "episodic_memory"
+      ],
+      "acquired_at": "2026/07/24 12:48:26",
+      "notes": "双触发：curiosity_resolved（正式好奇）或 llm_answer以？结尾（随口问答）"
+    },
+    "action_intent_resolution": {
+      "id": "action_intent_resolution",
+      "name": "动作意图解析",
+      "description": "从用户自然语言解析显式动作命令为结构化 Action Intent（fast pattern 快速入口 + 动作概念语义层 + 否定优先 + 命令性门）",
+      "status": "acquired",
+      "category": "action",
+      "related_modules": [
+        "action_concepts.py",
+        "action_resolver.py",
+        "minecraft/reflex.py"
+      ],
+      "related_nodes": [
+        "网络搜索",
+        "文件操作",
+        "看屏幕",
+        "FOLLOW",
+        "进入Minecraft世界"
+      ],
+      "dependencies": [
+        "action_registry"
+      ],
+      "acquired_at": "2026/09/19 20:02:35",
+      "notes": "正则仍是快速入口，但动作理解长在 Action Concept 上（图谱提供候选，执行经 Intent）"
+    }
+  },
+  "updated_at": "2026/09/19 20:02:35"
+}

@@ -1,0 +1,231 @@
+{
+ "experiment": "H 长链因果行动（含 K 非天花板消融读数）",
+ "research_question": "R10/§17",
+ "per_condition": {
+  "L0": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    }
+   ]
+  },
+  "L1": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 259,
+     "actions": 42,
+     "redundant": 23,
+     "failed": 10,
+     "writeback_promoted": 52
+    },
+    {
+     "success": true,
+     "success_tick": 259,
+     "actions": 42,
+     "redundant": 23,
+     "failed": 10,
+     "writeback_promoted": 52
+    },
+    {
+     "success": true,
+     "success_tick": 259,
+     "actions": 42,
+     "redundant": 23,
+     "failed": 10,
+     "writeback_promoted": 52
+    },
+    {
+     "success": true,
+     "success_tick": 259,
+     "actions": 42,
+     "redundant": 23,
+     "failed": 10,
+     "writeback_promoted": 52
+    },
+    {
+     "success": true,
+     "success_tick": 259,
+     "actions": 42,
+     "redundant": 23,
+     "failed": 10,
+     "writeback_promoted": 52
+    }
+   ]
+  },
+  "L2": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 0
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 0
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 0
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 0
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 0
+    }
+   ]
+  },
+  "L3": {
+   "n": 5,
+   "runs": [
+    {
+     "success": false,
+     "success_tick": null,
+     "actions": 65,
+     "redundant": 58,
+     "failed": 33,
+     "writeback_promoted": 10
+    },
+    {
+     "success": false,
+     "success_tick": null,
+     "actions": 65,
+     "redundant": 58,
+     "failed": 33,
+     "writeback_promoted": 10
+    },
+    {
+     "success": false,
+     "success_tick": null,
+     "actions": 65,
+     "redundant": 58,
+     "failed": 33,
+     "writeback_promoted": 10
+    },
+    {
+     "success": false,
+     "success_tick": null,
+     "actions": 65,
+     "redundant": 58,
+     "failed": 33,
+     "writeback_promoted": 10
+    },
+    {
+     "success": false,
+     "success_tick": null,
+     "actions": 65,
+     "redundant": 58,
+     "failed": 33,
+     "writeback_promoted": 10
+    }
+   ]
+  },
+  "L3b": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    },
+    {
+     "success": true,
+     "success_tick": 315,
+     "actions": 46,
+     "redundant": 26,
+     "failed": 11,
+     "writeback_promoted": 54
+    }
+   ]
+  }
+ }
+}

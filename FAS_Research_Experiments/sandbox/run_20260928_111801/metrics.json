@@ -1,0 +1,17 @@
+{
+ "duration_s": 1.73,
+ "event_count": 5,
+ "counters": {},
+ "ablation": "full",
+ "success": true,
+ "success_tick": 6,
+ "graph": {
+  "nodes": 240,
+  "edges": 276
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "ok": true
+}

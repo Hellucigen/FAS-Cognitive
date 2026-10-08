@@ -1,0 +1,18 @@
+{
+ "duration_s": 0.54,
+ "event_count": 4,
+ "counters": {},
+ "prior_level": "A",
+ "seed": 1,
+ "success": false,
+ "success_tick": null,
+ "graph": {
+  "nodes": 238,
+  "edges": 276
+ },
+ "inv": {
+  "oak_log": 2
+ },
+ "action_count": 7,
+ "ok": true
+}

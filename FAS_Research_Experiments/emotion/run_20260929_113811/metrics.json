@@ -1,0 +1,30 @@
+{
+ "duration_s": 1.68,
+ "event_count": 9,
+ "counters": {},
+ "episode": "ep2_E0",
+ "success": true,
+ "success_tick": 9,
+ "actions_total": 3,
+ "actions_invalid": 0,
+ "lit_ticks": {
+  "oak_log": 8,
+  "物品:oak_log": 9
+ },
+ "gain_first": 1.0,
+ "gain_last": 1.0,
+ "final_mass": 52.458,
+ "final_top5": [
+  "MINE",
+  "能力:资源采集",
+  "能力:装备选择",
+  "可采资源",
+  "birch_log"
+ ],
+ "final_lit_ge005": 39,
+ "graph": {
+  "nodes": 238,
+  "edges": 277
+ },
+ "ok": true
+}

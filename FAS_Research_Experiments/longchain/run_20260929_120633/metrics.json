@@ -1,0 +1,42 @@
+{
+ "duration_s": 6.54,
+ "event_count": 37,
+ "counters": {},
+ "episode": "lc_L2",
+ "actions_total": 46,
+ "actions_redundant": 26,
+ "actions_failed": 11,
+ "fail_reasons": [
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:timeout",
+  "failed:tool_missing:wooden_pickaxe",
+  "failed:furnace_empty",
+  "failed:timeout"
+ ],
+ "path_len_unique": 20,
+ "inventory": {
+  "oak_planks": 3,
+  "wooden_pickaxe": 1,
+  "oak_log": 12,
+  "stone_pickaxe": 1,
+  "coal": 1,
+  "iron_ingot": 1
+ },
+ "graph_delta": {
+  "nodes": 201,
+  "edges": 576
+ },
+ "writeback_promoted": [],
+ "graph": {
+  "nodes": 418,
+  "edges": 823
+ },
+ "success": true,
+ "success_tick": 315,
+ "ok": true
+}

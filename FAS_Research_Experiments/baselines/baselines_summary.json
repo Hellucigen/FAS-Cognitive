@@ -1,0 +1,154 @@
+{
+ "goal": "oak_planks",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "max_ticks": 120,
+ "elapsed_s": 2.0,
+ "results": {
+  "reactive": [
+   {
+    "baseline": "reactive",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "reactive",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "reactive",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   }
+  ],
+  "memory_only": [
+   {
+    "baseline": "memory_only",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "memory_only",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "memory_only",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   }
+  ],
+  "graph_retrieval": [
+   {
+    "baseline": "graph_retrieval",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "graph_retrieval",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   },
+   {
+    "baseline": "graph_retrieval",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "action_count": 2,
+    "graph": {
+     "nodes": 236,
+     "edges": 275
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    }
+   }
+  ]
+ },
+ "full_graph": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\baselines\\full_graph.json"
+}

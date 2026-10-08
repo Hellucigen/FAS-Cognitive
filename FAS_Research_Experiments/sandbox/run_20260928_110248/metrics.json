@@ -1,0 +1,17 @@
+{
+ "duration_s": 1.83,
+ "event_count": 6,
+ "counters": {},
+ "env_change_tick": 60,
+ "success": true,
+ "success_tick": 6,
+ "phase2_success": false,
+ "phase2_tick": null,
+ "graph": {
+  "nodes": 244,
+  "edges": 291
+ },
+ "inv": {},
+ "birch_seen": false,
+ "ok": true
+}

@@ -1,0 +1,24 @@
+{
+ "duration_s": 1.81,
+ "event_count": 9,
+ "counters": {},
+ "rounds": [
+  15,
+  81
+ ],
+ "hypotheses": [],
+ "hyp_count": 0,
+ "aggregations": {},
+ "graph": {
+  "nodes": 261,
+  "edges": 341
+ },
+ "inv": {
+  "oak_log": 1,
+  "oak_planks": 3,
+  "stick": 2,
+  "wooden_pickaxe": 1,
+  "cobblestone": 3
+ },
+ "ok": true
+}

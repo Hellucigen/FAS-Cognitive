@@ -1,0 +1,17 @@
+{
+ "duration_s": 1.89,
+ "event_count": 36,
+ "counters": {},
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed4.json",
+ "causal": {
+  "aggregations": 2,
+  "hypotheses": 7,
+  "promoted": [
+   "craft_item(oak_planks)|self:self:craft_item:succeeded",
+   "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+   "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+   "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+  ]
+ },
+ "ok": true
+}

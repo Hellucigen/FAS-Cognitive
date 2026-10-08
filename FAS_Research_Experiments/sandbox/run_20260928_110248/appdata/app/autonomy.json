@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "oak_planks",
+      "source": "experiment_obtain",
+      "text": "环境变化后重新获得 oak_planks",
+      "created": "2026/09/28 11:02:50",
+      "created_ts": 1790564570.5033512,
+      "last_considered": 3256.0,
+      "last_success_at": 3400.0
+    }
+  ],
+  "explore_dirs": {
+    "north": 3,
+    "east": 3,
+    "south": 3,
+    "west": 3
+  },
+  "last_novel_ts": 1790564568.9005718,
+  "updated_at": "2026/09/28 11:02:50"
+}

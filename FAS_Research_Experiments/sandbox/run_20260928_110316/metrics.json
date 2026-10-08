@@ -1,0 +1,21 @@
+{
+ "duration_s": 1.86,
+ "event_count": 6,
+ "counters": {},
+ "completion_order": [
+  "oak_planks",
+  "stone_pickaxe"
+ ],
+ "graph": {
+  "nodes": 261,
+  "edges": 340
+ },
+ "inv": {
+  "oak_planks": 3,
+  "wooden_pickaxe": 1,
+  "oak_log": 6,
+  "stone_pickaxe": 1
+ },
+ "goal_states": [],
+ "ok": true
+}

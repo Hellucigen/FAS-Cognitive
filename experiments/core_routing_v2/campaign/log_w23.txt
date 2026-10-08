@@ -1,0 +1,21 @@
+[w23] fas_full T2 seed8: succ=1 class=none
+[w23] fas_full T3 seed13: succ=1 class=none
+[w23] fas_full T4 seed18: succ=1 class=none
+[w23] llm_direct T2 seed8: succ=1 class=none
+[w23] llm_direct T3 seed15: succ=1 class=none
+[w23] llm_history T1 seed8: succ=1 class=none
+[w23] llm_history T2 seed18: succ=1 class=none
+[w23] llm_history T4 seed14: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8858.22it/s]
+[w23] llm_rag T2 seed11: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5212.69it/s]
+[w23] llm_rag T4 seed7: succ=1 class=none
+[w23] random_ctx T1 seed16: succ=1 class=none
+[w23] random_ctx T3 seed8: succ=1 class=none
+[w23] random_ctx T4 seed16: succ=1 class=none
+[w23] D-noact T3 seed6: succ=1 class=none
+[w23] D-nodemand T2 seed14: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9458.93it/s]
+[w23] D-flat T2 seed4: succ=1 class=none
+[w23] D-flat T3 seed10: succ=1 class=none
+[w23] slice complete: 17 runs

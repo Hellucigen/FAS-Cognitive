@@ -1,0 +1,13 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8548.99it/s]
+[routing] D-flat T2 seed16: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10818.31it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5614.12it/s]
+[routing] D-flat T2 seed17: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6231.34it/s]
+[routing] D-flat T2 seed18: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5127.42it/s]
+[routing] D-flat T2 seed19: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5991.38it/s]
+[routing] D-flat T2 seed20: succ=1 dec=2 dist=0.0
+done: 5 task-runs -> experiments/core_routing/ablations\summary.csv

@@ -1,0 +1,103 @@
+{
+ "experiment": "C",
+ "condition": "No-Transfer",
+ "seed": 3,
+ "task1": "crafting_table",
+ "task2": "wooden_pickaxe",
+ "max_ticks": 400,
+ "ep2": {
+  "episode": "ep2_No-Transfer",
+  "actions_total": 9,
+  "actions_redundant": 2,
+  "actions_invalid": 0,
+  "types": [
+   "gather_resource",
+   "gather_resource",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "place_block",
+   "craft_item"
+  ],
+  "targets": [
+   "birch_log",
+   "oak_log",
+   "oak_planks",
+   "stick",
+   "oak_planks",
+   "crafting_table",
+   "oak_planks",
+   "crafting_table",
+   "wooden_pickaxe"
+  ],
+  "inventory": {
+   "birch_log": 2,
+   "oak_planks": 3,
+   "stick": 2,
+   "wooden_pickaxe": 1
+  },
+  "graph": {
+   "nodes": 251,
+   "edges": 310
+  },
+  "causal": {
+   "aggregations": 7,
+   "hypotheses": 1,
+   "promoted": []
+  },
+  "shared_structure_usage": {
+   "gather_resource@oak_log": 1,
+   "craft_item@oak_planks": 3,
+   "craft_item@crafting_table": 1
+  },
+  "recombination_event_idx": 5,
+  "no_transfer_ceiling": {
+   "gather_resource@oak_log": 1,
+   "craft_item@oak_planks": 3,
+   "craft_item@stick": 1,
+   "craft_item@crafting_table": 1,
+   "craft_item@wooden_pickaxe": 1
+  },
+  "inherited_wb_nodes": 0,
+  "start_activation": {
+   "oak_log": 5.0,
+   "oak_planks": 3.5301,
+   "crafting_table": 2.0716,
+   "物品:crafting_table": 0.2717,
+   "物品:wooden_pickaxe": 5.0,
+   "birch_log": 5.0
+  },
+  "success": true,
+  "success_tick": 16,
+  "action_prior_t0": {
+   "gather_resource(oak_log)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   },
+   "craft_item(oak_planks)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   },
+   "craft_item(crafting_table)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   },
+   "craft_item(stick)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   },
+   "craft_item(wooden_pickaxe)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   }
+  },
+  "transfer_benefit": null
+ }
+}

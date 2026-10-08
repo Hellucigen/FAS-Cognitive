@@ -1,0 +1,12 @@
+{
+ "duration_s": 1.66,
+ "event_count": 16,
+ "counters": {},
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed1.json",
+ "causal": {
+  "aggregations": 2,
+  "hypotheses": 4,
+  "promoted": []
+ },
+ "ok": true
+}

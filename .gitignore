@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.vscode/
+.claude/
+
+# 运行时数据一律不入库（真实图谱/经历/内部状态含个人数据）
+data/*
+!data/capability_registry.json
+!data/relation_phrase_table.json
+logs/
+*.log
+graph_snapshots/
+
+# 模型与本地资产
+E:/Models/
+*.onnx
+*.pt
+*.safetensors
+
+# 图谱运行时产物
+data/runtime_graph.json
+data/*.bak
+step*.json
+g3_annot_diagnostic.json

@@ -1,0 +1,66 @@
+{
+ "duration_s": 2.54,
+ "event_count": 6,
+ "counters": {},
+ "condition": "P0",
+ "prior_level": "A",
+ "seed": 3,
+ "episodes": [
+  {
+   "round": 1,
+   "success": false,
+   "done_tick": null,
+   "graph": {
+    "nodes": 232,
+    "edges": 263
+   },
+   "promoted": 0
+  },
+  {
+   "round": 2,
+   "success": false,
+   "done_tick": null,
+   "graph": {
+    "nodes": 236,
+    "edges": 275
+   },
+   "promoted": 0
+  },
+  {
+   "round": 3,
+   "success": false,
+   "done_tick": null,
+   "graph": {
+    "nodes": 239,
+    "edges": 284
+   },
+   "promoted": 0
+  },
+  {
+   "round": 4,
+   "success": false,
+   "done_tick": null,
+   "graph": {
+    "nodes": 243,
+    "edges": 296
+   },
+   "promoted": 0
+  },
+  {
+   "round": 5,
+   "success": false,
+   "done_tick": null,
+   "graph": {
+    "nodes": 246,
+    "edges": 305
+   },
+   "promoted": 0
+  }
+ ],
+ "n_success": 0,
+ "graph_growth": {
+  "nodes": 29,
+  "edges": 59
+ },
+ "ok": true
+}

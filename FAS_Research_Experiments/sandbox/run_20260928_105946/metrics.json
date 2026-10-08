@@ -1,0 +1,18 @@
+{
+ "duration_s": 1.75,
+ "event_count": 5,
+ "counters": {},
+ "env_change_tick": 60,
+ "success": true,
+ "success_tick": 6,
+ "graph": {
+  "nodes": 241,
+  "edges": 278
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "birch_seen": false,
+ "ok": true
+}

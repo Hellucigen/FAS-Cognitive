@@ -1,0 +1,42 @@
+{
+ "experiment": "G_event_transfer",
+ "condition": "G1",
+ "seed": 1,
+ "ep1": {
+  "promoted": 0,
+  "dropped_episodic": 27
+ },
+ "ep2": {
+  "episode": "ep2_G1",
+  "actions_total": 9,
+  "actions_redundant": 2,
+  "actions_invalid": 0,
+  "path_len_unique": 7,
+  "first_action": "gather_resource@birch_log",
+  "shared_action_hits": 6,
+  "inventory": {
+   "birch_log": 2,
+   "oak_planks": 3,
+   "stick": 2,
+   "wooden_pickaxe": 1
+  },
+  "graph": {
+   "nodes": 257,
+   "edges": 315
+  },
+  "ep1_mark_nodes": 8,
+  "ep1_mark_activated": 0,
+  "ep1_mark_activations": {
+   "变化:obs:self:block:oak_log:disappeared": 0.0,
+   "变化:obs:self:inventory:oak_log:count_increased": 0.0,
+   "变化:obs:self:inventory:oak_planks:count_increased": 0.0,
+   "变化:self:self:craft_item:succeeded": 0.0,
+   "变化:self:self:gather_resource:succeeded": 0.0,
+   "操作:craft_item(crafting_table)": 0.0,
+   "操作:craft_item(oak_planks)": 0.0,
+   "操作:gather_resource(oak_log)": 0.0
+  },
+  "success": true,
+  "success_tick": 16
+ }
+}

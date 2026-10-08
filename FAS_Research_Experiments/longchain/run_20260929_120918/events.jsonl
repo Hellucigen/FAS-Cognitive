@@ -1,0 +1,38 @@
+{"ts": "2026-09-29 12:09:18.861", "t_rel_s": 0.02, "step": 0, "tag": "RUN_START", "event": "run 开始 mode=sandbox label=H-L3b", "fields": {"experiment_id": "auto", "run_id": "run_20260929_120918"}}
+{"ts": "2026-09-29 12:09:20.499", "t_rel_s": 1.657, "step": 1, "tag": "GRAPH", "event": "快照 graph_start", "fields": {"snapshot": "graph_start", "key": "graph_start", "note": "", "graph": "graph_graph_start.json", "graph_nodes": 217}}
+{"ts": "2026-09-29 12:09:20.516", "t_rel_s": 1.674, "step": 2, "tag": "ACTSNAP", "event": "{\"tick\": 0, \"rank_iron\": 2}", "fields": {"tick": 0}}
+{"ts": "2026-09-29 12:09:20.724", "t_rel_s": 1.882, "step": 3, "tag": "ACTSNAP", "event": "{\"tick\": 10, \"rank_iron\": 1}", "fields": {"tick": 10}}
+{"ts": "2026-09-29 12:09:20.935", "t_rel_s": 2.094, "step": 4, "tag": "ACTSNAP", "event": "{\"tick\": 20, \"rank_iron\": 1}", "fields": {"tick": 20}}
+{"ts": "2026-09-29 12:09:21.164", "t_rel_s": 2.322, "step": 5, "tag": "ACTSNAP", "event": "{\"tick\": 30, \"rank_iron\": 1}", "fields": {"tick": 30}}
+{"ts": "2026-09-29 12:09:21.378", "t_rel_s": 2.536, "step": 6, "tag": "ACTSNAP", "event": "{\"tick\": 40, \"rank_iron\": 1}", "fields": {"tick": 40}}
+{"ts": "2026-09-29 12:09:21.612", "t_rel_s": 2.77, "step": 7, "tag": "ACTSNAP", "event": "{\"tick\": 50, \"rank_iron\": 1}", "fields": {"tick": 50}}
+{"ts": "2026-09-29 12:09:21.845", "t_rel_s": 3.004, "step": 8, "tag": "ACTSNAP", "event": "{\"tick\": 60, \"rank_iron\": 1}", "fields": {"tick": 60}}
+{"ts": "2026-09-29 12:09:22.103", "t_rel_s": 3.261, "step": 9, "tag": "ACTSNAP", "event": "{\"tick\": 70, \"rank_iron\": 1}", "fields": {"tick": 70}}
+{"ts": "2026-09-29 12:09:22.362", "t_rel_s": 3.521, "step": 10, "tag": "ACTSNAP", "event": "{\"tick\": 80, \"rank_iron\": 1}", "fields": {"tick": 80}}
+{"ts": "2026-09-29 12:09:22.646", "t_rel_s": 3.804, "step": 11, "tag": "ACTSNAP", "event": "{\"tick\": 90, \"rank_iron\": 1}", "fields": {"tick": 90}}
+{"ts": "2026-09-29 12:09:22.917", "t_rel_s": 4.075, "step": 12, "tag": "ACTSNAP", "event": "{\"tick\": 100, \"rank_iron\": 1}", "fields": {"tick": 100}}
+{"ts": "2026-09-29 12:09:23.218", "t_rel_s": 4.376, "step": 13, "tag": "ACTSNAP", "event": "{\"tick\": 110, \"rank_iron\": 1}", "fields": {"tick": 110}}
+{"ts": "2026-09-29 12:09:23.366", "t_rel_s": 4.524, "step": 14, "tag": "ACTSNAP", "event": "{\"tick\": 120, \"rank_iron\": 1}", "fields": {"tick": 120}}
+{"ts": "2026-09-29 12:09:23.415", "t_rel_s": 4.575, "step": 15, "tag": "ACTSNAP", "event": "{\"tick\": 130, \"rank_iron\": 1}", "fields": {"tick": 130}}
+{"ts": "2026-09-29 12:09:23.472", "t_rel_s": 4.631, "step": 16, "tag": "ACTSNAP", "event": "{\"tick\": 140, \"rank_iron\": 1}", "fields": {"tick": 140}}
+{"ts": "2026-09-29 12:09:23.531", "t_rel_s": 4.689, "step": 17, "tag": "ACTSNAP", "event": "{\"tick\": 150, \"rank_iron\": 1}", "fields": {"tick": 150}}
+{"ts": "2026-09-29 12:09:23.669", "t_rel_s": 4.827, "step": 18, "tag": "ACTSNAP", "event": "{\"tick\": 160, \"rank_iron\": 1}", "fields": {"tick": 160}}
+{"ts": "2026-09-29 12:09:23.963", "t_rel_s": 5.121, "step": 19, "tag": "ACTSNAP", "event": "{\"tick\": 170, \"rank_iron\": 1}", "fields": {"tick": 170}}
+{"ts": "2026-09-29 12:09:24.160", "t_rel_s": 5.318, "step": 20, "tag": "ACTSNAP", "event": "{\"tick\": 180, \"rank_iron\": 1}", "fields": {"tick": 180}}
+{"ts": "2026-09-29 12:09:24.236", "t_rel_s": 5.394, "step": 21, "tag": "ACTSNAP", "event": "{\"tick\": 190, \"rank_iron\": 1}", "fields": {"tick": 190}}
+{"ts": "2026-09-29 12:09:24.352", "t_rel_s": 5.51, "step": 22, "tag": "ACTSNAP", "event": "{\"tick\": 200, \"rank_iron\": 1}", "fields": {"tick": 200}}
+{"ts": "2026-09-29 12:09:24.453", "t_rel_s": 5.611, "step": 23, "tag": "ACTSNAP", "event": "{\"tick\": 210, \"rank_iron\": 1}", "fields": {"tick": 210}}
+{"ts": "2026-09-29 12:09:24.566", "t_rel_s": 5.724, "step": 24, "tag": "ACTSNAP", "event": "{\"tick\": 220, \"rank_iron\": 1}", "fields": {"tick": 220}}
+{"ts": "2026-09-29 12:09:24.670", "t_rel_s": 5.828, "step": 25, "tag": "ACTSNAP", "event": "{\"tick\": 230, \"rank_iron\": 1}", "fields": {"tick": 230}}
+{"ts": "2026-09-29 12:09:24.810", "t_rel_s": 5.968, "step": 26, "tag": "ACTSNAP", "event": "{\"tick\": 240, \"rank_iron\": 1}", "fields": {"tick": 240}}
+{"ts": "2026-09-29 12:09:24.917", "t_rel_s": 6.075, "step": 27, "tag": "ACTSNAP", "event": "{\"tick\": 250, \"rank_iron\": 1}", "fields": {"tick": 250}}
+{"ts": "2026-09-29 12:09:25.000", "t_rel_s": 6.158, "step": 28, "tag": "ACTSNAP", "event": "{\"tick\": 260, \"rank_iron\": 1}", "fields": {"tick": 260}}
+{"ts": "2026-09-29 12:09:25.073", "t_rel_s": 6.231, "step": 29, "tag": "ACTSNAP", "event": "{\"tick\": 270, \"rank_iron\": 1}", "fields": {"tick": 270}}
+{"ts": "2026-09-29 12:09:25.150", "t_rel_s": 6.308, "step": 30, "tag": "ACTSNAP", "event": "{\"tick\": 280, \"rank_iron\": 1}", "fields": {"tick": 280}}
+{"ts": "2026-09-29 12:09:25.230", "t_rel_s": 6.388, "step": 31, "tag": "ACTSNAP", "event": "{\"tick\": 290, \"rank_iron\": 1}", "fields": {"tick": 290}}
+{"ts": "2026-09-29 12:09:25.310", "t_rel_s": 6.469, "step": 32, "tag": "ACTSNAP", "event": "{\"tick\": 300, \"rank_iron\": 1}", "fields": {"tick": 300}}
+{"ts": "2026-09-29 12:09:25.401", "t_rel_s": 6.559, "step": 33, "tag": "ACTSNAP", "event": "{\"tick\": 310, \"rank_iron\": 1}", "fields": {"tick": 310}}
+{"ts": "2026-09-29 12:09:25.449", "t_rel_s": 6.607, "step": 34, "tag": "RESULT", "event": "背包获 iron_ingot @tick315", "fields": {"tick": 315}}
+{"ts": "2026-09-29 12:09:26.934", "t_rel_s": 8.092, "step": 35, "tag": "EPISODE", "event": "{\"episode\": \"lc_L3b\", \"actions_total\": 46, \"actions_redundant\": 26, \"actions_failed\": 11, \"fail_reasons\": [\"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:timeout\", \"failed:tool_missing:wooden_pickaxe\", \"failed:f", "fields": {}}
+{"ts": "2026-09-29 12:09:26.957", "t_rel_s": 8.115, "step": 36, "tag": "GRAPH", "event": "快照 graph_end", "fields": {"snapshot": "graph_end", "key": "graph_end", "note": "", "graph": "graph_graph_end.json", "graph_nodes": 452}}
+{"ts": "2026-09-29 12:09:26.959", "t_rel_s": 8.117, "step": 37, "tag": "RUN_END", "event": "run 结束 ok", "fields": {"duration_s": 8.11, "event_count": 37, "counters": "{}", "episode": "lc_L3b", "actions_total": 46, "actions_redundant": 26, "actions_failed": 11, "fail_reasons": "['failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:t", "path_len_unique": 20, "inventory": "{'oak_planks': 3, 'wooden_pickaxe': 1, 'oak_log': 12, 'stone_pickaxe': 1, 'coal': 1, 'iron_ingot': 1}", "graph_delta": "{'nodes': 235, 'edges': 629}", "writeback_promoted": "['explore_area(oak_log)|obs:minecraft:block:birch_log:appeared', 'explore_area(oak_log)|obs:minecraft:block:birch_log:disappeared', 'explore_area(oak_log)|obs:minecraft:block:coal_ore:appeared', 'expl", "graph": "{'nodes': 452, 'edges': 876}", "success": true, "success_tick": 315, "ok": true}}

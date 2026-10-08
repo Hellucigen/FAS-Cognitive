@@ -1,0 +1,133 @@
+{
+  "experiment": "core_incremental_value",
+  "title": "FAS 核心机制收官实验 — Spreading Activation 是否具有超越 Flat Retrieval 的独立增量价值?",
+  "manifest_written_at": "2026-09-30 (在生成任何正式数据之前锁定)",
+  "core_question": "在相同知识图谱、相同输入、相同 candidate set、相同信息预算下,FAS spreading activation 是否比 flat retrieval 具有独立的 joint-relevance discrimination 增量价值?",
+  "constraints": {
+    "zero_llm": true,
+    "no_minecraft": true,
+    "no_production_planner": true,
+    "no_recipe_closure": true,
+    "no_external_knowledge": true,
+    "no_embedding_api": true,
+    "no_extra_retrieval_source": true,
+    "no_production_modification": true,
+    "independent_of_production": true,
+    "code_provenance": "diffusion math 复用 research_audit/mechanism_falsification/ (已验证 663-run 独立实现,提炼自 production diffusion_engine.py 工程语义: 归一化脉冲+发射预算+发射即转移+fire-once+步间衰减+cap 钳制+方向语义);不 import 任何 production 模块。生产真源定位: diffusion_engine.py class@82, _edge_direction@370, mark_active@388, _space_rules@509, diffuse_step@940。"
+  },
+  "hypotheses": {
+    "H1_joint_convergence": "多输入同时激活时,与多个输入共同存在结构关系的 candidate 比仅与单个输入相关的 candidate 获得更高排名/activation。检验: 每 confirmatory 条件内, joint 候选 multi-seed 激活/排名 vs 最佳 single 候选;JCG_FAS > 0 率。",
+    "H2_interference_robustness": "distractor/noise 增加时,FAS 至少在部分非 trivial 条件下保持 joint candidate 识别能力。检验: 噪声/干扰曲线(斜率、AUC、critical noise),MRR 下降速度与 B2 对比。",
+    "H3_incremental_value_over_flat": "同一图/输入/候选/信息预算下,FAS 在至少一组预注册的复杂/干扰条件下相对 flat retrieval 表现可重复的 joint-relevance discrimination 优势 = ΔJCG = JCG_FAS − JCG_B2 > 0 在预注册条件上显著。可能结论: SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE。"
+  },
+  "methods": {
+    "FAS": "spreading activation (扩散核心 = mechanism_falsification 已验证参考模型;参数见 diffusion_params),seed = 输入节点,测量联合/单输入激活。",
+    "B1_direct_activation": "candidate 与 input 的直接边 relevance: score(cand|S) = Σ_{i∈S} w(Ii→cand) (仅直接出边;无则 0)。无传播。",
+    "B2_flat_graph_relevance": "与 FAS 同图同信息,无 spreading activation: score(cand|S) = Σ_{i∈S} f(i,cand), f = max over 简单路径(i→cand, 长度 ≤ max_len=joint_hops+2) 的边权乘积,不可达 = 0。flat aggregation,无多跳激活传播。",
+    "B3_random": "候选上均匀随机分数,sanity baseline,确认任务非随机可完成。",
+    "B4_oracle": "始终把构造出的 joint target 排第 1(仅校验 generator 无逻辑错误,不参与 superiority 比较)。"
+  },
+  "information_budget_equality": "同一 seed 生成一次图;FAS/B1/B2/B3/B4 共享同一 Graph 对象、同 inputs、同 candidates、同边集;无 method-specific edge;无 method-specific candidate;无隐藏 target 注入(joint 节点永不被直接 seed);唯一差异 = 传播动力学。是否违反由 sanity checks 逐轮校验,违反 → INVALID_RUN。",
+  "diffusion_params": {
+    "steps": "joint_hops + 2",
+    "seed_strength": 5.0,
+    "ratio": 0.5,
+    "transfer": 1.0,
+    "beta": 1.0,
+    "gain": 1.0,
+    "decay": 0.05,
+    "cap": 5.0,
+    "epsilon": 1e-4,
+    "measurement_domain": "候选集内排序(joint + singles + locals + shared_distractors + distractors);输入/中间节点不计入排名(2026-09-30 falsification 测量域裁决,seed 注入伪影)。"
+  },
+  "topologies": {
+    "T1_clean_convergent": "简单汇聚: 每输入经独立中点 m_i → joint pivot(共享汇聚) → O_joint;每输入一独享 single(O_Ii, 经独立中点);distractors 仅连背景填充节点(与任务结构无路径)。",
+    "T2_local_distractor": "T1 + 每输入附加 L 个强直接边(0.8)的 local distractor 候选(只与单一 input 相关)——防止只靠局部 relevance 得分。",
+    "T3_shared_noise": "T1 + S 个 shared distractor: 每候选与随机 ≥2 个输入有弱直接边(0.25),非 target——测试 activation competition(伪汇聚)。",
+    "T4_mixed_relational": "T1 全部 + local distractors + shared distractors + 无关节点 + 2-4 跳多跳路径(混合输出路径深度)——核心条件。",
+    "default_topology_for_sweeps": "T4(核心条件,§6)。"
+  },
+  "confirmatory_subset": {
+    "seed_count_fixed_50": "每个条件 50 个配对 seeds(实验开始前固定,取 spec 的 prefer 50)。",
+    "conditions": [
+      {"label": "C-1", "inputs": 3, "nodes": 100, "distractors": 100, "noise": 0.25, "topology": "T4"},
+      {"label": "C-2", "inputs": 3, "nodes": 300, "distractors": 300, "noise": 0.5, "topology": "T4"},
+      {"label": "C-3", "inputs": 5, "nodes": 300, "distractors": 300, "noise": 0.5, "topology": "T4"},
+      {"label": "C-4", "inputs": 5, "nodes": 1000, "distractors": 1000, "noise": 0.75, "topology": "T4"}
+    ]
+  },
+  "counterfactuals": {
+    "C1": "星形汇聚: I1→X, I2→X, I3→X (X = joint target, 直接边 0.7)。预期: 多播下 X top-1, JCG_X > 0。",
+    "C2": "无 joint target: I1→X, I2→Y, I3→Z (独立目标, 边权 0.9)。预期: FAS 不得凭空制造联合收敛 — multi-seed 排名与 single-seed 排名一致(候选排序 ρ ≥ 0.99), 各候选 JCG ≈ 0。违反 → 伪影。",
+    "C3": "二/三输入组合: X:I1+I2, Y:I2+I3, Z:I1+I3, W:I1+I2+I3 (直接边 0.7)。输入 I1+I2+I3, 理论 target = W。预期: W top-1(支持度最高);W 的 JCG 反映支持度差。"
+  },
+  "combination_test_O3": {
+    "structure": "2-hop。O1: I1→a(0.8), a→O1(0.8)(与 I1 强相关);O2: I2→b(0.8), b→O2(0.8)(与 I2 强相关);O3: I1→c(0.5), I2→c(0.5), c→O3(0.5)(与二者中等,共享汇聚 c)。",
+    "prediction": "联合激活 {I1,I2} 下,FAS 应凭传播累积(共享 pivot c 双份供能)使 O3 超过 O1/O2;flat(B2 path-product)下 O3 分数 0.5 < O1/O2 0.64,不应超过。",
+    "falsification_rule": "若 FAS 联合激活未使 O3 top-1 → 不修改 graph,记录为 falsification(如实报告)。",
+    "expected_numeric": "FAS: O3≈3.65 > O1≈O2≈2.92(按生产归一化脉冲手算,2026-09-30 预注册时导出)"
+  },
+  "dilution_test": "报告 reachable_nodes / activation_entropy / Gini / target_activation / target_rank;跨 distractor/noise sweep 计算 reachability 与 target_activation 的相关(ρ);若负相关 → FAS 存在『传播越广目标越难突出』dilution tradeoff(机制边界,如实报告,非实验失败)。",
+  "operating_regime": "graph 复杂度(实际节点数/边数)→ 性能(MRR)曲线;不预设形状(monotonic↑/↓/inverted-U/plateau 全部接受);inverted-U 出现则明确报告 operating regime。",
+  "sweeps": {
+    "grid": {
+      "node_count": [20, 50, 100, 300, 1000],
+      "input_count": [1, 2, 3, 5, 10, 20],
+      "joint_hops": [1, 2, 3, 4],
+      "distractor_count": [0, 10, 30, 100, 300, 1000],
+      "noise_ratio": [0.0, 0.1, 0.25, 0.5, 0.75, 0.9]
+    },
+    "defaults": {"topology": "T4", "nodes": 300, "inputs": 3, "distractors": 300, "noise": 0.5, "hops": 2, "weight": 0.5},
+    "cells_per_seed": 30,
+    "dimension_sweep": "一次只动一个维度,其余 = defaults。"
+  },
+  "interference_robustness": {
+    "metric_curve": "median MRR vs noise;OLS 斜率、归一化 AUC(mean median MRR over noise grid)、critical noise(= 维持 median MRR ≥ 0.9 的最高 noise;恒 ≥0.9 记 '>0.9')。",
+    "interpretation": "FAS 比 B2 更抗噪 → 支持 H2;否则如实报告。"
+  },
+  "statistics": {
+    "design": "配对 seeds(每 seed 同图同输入,各方法同图运行)。",
+    "primary_family": "4 个 confirmatory 条件的配对 ΔJCG = JCG_FAS − JCG_B2,单尾 Wilcoxon signed-rank(方向预注册: ΔJCG > 0)。",
+    "correction": "Holm(实验开始前锁定;比 Bonferroni 功效更高且控制 FWER,非按结果选择)。",
+    "alpha": 0.05,
+    "effect_size": "r = |z| / sqrt(2n)",
+    "ci": "95% bootstrap CI(1000 重采样,seed=42,固定)配对差异的中位数;同时报告差异均值与中位数。",
+    "secondary_family": "探索性,α 不校正但明确标注: 每条件 MRR FAS vs B2;JCG>0 率(FAS 与 B2,二项);joint vs best-single 排名(Wilcoxon);稳健性斜率/AUC/critical noise;dilution ρ;weight sweep 趋势;negative-edge 效应;insertion-order 稳定性。",
+    "exclusions": "INVALID_RUN 不进统计;满足 sanity 的全部进入,无 seed 删除。"
+  },
+  "sanity_checks": ["same_graph_same_seed", "same_inputs", "same_candidates", "same_graph_information", "same_budget", "no_hidden_target_injection", "no_method_specific_edge", "no_method_specific_candidate", "graph_integrity(无重复边/权重范围/节点数)", "target_never_seeded_directly"],
+  "hidden_oracle_checks": {
+    "label_permutation": "候选标签轮换重命名,30 seeds → 排名不变(FAS/B2)。",
+    "node_id_permutation": "全图 ID 洗牌,30 seeds → 排名不变。",
+    "insertion_order_permutation": "同图不同节点插入顺序,10 permutations × 30 seeds → 各方法 median MRR 变异系数 < 5% 且 ΔJCG 符号不变;否则 = implementation defect / ranking artifact,不解释为认知机制。",
+    "dictionary_ordering": "任务解析不依赖任何候选序(候选列表按 seed 洗牌后进入打分);tie-break = run-seed 固定洗牌(各方法同 seed 同 tie-break)。",
+    "seed_specific_generation": "B4 oracle 在全部拓扑上 MRR = 1(校验 generator);joint 节点结构特权报告(degree 对比)。"
+  },
+  "relation_weight_sweep": {"weights": [0.1, 0.3, 0.5, 0.7, 0.9], "fixed": "T1 与 T4, nodes=100, inputs=3, dist=100, noise=0.25, 30 seeds;观察 target margin / MRR / dilution;不允许根据结果反选 weight。", "default_weight": 0.5},
+  "negative_edges": {
+    "variants": {"pos_only": "对照组", "neg_from_inputs": "输入→distractor 候选 −0.5 抑制边", "mixed": "半数抑制(−0.5)半数正边(0.5)"},
+    "settings": "T1 + locals, nodes=100, inputs=3, dist=100, noise=0.25, 30 seeds",
+    "question": "抑制关系能否降低错误候选 activation 而不导致 propagation collapse(total activation > 0 且 joint 保持 top-1)。collapse/异常 → 记录为 Layer-2 / mechanism realization issue。"
+  },
+  "minimal_reproduction": "任何 unexpected failure → 自动缩到 ≤20 nodes 图,判定 implementation bug vs mechanism limitation;bug 修复流程: stop → 最小复现 → 修复 → 该条件完整重跑 → 保留原始失败记录(不得覆盖)。",
+  "metrics": {
+    "per_run": ["target_rank", "target_activation", "mrr", "recall@1", "recall@3", "recall@5", "ndcg", "activation_margin(vs best single)", "rank_margin(vs best single)", "topk_stability(Jaccard(top3_multi, top3_union_singles))", "entropy", "gini", "reachable_nodes", "total_activation", "top3_ids"],
+    "jcg": "JCG = score(O_joint | I1..In) − mean_i score(O_joint | Ii);分别算 JCG_FAS / JCG_B1 / JCG_B2",
+    "djcg": "ΔJCG = JCG_FAS − JCG_B2;ΔJCG > 0 = FAS 联合激活产生超过 flat 聚合的额外效果"
+  },
+  "figures": [
+    "Figure 1: FAS vs flat retrieval — MRR / Recall (confirmatory, 4 条件)"
+  ],
+  "final_classification_dimensions": ["CORE MECHANISM", "INCREMENTAL VALUE OVER FLAT RETRIEVAL", "NOISE ROBUSTNESS", "TOPOLOGY SENSITIVITY", "SCALABILITY"],
+  "h3_supported_requirements": ["confirmatory 存在一致优势", "多 seed 重复", "effect size 非零且有实际意义", "多重比较校正后仍成立", "非 insertion-order artifact", "非 topology 泄漏", "非 hidden oracle", "非额外信息预算", "非单一极端参数", "至少一个复杂/干扰条件成立"],
+  "h3_rejection_scenarios": {
+    "A": "FAS 与 flat 都非常好 → spreading activation 无增量价值",
+    "B": "FAS 与 flat 都很差 → graph representation / task formulation 可能不合适",
+    "C": "FAS 低噪声好、高噪声差 → robustness limitation",
+    "D": "FAS 多输入好、单输入无优势 → mechanism 特化为 multi-input convergence",
+    "E": "FAS 某种 topology 好、另一种差 → topology-sensitive mechanism"
+  },
+  "production_policy": "不改生产。发现生产需改 → 只记 recommended_change,不实施。",
+  "one_sentence_diagnosis_template": "如果排除目前已发现的 Layer-1 实现缺陷,并在一个正确构造的 relational graph 上运行 FAS,那么 spreading activation 相对于 flat retrieval 的真正增量价值是 ______。(空格按结果填写,不预设)",
+  "committed_seed_reservoir": "全局随机种子 = seed × 100000 + 打点序号(确定性强);graph seed 与 tie-break seed 同源派生。"
+}

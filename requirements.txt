@@ -1,0 +1,11 @@
+# FAS-Cognitive — 认知核心依赖（保持轻装：核心动力学只用 stdlib + numpy）
+numpy>=1.24.0
+jieba>=0.42.1            # 复合短语/依存分析（compound_phrase_handler）
+
+# 可选（语义召回 embedding_manager 惰性导入；不装则跳过 FAISS 路径）
+# sentence-transformers>=2.7.0
+# faiss-cpu>=1.8.0
+# torch>=2.12.0
+
+# 测试
+pytest>=7.0

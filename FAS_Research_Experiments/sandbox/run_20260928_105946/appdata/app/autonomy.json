@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "goals": [],
+  "explore_dirs": {
+    "north": 1,
+    "east": 1,
+    "south": 1,
+    "west": 0
+  },
+  "last_novel_ts": 1790564386.943166,
+  "updated_at": "2026/09/28 10:59:48"
+}

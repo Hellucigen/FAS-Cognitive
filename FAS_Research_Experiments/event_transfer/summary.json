@@ -1,0 +1,126 @@
+{
+ "experiment": "G 层级事件/跨情境复用",
+ "research_question": "R9",
+ "per_condition": {
+  "G0": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "4/12"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "4/12"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "4/12"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "4/12"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "4/12"
+    }
+   ]
+  },
+  "G1": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/8"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/8"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/8"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/8"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/8"
+    }
+   ]
+  },
+  "G2": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/0"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/0"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/0"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/0"
+    },
+    {
+     "success": true,
+     "success_tick": 16,
+     "actions": 9,
+     "shared_hits": 6,
+     "ep1_marks_activated": "0/0"
+    }
+   ]
+  }
+ }
+}

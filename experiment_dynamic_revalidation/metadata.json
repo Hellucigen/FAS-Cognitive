@@ -1,0 +1,23 @@
+{
+  "experiment": "FAS Minecraft Dynamic Environment Revalidation Experiment",
+  "start_timestamp": "2026-09-27T18:47:00",
+  "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+  "git_branch": "main",
+  "minecraft_version": "26.1 (HMCL client, LAN-hosted world, java PID 13736)",
+  "minecraft_port": 64446,
+  "bridge_host": "127.0.0.1",
+  "bridge_port": 5010,
+  "bot_username": "Haru",
+  "python": "E:/Miniforge.envs/Fascinator/python.exe (3.12.13)",
+  "node": "E:/Nodejs/node.exe",
+  "startup": "python app.py (README quick start)",
+  "control_interface": "existing bridge HTTP API (minecraft_bot/bot.js, port 5010); environment commands via /say -> bot.chat('/setblock ...') pending permission verification",
+  "observation_interface": "logs (fas_all.jsonl, minecraft.jsonl, perception.jsonl, llm.jsonl), data/autonomy.json, data/runtime_graph.json, bridge /state",
+  "intervention_policy": "auto via experiment program only; every intervention logged as environment_intervention",
+  "no_modify_policy": "no production code changes; no threshold/goal changes; no LLM added to action path",
+  "duration_budget_min": 60,
+  "cases": ["A_stale_goal", "B_repeated_failure", "C_timeout_reconciliation", "D_experience_reuse"],
+  "baseline_graph": {"nodes": 3749, "edges": 9875},
+  "baseline_goals": [],
+  "notes": "FAS and bridge were stopped at experiment start (MC server online). Bot config port was stale (60576); experiment writes config.json with current LAN port 64446 using the same shape as minecraft_session.connect() — an existing interface."
+}

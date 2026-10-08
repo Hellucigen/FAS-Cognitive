@@ -1,0 +1,155 @@
+{
+ "goal": "cobblestone",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "max_ticks": 300,
+ "results": {
+  "A": [
+   {
+    "prior_level": "A",
+    "seed": 1,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 527,
+     "edges": 1155
+    },
+    "inv": {},
+    "action_count": 3
+   },
+   {
+    "prior_level": "A",
+    "seed": 2,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 527,
+     "edges": 1155
+    },
+    "inv": {},
+    "action_count": 3
+   },
+   {
+    "prior_level": "A",
+    "seed": 3,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 527,
+     "edges": 1155
+    },
+    "inv": {},
+    "action_count": 3
+   }
+  ],
+  "B": [
+   {
+    "prior_level": "B",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "prior_level": "B",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "prior_level": "B",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "C": [
+   {
+    "prior_level": "C",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "prior_level": "C",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "prior_level": "C",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ]
+ }
+}

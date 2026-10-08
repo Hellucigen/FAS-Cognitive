@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "oak_fence",
+      "source": "experiment_obtain",
+      "text": "实验目标：组合 oak_fence(planks+stick)",
+      "created": "2026/09/28 11:03:15",
+      "created_ts": 1790564595.893489,
+      "last_considered": 1352.0,
+      "last_success_at": 1352.0
+    },
+    {
+      "type": "obtain",
+      "target": "oak_fence",
+      "source": "experiment_obtain",
+      "text": "实验目标：再次获得 oak_fence",
+      "created": "2026/09/28 11:03:15",
+      "created_ts": 1790564595.920082,
+      "last_considered": 1352.0,
+      "last_success_at": 1352.0
+    }
+  ],
+  "explore_dirs": {
+    "north": 4,
+    "east": 3,
+    "south": 3,
+    "west": 3
+  },
+  "last_novel_ts": 1790564594.412274,
+  "updated_at": "2026/09/28 11:03:15"
+}

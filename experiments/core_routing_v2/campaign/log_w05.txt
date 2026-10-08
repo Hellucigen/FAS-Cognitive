@@ -1,0 +1,60 @@
+[w05] fas_full T1 seed8: succ=1 class=none
+[w05] fas_full T2 seed14: succ=1 class=none
+[w05] fas_full T3 seed19: succ=1 class=none
+[w05] llm_direct T1 seed7: succ=1 class=none
+[w05] llm_direct T2 seed14: succ=1 class=none
+[w05] llm_direct T4 seed4: succ=1 class=none
+[w05] llm_history T1 seed14: succ=1 class=none
+[w05] llm_history T3 seed10: succ=1 class=none
+[w05] llm_history T4 seed20: succ=1 class=none
+Traceback (most recent call last):
+  File "E:\Project\Fascinator\scripts\combo_worker.py", line 68, in <module>
+    main()
+  File "E:\Project\Fascinator\scripts\combo_worker.py", line 34, in main
+    m = R.run_task(cond, task_key, seed, llm, log)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 765, in run_task
+    ctx_text = baseline_context(cond, store, obs_line,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 259, in baseline_context
+    + store.rag_block(q, RAG_K))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 228, in rag_block
+    self._matrix = emb.encode(texts)
+                   ^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\embedding_manager.py", line 83, in encode
+    return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+           ^^^^^^^^^^
+  File "E:\Project\Fascinator\embedding_manager.py", line 74, in model
+    from sentence_transformers import SentenceTransformer
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\__init__.py", line 10, in <module>
+    from sentence_transformers.backend import (
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\backend\__init__.py", line 5, in <module>
+    from .quantize import export_dynamic_quantized_onnx_model, export_static_quantized_openvino_model
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\backend\quantize.py", line 7, in <module>
+    from sentence_transformers.util import disable_datasets_caching, is_datasets_available
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\util\__init__.py", line 25, in <module>
+    from .retrieval import (
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\util\retrieval.py", line 14, in <module>
+    from .similarity import cos_sim
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\util\similarity.py", line 9, in <module>
+    from sklearn.metrics import pairwise_distances
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\__init__.py", line 70, in <module>
+    from sklearn.base import clone  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\base.py", line 20, in <module>
+    from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\utils\__init__.py", line 9, in <module>
+    from sklearn.utils._chunking import gen_batches, gen_even_slices
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\utils\_chunking.py", line 11, in <module>
+    from sklearn.utils._param_validation import Interval, validate_params
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\utils\_param_validation.py", line 17, in <module>
+    from sklearn.utils.validation import _is_arraylike_not_scalar
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\utils\validation.py", line 24, in <module>
+    from sklearn.utils._array_api import (
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sklearn\utils\_array_api.py", line 16, in <module>
+    import scipy.special as special
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\scipy\special\__init__.py", line 785, in <module>
+    from . import _ufuncs
+  File "scipy/special/_ufuncs_extra_code.pxi", line 3, in init scipy.special._ufuncs
+MemoryError

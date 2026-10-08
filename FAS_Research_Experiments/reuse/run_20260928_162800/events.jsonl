@@ -1,0 +1,37 @@
+{"ts": "2026-09-28 16:28:00.694", "t_rel_s": 0.023, "step": 0, "tag": "RUN_START", "event": "run 开始 mode=sandbox label=A-ep1-discover", "fields": {"experiment_id": "auto", "run_id": "run_20260928_162800"}}
+{"ts": "2026-09-28 16:28:02.359", "t_rel_s": 1.688, "step": 1, "tag": "GRAPH", "event": "快照 graph_start_r1", "fields": {"snapshot": "graph_start_r1", "key": "graph_start_r1", "note": "", "graph": "graph_graph_start_r1.json", "graph_nodes": 219}}
+{"ts": "2026-09-28 16:28:02.364", "t_rel_s": 1.693, "step": 2, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.378", "t_rel_s": 1.707, "step": 3, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.389", "t_rel_s": 1.718, "step": 4, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.389", "t_rel_s": 1.718, "step": 5, "tag": "RESULT", "event": "第1轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.399", "t_rel_s": 1.728, "step": 6, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.412", "t_rel_s": 1.741, "step": 7, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.419", "t_rel_s": 1.748, "step": 8, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.419", "t_rel_s": 1.748, "step": 9, "tag": "RESULT", "event": "第2轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.429", "t_rel_s": 1.758, "step": 10, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.440", "t_rel_s": 1.77, "step": 11, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.448", "t_rel_s": 1.777, "step": 12, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.448", "t_rel_s": 1.777, "step": 13, "tag": "RESULT", "event": "第3轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.460", "t_rel_s": 1.789, "step": 14, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.471", "t_rel_s": 1.8, "step": 15, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.478", "t_rel_s": 1.807, "step": 16, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.478", "t_rel_s": 1.807, "step": 17, "tag": "RESULT", "event": "第4轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.490", "t_rel_s": 1.819, "step": 18, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.503", "t_rel_s": 1.832, "step": 19, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.509", "t_rel_s": 1.838, "step": 20, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.509", "t_rel_s": 1.838, "step": 21, "tag": "RESULT", "event": "第5轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.522", "t_rel_s": 1.851, "step": 22, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.536", "t_rel_s": 1.865, "step": 23, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.543", "t_rel_s": 1.872, "step": 24, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.543", "t_rel_s": 1.872, "step": 25, "tag": "RESULT", "event": "第6轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.556", "t_rel_s": 1.885, "step": 26, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.568", "t_rel_s": 1.897, "step": 27, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.575", "t_rel_s": 1.904, "step": 28, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.575", "t_rel_s": 1.904, "step": 29, "tag": "RESULT", "event": "第7轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.588", "t_rel_s": 1.917, "step": 30, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 0}}
+{"ts": "2026-09-28 16:28:02.601", "t_rel_s": 1.93, "step": 31, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 2}}
+{"ts": "2026-09-28 16:28:02.609", "t_rel_s": 1.938, "step": 32, "tag": "ACTSNAP", "event": "{\"\\u7269\\u54c1:oak_planks\": 0.9, \"\\u7269\\u54c1:oak_log\": 0.0}", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.609", "t_rel_s": 1.938, "step": 33, "tag": "RESULT", "event": "第8轮达成 @tick4", "fields": {"tick": 4}}
+{"ts": "2026-09-28 16:28:02.663", "t_rel_s": 1.992, "step": 34, "tag": "EPISODE", "event": "{\"episode\": \"ep1_final\", \"actions_total\": 16, \"actions_redundant\": 14, \"actions_invalid\": 0, \"first_ore_action_idx\": 0, \"first_noise_action_idx\": null, \"types\": [\"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather_resource\", \"craft_item\", \"gather", "fields": {}}
+{"ts": "2026-09-28 16:28:02.670", "t_rel_s": 1.999, "step": 35, "tag": "RESULT", "event": "Ep1 图谱 → E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed1.json", "fields": {}}
+{"ts": "2026-09-28 16:28:02.671", "t_rel_s": 2.0, "step": 36, "tag": "RUN_END", "event": "run 结束 ok", "fields": {"duration_s": 2.0, "event_count": 36, "counters": "{}", "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed1.json", "causal": "{'aggregations': 2, 'hypotheses': 7, 'promoted': ['craft_item(oak_planks)|self:self:craft_item:succeeded', 'gather_resource(oak_log)|obs:self:block:oak_log:disappeared', 'gather_resource(oak_log)|obs:", "ok": true}}

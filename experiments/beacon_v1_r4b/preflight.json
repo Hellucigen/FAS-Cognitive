@@ -1,0 +1,30 @@
+{
+ "graph_nodes": 37,
+ "graph_edges": 20,
+ "propagation_probe_seed": "物品:oak_log",
+ "propagation_newly_lit": 1,
+ "demand_keys": [
+  "action",
+  "curiosity",
+  "emotion",
+  "knowledge"
+ ],
+ "gap_type": "dict",
+ "routing_mode": "graph_only",
+ "beacon_probe": {
+  "seed": "物品:oak_log",
+  "oak_log_lit": true,
+  "oak_planks_lit": true,
+  "lit_sample": [
+   "物品:cobblestone",
+   "物品:crafting_table",
+   "物品:oak_fence",
+   "物品:oak_log",
+   "物品:oak_planks",
+   "物品:stick",
+   "物品:stone_pickaxe",
+   "物品:wooden_pickaxe"
+  ],
+  "has_produce_edge": false
+ }
+}

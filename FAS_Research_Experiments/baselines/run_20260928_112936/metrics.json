@@ -1,0 +1,49 @@
+{
+ "duration_s": 0.65,
+ "event_count": 7,
+ "counters": {},
+ "baseline": "llm_heavy",
+ "seed": 1,
+ "success": false,
+ "success_step": null,
+ "llm_calls": [
+  {
+   "step": 0,
+   "cmd": "__ERROR__ sandbox 零 LLM 契约被打破: mimo",
+   "ok": false,
+   "note": "unknown_verb:__error__",
+   "lat_s": 0.0
+  },
+  {
+   "step": 1,
+   "cmd": "__ERROR__ sandbox 零 LLM 契约被打破: mimo",
+   "ok": false,
+   "note": "unknown_verb:__error__",
+   "lat_s": 0.0
+  },
+  {
+   "step": 2,
+   "cmd": "__ERROR__ sandbox 零 LLM 契约被打破: mimo",
+   "ok": false,
+   "note": "unknown_verb:__error__",
+   "lat_s": 0.0
+  },
+  {
+   "step": 3,
+   "cmd": "__ERROR__ sandbox 零 LLM 契约被打破: mimo",
+   "ok": false,
+   "note": "unknown_verb:__error__",
+   "lat_s": 0.0
+  },
+  {
+   "step": 4,
+   "cmd": "__ERROR__ sandbox 零 LLM 契约被打破: mimo",
+   "ok": false,
+   "note": "unknown_verb:__error__",
+   "lat_s": 0.0
+  }
+ ],
+ "calls_count": 5,
+ "inv": {},
+ "ok": true
+}

@@ -1,0 +1,44 @@
+{
+  "raw": [
+    {
+      "id": "ev_f76d5c3777",
+      "ts": 1790564813.810621,
+      "ts_str": "11:06:53",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_direction",
+      "content": {
+        "target": "east",
+        "params": {
+          "direction": "east",
+          "max_time": 45.0,
+          "night_stop": true
+        },
+        "reason": [
+          "CuriosityDrive",
+          "Haru的位置"
+        ],
+        "motivation": "curiosity",
+        "expected_effect": "往east走走看，了解周边",
+        "urgency": 0.35,
+        "priority": 0.35,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "空闲：去少走的方向探索一阵"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    }
+  ]
+}

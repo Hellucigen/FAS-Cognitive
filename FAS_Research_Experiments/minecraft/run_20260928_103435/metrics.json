@@ -1,0 +1,17 @@
+{
+ "duration_s": 1808.47,
+ "event_count": 486,
+ "counters": {
+  "samples": 120,
+  "exp_events_copied": 2415
+ },
+ "git": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "ok": true,
+ "graph_delta_M1": {
+  "note": "M1 知识发现 run（快照补救）",
+  "nodes_added": 100,
+  "nodes_removed": 20,
+  "edges_added": 365,
+  "edges_removed": 143
+ }
+}

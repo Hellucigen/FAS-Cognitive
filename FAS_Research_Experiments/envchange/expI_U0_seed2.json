@@ -1,0 +1,31 @@
+{
+ "experiment": "I_envchange",
+ "condition": "U0",
+ "seed": 2,
+ "result": {
+  "condition": "U0",
+  "seed": 2,
+  "phase1_done": [
+   4,
+   4,
+   4,
+   4
+  ],
+  "phase2_success": true,
+  "phase2_done_tick": 4,
+  "phase2_failures": 0,
+  "priors_phase1": {},
+  "priors_phase2": {},
+  "oak_activation_trace": [
+   5.0,
+   5.0,
+   5.0,
+   5.0,
+   5.0
+  ],
+  "graph": {
+   "nodes": 242,
+   "edges": 297
+  }
+ }
+}

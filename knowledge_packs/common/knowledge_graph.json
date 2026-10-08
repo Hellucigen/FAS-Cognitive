@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "id": "Fascinator",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {
+        "aliases": [
+          "FAS",
+          "fas",
+          "Fascinator"
+        ]
+      },
+      "created": "2026/07/04 17:42:23",
+      "last_access": "2026/07/04 17:42:23"
+    },
+    {
+      "id": "Haru",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "self",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {
+        "type": "embodied_self",
+        "desc": "Haru——Fascinator 的具身主体（Minecraft 中的自我）"
+      },
+      "created": "2026/07/04 17:42:23",
+      "last_access": "2026/07/04 17:42:23",
+      "graph_space": "self"
+    },
+    {
+      "id": "苹果",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {},
+      "created": "2026/07/04 17:49:10",
+      "last_access": "2026/07/04 17:49:10"
+    },
+    {
+      "id": "圆形",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {},
+      "created": "2026/07/04 17:49:10",
+      "last_access": "2026/07/04 17:49:10"
+    },
+    {
+      "id": "用户",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {},
+      "created": "2026/07/04 17:49:46",
+      "last_access": "2026/07/04 17:49:46"
+    },
+    {
+      "id": "Hellucigen",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.5,
+      "extra_attrs": {},
+      "created": "2026/07/04 17:49:46",
+      "last_access": "2026/07/04 17:49:46"
+    }
+  ],
+  "edges": [
+    {
+      "src": "Fascinator",
+      "dst": "Haru",
+      "relation": "名字叫",
+      "weight": 1.0,
+      "activation": 0.0,
+      "created": "2026/07/04 17:42:23",
+      "last_access": "2026/07/04 17:42:23"
+    },
+    {
+      "src": "苹果",
+      "dst": "圆形",
+      "relation": "是",
+      "weight": 1.0,
+      "activation": 0.0,
+      "created": "2026/07/04 17:49:10",
+      "last_access": "2026/07/04 17:49:10"
+    },
+    {
+      "src": "用户",
+      "dst": "Hellucigen",
+      "relation": "名字是",
+      "weight": 1.0,
+      "activation": 0.0,
+      "created": "2026/07/04 17:49:46",
+      "last_access": "2026/07/04 17:49:46"
+    }
+  ]
+}

@@ -1,0 +1,1204 @@
+{
+  "raw": [
+    {
+      "id": "ev_82404e2401",
+      "ts": 1790563434.495958,
+      "ts_str": "10:43:54",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_17633b1dab",
+      "ts": 1790563434.691259,
+      "ts_str": "10:43:54",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_197372c6f2",
+      "ts": 1790563434.6973267,
+      "ts_str": "10:43:54",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8e4d75f344",
+      "ts": 1790563434.8771405,
+      "ts_str": "10:43:54",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8f1ca7f1c9",
+      "ts": 1790563434.8811944,
+      "ts_str": "10:43:54",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_540dd08020",
+      "ts": 1790563435.0652554,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_72f8fa47b2",
+      "ts": 1790563435.0697637,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_fe8f483dae",
+      "ts": 1790563435.2276032,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f4153a9f3f",
+      "ts": 1790563435.2321372,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_9d05e37d03",
+      "ts": 1790563435.3800125,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_74553e762c",
+      "ts": 1790563435.3835776,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_3e0f156489",
+      "ts": 1790563435.5485983,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_5ec5cb9d43",
+      "ts": 1790563435.552493,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_2d9160e14c",
+      "ts": 1790563435.6738737,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_b1bd752fd9",
+      "ts": 1790563435.6773806,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_4d5982f9f5",
+      "ts": 1790563435.8115454,
+      "ts_str": "10:43:55",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_75a1a26928",
+      "ts": 1790563435.8157601,
+      "ts_str": "10:43:55",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_dd07637c7a",
+      "ts": 1790563436.0418036,
+      "ts_str": "10:43:56",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_d15cc2679d",
+      "ts": 1790563436.0478854,
+      "ts_str": "10:43:56",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_3aab47f8a7",
+      "ts": 1790563436.2760086,
+      "ts_str": "10:43:56",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_fd3ab4281e",
+      "ts": 1790563436.281578,
+      "ts_str": "10:43:56",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_6c42db26da",
+      "ts": 1790563436.5091827,
+      "ts_str": "10:43:56",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_4b471e4004",
+      "ts": 1790563436.518714,
+      "ts_str": "10:43:56",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_e4c21a39ac",
+      "ts": 1790563436.724128,
+      "ts_str": "10:43:56",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_47dd65c230",
+      "ts": 1790563436.7312126,
+      "ts_str": "10:43:56",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_2c51a2e079",
+      "ts": 1790563436.9692774,
+      "ts_str": "10:43:56",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_75b3f04fa3",
+      "ts": 1790563436.975337,
+      "ts_str": "10:43:56",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_823d6ac143",
+      "ts": 1790563437.1734204,
+      "ts_str": "10:43:57",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_0541891024",
+      "ts": 1790563437.1795144,
+      "ts_str": "10:43:57",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8d3087e5f6",
+      "ts": 1790563437.4026747,
+      "ts_str": "10:43:57",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_4a0a26e4bf",
+      "ts": 1790563437.4078615,
+      "ts_str": "10:43:57",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_4a86a2a473",
+      "ts": 1790563437.635604,
+      "ts_str": "10:43:57",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_c431e6f85e",
+      "ts": 1790563437.6425056,
+      "ts_str": "10:43:57",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8792b741fe",
+      "ts": 1790563437.886095,
+      "ts_str": "10:43:57",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_0b802b9eba",
+      "ts": 1790563437.893078,
+      "ts_str": "10:43:57",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_64dd86c121",
+      "ts": 1790563438.072155,
+      "ts_str": "10:43:58",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a2df7a70ae",
+      "ts": 1790563438.0791955,
+      "ts_str": "10:43:58",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_678e667360",
+      "ts": 1790563438.30296,
+      "ts_str": "10:43:58",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_3f18758f98",
+      "ts": 1790563438.3104668,
+      "ts_str": "10:43:58",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -13.02364713186689,
+              "y": 64.0,
+              "z": 7.442084075352508
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f71826074a",
+      "ts": 1790563438.536742,
+      "ts_str": "10:43:58",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:dug_no_item",
+        "reason": "dug_no_item",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    }
+  ]
+}

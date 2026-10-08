@@ -1,0 +1,1140 @@
+FAS 核心机制收官实验
+
+Spreading Activation 是否具有超越 Flat Retrieval 的独立增量价值？
+
+你现在负责执行 FAS 当前最关键的一项科研实验。
+
+⸻
+
+一、实验的唯一核心问题
+
+前期全面审计已经完成。
+
+当前已知：
+
+1. Layer-1 存在真实实现缺陷，已经修复；
+2. Layer-2 存在真实 graph topology / relation-direction 限制；
+3. FAS diffusion engine 本身能够运行；
+4. 多输入汇聚机制已经获得机制级支持：
+    * JCG > 0 率约 0.970；
+    * ≥2 inputs 时 MRR@1 = 1.0；
+    * relation-direction experiment：ρ ≈ .33 → .65；
+    * p=.002；
+    * r=.886；
+    * 10/10 seeds 方向一致；
+5. A10 已证明 persistent graph memory 在信息不对称任务中可以产生行为收益：
+    * FAS 20/20；
+    * direct 0/20；
+    * D-noact 0/20；
+    * 但 FAS 与 D-flat 都为 20/20；
+6. 因此目前最大的未知问题不是：
+    “持久化记忆有没有用？”
+    而是：
+
+Spreading activation 本身，是否比一个合理的 flat retrieval mechanism 具有独立的增量价值？
+
+这就是本实验唯一核心问题。
+
+⸻
+
+二、最终科研假设
+
+预注册以下假设，不允许根据实验结果修改。
+
+H1 — Joint convergence
+
+当多个输入同时激活时：
+
+与多个输入共同存在结构关系的 candidate，应当比仅与单个输入相关的 candidate 获得更高排名/activation。
+
+⸻
+
+H2 — Interference robustness
+
+当存在越来越多局部相关节点和无关 distractors 时：
+
+FAS spreading activation 应当至少在某些非 trivial 条件下保持 joint candidate 的识别能力。
+
+⸻
+
+H3 — Incremental value over flat retrieval
+
+这是最重要的假设：
+
+在相同知识图谱、相同输入、相同 candidate set 和相同信息预算下，FAS spreading activation 应在至少一组预注册的复杂/干扰条件下，相对于 flat retrieval 表现出可重复的 joint-relevance discrimination 优势。
+
+注意：
+
+H3 不预设一定成立。
+
+可能结果：
+
+SUPPORTED
+PARTIALLY SUPPORTED
+REJECTED
+INCONCLUSIVE
+
+⸻
+
+三、严格禁止
+
+本实验不是 benchmark optimization。
+
+禁止：
+
+* 根据结果修改参数；
+* 删除失败 seed；
+* 修改 candidate；
+* 为 FAS 单独增加信息；
+* 给 FAS 额外 graph edges；
+* 给 flat retrieval 删除信息；
+* 根据结果调整 noise；
+* 根据结果改变 metric；
+* post-hoc 选择 graph；
+* post-hoc 选择 seed；
+* 调整 normalization 直到 FAS 胜出；
+* 为 FAS 添加 task-specific rule；
+* 使用 LLM；
+* 使用 Minecraft；
+* 使用 production planner；
+* 使用 recipe closure；
+* 使用外部知识；
+* 使用 embedding API；
+* 使用额外 retrieval source。
+
+如果发现 reference implementation 本身存在 bug：
+
+先停止该实验条件
+→ 建立最小复现
+→ 修复 bug
+→ 从该条件完整重跑
+→ 保留原始失败记录
+
+不能直接覆盖。
+
+⸻
+
+四、实验必须独立于 Production FAS
+
+建立：
+
+experiments/core_incremental_value/
+
+不得修改：
+
+production FAS
+
+允许复用：
+
+* 已验证的 diffusion 数学实现；
+* graph data structure；
+* activation primitives；
+
+但必须在报告中明确哪些代码来自 production。
+
+建立：
+
+experiments/core_incremental_value/
+├── README.md
+├── manifest.json
+├── generator.py
+├── runners/
+├── raw_results.jsonl
+├── summary.csv
+├── statistics.csv
+├── figures/
+└── FINAL_REPORT.md
+
+⸻
+
+五、核心图模型
+
+构造一个完全可控的 relational graph。
+
+基本结构：
+
+I1
+I2
+I3
+
+以及：
+
+O_joint
+O_I1
+O_I2
+O_I3
+D1...
+Dn
+
+其中：
+
+O_joint
+
+与多个 input 存在结构路径。
+
+例如：
+
+I1 ── A ── O_joint
+I2 ── A ── O_joint
+I3 ── A ── O_joint
+
+而：
+
+O_I1
+
+只与 I1 相关：
+
+I1 ── B ── O_I1
+
+同理：
+
+I2 ── C ── O_I2
+I3 ── D ── O_I3
+
+⸻
+
+六、不要只使用一种 graph topology
+
+必须至少建立四种 topology。
+
+T1 — Clean convergent graph
+
+最简单结构。
+
+目的：
+
+验证 reference implementation 的基本能力。
+
+⸻
+
+T2 — Local distractor graph
+
+增加大量只与单一 input 相关的 candidate。
+
+目的：
+
+防止 FAS 只靠局部 relevance 就得到正确答案。
+
+⸻
+
+T3 — Shared-noise graph
+
+加入大量：
+
+shared distractor
+
+这些节点与多个 input 存在弱关系，但不是 target。
+
+目的：
+
+测试 activation competition。
+
+⸻
+
+T4 — Mixed relational graph
+
+同时包含：
+
+joint target
+single-input candidates
+shared distractors
+irrelevant nodes
+multi-hop paths
+
+这是核心条件。
+
+⸻
+
+七、Graph topology 参数 sweep
+
+至少测试：
+
+Node count
+
+20
+50
+100
+300
+1000
+
+⸻
+
+Input count
+
+1
+2
+3
+5
+10
+20
+
+⸻
+
+Joint path length
+
+1 hop
+2 hop
+3 hop
+4 hop
+
+⸻
+
+Distractor count
+
+0
+10
+30
+100
+300
+1000
+
+⸻
+
+Noise ratio
+
+0%
+10%
+25%
+50%
+75%
+90%
+
+⸻
+
+八、必须控制计算预算
+
+FAS 和 flat retrieval 必须获得等价信息。
+
+不要让：
+
+FAS
+
+访问更多 graph information，而：
+
+flat retrieval
+
+只看局部信息。
+
+至少保证：
+
+same nodes
+same edges
+same input nodes
+same candidate nodes
+same graph
+same seed
+same task
+same information availability
+
+区别只能是：
+
+FAS:
+spreading activation + graph interaction
+Flat:
+non-propagating direct relevance aggregation
+
+⸻
+
+九、Flat Retrieval baseline
+
+不要使用一个故意很弱的 baseline。
+
+建立至少两个：
+
+B1 — Direct activation
+
+candidate 与 input 的直接 relevance。
+
+⸻
+
+B2 — Flat graph relevance
+
+允许 baseline 使用与 FAS 相同的 graph information，但：
+
+不进行 spreading activation。
+
+可以使用：
+
+direct relation score
+precomputed relevance
+flat aggregation
+
+但不得进行多-hop activation propagation。
+
+⸻
+
+十、必须额外加入两个 sanity baseline
+
+B3 — Random
+
+确认任务不是随机就能完成。
+
+B4 — Oracle
+
+仅用于确认任务 generator 没有逻辑错误。
+
+Oracle 不参与 superiority comparison。
+
+⸻
+
+十一、最核心指标
+
+不能只看 Top-1。
+
+至少计算：
+
+MRR
+Recall@1
+Recall@3
+Recall@5
+NDCG
+activation margin
+rank margin
+top-k stability
+
+⸻
+
+十二、定义 Joint Convergence Gain
+
+预注册：
+
+JCG =
+score(O_joint | I1...In)
+-
+mean(score(O_joint | Ii))
+
+分别计算：
+
+JCG_FAS
+JCG_B1
+JCG_B2
+
+以及：
+
+ΔJCG =
+JCG_FAS - JCG_B2
+
+其中：
+
+ΔJCG > 0
+
+才意味着 FAS 的联合激活产生了超过 flat aggregation 的额外效果。
+
+不要修改公式来适应结果。
+
+⸻
+
+十三、定义 Interference Robustness
+
+随着 distractor/noise 增加，计算：
+
+performance(noise)
+
+并拟合：
+
+performance degradation curve
+
+报告：
+
+slope
+AUC
+critical noise level
+
+如果 FAS 比 flat retrieval 更抗噪：
+
+报告为支持。
+
+如果没有：
+
+如实报告。
+
+⸻
+
+十四、最关键实验：FAS vs Flat under controlled interference
+
+必须预先指定至少以下条件作为 confirmatory subset：
+
+3 inputs
+100 graph nodes
+100 distractors
+25% noise
+3 inputs
+300 graph nodes
+300 distractors
+50% noise
+5 inputs
+300 graph nodes
+300 distractors
+50% noise
+5 inputs
+1000 graph nodes
+1000 distractors
+75% noise
+
+每个条件：
+
+≥30 paired seeds
+
+如果资源允许：
+
+50 seeds
+
+但 seed 数量必须在实验开始前固定。
+
+⸻
+
+十五、不要只测试“共同相关”
+
+还必须测试 counterfactual graph。
+
+例如：
+
+C1
+
+I1 → X
+I2 → X
+I3 → X
+
+X 是 joint target。
+
+⸻
+
+C2
+
+I1 → X
+I2 → Y
+I3 → Z
+
+没有 joint target。
+
+此时 FAS 不应该凭空制造 joint convergence。
+
+⸻
+
+C3
+
+多个候选都与两个输入相关：
+
+X : I1 + I2
+Y : I2 + I3
+Z : I1 + I3
+W : I1 + I2 + I3
+
+输入：
+
+I1 + I2 + I3
+
+理论 target：
+
+W
+
+这是非常重要的 test。
+
+⸻
+
+十六、测试“组合关系”而不是节点相似度
+
+构造：
+
+I1 + I2
+
+使得：
+
+O1
+
+与 I1 强相关。
+
+O2
+
+与 I2 强相关。
+
+O3
+
+与二者都有中等关系。
+
+要求：
+
+判断 FAS 是否能通过传播后的联合 activation，使 O3 超过 O1/O2。
+
+如果 O3 不能超过：
+
+不要修改 graph。
+
+这就是 falsification。
+
+⸻
+
+十七、测试 activation dilution
+
+此前 relation-direction 实验发现：
+
+bidirectional topology 增加 reachability，但绝对 activation 可能下降，因为 activation 被更多节点分摊。
+
+因此必须单独测：
+
+reachability
+vs
+activation concentration
+
+报告：
+
+reachable_nodes
+activation_entropy
+Gini
+target_activation
+target_rank
+
+回答：
+
+FAS 是否存在“传播越广，目标越难突出”的 dilution tradeoff？
+
+如果存在，这是重要的机制边界，不是实验失败。
+
+⸻
+
+十八、测试 operating regime
+
+最终绘制：
+
+graph complexity
+        ↓
+performance
+
+不要假设：
+
+complexity ↑ → performance ↑
+
+可能出现：
+
+monotonic ↑
+monotonic ↓
+inverted-U
+plateau
+
+全部接受。
+
+如果出现 inverted-U：
+
+明确报告 FAS 存在 operating regime。
+
+⸻
+
+十九、统计方法
+
+所有 FAS vs baseline comparison：
+
+使用：
+
+paired seeds
+
+至少：
+
+Wilcoxon signed-rank
+
+同时报告：
+
+effect size
+95% CI
+median difference
+
+多重比较：
+
+Holm
+
+或者预先指定的 Bonferroni。
+
+不要选择对结果更有利的 correction。
+
+在实验开始时确定。
+
+⸻
+
+二十、必须保存每一个 seed
+
+raw_results.jsonl 至少包含：
+
+{
+  "seed": 1,
+  "condition": "...",
+  "topology": "...",
+  "inputs": 3,
+  "nodes": 300,
+  "noise": 0.5,
+  "distractors": 300,
+  "method": "fas",
+  "target_rank": 1,
+  "target_activation": 0.73,
+  "mrr": 1.0,
+  "entropy": 2.3
+}
+
+不要只保存 summary。
+
+⸻
+
+二十一、自动 sanity checks
+
+每轮实验前自动验证：
+
+same graph
+same seed
+same inputs
+same candidates
+same graph information
+same budget
+no hidden target injection
+no method-specific edge
+no method-specific candidate
+
+如果失败：
+
+INVALID_RUN
+
+不能进入统计。
+
+⸻
+
+二十二、自动检查隐藏 oracle
+
+尤其检查：
+
+target label
+goal name
+candidate ordering
+node insertion order
+dictionary ordering
+seed-specific generation
+
+不能让：
+
+O_joint
+
+因为名字、ID、插入顺序等原因获得优势。
+
+必须进行：
+
+label permutation
+node ID permutation
+insertion order permutation
+
+sanity tests。
+
+⸻
+
+二十三、必须测试 insertion-order bias
+
+建立：
+
+same graph
+different node insertion order
+
+至少：
+
+10 permutations
+
+如果结果明显变化：
+
+这是 implementation defect / ranking artifact。
+
+不要把它解释成认知机制。
+
+⸻
+
+二十四、必须测试 relation-weight sensitivity
+
+至少：
+
+0.1
+0.3
+0.5
+0.7
+0.9
+
+但：
+
+relation weight 不允许根据结果选择。
+
+提前固定 sweep。
+
+观察：
+
+target margin
+noise robustness
+dilution
+
+⸻
+
+二十五、必须测试 negative edges
+
+因为 FAS 当前支持 inhibition。
+
+构造：
+
+positive relation
+negative relation
+mixed relation
+
+测试：
+
+抑制关系是否能够降低错误 candidate 的 activation，而不是导致整个 propagation collapse。
+
+如果发现问题：
+
+记录为 Layer 2 / mechanism realization issue。
+
+⸻
+
+二十六、最终判定规则
+
+H3：
+
+FAS > flat retrieval
+
+只有满足以下条件才允许写：
+
+SUPPORTED
+
+至少要求：
+
+1. confirmatory 条件中存在一致优势；
+2. 多个 seed 重复；
+3. effect size 非零且具有实际意义；
+4. multiple-comparison correction 后仍成立；
+5. 不是 insertion-order artifact；
+6. 不是 graph topology 泄漏；
+7. 不是 hidden oracle；
+8. 不是额外信息预算；
+9. 不是单一极端参数；
+10. 至少一个复杂/干扰条件成立。
+
+否则：
+
+PARTIALLY SUPPORTED
+
+或者：
+
+REJECTED
+
+⸻
+
+二十七、如果 H3 被拒绝，不要停止
+
+如果：
+
+FAS ≈ flat
+
+必须进一步回答：
+
+情况 A
+
+FAS 和 flat 都非常好：
+
+spreading activation 没有增量价值。
+
+情况 B
+
+FAS 和 flat 都很差：
+
+graph representation / task formulation 可能不适合。
+
+情况 C
+
+FAS 在低噪声好，高噪声差：
+
+robustness limitation。
+
+情况 D
+
+FAS 在多输入好，单输入无优势：
+
+mechanism may specifically provide multi-input convergence。
+
+情况 E
+
+FAS 在某种 topology 好，另一种 topology 差：
+
+topology-sensitive mechanism。
+
+不要简单写：
+
+“FAS failed”。
+
+⸻
+
+二十八、自动进行一次最小复现
+
+如果发现任何：
+
+unexpected failure
+
+必须自动缩小到最小 graph：
+
+≤20 nodes
+
+然后判断：
+
+implementation bug
+vs
+mechanism limitation
+
+不要把一个明显的 bug 误报成 theoretical failure。
+
+⸻
+
+二十九、与之前实验统一
+
+最终报告必须同时引用并整合：
+
+C34 v2
+A9 relation-direction
+A10 beacon
+JCG experiment
+noise experiment
+
+形成：
+
+Evidence hierarchy
+
+建议结构：
+
+Persistent memory value
+        ↓
+A10
+Activation mechanism exists
+        ↓
+JCG
+Topology controls propagation
+        ↓
+A9
+Incremental value over flat retrieval
+        ↓
+THIS EXPERIMENT
+
+⸻
+
+三十、最终报告必须回答
+
+生成：
+
+experiments/core_incremental_value/FINAL_REPORT.md
+
+开头直接给：
+
+Executive Conclusion
+
+回答：
+
+1.
+
+FAS persistent memory 是否有行为价值？
+
+2.
+
+FAS spreading activation 是否真的运行？
+
+3.
+
+多输入 convergence 是否存在？
+
+4.
+
+convergence 是否抗噪声？
+
+5.
+
+FAS 是否比 flat retrieval 有增量价值？
+
+6.
+
+这种优势是否依赖 graph topology？
+
+7.
+
+这种优势是否存在 operating regime？
+
+8.
+
+当前 FAS 最大瓶颈是什么？
+
+⸻
+
+三十一、必须生成最终分类
+
+严格使用：
+
+CORE MECHANISM:
+SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE
+INCREMENTAL VALUE OVER FLAT RETRIEVAL:
+SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE
+NOISE ROBUSTNESS:
+SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE
+TOPOLOGY SENSITIVITY:
+SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE
+SCALABILITY:
+SUPPORTED / PARTIALLY SUPPORTED / REJECTED / INCONCLUSIVE
+
+⸻
+
+三十二、最终图表
+
+至少生成：
+
+Figure 1
+
+FAS vs flat retrieval：MRR / Recall
+
+Figure 2
+
+Joint Convergence Gain
+
+Figure 3
+
+Noise robustness curve
+
+Figure 4
+
+Graph complexity curve
+
+Figure 5
+
+Input-count scaling
+
+Figure 6
+
+Activation dilution：
+
+reachability
+vs
+target activation
+
+Figure 7
+
+Topology comparison
+
+Figure 8
+
+Representative activation landscapes：
+
+FAS
+vs
+flat
+
+Figure 9
+
+最终 evidence hierarchy：
+
+A10
+ ↓
+JCG
+ ↓
+A9
+ ↓
+this experiment
+
+所有图：
+
+* publication quality；
+* vector-friendly；
+* 统一字体；
+* 统一坐标；
+* 清楚区分 mechanism / behavioral evidence；
+* 不使用装饰性 3D；
+* 不使用截图；
+* 不用颜色暗示“成功/失败”；
+* 每个 figure 都有明确 caption；
+* 保存 PDF/SVG/PNG。
+
+⸻
+
+三十三、不要修改生产 FAS
+
+本实验结束后：
+
+不得因为实验结果修改 production FAS。
+
+如果发现 production 需要修改：
+
+只记录：
+
+recommended_change
+
+不要实施。
+
+原因：
+
+本实验的目的就是区分“核心机制能力”和“生产系统实现”。
+
+⸻
+
+三十四、最终给出科研诊断
+
+最终必须给出一句最重要的话：
+
+“如果排除目前已发现的 Layer-1 实现缺陷，并在一个正确构造的 relational graph 上运行 FAS，那么 spreading activation 相对于 flat retrieval 的真正增量价值是 ______。”
+
+空格必须根据实验结果自动填写。
+
+不能预设。
+
+⸻
+
+三十五、最终不要优化论文结论
+
+这是实验，不是论文包装。
+
+如果最终发现：
+
+persistent memory = strong
+multi-input convergence = strong
+spreading activation vs flat = no advantage
+
+就明确报告：
+
+FAS 的当前实证贡献更接近 persistent relational memory，而不是 activation dynamics 的 superiority。
+
+如果发现：
+
+persistent memory = strong
+multi-input convergence = strong
+spreading activation > flat under interference
+
+则报告：
+
+FAS provides evidence that relational spreading activation adds computational value beyond flat retrieval under multi-input interference.
+
+如果发现：
+
+FAS > flat only under specific topology
+
+则报告：
+
+The mechanism exhibits a topology-dependent operating regime.
+
+⸻
+
+三十六、完成标准
+
+只有以下全部完成，任务才算结束：
+
+* [ ]	实验代码完成；
+* [ ]	preflight 全通过；
+* [ ]	所有正式 seeds 完成；
+* [ ]	raw results 保存；
+* [ ]	statistics 完成；
+* [ ]	multiple comparison correction 完成；
+* [ ]	sanity checks 完成；
+* [ ]	permutation tests 完成；
+* [ ]	insertion-order test 完成；
+* [ ]	negative-edge test 完成；
+* [ ]	noise sweep 完成；
+* [ ]	complexity sweep 完成；
+* [ ]	input scaling 完成；
+* [ ]	topology comparison 完成；
+* [ ]	figures 完成；
+* [ ]	FINAL_REPORT.md 完成；
+* [ ]	没有修改 production FAS；
+* [ ]	没有为了结果调参；
+* [ ]	明确回答 H1/H2/H3；
+* [ ]	明确回答“FAS spreading activation 是否有超越 flat retrieval 的独立价值”。
+
+完成后直接汇报最终结果，不要询问下一步是否继续。

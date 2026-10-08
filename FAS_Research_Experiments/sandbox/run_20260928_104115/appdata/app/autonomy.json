@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "oak_planks",
+      "source": "experiment_obtain",
+      "text": "实验目标：自主获得 oak_planks",
+      "created": "2026/09/28 10:41:17",
+      "created_ts": 1790563277.2148745
+    }
+  ],
+  "explore_dirs": {
+    "north": 0,
+    "east": 0,
+    "south": 0,
+    "west": 0
+  },
+  "last_novel_ts": 1790563275.701894,
+  "updated_at": "2026/09/28 10:41:17"
+}

@@ -1,0 +1,46 @@
+{
+  "raw": [
+    {
+      "id": "ev_92483936cb",
+      "ts": 1790563867.207029,
+      "ts_str": "10:51:07",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:oak_planks",
+          "实验目标",
+          "目标:获得oak_planks"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 oak_planks：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    }
+  ]
+}

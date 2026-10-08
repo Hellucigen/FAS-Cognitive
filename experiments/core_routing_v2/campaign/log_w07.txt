@@ -1,0 +1,14 @@
+[w07] fas_full T1 seed10: succ=1 class=none
+[w07] fas_full T2 seed16: succ=1 class=none
+[w07] fas_full T4 seed2: succ=1 class=none
+[w07] llm_direct T1 seed9: succ=1 class=none
+[w07] llm_direct T2 seed16: succ=1 class=none
+[w07] llm_direct T4 seed6: succ=1 class=none
+[w07] llm_history T1 seed16: succ=1 class=none
+[w07] llm_history T3 seed12: succ=1 class=none
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.
+O

@@ -1,0 +1,58 @@
+{
+ "duration_s": 0.14,
+ "event_count": 12,
+ "counters": {},
+ "episode": "A2_B1",
+ "actions_total": 8,
+ "actions_redundant": 2,
+ "actions_invalid": 0,
+ "path_len_unique": 6,
+ "first_action": "gather_resource@oak_log",
+ "shared_action_hits": 6,
+ "types": [
+  "gather_resource",
+  "craft_item",
+  "craft_item",
+  "craft_item",
+  "craft_item",
+  "craft_item",
+  "place_block",
+  "craft_item"
+ ],
+ "targets": [
+  "oak_log",
+  "oak_planks",
+  "stick",
+  "oak_planks",
+  "crafting_table",
+  "oak_planks",
+  "crafting_table",
+  "wooden_pickaxe"
+ ],
+ "inventory": {
+  "oak_planks": 3,
+  "stick": 2,
+  "wooden_pickaxe": 1
+ },
+ "graph": {
+  "nodes": 293,
+  "edges": 444
+ },
+ "action_prior_sample": {},
+ "causal": {
+  "aggregations": 6,
+  "hypotheses": 1,
+  "promoted": []
+ },
+ "inherited_wb_nodes": 0,
+ "start_activation": {
+  "oak_log": 5.0,
+  "物品:oak_planks": 5.0,
+  "物品:stick": 5.0,
+  "物品:crafting_table": 3.7733,
+  "物品:oak_fence": 5.0
+ },
+ "success": true,
+ "success_tick": 11,
+ "ok": true
+}

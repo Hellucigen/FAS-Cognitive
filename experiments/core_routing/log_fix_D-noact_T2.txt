@@ -1,0 +1,5 @@
+[routing] D-noact T2 seed17: succ=1 dec=2 dist=0.0
+[routing] D-noact T2 seed18: succ=1 dec=3 dist=0.0
+[routing] D-noact T2 seed19: succ=1 dec=3 dist=0.0
+[routing] D-noact T2 seed20: succ=1 dec=3 dist=0.0
+done: 4 task-runs -> experiments/core_routing/ablations\summary.csv

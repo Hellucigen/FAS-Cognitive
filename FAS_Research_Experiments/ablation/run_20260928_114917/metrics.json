@@ -1,0 +1,21 @@
+{
+ "duration_s": 0.19,
+ "event_count": 4,
+ "counters": {},
+ "ablation": "-Writeback",
+ "seed": 1,
+ "success": true,
+ "success_tick": 15,
+ "graph": {
+  "nodes": 248,
+  "edges": 309
+ },
+ "inv": {
+  "oak_planks": 3,
+  "stick": 2,
+  "wooden_pickaxe": 1,
+  "cobblestone": 1
+ },
+ "action_count": 9,
+ "ok": true
+}

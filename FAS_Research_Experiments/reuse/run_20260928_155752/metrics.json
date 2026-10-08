@@ -1,0 +1,62 @@
+{
+ "duration_s": 2.9,
+ "event_count": 629,
+ "counters": {},
+ "episode": "ep2_A",
+ "actions_total": 16,
+ "actions_redundant": 15,
+ "actions_invalid": 0,
+ "first_relevant_action_idx": null,
+ "first_relevant_ticks": null,
+ "types": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "targets": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "inventory": {},
+ "graph": {
+  "nodes": 249,
+  "edges": 295
+ },
+ "causal": {
+  "aggregations": 5,
+  "hypotheses": 4,
+  "promoted": [
+   "explore_area(mystic_chunk)|self:self:explore_area:failed:timeout"
+  ]
+ },
+ "success": false,
+ "success_tick": null,
+ "ok": true
+}

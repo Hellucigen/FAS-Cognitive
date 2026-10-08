@@ -1,0 +1,135 @@
+{
+  "version": 1,
+  "seq": 0,
+  "event_seq": 4,
+  "monitors": [
+    {
+      "id": "自主行动",
+      "name": "自主行动状态",
+      "description": "自主行动的结果类别（由 AutonomousLoop 提交）",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "schema": {
+        "enum": [
+          "success",
+          "failed",
+          "idle",
+          "acting"
+        ]
+      },
+      "epsilon": null,
+      "current_value": "failed",
+      "previous_value": "success",
+      "updated_at": "2026/09/28 11:16:42",
+      "last_changed_at": "2026/09/28 11:16:42",
+      "source": "tool",
+      "mode": "event",
+      "poll_interval_s": 0.0,
+      "enabled": true,
+      "confidence": null,
+      "observation_count": 19,
+      "last_error": null,
+      "changes": [
+        {
+          "ts": "2026/09/28 11:16:42",
+          "previous": null,
+          "current": "success",
+          "delta": null,
+          "event_id": "evt_1"
+        },
+        {
+          "ts": "2026/09/28 11:16:42",
+          "previous": "success",
+          "current": "failed",
+          "delta": null,
+          "event_id": "evt_2"
+        },
+        {
+          "ts": "2026/09/28 11:16:42",
+          "previous": "failed",
+          "current": "success",
+          "delta": null,
+          "event_id": "evt_3"
+        },
+        {
+          "ts": "2026/09/28 11:16:42",
+          "previous": "success",
+          "current": "failed",
+          "delta": null,
+          "event_id": "evt_4"
+        }
+      ],
+      "created_at": "2026/09/28 11:16:42",
+      "metadata": {},
+      "updated_at_epoch": 1790565402.70539
+    }
+  ],
+  "events": [
+    {
+      "event_id": "evt_1",
+      "type": "state_changed",
+      "monitor_id": "自主行动",
+      "monitor_name": "自主行动状态",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "previous": null,
+      "current": "success",
+      "delta": null,
+      "source": "tool",
+      "ts": "2026/09/28 11:16:42",
+      "ts_epoch": 1790565402.0695086
+    },
+    {
+      "event_id": "evt_2",
+      "type": "state_changed",
+      "monitor_id": "自主行动",
+      "monitor_name": "自主行动状态",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "previous": "success",
+      "current": "failed",
+      "delta": null,
+      "source": "tool",
+      "ts": "2026/09/28 11:16:42",
+      "ts_epoch": 1790565402.414565
+    },
+    {
+      "event_id": "evt_3",
+      "type": "state_changed",
+      "monitor_id": "自主行动",
+      "monitor_name": "自主行动状态",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "previous": "failed",
+      "current": "success",
+      "delta": null,
+      "source": "tool",
+      "ts": "2026/09/28 11:16:42",
+      "ts_epoch": 1790565402.4606571
+    },
+    {
+      "event_id": "evt_4",
+      "type": "state_changed",
+      "monitor_id": "自主行动",
+      "monitor_name": "自主行动状态",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "previous": "success",
+      "current": "failed",
+      "delta": null,
+      "source": "tool",
+      "ts": "2026/09/28 11:16:42",
+      "ts_epoch": 1790565402.5758927
+    }
+  ]
+}

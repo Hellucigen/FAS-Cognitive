@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "seq": 0,
+  "event_seq": 1,
+  "monitors": [
+    {
+      "id": "自主行动",
+      "name": "自主行动状态",
+      "description": "自主行动的结果类别（由 AutonomousLoop 提交）",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "schema": {
+        "enum": [
+          "success",
+          "failed",
+          "idle",
+          "acting"
+        ]
+      },
+      "epsilon": null,
+      "current_value": "success",
+      "previous_value": null,
+      "updated_at": "2026/09/28 11:08:17",
+      "last_changed_at": "2026/09/28 11:08:15",
+      "source": "tool",
+      "mode": "event",
+      "poll_interval_s": 0.0,
+      "enabled": true,
+      "confidence": null,
+      "observation_count": 110,
+      "last_error": null,
+      "changes": [
+        {
+          "ts": "2026/09/28 11:08:15",
+          "previous": null,
+          "current": "success",
+          "delta": null,
+          "event_id": "evt_1"
+        }
+      ],
+      "created_at": "2026/09/28 11:08:15",
+      "metadata": {},
+      "updated_at_epoch": 1790564897.6008408
+    }
+  ],
+  "events": [
+    {
+      "event_id": "evt_1",
+      "type": "state_changed",
+      "monitor_id": "自主行动",
+      "monitor_name": "自主行动状态",
+      "target_type": "external",
+      "target_id": "haru_autonomy",
+      "state_type": "enum",
+      "unit": "",
+      "previous": null,
+      "current": "success",
+      "delta": null,
+      "source": "tool",
+      "ts": "2026/09/28 11:08:15",
+      "ts_epoch": 1790564895.5240204
+    }
+  ]
+}

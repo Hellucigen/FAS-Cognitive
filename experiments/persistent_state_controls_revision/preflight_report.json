@@ -1,0 +1,577 @@
+{
+ "pass": false,
+ "per_seed": [
+  {
+   "seed": 0,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 1,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 2,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 3,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 4,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 5,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 6,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 7,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 8,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  },
+  {
+   "seed": 9,
+   "metrics": {
+    "C1": {
+     "present": true,
+     "slot": 7,
+     "fail_lines": 1,
+     "n_node_lines": 8,
+     "n_lines": 22,
+     "chars": 684,
+     "tokens_est": 171.0
+    },
+    "C3b": {
+     "present": true,
+     "slot": 6,
+     "fail_lines": 4,
+     "n_node_lines": 16,
+     "n_lines": 18,
+     "chars": 515,
+     "tokens_est": 128.8
+    },
+    "C4b": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    },
+    "C4c": {
+     "present": false,
+     "slot": null,
+     "fail_lines": 0,
+     "n_node_lines": 8,
+     "n_lines": 10,
+     "chars": 239,
+     "tokens_est": 59.8
+    }
+   },
+   "neg_edges": {
+    "C4b": 2,
+    "C4c": 0
+   },
+   "facts_eq_C3": true,
+   "C4b_C4c_present_diff": false,
+   "C4b_C4c_slot_diff": [
+    null,
+    null
+   ]
+  }
+ ],
+ "failures": [
+  "P1 C4b seed0: tool_missing absent",
+  "P1 C4c seed0: tool_missing absent",
+  "P2 C4b seed0: slot undefined",
+  "P2 C4c seed0: slot undefined",
+  "P3 C4b seed0: char ratio 0.35",
+  "P3 C4c seed0: char ratio 0.35",
+  "P1 C4b seed1: tool_missing absent",
+  "P1 C4c seed1: tool_missing absent",
+  "P2 C4b seed1: slot undefined",
+  "P2 C4c seed1: slot undefined",
+  "P3 C4b seed1: char ratio 0.35",
+  "P3 C4c seed1: char ratio 0.35",
+  "P1 C4b seed2: tool_missing absent",
+  "P1 C4c seed2: tool_missing absent",
+  "P2 C4b seed2: slot undefined",
+  "P2 C4c seed2: slot undefined",
+  "P3 C4b seed2: char ratio 0.35",
+  "P3 C4c seed2: char ratio 0.35",
+  "P1 C4b seed3: tool_missing absent",
+  "P1 C4c seed3: tool_missing absent",
+  "P2 C4b seed3: slot undefined",
+  "P2 C4c seed3: slot undefined",
+  "P3 C4b seed3: char ratio 0.35",
+  "P3 C4c seed3: char ratio 0.35",
+  "P1 C4b seed4: tool_missing absent",
+  "P1 C4c seed4: tool_missing absent",
+  "P2 C4b seed4: slot undefined",
+  "P2 C4c seed4: slot undefined",
+  "P3 C4b seed4: char ratio 0.35",
+  "P3 C4c seed4: char ratio 0.35",
+  "P1 C4b seed5: tool_missing absent",
+  "P1 C4c seed5: tool_missing absent",
+  "P2 C4b seed5: slot undefined",
+  "P2 C4c seed5: slot undefined",
+  "P3 C4b seed5: char ratio 0.35",
+  "P3 C4c seed5: char ratio 0.35",
+  "P1 C4b seed6: tool_missing absent",
+  "P1 C4c seed6: tool_missing absent",
+  "P2 C4b seed6: slot undefined",
+  "P2 C4c seed6: slot undefined",
+  "P3 C4b seed6: char ratio 0.35",
+  "P3 C4c seed6: char ratio 0.35",
+  "P1 C4b seed7: tool_missing absent",
+  "P1 C4c seed7: tool_missing absent",
+  "P2 C4b seed7: slot undefined",
+  "P2 C4c seed7: slot undefined",
+  "P3 C4b seed7: char ratio 0.35",
+  "P3 C4c seed7: char ratio 0.35",
+  "P1 C4b seed8: tool_missing absent",
+  "P1 C4c seed8: tool_missing absent",
+  "P2 C4b seed8: slot undefined",
+  "P2 C4c seed8: slot undefined",
+  "P3 C4b seed8: char ratio 0.35",
+  "P3 C4c seed8: char ratio 0.35",
+  "P1 C4b seed9: tool_missing absent",
+  "P1 C4c seed9: tool_missing absent",
+  "P2 C4b seed9: slot undefined",
+  "P2 C4c seed9: slot undefined",
+  "P3 C4b seed9: char ratio 0.35",
+  "P3 C4c seed9: char ratio 0.35"
+ ]
+}

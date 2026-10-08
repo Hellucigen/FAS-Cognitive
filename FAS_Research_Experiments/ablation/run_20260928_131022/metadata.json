@@ -1,0 +1,45 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260928_131022",
+ "family": "ablation",
+ "label": "-Diffusion-Episodic",
+ "mode": "sandbox",
+ "seed": 3,
+ "timestamp": "2026-09-28 13:10:22.948",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {
+  "mode": "learning_closed_loop",
+  "goal_obtain": "oak_planks",
+  "attention_floor": 0.9,
+  "prior_extra": [
+   {
+    "result": "iron_ingot",
+    "kind": "smelt",
+    "tool": "furnace",
+    "inputs": {
+     "raw_iron": 1
+    },
+    "fuel": true,
+    "provenance": {
+     "knowledge_type": "prior",
+     "source": "offline_sim",
+     "version_verified": false,
+     "confidence": 0.6
+    }
+   }
+  ],
+  "seed": 3
+ },
+ "extra": {
+  "ablation": "-Diffusion-Episodic",
+  "goal": "oak_planks",
+  "switches": {
+   "diffusion_on": false,
+   "causal_on": false
+  },
+  "max_ticks": 120
+ }
+}

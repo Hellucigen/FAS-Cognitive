@@ -1,0 +1,664 @@
+{
+ "experiment": "H_longchain",
+ "condition": "L3",
+ "seed": 5,
+ "max_ticks": 1200,
+ "result": {
+  "episode": "lc_L3",
+  "actions_total": 65,
+  "actions_redundant": 58,
+  "actions_failed": 33,
+  "fail_reasons": [
+   "failed:timeout",
+   "failed:tool_missing:stone_pickaxe",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout",
+   "failed:timeout"
+  ],
+  "path_len_unique": 7,
+  "types": [
+   "explore_area",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_area",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction",
+   "explore_direction",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "amble",
+   "explore_direction",
+   "explore_direction"
+  ],
+  "targets": [
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ore",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "iron_ingot",
+   "south",
+   "west",
+   "",
+   "north",
+   "",
+   "east",
+   "",
+   "south",
+   "west",
+   "north",
+   "east",
+   "",
+   "south",
+   "west",
+   "north",
+   "",
+   "east",
+   "",
+   "south",
+   "",
+   "west",
+   "north",
+   "",
+   "east",
+   "",
+   "south",
+   "",
+   "west",
+   "north",
+   "",
+   "east",
+   "",
+   "south",
+   "",
+   "west",
+   "north",
+   "",
+   "east",
+   "",
+   "south",
+   "",
+   "west",
+   "north",
+   "east",
+   "south",
+   "",
+   "west",
+   "",
+   "north",
+   "",
+   "east",
+   "south"
+  ],
+  "inventory": {},
+  "graph_delta": {
+   "nodes": 89,
+   "edges": 143
+  },
+  "writeback_promoted": [
+   "amble|self:self:amble:failed:timeout",
+   "explore_area(iron_ingot)|self:self:explore_area:failed:timeout",
+   "explore_area(iron_ingot)|self:self:explore_area:succeeded",
+   "explore_direction(east)|self:self:explore_direction:failed:timeout",
+   "explore_direction(north)|self:self:explore_direction:failed:timeout",
+   "explore_direction(north)|self:self:explore_direction:succeeded",
+   "explore_direction(south)|self:self:explore_direction:failed:timeout",
+   "explore_direction(south)|self:self:explore_direction:succeeded",
+   "explore_direction(west)|self:self:explore_direction:failed:timeout",
+   "explore_direction(west)|self:self:explore_direction:succeeded"
+  ],
+  "graph": {
+   "nodes": 306,
+   "edges": 390
+  },
+  "success": false,
+  "success_tick": null,
+  "rank_trace": [
+   {
+    "tick": 0,
+    "rank_iron": 1
+   },
+   {
+    "tick": 10,
+    "rank_iron": 16
+   },
+   {
+    "tick": 20,
+    "rank_iron": 20
+   },
+   {
+    "tick": 30,
+    "rank_iron": 5
+   },
+   {
+    "tick": 40,
+    "rank_iron": 4
+   },
+   {
+    "tick": 50,
+    "rank_iron": 5
+   },
+   {
+    "tick": 60,
+    "rank_iron": 6
+   },
+   {
+    "tick": 70,
+    "rank_iron": 7
+   },
+   {
+    "tick": 80,
+    "rank_iron": 11
+   },
+   {
+    "tick": 90,
+    "rank_iron": 13
+   },
+   {
+    "tick": 100,
+    "rank_iron": 1
+   },
+   {
+    "tick": 110,
+    "rank_iron": 1
+   },
+   {
+    "tick": 120,
+    "rank_iron": 1
+   },
+   {
+    "tick": 130,
+    "rank_iron": 1
+   },
+   {
+    "tick": 140,
+    "rank_iron": 1
+   },
+   {
+    "tick": 150,
+    "rank_iron": 1
+   },
+   {
+    "tick": 160,
+    "rank_iron": 1
+   },
+   {
+    "tick": 170,
+    "rank_iron": 1
+   },
+   {
+    "tick": 180,
+    "rank_iron": 1
+   },
+   {
+    "tick": 190,
+    "rank_iron": 1
+   },
+   {
+    "tick": 200,
+    "rank_iron": 1
+   },
+   {
+    "tick": 210,
+    "rank_iron": 1
+   },
+   {
+    "tick": 220,
+    "rank_iron": 1
+   },
+   {
+    "tick": 230,
+    "rank_iron": 1
+   },
+   {
+    "tick": 240,
+    "rank_iron": 1
+   },
+   {
+    "tick": 250,
+    "rank_iron": 1
+   },
+   {
+    "tick": 260,
+    "rank_iron": 1
+   },
+   {
+    "tick": 270,
+    "rank_iron": 1
+   },
+   {
+    "tick": 280,
+    "rank_iron": 1
+   },
+   {
+    "tick": 290,
+    "rank_iron": 1
+   },
+   {
+    "tick": 300,
+    "rank_iron": 1
+   },
+   {
+    "tick": 310,
+    "rank_iron": 1
+   },
+   {
+    "tick": 320,
+    "rank_iron": 1
+   },
+   {
+    "tick": 330,
+    "rank_iron": 1
+   },
+   {
+    "tick": 340,
+    "rank_iron": 1
+   },
+   {
+    "tick": 350,
+    "rank_iron": 1
+   },
+   {
+    "tick": 360,
+    "rank_iron": 1
+   },
+   {
+    "tick": 370,
+    "rank_iron": 1
+   },
+   {
+    "tick": 380,
+    "rank_iron": 1
+   },
+   {
+    "tick": 390,
+    "rank_iron": 1
+   },
+   {
+    "tick": 400,
+    "rank_iron": 1
+   },
+   {
+    "tick": 410,
+    "rank_iron": 1
+   },
+   {
+    "tick": 420,
+    "rank_iron": 1
+   },
+   {
+    "tick": 430,
+    "rank_iron": 1
+   },
+   {
+    "tick": 440,
+    "rank_iron": 1
+   },
+   {
+    "tick": 450,
+    "rank_iron": 1
+   },
+   {
+    "tick": 460,
+    "rank_iron": 1
+   },
+   {
+    "tick": 470,
+    "rank_iron": 1
+   },
+   {
+    "tick": 480,
+    "rank_iron": 1
+   },
+   {
+    "tick": 490,
+    "rank_iron": 1
+   },
+   {
+    "tick": 500,
+    "rank_iron": 1
+   },
+   {
+    "tick": 510,
+    "rank_iron": 1
+   },
+   {
+    "tick": 520,
+    "rank_iron": 1
+   },
+   {
+    "tick": 530,
+    "rank_iron": 1
+   },
+   {
+    "tick": 540,
+    "rank_iron": 1
+   },
+   {
+    "tick": 550,
+    "rank_iron": 1
+   },
+   {
+    "tick": 560,
+    "rank_iron": 1
+   },
+   {
+    "tick": 570,
+    "rank_iron": 1
+   },
+   {
+    "tick": 580,
+    "rank_iron": 1
+   },
+   {
+    "tick": 590,
+    "rank_iron": 1
+   },
+   {
+    "tick": 600,
+    "rank_iron": 1
+   },
+   {
+    "tick": 610,
+    "rank_iron": 1
+   },
+   {
+    "tick": 620,
+    "rank_iron": 1
+   },
+   {
+    "tick": 630,
+    "rank_iron": 1
+   },
+   {
+    "tick": 640,
+    "rank_iron": 1
+   },
+   {
+    "tick": 650,
+    "rank_iron": 1
+   },
+   {
+    "tick": 660,
+    "rank_iron": 1
+   },
+   {
+    "tick": 670,
+    "rank_iron": 1
+   },
+   {
+    "tick": 680,
+    "rank_iron": 1
+   },
+   {
+    "tick": 690,
+    "rank_iron": 1
+   },
+   {
+    "tick": 700,
+    "rank_iron": 1
+   },
+   {
+    "tick": 710,
+    "rank_iron": 1
+   },
+   {
+    "tick": 720,
+    "rank_iron": 1
+   },
+   {
+    "tick": 730,
+    "rank_iron": 1
+   },
+   {
+    "tick": 740,
+    "rank_iron": 1
+   },
+   {
+    "tick": 750,
+    "rank_iron": 1
+   },
+   {
+    "tick": 760,
+    "rank_iron": 1
+   },
+   {
+    "tick": 770,
+    "rank_iron": 1
+   },
+   {
+    "tick": 780,
+    "rank_iron": 1
+   },
+   {
+    "tick": 790,
+    "rank_iron": 1
+   },
+   {
+    "tick": 800,
+    "rank_iron": 1
+   },
+   {
+    "tick": 810,
+    "rank_iron": 1
+   },
+   {
+    "tick": 820,
+    "rank_iron": 1
+   },
+   {
+    "tick": 830,
+    "rank_iron": 1
+   },
+   {
+    "tick": 840,
+    "rank_iron": 1
+   },
+   {
+    "tick": 850,
+    "rank_iron": 1
+   },
+   {
+    "tick": 860,
+    "rank_iron": 1
+   },
+   {
+    "tick": 870,
+    "rank_iron": 1
+   },
+   {
+    "tick": 880,
+    "rank_iron": 1
+   },
+   {
+    "tick": 890,
+    "rank_iron": 1
+   },
+   {
+    "tick": 900,
+    "rank_iron": 1
+   },
+   {
+    "tick": 910,
+    "rank_iron": 1
+   },
+   {
+    "tick": 920,
+    "rank_iron": 1
+   },
+   {
+    "tick": 930,
+    "rank_iron": 1
+   },
+   {
+    "tick": 940,
+    "rank_iron": 1
+   },
+   {
+    "tick": 950,
+    "rank_iron": 1
+   },
+   {
+    "tick": 960,
+    "rank_iron": 1
+   },
+   {
+    "tick": 970,
+    "rank_iron": 1
+   },
+   {
+    "tick": 980,
+    "rank_iron": 1
+   },
+   {
+    "tick": 990,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1000,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1010,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1020,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1030,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1040,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1050,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1060,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1070,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1080,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1090,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1100,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1110,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1120,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1130,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1140,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1150,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1160,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1170,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1180,
+    "rank_iron": 1
+   },
+   {
+    "tick": 1190,
+    "rank_iron": 1
+   }
+  ]
+ }
+}

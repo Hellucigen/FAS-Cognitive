@@ -1,0 +1,15 @@
+{
+ "duration_s": 3.58,
+ "event_count": 6,
+ "counters": {},
+ "rounds": [],
+ "hypotheses": [],
+ "hyp_count": 0,
+ "aggregations": {},
+ "graph": {
+  "nodes": 349,
+  "edges": 602
+ },
+ "inv": {},
+ "ok": true
+}

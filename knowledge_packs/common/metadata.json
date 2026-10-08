@@ -1,0 +1,9 @@
+{
+  "name": "common",
+  "type": "semantic",
+  "enabled": true,
+  "priority": 10,
+  "description": "Default common knowledge pack (user knowledge graph)",
+  "author": "Fascinator",
+  "version": "1.0"
+}

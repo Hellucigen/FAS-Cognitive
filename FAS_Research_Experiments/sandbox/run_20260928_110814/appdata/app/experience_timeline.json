@@ -1,0 +1,96 @@
+{
+  "raw": [
+    {
+      "id": "ev_2bb760d24f",
+      "ts": 1790564895.509306,
+      "ts_str": "11:08:15",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_area",
+      "content": {
+        "target": "stone",
+        "params": {
+          "goal": "stone",
+          "direction": "east",
+          "max_time": 240.0,
+          "max_distance": 32.0,
+          "night_stop": false
+        },
+        "reason": [
+          "物品:stone",
+          "实验目标",
+          "目标:获得stone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "定向找到 stone",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "explore_area mot=user_goal drive=0.80 att=0.18 nov=0.30 tend=0.00 int=0.00 risk=0.00 rec=0.00 fail=0.00 → 0.345"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {
+        "repeat": 105,
+        "last_ts": 1790564897.4846492
+      }
+    },
+    {
+      "id": "ev_f83a036d53",
+      "ts": 1790564897.509626,
+      "ts_str": "11:08:17",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_area",
+      "content": {
+        "target": "stone",
+        "params": {
+          "goal": "stone",
+          "direction": "west",
+          "max_time": 240.0,
+          "max_distance": 32.0,
+          "night_stop": false
+        },
+        "reason": [
+          "物品:stone",
+          "实验目标",
+          "目标:获得stone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "定向找到 stone",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 stone：stone 图上无产出路径：定向探索"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {
+        "repeat": 1,
+        "last_ts": 1790564897.533056
+      }
+    }
+  ]
+}

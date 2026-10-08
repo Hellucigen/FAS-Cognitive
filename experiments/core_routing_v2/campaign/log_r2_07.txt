@@ -1,0 +1,14 @@
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6147.59it/s]
+[wr2_07] llm_rag T2 seed19: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8715.63it/s]
+[wr2_07] llm_rag T4 seed15: succ=1 class=none
+[wr2_07] random_ctx T2 seed6: succ=1 class=none
+[wr2_07] random_ctx T3 seed10: succ=1 class=none
+[wr2_07] random_ctx T4 seed15: succ=1 class=none
+[wr2_07] D-noact T3 seed4: succ=1 class=none
+[wr2_07] D-nodemand T2 seed10: succ=1 class=none
+[wr2_07] D-nodemand T3 seed9: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10911.86it/s]
+[wr2_07] D-flat T2 seed15: succ=1 class=none
+[wr2_07] D-flat T3 seed19: succ=0 class=none
+[wr2_07] slice complete: 10 runs (+retries)

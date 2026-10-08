@@ -1,0 +1,100 @@
+{
+ "summary": {
+  "B0-direct": {
+   "exact": 0,
+   "partial": 0,
+   "total": 30,
+   "rate": 0.0
+  },
+  "B1-history": {
+   "exact": 14,
+   "partial": 14,
+   "total": 30,
+   "rate": 0.467
+  },
+  "B2-retrieval": {
+   "exact": 16,
+   "partial": 17,
+   "total": 30,
+   "rate": 0.533
+  },
+  "FAS-G3": {
+   "exact": 0,
+   "partial": 0,
+   "total": 30,
+   "rate": 0.0
+  },
+  "FAS-G2": {
+   "exact": 9,
+   "partial": 9,
+   "total": 30,
+   "rate": 0.3
+  },
+  "FAS-G1": {
+   "exact": 9,
+   "partial": 9,
+   "total": 30,
+   "rate": 0.3
+  },
+  "FAS-G3-nospread": {
+   "exact": 3,
+   "partial": 6,
+   "total": 30,
+   "rate": 0.1
+  }
+ },
+ "tests": [
+  {
+   "hypothesis": "H1 FAS-G3>FAS-G1",
+   "n": 30,
+   "wins": 0,
+   "losses": 9,
+   "mcnemar_p": 0.003906
+  },
+  {
+   "hypothesis": "H2 FAS-G3>B0",
+   "n": 30,
+   "wins": 0,
+   "losses": 0,
+   "mcnemar_p": 1.0
+  },
+  {
+   "hypothesis": "H3 FAS-G3>B1",
+   "n": 30,
+   "wins": 0,
+   "losses": 14,
+   "mcnemar_p": 0.000122
+  },
+  {
+   "hypothesis": "H4 FAS-G3>B2",
+   "n": 30,
+   "wins": 0,
+   "losses": 16,
+   "mcnemar_p": 3.1e-05
+  },
+  {
+   "hypothesis": "H5 FAS-G3>no-spread",
+   "n": 30,
+   "wins": 0,
+   "losses": 3,
+   "mcnemar_p": 0.25
+  },
+  {
+   "hypothesis": "H6 G3>G1 cross-ep",
+   "n": 30,
+   "wins": 0,
+   "losses": 9,
+   "mcnemar_p": 0.003906
+  },
+  {
+   "hypothesis": "H5s FAS>no-spread (score)",
+   "n": 6,
+   "wilcoxon_p": 1.0
+  },
+  {
+   "hypothesis": "H6s G3>G1 (score)",
+   "n": 9,
+   "wilcoxon_p": 1.0
+  }
+ ]
+}

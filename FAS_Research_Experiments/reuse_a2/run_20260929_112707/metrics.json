@@ -1,0 +1,16 @@
+{
+ "duration_s": 4.98,
+ "event_count": 16,
+ "counters": {},
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse_a2\\A1_pilot_graph_s1.json",
+ "causal": {
+  "aggregations": 6,
+  "hypotheses": 6,
+  "promoted": []
+ },
+ "rounds_done": {
+  "1": 11,
+  "2": 7
+ },
+ "ok": true
+}

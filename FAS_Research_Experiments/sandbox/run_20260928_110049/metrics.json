@@ -1,0 +1,17 @@
+{
+ "duration_s": 1.78,
+ "event_count": 5,
+ "counters": {},
+ "success_tick": 6,
+ "env_change_tick": 70,
+ "graph": {
+  "nodes": 241,
+  "edges": 278
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "goal_states": [],
+ "ok": true
+}

@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fascinator 技术报告</title>
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --border: #d1d9e0;
+    --code-bg: #f6f8fa; --accent: #0969da; --th-bg: #f6f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --border: #3d444d;
+      --code-bg: #161b22; --accent: #4493f8; --th-bg: #161b22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.75; font-size: 16px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 48px 28px 120px; }
+  h1, h2, h3, h4 { line-height: 1.3; margin-top: 1.8em; margin-bottom: .6em; font-weight: 600; }
+  h1 { font-size: 2.1em; border-bottom: 2px solid var(--border); padding-bottom: .3em; margin-top: 0; }
+  h2 { font-size: 1.55em; border-bottom: 1px solid var(--border); padding-bottom: .25em; }
+  h3 { font-size: 1.22em; }
+  h4 { font-size: 1.05em; color: var(--muted); }
+  p { margin: .8em 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    background: var(--code-bg); padding: .18em .4em; border-radius: 5px;
+    font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace;
+    font-size: .88em;
+  }
+  pre {
+    background: var(--code-bg); padding: 14px 16px; border-radius: 8px;
+    overflow-x: auto; border: 1px solid var(--border);
+  }
+  pre code { background: none; padding: 0; font-size: .86em; line-height: 1.55; }
+  blockquote {
+    margin: 1em 0; padding: .4em 1em; border-left: 4px solid var(--border);
+    color: var(--muted); background: var(--code-bg); border-radius: 0 6px 6px 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: .92em; display: block; overflow-x: auto; }
+  th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--th-bg); font-weight: 600; white-space: nowrap; }
+  tr:nth-child(even) td { background: color-mix(in srgb, var(--code-bg) 45%, transparent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }
+  .mermaid {
+    background: var(--code-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin: 1.4em 0; text-align: center; overflow-x: auto;
+  }
+  .mermaid svg { max-width: 100%; height: auto; }
+  /* 顶部目录悬浮按钮 */
+  #tocbtn {
+    position: fixed; right: 22px; bottom: 22px; z-index: 99;
+    background: var(--accent); color: #fff; border: none; border-radius: 999px;
+    padding: 11px 20px; font-size: 14px; cursor: pointer; opacity: .92;
+    box-shadow: 0 3px 14px rgba(0,0,0,.22);
+  }
+  #tocbtn:hover { opacity: 1; }
+  #toast {
+    position: fixed; left: 50%; transform: translateX(-50%); top: 18px; z-index: 100;
+    background: #b42318; color: #fff; padding: 10px 18px; border-radius: 8px;
+    font-size: 14px; display: none; max-width: 88vw;
+  }
+</style>
+</head>
+<body>
+<div id="toast"></div>
+<div class="wrap" id="content"><p style="color:#888">正在渲染报告…</p></div>
+<button id="tocbtn" onclick="document.getElementById('content').scrollIntoView({behavior:'smooth'})">↑ 回到顶部</button>
+
+<script type="text/plain" id="md-source">
+# Fascinator 技术报告
+
+> 对象：`E:\Project\Fascinator` 全代码库
+> 版本：2026-09-14 快照（工作区含未提交改动）；**2026-09-15 增补安全修复，见 §18.4**；**2026-09-22 按现行代码全面校对 §18（A 项销账/B 项修复，见 §18.5）与 §19 附录**；**2026-09-22 晚：稳定化收尾（§18.6、§17.4 启动/停机守卫、§14 配置死键清洗、§16 套件 72 项）**；**同日补记两轮：/api/nlp 作用域地雷（§18.6 事后补记）与 MC 闭环三雷（§18.6 事后补记 2，套件 73 项）**
+> 报告目标：讲清楚"这个系统能做什么、每块代码在干什么、数据怎么流、怎么接进来"
+>
+> ⚠️ 行号口径：正文引用的行号基于 09-14 快照。09-15 的安全修复使 `app.py` 增加约
+> 63 行、`diffusion_engine.py` 增加约 30 行，其后各处行号整体后移（关键锚点已按新
+> 快照更新：`process_nlp` 1925→1966、`_save_writer_loop` 1330→1363、
+> `diffuse_step` 728→756、`execute_action` 1100→1128）。
+
+---
+
+## 目录
+
+1. [一页速览](#1-一页速览)
+2. [设计哲学：三条信条](#2-设计哲学三条信条)
+3. [总体架构](#3-总体架构)
+4. [数据模型：统一知识图谱](#4-数据模型统一知识图谱)
+5. [核心引擎：激活扩散](#5-核心引擎激活扩散)
+6. [主流程：一个对话回合的完整生命周期](#6-主流程一个对话回合的完整生命周期)
+7. [语言子系统](#7-语言子系统)
+8. [记忆、自我与学习](#8-记忆自我与学习)
+9. [自主性：无输入时她在做什么](#9-自主性无输入时她在做什么)
+10. [认知调节：锁 / 状态检测器 / 触发器](#10-认知调节锁--状态检测器--触发器)
+11. [具身与环境接口](#11-具身与环境接口)
+12. [API 接口总览](#12-api-接口总览)
+13. [前端](#13-前端)
+14. [配置参数全集](#14-配置参数全集)
+15. [持久化文件地图](#15-持久化文件地图)
+16. [测试与质量保障](#16-测试与质量保障)
+17. [运行手册](#17-运行手册)
+18. [成熟度评估与已知限制](#18-成熟度评估与已知限制)
+19. [附录：文件清单](#19-附录文件清单)
+
+---
+
+## 1. 一页速览
+
+**Fascinator 是什么**：一个"认知架构"研究原型。它不是聊天机器人框架，而是一次实验——把**语义记忆、情景记忆、程序性记忆、情绪、自我、行为倾向**全部塞进**同一张知识图谱**里，然后用**激活扩散**（spreading activation）这一个机制去驱动所有认知行为：注意力聚焦、记忆召回、情绪反应、要不要说话、说什么。
+
+**一句话概括信息流**：
+
+```
+用户说一句话 → LLM 把它拆成图上的节点和边 → 这些节点被"点亮"
+→ 激活沿边扩散、衰减、竞争 → 活得最好的若干节点成为"当前在想的事"（Top-K）
+→ 如果"LLM回答"这个节点被顶过阈值，就把 Top-K 交给 LLM 说成人话
+```
+
+**规模**（截至本快照）：
+
+| 指标 | 数值 |
+|---|---|
+| Python 代码总量 | 40,557 行（含测试/脚本/原型） |
+| 核心运行时代码 | 27,854 行（`app.py` 6035 行为单文件最大头） |
+| 当前运行图谱 | **651 节点 / 1084 边** |
+| Flask API 端点 | 145 个 |
+| 测试套件 | 72 个脚本式文件（71 个离线回归 + 1 个活体冒烟），2026-09-22 收尾全套件 72/72 |
+| 前端 | `index.html` 2305 行，12 个标签页 |
+
+**技术栈**：Python 3.10+ / Flask / FAISS / sentence-transformers(BGE-small-zh) / LLM 走小米 MiMo（默认）或 DeepSeek API，Ollama 本地后端存在但默认关闭 / Mineflayer(Node.js) 做 Minecraft 具身。
+
+**能干什么**（真实能力，非愿景）：
+
+- 多轮对话，且回答基于图检索而非纯 LLM 幻觉（Top-K 可追溯）
+- 遇到不认识的词会**主动反问**（好奇心机制），用户回答后自动沉淀进图
+- 记住经历类事实，带时间锚点、父子事件层级
+- 有情绪节点、有偏好（边权）、有自我模型、有行为倾向
+- 空闲时**自主行动**：在 Minecraft 里观察/靠近/跟随/采集/撤离（零 LLM，纯确定性）
+- 认知调节：可以给任意对象加锁、定义状态检测器、定义触发器
+- 视觉（截屏 OCR / 对象检测）、听觉（语音/音乐/环境声分类）两条感知通道
+- 多通道：不只在网页聊天，游戏聊天框里说话也走同一条认知管线
+
+---
+
+## 2. 设计哲学：三条信条
+
+这三条不是口号，代码里到处都是它们留下的痕迹（注释、守卫、测试）。
+
+### 信条一：万物皆图（Everything is Graph）
+
+> `self_graph.py:5` — "禁止新增 PersonalityManager / EmotionManager / PreferenceManager / GoalManager / IdentityManager / ReflectionManager / ExperienceManager 或任何独立保存状态的 Python 对象。所有认知状态必须由：节点 + 边 + 边权 + 激活度共同决定。"
+
+含义：**不要存储结果，而是存储关系**。比如"她喜欢 Minecraft"不是某个布尔字段，而是 `Self -[喜欢 w=0.72]-> Minecraft` 这条边；"她现在心情不好"不是某个 mood 变量，而是 `难过` 节点的激活值高。
+
+后果：
+- 倾向会自然衰减：disposition 节点强度按 `DECAY_FACTOR=0.97` 逐反思周期衰减（`decay_all` 挂 reflection 节拍）；`Self-[喜欢]->X` 偏好边本身**没有**独立的时间衰减参数（2026-09-22 收尾核实：旧文档所写 `preference_decay_per_day` 是从未被读取的死键，已删）
+- 情绪会参与扩散（情绪词是图节点，`type=emotion`）
+- 任何一次认知活动都**可观测、可追溯、可解释**
+
+**例外清单**（这些刻意不入图，见 `docs/fas_cognitive_architecture_v2.md` §五）：自然语言句子本身、每轮回答的原始文本（进 `chat_log`）、扩散中间量、向量索引、阈值比较器本身。
+
+### 信条二：注意力由激活竞争产生，不是代码 if-else 决定
+
+旧式做法是"如果用户问天气 → 走天气分支"。Fascinator 的做法是：把"回答""追问""沉默""搜索"都做成图上的**行为节点**，让它们互相竞争，谁的激活高谁执行；都没顶过阈值就**真的沉默**。
+
+这条信条在代码里的硬约束（`docs/fas_cognitive_architecture_v2.md` §六）：固定规则只允许出现在三个地方——
+1. **输入校验**（白名单、JSON 格式）
+2. **物理守恒**（能量钳制、fire-once、队列顺序）
+3. **发育期脚手架**（明确标注可降级的临时兜底）
+
+### 信条三：可解释性优先于性能
+
+代价体现在代码里：大量 `logger.info` 记录决策依据（每轮都打印"回答区节点: X(2.31), Y(1.87)..."）、`explain` 字段随候选一起返回前端、`cycle_id` 贯穿所有内部状态写入。这是有意的——她为什么这么回答，必须能查。
+
+---
+
+## 3. 总体架构
+
+### 3.1 分层视图
+
+```mermaid
+graph TB
+    subgraph L1["① 入口层 · 谁在跟她说话"]
+        WEB["Web 前端<br/>index.html"]
+        MCCHAT["游戏内聊天<br/>minecraft_channel.py"]
+        CHANNEL["通道抽象<br/>conversation_channel.py"]
+        WEB --> API
+        MCCHAT --> CHANNEL
+        CHANNEL -->|"HTTP 调自己的 /api/nlp"| API
+    end
+
+    subgraph L2["② 服务层 · app.py (6035 行, 145 路由)"]
+        API["Flask 路由 /api/*"]
+        TURN["对话回合管线<br/>process_nlp() app.py:1925"]
+        SAVE["异步存盘线程<br/>_save_writer_loop app.py:1330"]
+        API --> TURN
+        TURN --> SAVE
+    end
+
+    subgraph L3["③ 认知层 · 决策在这里发生"]
+        NLP["NLP 感知器<br/>nlp_processor.py"]
+        DIFF["激活扩散引擎<br/>diffusion_engine.py"]
+        DIALOG["交流决策层<br/>dialogue_decision.py"]
+        MODES["LLM 参与模式 + 预算<br/>cognition_modes.py"]
+        TURN --> NLP
+        TURN --> DIFF
+        TURN --> DIALOG
+        TURN --> MODES
+    end
+
+    subgraph L4["④ 记忆与自我层"]
+        KG["统一知识图谱<br/>graph_model.py"]
+        EMB["语义检索 FAISS+BGE<br/>embedding_manager.py"]
+        BUF["情景缓冲区<br/>episodic_buffer.py"]
+        SELF["Self 模型<br/>self_model.py / self_graph.py"]
+        DISP["行为倾向<br/>disposition_store.py"]
+        DIFF --> KG
+        EMB --> DIFF
+        KG --> SELF
+        KG --> DISP
+    end
+
+    subgraph L5["⑤ 自主与调节层"]
+        CC["持续认知循环<br/>continuous_cognition.py"]
+        AUT["自主行动闭环<br/>autonomy.py"]
+        REG["认知调节<br/>cognitive_regulation.py"]
+        INT["内部状态<br/>internal_state.py"]
+        CC --> AUT
+        CC --> REG
+        AUT --> INT
+    end
+
+    subgraph L6["⑥ 具身层 · 手脚与感官"]
+        MCE["Minecraft 具身<br/>minecraft_embodiment.py"]
+        BRIDGE["HTTP 桥 :5010<br/>minecraft_bridge.py"]
+        BOTJS["bot.js (Mineflayer)"]
+        EYE["Eye 屏幕 OCR"]
+        VIS["Vision 对象检测"]
+        EAR["Ear 听觉"]
+        MCE --> BRIDGE --> BOTJS
+    end
+
+    L3 --> L4
+    L4 --> L5
+    L5 --> L6
+    L6 -->|"感知进图"| L4
+```
+
+### 3.2 关键设计决策表
+
+| 决策 | 做法 | 代价 / 收益 |
+|---|---|---|
+| 单进程单图 | 一个 Python 进程持有一张图，`threading.RLock` 保护 | 简单、可直接调试；无法水平扩展 |
+| 单文件后端 | 全部路由写在 `app.py`（5972 行） | 找东西靠 grep；但避免了循环依赖 |
+| LLM 是"增强器"不是"中枢" | LLM 挂了/超预算 → 图谱继续跑，降级为不回答 | 韧性好；但降级时回答质量骤降 |
+| 意图层与具身层解耦 | `autonomy.py` 只产生语义意图，具身适配器执行 | 换环境只换适配器；需要写适配器接口 |
+| 持久化用 JSON | 图谱、状态、日志全是 JSON 文件 | 可读、可 diff、可用 git 管；大图会慢 |
+
+---
+
+## 4. 数据模型：统一知识图谱
+
+代码位置：`graph_model.py`（616 行）
+
+### 4.1 Node —— 节点
+
+| 字段 | 类型 | 默认 | 含义 |
+|---|---|---|---|
+| `id` | str | 必填 | 节点标识（**就是节点名本身**，中文名直接当 ID） |
+| `weight` | float | 0.0 | **静态**先验重要性，裁剪到 `[-2.0, 2.0]` |
+| `activation` | float | 0.0 | **运行时**动态激活值（≥0，受空间 cap 限制） |
+| `label` | enum | declarative-semantic | 记忆类型，见下表 |
+| `graph_space` | enum | semantic | 认知空间，决定生命周期与传播参数 |
+| `execution` | str\|None | None | 程序性节点的 Python 代码字符串 |
+| `confidence` | float | 0.5 | 知识置信度 `[0,1]` |
+| `extra_attrs` | dict | {} | 自由属性（`type`、`aliases`、`self_capability`…） |
+| `created` / `last_access` | str | now | 时间戳 `YYYY/MM/DD HH:MM:SS` |
+
+**weight 与 activation 的分离**是关键设计：`weight` 是"这条知识有多重要"（长期、缓慢变化），`activation` 是"此刻它有多活跃"（瞬时、每轮清零重来）。服务器重启时 **所有 activation 归零**（`app.py:249-258`），因为"激活是瞬时认知状态，不应随图谱结构持久化"。
+
+#### label —— 记忆类型（5 种）
+
+| label | 含义 | 当前数量 |
+|---|---|---|
+| `declarative-semantic` | 语义记忆：客观事实/概念 | 515 |
+| `declarative-episodic` | 情景记忆：个人经历/事件 | 83 |
+| `infrastructure` | 基础设施：引擎零件，不参与认知输出 | 29 |
+| `procedural` | 程序性记忆：可执行动作 | 23 |
+| `self` | 自我节点（只有 1 个：`Self`） | 1 |
+
+#### graph_space —— 认知空间（4 种）
+
+这是 2026-09 引入的"架构重评估 0.1"改造。**空间不限制连接**（跨空间联想是核心能力），只决定**生命周期和传播动力学**：
+
+| 空间 | 语义 | λ 衰减 | β 增益 | 允许双向 | 激活上限 | 当前数量 |
+|---|---|---|---|---|---|---|
+| `semantic` | 客观知识 | 0.05 | 1.0 | ✅ | 5.0 | 470 |
+| `episodic` | 经历/事件 | **0.15**（快忘） | 0.7 | ❌ | 3.0 | 57 |
+| `cognitive` | 认知过程 | 0.08 | **1.5** | ❌ | 5.0 | 37 |
+| `self` | 自我相关 | **0.01**（慢变） | 0.5 | ✅ | 5.0 | 87 |
+
+读法：情景记忆忘得快（λ=0.15）、自我认知极稳定（λ=0.01）、认知过程起得快（β=1.5）。
+
+### 4.2 Edge —— 边
+
+| 字段 | 类型 | 默认 | 含义 |
+|---|---|---|---|
+| `src` / `dst` | str | 必填 | 起点 / 终点节点 ID |
+| `relation` | str | 必填 | 关系名（自由文本，如 `喜欢`、`导致`、`时间顺序`） |
+| `weight` | float | 0.5 | 边权，同样裁剪到 `[-2, 2]` |
+| `activation` | float | 0.0 | 运行时边激活（被频繁使用的边传信号更强） |
+| `relation_category` | enum | semantic_relation | 关系类别，决定传播方向/增益/衰减 |
+| `_seq` | int | 自增 | 稳定序号（不序列化），用于 tie-break |
+
+#### relation_category —— 关系类别（7 类）
+
+| 类别 | 方向 | 衰减倍率 | 增益倍率 | 当前数量 |
+|---|---|---|---|---|
+| `semantic_relation` | 双向 | 1.0 | 1.0 | 740 |
+| `cognitive_relation` | 单向 | 0.5 | 1.3 | 224 |
+| `temporal_relation` | 单向 | **1.5**（快淡） | 0.7 | 56 |
+| `causal_relation` | 单向 | 0.8 | **1.2** | 33 |
+| `social_relation` | 双向 | 0.8 | 0.8 | 24 |
+| `emotional_relation` | 双向 | **0.3**（久留） | **1.5**（强） | 5 |
+| `procedural_relation` | 单向 | 0.5 | 1.2 | 2 |
+
+读法：情绪边传得最强、留得最久；时间边传得最弱、淡得最快——这符合直觉。
+
+**关系本体**（`config.py:252-287`）：约 60 个中文关系词预先映射到类别（`导致→causal`、`喜欢→emotional`、`参与→social`…），未列出的自由关系默认 `semantic_relation`。
+
+### 4.3 KnowledgeGraph —— 容器
+
+```python
+class KnowledgeGraph:
+    nodes: dict[str, Node]        # id → Node
+    edges: list[Edge]             # ← 唯一真相源
+
+    # 派生索引（性能改造 2026-09）
+    _out_index:    dict[str, list[Edge]]      # src → 出边
+    _in_index:     dict[str, list[Edge]]      # dst → 入边
+    _pair_index:   dict[tuple, dict]          # (src,dst) → {relation: Edge}
+    _node_order:   dict[str, int]             # 节点插入序（tie-break 用）
+
+    _lock: threading.RLock
+    # 结构变更回调（默认空 = 零开销）
+    _cb_node_renamed / _cb_edge_removed / _cb_node_removed / _cb_node_added
+```
+
+设计点：
+
+- **不变量**：`kg.edges` 列表是唯一真相，三个索引与它逐条一致（含重复边、悬空边）。批量直写（启动 overlay / pack 导入 / 迁移脚本）后必须调 `rebuild_indexes()`。
+- **回调机制**：`_cb_node_added` 被 `embedding_manager.mark_dirty` 订阅 → 新节点一诞生就登记进待索引队列，实现"图写入 → 语义索引跟随"。这是"她每长出一个新认知，语义召回就能找到它"的落地方式。
+- **线程安全**：所有修改走 `with self._lock`。扩散引擎持有自己的 `_lock`，两把锁存在嵌套（引擎锁内调图操作），依赖 Python RLock 可重入。
+
+### 4.4 持久化
+
+`kg.save(path)` 走"意外缩小守卫"：节点数腰斩时自动留副本。序列化格式：
+
+```json
+{
+  "nodes": [{"id":"Self","weight":0.9,"activation":0.0,"label":"self",
+             "graph_space":"self","execution":null,"confidence":1.0,
+             "extra_attrs":{...},"created":"...","last_access":"..."}],
+  "edges": [{"src":"Self","dst":"Minecraft","relation":"喜欢","weight":0.72,
+             "activation":0.0,"relation_category":"emotional_relation",...}]
+}
+```
+
+---
+
+## 5. 核心引擎：激活扩散
+
+代码位置：`diffusion_engine.py`（1353 行）——**这是整个系统的心脏**。
+
+### 5.1 论文公式 vs 实际实现
+
+论文（§5.1.1）给出的形式：
+
+```
+a_uv(t)      = w_uv + r(u,v,t)              边的有效权重 + 运行时修正
+Δa(u→v)(t)   = a(u,t) · a_uv(t) · β / |N+(u)|   按出度归一化的传播量
+a(v,t+1)     = (1-λ)·a(v,t) + Σ Δa(u→v)(t)      衰减 + 累积
+```
+
+实际代码（`diffuse_step` `diffusion_engine.py:728`）逐条对应，并做了几处工程加固：
+
+```python
+# 1) 有效权重 = 静态边权 × 运行时加成（模拟突触可塑性）
+w_eff = max(0.0, edge.weight) * (1.0 + edge.activation * 0.6)
+
+# 2) 传播量（正向），total_w 是出边权重和 —— 对应 /|N+(u)|
+contribution = node.activation * w_eff * beta * gain / total_w
+
+# 3) 发射能量封顶：一步最多发出自身激活的 emission_ratio（默认 0.5）
+budget = node.activation * emission_ratio
+if emitted_sum > budget: 全部 node_delta 等比缩放
+
+# 4) 发射即转移：把发出的能量从源节点身上扣掉（除非是锚点）
+delta[nid] -= emitted_sum * emission_transfer
+
+# 5) 接收：按目标空间 cap 裁剪
+new_val = clip(old + incoming, 0, dst_space.activation_cap)
+```
+
+### 5.2 与论文的三处偏离（以及为什么）
+
+| 偏离 | 论文 | 实现 | 原因 |
+|---|---|---|---|
+| **fire-once** | 每步都能发射 | 一轮内每个节点只发射一次（`_fired_round`） | 无衰减纯累积 + 环路 → 激活值每步翻倍撞 cap，回答区退化成一片并列 |
+| **发射即转移** | 发射是复制 | `emission_transfer=1.0` 时源节点扣掉发出的部分 | 旧语义下全网总能量每步可翻倍，唯一平衡点是全部撞上限（实测 40 tick 后 733 节点全亮、374 个钉在 cap 5.0，每 tick 统计完全相同——那不是认知，是一个卡死的固定点） |
+| **衰减时机** | 每步 `(1-λ)` | 一轮结束统一衰减一次（`diffuse_round` 末尾调 `decay_step`） | 让信号在一轮内自由传播，不被中途衰减打断 |
+
+> 这三条都有回归护栏：`tests/test_energy_conservation.py`（离线断言中的一部分）锁住"空闲长跑总能量有界、不出现满格节点、回合内排序不被压平、锚点只在回合内有效"。
+
+### 5.3 单步扩散流程
+
+```mermaid
+flowchart TD
+    A["diffuse_step() 开始"] --> B["遍历活跃前沿 _active_nodes"]
+    B --> C{"activation < min_spread_threshold(0.05)?"}
+    C -->|是| SKIP1["跳过：弱信号不传递"]
+    C -->|否| D{"本轮已发射过? (fire-once)"}
+    D -->|是| SKIP2["跳过：一轮只发一次"]
+    D -->|否| E{"被 blocking 锁锁定?"}
+    E -->|是| SKIP3["跳过：不发射"]
+    E -->|否| F["取空间规则 β / 关系规则 gain"]
+    F --> G["正向：沿出边 src→dst<br/>contribution = a · w_eff · β · gain / total_w"]
+    F --> H["反向：沿入边回溯 dst→src<br/>强度 = 正向 × 0.5（仅双向关系类别）"]
+    G --> I["发射预算封顶<br/>emitted_sum ≤ a × emission_ratio(0.5)"]
+    H --> I
+    I --> J{"是刺激源锚点?"}
+    J -->|是| K["不扣自己（照常供能）"]
+    J -->|否| L["delta[自己] -= emitted_sum × emission_transfer"]
+    K --> M["标记本轮已发射"]
+    L --> M
+    M --> N["接收阶段：dst.activation = clip(old + Δ, 0, dst空间cap)"]
+    N --> O["刷新行动队列（增量）"]
+    O --> P{"max_delta < theta_threshold(0.01)?"}
+    P -->|是| Q["收敛，round 提前结束"]
+    P -->|否| R["继续下一步（最多 max_depth=6 步）"]
+```
+
+### 5.4 三个核心 API
+
+| 方法 | 签名 | 作用 |
+|---|---|---|
+| `activate_from_inputs(node_ids, edge_specs, similarity_map=None)` | `diffusion_engine.py:482` | **注入激活**：给种子节点加激活、给关联边加成 |
+| `diffuse_round(max_steps=None)` | `:964` | **跑一轮**：清 fire-once → 最多 6 步 → 统一衰减一次 |
+| `diffuse_from(node_ids, steps=1)` | `:936` | **补传播**：只让指定节点发射，其余标记为已发射 |
+
+#### 种子强度怎么算（`activate_from_inputs`）
+
+这是"输入如何变成注意力"的关键，值得用公式说清：
+
+```
+无相似度时（LLM 抽取出的实体）：
+    bonus = input_default_bonus(0.5) × activation_max(5.0) = 2.5
+
+有相似度时（FAISS 命中）：
+    bonus = (sim - floor) / (1 - floor) × activation_max
+    其中 floor = input_similarity_floor = 0.5
+
+  例：sim=1.0 → bonus=5.0（满量程，"这个节点就是输入本身"）
+      sim=0.75 → bonus=2.5
+      sim=0.5  → bonus=0.0（低于地板不算焦点）
+```
+
+**地板的用意**（`config.py:42-48` 有详细注释）：相似度 0.5~0.6 的命中多半是高频词/枢纽节点的"人人有份式"匹配。一句"Fascinator"能召回一串 CI 节点（0.58~0.60），它们会把整片邻域泵到饱和，把真正相关的节点挤出回答区。
+
+同时，被本轮点亮的节点会进 `_anchored` 集合（**刺激源锚点**）：它们在发射时免于能量转移，保证回合内排序不被压平。回合边界调 `clear_anchors()` 清理。
+
+#### 种子还会给关联边加成
+
+```
+edge_bonus = max(0.1, 0.5 × max(sim[src], sim[dst]))
+edge.activation = min(3.0, edge.activation + edge_bonus)
+```
+
+加上 LLM 抽出的边精确匹配已有边时 `+0.5`。这就是"突触强化"的来源之一——被反复用到的边 `activation` 累积，下次传播时 `w_eff` 更大。
+
+### 5.5 Top-K：认知焦点是怎么选出来的
+
+`get_topk(k=20)` `diffusion_engine.py:333`
+
+```python
+pool = [活跃前沿内 且 未被 non_blocking 锁隐藏 的节点]
+top_nodes = heapq.nlargest(k, pool, key=lambda n: (
+    n.activation,                              # ① 激活值降序
+    last_lit.get(n.id, 0),                     # ② 本轮更晚点亮的优先
+    -node_order.get(n.id, 1<<60)               # ③ 入图更早的优先
+))
+```
+
+tie-break 的三个键有讲究（代码注释直说了原因）：
+
+- ② 的存在是因为**饱和场上 cap 并列很常见**，不能让"最老的节点"靠入图序取胜，否则回答区被早年旧簇占满。
+- ③ 是旧版"等值输入序"的确定性保留。
+
+返回的边不是全部边，而是 **Top 节点的出入边**（去重后按 `_seq` 输出），这样回答上下文里的边一定是"焦点之间的关系"。
+
+**关键：只在前沿内取**。前沿外节点的激活已被吸附为 0，旧版用零激活节点填满 k 的行为已被移除——"零激活节点无认知意义"。
+
+### 5.6 行动队列（Action Queue）
+
+`_refresh_action_queue(changed_ids=None)` `:384`
+
+判定条件极其简单：**`label == "procedural"` 且 `activation >= theta_action(0.5)` 且 未被 `scope=action` 的锁排除**。
+
+排序键 `(-activation, 入图序)`，`/api/actions/execute` 取队首。
+
+支持两种模式：
+- `changed_ids=None` → 全量重建（`/api/actions` 轮询等调用点）
+- `changed_ids=[...]` → 增量：只重估脏集合（回调/直写标记的节点）∪ 本次显式变化的节点
+
+后者的存在是因为在 651 节点的图上，每步全量扫 651 个节点找 procedural 太浪费——而扩散每步都会调它。
+
+### 5.7 锁的 7 个介入点
+
+`COGNITIVE_REGULATION.md` §2 列出了扩散引擎里全部 7 处锁钩子（代码里有显式注释标记 `── 锁介入点 N/5 ──`）：
+
+| # | 位置 | 行号 | 效果 |
+|---|---|---|---|
+| 1 | 节点激活前（种子循环） | `:533` | blocking 锁：种子拿不到激活 |
+| 2 | 边参与扩散前（加成循环） | `:606` | blocking 锁：边不进被加成集合 |
+| 3 | 节点发射前 | `:769` | blocking 锁：不向外发射 |
+| 4 | 边传播前（正/反向） | `:809`, `:836` | blocking 锁：两个方向都不传 |
+| 5 | 目标接收前 | `:891` | blocking 锁：不因他人传播获得注意力 |
+| 6 | 进入 Top-K 前 | `:351`, `:369` | **non_blocking** 也过滤 |
+| 7 | 活跃快照 / 动作队列 | `:236`, `:416` | `scope=action` 排除出可执行队列 |
+
+**设计克制**：锁只是"从传播中摘除对象"，**不改任何公式**（`total_w` 定义、β、gain、fire-once、能量守恒全部不动）。无锁时七处都是 `bool(reg)` 短路，零开销。
+
+### 5.8 衰减
+
+两级衰减，语义不同：
+
+| 机制 | 参数 | 时机 | 强度 |
+|---|---|---|---|
+| **轮内衰减** `decay_step()` | 空间 λ（semantic 0.05 / episodic 0.15 / self 0.01） | `diffuse_round` 结束时一次 | 温和 |
+| **回合间衰减** `apply_inter_round_decay(factor, floor)` | `inter_round_decay=0.75`，`inter_decay_floor=0.5` | 新输入到达前（`app.py:2227`） | **很强** |
+
+回合间衰减 0.75 的语义（`config.py:31-33` 注释）：*"注意力残留只保留一轮——上一轮的满量程焦点（5.0）衰减到 1.25，低于本轮输入种子，于是'这一轮在想什么'由本轮输入决定，而不是最近五轮的平均。"*
+
+地板 0.5 的语义：一个节点从 cap(5.0) 开始，约 5 轮未被激活后归零。这比原来的 0.001 大大截断了无关节点的噪声传播。
+
+边衰减 = 源节点空间 λ × 关系类别 decay_mult（时间关系 1.5 倍最快淡出）。
+
+---
+
+## 6. 主流程：一个对话回合的完整生命周期
+
+**这是本报告最重要的一节。** 全部逻辑在 `app.py` 的 `process_nlp()`（`:1925`–`:3161`，约 1240 行）。
+
+### 6.1 时序图
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as 用户/通道
+    participant API as /api/nlp
+    participant CC as 持续认知循环
+    participant AUT as 自主行动
+    participant NLP as NLP感知器
+    participant EMB as FAISS检索
+    participant CUR as 好奇心引擎
+    participant CP as 复合短语处理
+    participant DE as 扩散引擎
+    participant DD as 交流决策层
+    participant LLM as LLM语言层
+    participant KG as 知识图谱
+    participant LOG as 日志/持久化
+
+    U->>API: POST {text}
+    API->>CC: set_busy(True) 暂停后台 tick
+    API->>AUT: notify_user_activity() 自主行动让位+打断
+    API->>API: llm_budget.turn_reset()
+    API->>KG: Minecraft 状态轮询 → 感知节点
+    API->>KG: internal_state.begin_cycle() → cycle_id
+
+    Note over API,NLP: 阶段 1 · 感知
+    API->>NLP: process(text)
+    NLP-->>API: {nodes, edges, illocutionary_act,<br/>dialogue_act, response_expectation, memory_type}
+    API->>API: _fuzzy_match_node 模糊归并到图中真实ID
+
+    Note over API,CUR: 阶段 2 · 多路信号注入
+    API->>API: 坐标指令检测 → 注入 点击 节点
+    API->>KG: 社交互动检测 → 注入 社交互动 节点
+    API->>KG: 情绪共振 → 扫描图中 type=emotion 节点出现在文本里
+    API->>EMB: 每个输入词 FAISS 召回 topk=8
+    EMB-->>API: 命中节点（相似度 ≥0.3 过滤）
+    API->>CUR: 解析用户对好奇问题的回答
+    API->>CP: 复合短语判定 → 过滤关系型短语 + 生成 frame 查询
+    API->>DE: frame 查询 → 相关边 activation +1.2
+    API->>CUR: 未知检测 & 注入好奇心信号
+
+    Note over API,DE: 阶段 3 · 激活与扩散
+    API->>DE: apply_inter_round_decay(0.75, floor=0.5)
+    API->>DE: activate_from_inputs(nodes, edges, sim_map)
+    alt 触发了好奇心
+        API->>DE: diffuse_round(max_steps=3) 好奇心检测相
+        API->>CUR: should_generate_question?
+        API->>LLM: generate_question() 生成自然语言问句
+        API->>DE: diffuse_round(剩余步数) 主扩散相
+    else 正常
+        API->>DE: diffuse_round() 完整一轮
+    end
+
+    Note over API,LLM: 阶段 4 · 动作（万物皆图，会点燃图中的动作节点）
+    API->>U: 网络搜索（显式意图词 / ≥2 图外概念 / 技术名词）
+    API->>U: 文件操作（LLM 抽参 → 执行）
+    API->>U: 屏幕 OCR（"看看屏幕"）
+    API->>KG: 时间感知锚定 → 时段节点激活
+    API->>U: Minecraft 反射指令（零 LLM 纯函数解析）
+
+    Note over API,KG: 阶段 5 · 记忆抽取与沉淀
+    API->>API: narrative_score 事件结构评分
+    API->>NLP: extract_narrative / extract_assertion_graph
+    NLP-->>API: memory_draft {nodes, edges, event{summary,event_time,parent_event}}
+    API->>KG: 事件框架挂接（时间锚点 + 父子事件 时间顺序）
+    API->>DE: 新实体补激活 + diffuse_from(steps=1)
+
+    Note over API,LLM: 阶段 6 · 决策
+    API->>API: 上一轮表达 outcome 标注 → disposition 边权更新
+    API->>DD: dialogue_decide(...) 回应欲望认知竞争
+    DD-->>API: {decision: respond|minimal|silence, desire, constraints}
+
+    Note over API,LLM: 阶段 7 · 语言实现
+    API->>KG: 检查 LLM回答 节点是否 ≥ theta_action
+    API->>API: demand_score → mode_for_demand → LLM 参与模式
+    API->>API: 过滤 Top-K（去掉 infra / 坐标 / 被锁节点）
+    API->>LLM: answer_question(text, topk_nodes, knowledge_edges, cog_ctx)
+    LLM-->>API: llm_answer
+    API->>KG: LLM回答节点 activation 清零（"本轮已执行、能量已消耗"）
+
+    Note over API,LOG: 阶段 8 · 收尾
+    API->>KG: internal_state.end_cycle()
+    API->>LOG: _save() 落盘
+    API->>DE: clear_anchors() 回合边界
+    API->>CC: set_busy(False)
+    API->>LOG: chat_log.record()
+    API->>LOG: buffer.add_expression() 表达事件入缓冲
+    API->>KG: self_updater.process_turn() Self 模型更新
+    API->>KG: reflection_engine.check_triggers() 反思触发检查
+    API->>KG: drive_evaluator.evaluate() 驱动力评估
+    API->>KG: action_selector.evaluate() 能力评估
+    API-->>U: {answer, graph:{nodes,edges}, parsed, ...}
+```
+
+### 6.2 逐阶段文字说明
+
+#### 阶段 0 · 前置与让位（`:1932-1948`）
+
+```python
+cc.set_busy(True)              # 后台持续认知循环暂停 tick 扩散，避免双重扩散
+autonomy.notify_user_activity()  # 用户活动 → 自主行动让位 + 打断在飞动作
+llm_budget.turn_reset()        # 回合预算计数重置
+mc["get_state"]() → mc_update_perception(...)  # 游戏状态 → 感知节点
+```
+
+**"用户优先"是硬编码的**，不需要 LLM 判断谁更重要。
+
+#### 阶段 1 · NLP 感知（`:1988-1999`）
+
+`nlp.process(text)` 一次 LLM 调用，返回结构化解析。随后 `_fuzzy_match_node` 把 LLM 输出的名字归并到图里真实存在的节点 ID：
+
+归并优先级（`app.py:977`）：**完全匹配 > 别名匹配（`extra_attrs.aliases`）> 包含匹配（≥3 字且占比 ≥60%）> 边界匹配打分**。
+
+包含匹配的存在是为了处理 LLM 措辞波动：`收获日2` ⊂ `收获日2游玩`。防护是"较短方长度 ≥3 且占比 ≥60%"，避免"两个礼拜"被长事件名误吞。
+
+#### 阶段 2 · 多路信号注入
+
+这是"万物皆图"最密集的地方——所有信号都以**点燃图节点**的方式进入，没有旁路：
+
+| 信号源 | 注入方式 | 行号 |
+|---|---|---|
+| 坐标点击指令 | 建 `坐标(X=..,Y=..)` 节点 + `点击-[目标]→坐标` 边 | `:2005` |
+| 社交互动 | 注入 `社交互动` 节点（`illocutionary_act=expressive` 或社交类 `dialogue_act`） | `:2046` |
+| 话题终止指令 | `mark_termination()` + 注入社交互动 | `:2041` |
+| 情绪共振 | 扫图中所有 `type=emotion` 节点，出现在用户文本里就 `inject_emotion(kg, text, emotion)` | `:2063` |
+| FAISS 语义召回 | 每个输入词搜 `top_k=faiss_recall_topk(8)`，相似度 ≥0.3，只注入图中存在且 `is_cognitive_visible` 的节点 | `:2083` |
+| 好奇心回答解析 | 有待答好奇问题时，本次输入视为回答 | `:2111` |
+| 复合短语 | 过滤关系型短语，生成 frame 查询 → 相关边 `activation += 1.2` | `:2121`, `:2145` |
+
+**FAISS 召回的一个细节**（`:2077-2098` 注释）：召回广度设成 8 而不是 5，因为"minecraft 的语义邻域里，Minecraft(0.80) / Minecraft会话(0.79) / 游玩—对象—Minecraft(0.76) 之后才是 进入Minecraft世界(0.72) 这类能力节点，取 5 会把'我能玩 Minecraft'这件事直接截掉"。
+
+#### 阶段 3 · 激活与扩散（`:2213-2289`）
+
+```python
+engine.apply_inter_round_decay(0.75, floor=0.5)   # 清旧噪声
+engine.activate_from_inputs(parsed_nodes, parsed_edges, similarity_map=sim_map)
+
+if 好奇心触发:
+    engine.diffuse_round(max_steps=3)             # 阶段一：好奇心检测
+    if should_generate_question(kg, config):
+        curiosity_question = generate_question(nlp, curiosity_info)
+        set_curiosity_question(...)               # 写入 等待回答 节点属性
+    cleanup_curiosity_activation(kg)
+    engine.diffuse_round(remaining_steps)         # 阶段二：主扩散
+else:
+    engine.diffuse_round()                        # 完整一轮
+```
+
+**分阶段扩散**是个精巧的设计：3 步正好让信号到达"生成好奇问题"节点而不过冲（overshoot）。用显式的 `diffuse_round(max_steps=)` 表达，而不是临时改写 `config["max_depth"]`。
+
+#### 阶段 4 · 动作执行（`:2291-2400`）
+
+四类动作，触发条件都是**模式匹配 + 图状态**：
+
+| 动作 | 触发 | 执行 | 留痕 |
+|---|---|---|---|
+| **网络搜索** | 显式意图词（"搜一下"）或 提问型输入引入 ≥2 个图外概念 或 情绪/陈述含字母数字型图外概念（C2/5G） | `actions/web_search.do_web_search()` | 建 `搜索记录_{ts}` procedural 节点 + `执行`边 + `涉及`边连到查询中的已有实体 |
+| **文件操作** | 正则匹配"创建/新建/写/生成 + 文件" | LLM 抽参 `file_action_extract` → `execute_file_action()` | 建 `文件操作记录_{ts}` 节点 |
+| **屏幕 OCR** | "看看/识别/截屏" + "屏幕/画面" | `eye.screen_ocr.recognize_text()` | 建 `eye_text_{ts}` 节点，带显著文本+屏幕方位 |
+| **时间锚定** | 时间指示语（"现在/今晚/熬夜/凌晨"） | `temporal_awareness.ground()` | 激活对应时段节点，事件挂 `发生于时段` 边 |
+
+**Minecraft 反射指令**（`:2690-2734`）值得单独说：这是一条**零 LLM 的快速通路**。`minecraft_reflex.parse_reflex_command()` 是纯函数，专门单独成文件，因为"原来这段解析长在 app.py 的请求处理里，用一串位置分组硬凑参数，结果出现了三类真 bug"（模块头注释详细记录了：否定句被当肯定句、分组错位导致 `attack("")` 攻击最近非玩家实体、秒数解析 ValueError）。现在的原则是：**第一步就判否定；每个动作按具名语义解析；取不到目标就如实拒绝，绝不"就近挑一个"**。
+
+#### 阶段 5 · 记忆抽取与沉淀（`:2402-2515`）
+
+先判要不要抽取（`_should_extract_memory`）：非教学型 `dialogue_act`（问候/告别/感谢/道歉/情绪表达/提问/请求/观点…）**不抽取**，除非 `memory_type` 明确是 episodic/semantic。
+
+抽取路径二选一：
+
+- **叙事路径**：`narrative_score(text)` ≥ 阈值（balanced 0.45）→ `extract_narrative()` → 建"故事节点 + 按序事件实例 + 角色原子节点"，事件之间用 `时间顺序` 边串成链。用于"用户讲述他人/虚构故事"。
+- **常规路径**：`extract_assertion_graph(text, topk_check, focus_events)` → 事件框架入库。
+
+**事件框架**（`app.py:1060-1097` 有完整说明）是情景记忆的结构：
+
+```
+用户 -[参与/态度]→ 事件节点 -[涉及/参与者/发生时间/引发]→ 实体/时间/情绪
+```
+
+- 事件节点落 `episodic` 空间并带 `event_timestamp`
+- 时间字符串新建为 `semantic` 空间的**时间锚点节点**（共享参考实体）
+- `_update_focus_event()` 把 `当前焦点事件` 指针移到事件（有父事件时聚焦父事件）
+
+**新实体补激活**（`:2486-2505`）：抽取出的节点在扩散期还不在图里，所以扩散错过了它们。补激活后还要补**一步只从新实体发射**的传播：
+
+> *"只补激活不补传播的话它的邻域（关联能力、时间桶、相关实体）照旧是暗的。必须走 `diffuse_from`：否则整片前沿会重新发射一轮，把邻域泵到饱和，回答区退化成一堆 cap 并列。"*
+
+#### 阶段 6 · 决策（`:2517-2585`）
+
+两条线并行：
+
+**A. 上一轮表达的 outcome 标注** —— 从 `buffer.last_unannotated_expression()` 取出上一轮她说了什么，用本轮用户输入判断那个表达的结果（正/负/中性）：
+
+```python
+_outcome, _detail = classify_outcome(prev_expr, text, parsed, gap)
+buffer.annotate_expression(prev_expr, _outcome, _detail)
+cc.note_outcome(_outcome == "negative")        # 表达抑制信号
+persona.mood_event("positive" if ... else "negative")
+disposition_store.apply_outcome(context, behavior, outcome,
+                                evidence_ref=text[:60],
+                                source="user_feedback", allow_create=True)
+```
+
+这是**人格/表达风格学习的闭环**：她说了什么 → 用户反应 → 倾向边权强化或衰减。
+（2026-09-18 修复：旧版 turn 级 `apply_outcome` 只回写已存在的 pair，绝大多数反馈被静默丢弃；
+现已扩展 outcome 四态、多来源证据、首条经历建 candidate，详见 `docs/self_learning_loop_fix.md`
+与 `tests/test_self_learning_loop.py`。）
+
+**B. 交流决策 `dialogue_decide()`** —— 要不要回应，由图谱信号竞争决定：
+
+输入因子：言语行为的回应拉力（`ACT_PULL` 表）、回应期待、话题共振（TopK 激活）、行为倾向、好奇信号、表达抑制（刚说过/负反馈）、文字投入度。
+
+输出三态：`respond` / `minimal`（可极简）/ `silence`（**不回应是合法结果**）。
+
+还有回应约束生成：`no_question`（用户分享事实且无信息需求时禁机械追问）、`ack_only`（话题终止指令后只简短确认）、`minimal_len`。
+
+#### 阶段 7 · 语言实现（`:2587-2866`）
+
+最后一道门是 `LLM回答` 节点的激活值：
+
+```python
+llm_node = engine.name_to_node.get("LLM回答")     # 一个 procedural 节点
+if llm_node.activation >= theta_action(0.5):
+    raw_topk, topk_edges = engine.get_topk(k=20)
+    topk_nodes = [过滤掉基础设施/坐标节点/被锁节点]
+    ...
+    llm_answer = nlp.answer_question(text, topk_nodes, knowledge_edges,
+                                     context_type=_ctx_type, cognitive_context=_cog_ctx)
+```
+
+**`_cog_ctx`（认知上下文）是送给 LLM 的完整"此刻在想什么"**，包含 14 个字段：模式+需求分数、注意力上下文、言语行为、对话行为、回应期待、建议的回复目标、行为倾向（已剔除沉默）、网络搜索结果、文件动作、屏幕结果、回应约束（非 Web 通道追加"场合约束：短、单行、不要 Markdown"）、Minecraft 动作结果、近期对话 6 轮、世界状态快照、当前心情、认知触发事件。
+
+**世界状态只在真正连着世界时注入**（`:2781` 注释）：*"断开时图里留的是上次的值，拿旧坐标当'我现在在这里'回答就是撒谎。"*
+
+**回答生成前有两道保险**：
+1. `demand_score → mode_for_demand`：认知需求评分决定 LLM 参与模式（MODE0 图自足 / MODE1 仅语言 / MODE2 解释 / MODE3 推理 / MODE4 反思 / MODE5 深度）
+2. `llm_budget.can_call(mode)`：预算门控。拒绝则 `llm_answer = None`，**图谱继续，降级为不回答**
+
+#### 阶段 8 · 收尾（`:2868-3138`）
+
+一串后置钩子，全部有 try/except 保护（一个失败不影响其他）：
+
+```
+internal_state.end_cycle(cycle_id, outcome={answered, curiosity, faiss_hits})
+_save()                              # 异步存盘
+engine.clear_anchors()               # 回合边界清锚点
+cc.set_busy(False)                   # 恢复后台循环
+engine.stop_auto()
+chat_log.record(user_input, system_response, curiosity...)
+buffer.add_expression({...})         # 表达事件入缓冲（不落图）
+self_updater.process_turn(...)       # Self Model 更新（重要性门槛过滤）
+reflection_engine.check_triggers()   # 反思触发检查
+drive_evaluator.evaluate()           # 驱动力评估
+action_selector.evaluate()           # 能力评估 + persist_intent
+```
+
+### 6.3 异常路径
+
+```python
+except Exception as e:
+    internal_state.end_cycle(_cycle_id, outcome={"error": str(e)[:200]})  # 收周期，避免悬挂
+    cc.set_busy(False)      # 必须解除，否则后台循环卡死
+    return jsonify({"success": False, "error": str(e)}), 500
+```
+
+---
+
+## 7. 语言子系统
+
+### 7.1 NLP 感知器
+
+代码：`nlp_processor.py`（1139 行）
+
+**主入口** `process(text)` `:165`：
+
+```python
+raw_result = self.chain.invoke({"text": clean_text, "current_date": "2026年09月14日 Sunday"})
+parsed = self._sanitize_result(raw_result)
+# 失败会自动重试一次；再失败返回默认结构（不抛异常）
+```
+
+`chain = RECONSTRUCT_PROMPT | self.llm | JsonOutputParser()` —— LangChain 管道。
+
+**输出 schema**（`_sanitize_result` `:219` 保证结构）：
+
+```json
+{
+  "nodes": ["用户", "阿司匹林", "药"],           // 去重、去代词、代词映射
+  "edges": [{"src":"...","dst":"...","type":"...","weight":0.0~1.0}],
+  "illocutionary_act": "assertive",              // 5 类言语行为
+  "dialogue_act": "information_statement",       // 对话行为细分类
+  "response_expectation": "low|medium|high",     // 回应期待
+  "suggested_reply_goals": ["acknowledge"],
+  "memory_type": "semantic|episodic"
+}
+```
+
+**清洗规则**（`:234-236`）：
+
+```python
+DROP = {"他","她","它","他们","她们","他的",...}          # 代词直接丢弃
+SELF_MAP = {"我":"用户","我的":"用户","你":"Fascinator","你的":"Fascinator"}
+```
+
+这条映射是**自我/他者视角归一化的关键**：用户说"我"必须变成图里的 `用户` 节点，"你"变成 `Fascinator`。
+
+**其他方法**：
+
+| 方法 | 作用 |
+|---|---|
+| `extract_assertion_graph(text, context_nodes, focus_events)` `:434` | 断言 → 图谱草稿（含 `event` 框架信息） |
+| `extract_narrative(text)` `:617` | 叙事分段抽取（故事+情节链） |
+| `answer_question(text, topk_nodes, topk_edges, context_type, cognitive_context)` `:653` | 基于 Top-K 生成回答 |
+| `expand_concept(word, context)` `:1033` | 学习模块的概念扩展 |
+| `classify_intent(text, intent_tree)` `:369` | 意图分类树 |
+| `ask(task, user_input)` `:1063` | 通用任务调用（如 `file_action_extract`） |
+| `switch_provider(provider, api_key, model)` `:138` | 运行时热切换 LLM |
+
+### 7.2 言语行为与对话行为
+
+**5 类言语行为**（Searle 分类）与对应反应链：
+
+| 类别 | 说明 | 图上的反应链 |
+|---|---|---|
+| 断言类 | 陈述/描述事实 | → 知识存储 → 存入记忆 |
+| 指令类 | 命令/请求/提问 | → 询问处理 → LLM回答 |
+| 承诺类 | 承诺/意图/计划 | → 意图注册 → 行动计划 |
+| 表达类 | 情感/态度 | → 情感记录 → 情绪节点 |
+| 宣告类 | 宣告/命名/声明 | → 声明注册 → 写入图谱 |
+
+**`dialogue_act`** 是更细的分类（约 20 种），直接驱动流程分支：
+- 社交类 `{greeting, farewell, thanking, apology, emotion_expression, sharing}` → 注入"社交互动"节点
+- 非教学类 `{greeting, ..., question, request, opinion, ..., backchannel, suggestion, curiosity_expression, answer}` → **不触发记忆抽取**
+
+### 7.3 复合短语处理
+
+代码：`compound_phrase_handler.py`（986 行）
+
+**解决什么问题**：中文里"代表产品""创始人"这类短语，如果按普通名词处理，会被好奇心机制误判为"未知概念"从而触发打断性反问。但实际上它们是**关系型短语**——已经有对应的边存在。
+
+**三分类判定**：
+
+| 类别 | 含义 | 处理 |
+|---|---|---|
+| **关系型**（relational） | "代表产品" = 一条 frame 查询 | 过滤出 curiosity 候选；生成 `frame_queries` → 相关边 `activation += 1.2`（强 boost，使匹配的边在扩散中传更强信号） |
+| **词汇化**（lexicalized） | 已经固化为词的短语 | 正常处理 |
+| **绝对名词** | 普通名词 | 正常处理 |
+
+**Frame 查询结构**：`{frame: "代表产品", attribute_type: "...", possessor: "麦当劳", slot_id: "...", query_description: "..."}`
+
+词语槽表持久化在 `data/relation_phrase_table.json`，并且会**随使用积累**（"语言理解广度"的自学通路）。
+
+### 7.4 对话决策与 LLM 参与模式
+
+**`dialogue_decision.py`（155 行）** — 回应欲望认知竞争
+
+回应拉力基线表 `ACT_PULL`（按言语行为类别给基线值）、话题终止正则 `_TERM_RE`（"停止话题/换个话题/别说了/打住/到此为止"）。
+
+话题终止后 `inhibit_topics(kg, engine)` 抑制当前话题节点激活，硬编码 600s 抑制期（`COGNITIVE_REGULATION.md` §7.2 明确指出这是"与对象型认知锁不同轴"的遗留设计，未来应统一为带 `expires_at` 的锁）。
+
+**`cognition_modes.py`（246 行）** — LLM 参与模式与预算
+
+六个模式（按成本递增）：
+
+| 模式 | 名称 | 何时用 |
+|---|---|---|
+| MODE0 | `graph_only` | 图谱自足：扩散/竞争/倾向/意图/触发，零 LLM |
+| MODE1 | `language` | 把已形成的认知状态说成人话 |
+| MODE2 | `interpret` | 图谱无法可靠解释输入时，LLM 作认知解释器 |
+| MODE3 | `reason` | 多步/反事实/远距离组合推理 |
+| MODE4 | `reflect` | 低频反思/倾向形成/人格统计 |
+| MODE5 | `deep` | 最昂贵：仅用户明确要求/重大缺口/高价值目标 |
+
+认知需求评分输入：输入不确定度 / 新颖度 / 冲突 / 语言复杂度 / 推理深度 / 目标重要性 / 好奇心 / 情绪显著性 → `demand_score` → `mode_for_demand`。
+
+`BudgetManager`：`max_calls_per_turn` / `per_minute` / `max_tokens_per_turn` / `daily_budget`，按 mode 的权重与冷却；profile 有 `development / balanced / economy / full` 四档（当前用 balanced）。
+
+**关键**：本模块**不做任何 LLM 调用**，只做评估与配额（"万物皆图：评估读图谱状态"）。失败策略是返回 None → 调用方降级。
+
+### 7.5 LLM 后端
+
+代码：`llm_provider.py`（294 行）+ `ollama_backend.py`
+
+| Provider | 状态 | 模型 | 说明 |
+|---|---|---|---|
+| `mimo`（小米） | **默认** | `mimo-v2.6-flash`（全场景统一，思考模型） | 思考 token 与输出共享 `max_completion_tokens` 预算（API 上限 ~131k）：抽取/expand 16384、对话/L1 4096 |
+| `deepseek` | 可选 | `deepseek-v4-flash` | 4096 会触发 `finish_reason=length`（推理阶段消耗同一份 token 预算，推理一长输出就为空），所以给 8192 |
+| `ollama` | **默认关闭** | `qwen2.5:7b-instruct-q5_k_m` | 需要 `config.enable_ollama=true` 才加载（`ollama_enabled()` 守卫） |
+
+三个后端实例：
+- `_backend`（temperature=0.1, json_mode=True）— 抽取任务，要稳定
+- `_expand_backend`（temperature=0.35）— 扩展任务，要发想
+- `_chat_backend`（temperature=0.7）— 对话回答，要自然
+
+Key 存放：`data/llm_secret.json`（gitignored），支持 `MIMO_API_KEY` / `DEEPSEEK_API_KEY` 环境变量覆盖。**永不写入 `llm_config.json`**。
+
+---
+
+## 8. 记忆、自我与学习
+
+### 8.1 四种记忆的关系
+
+```mermaid
+graph LR
+    subgraph S1["短期"]
+        EB["情景缓冲区<br/>episodic_buffer.py<br/>capacity=100"]
+        EXPR["表达事件缓冲<br/>（她说了什么 + 结果）"]
+    end
+    subgraph S2["长期 · 统一知识图谱"]
+        SEM["语义记忆<br/>declarative-semantic<br/>515 节点"]
+        EPI["情景记忆<br/>declarative-episodic<br/>83 节点"]
+        PROC["程序性记忆<br/>procedural<br/>23 节点"]
+        SELFM["自我空间<br/>graph_space=self<br/>87 节点"]
+    end
+    subgraph S3["图外记录（刻意不入图）"]
+        CL["对话日志<br/>chat_log.json"]
+        EL["演化日志<br/>graph_evolution_log.py"]
+    end
+    U["用户输入"] --> EB
+    EB -->|"晋升条件满足"| EPI
+    EB --> EXPR
+    EXPR -->|"outcome 标注"| DISP["行为倾向边权"]
+    EPI --> SELFM
+    SEM --> SELFM
+```
+
+### 8.2 情景缓冲区 `episodic_buffer.py`（321 行）
+
+**容量 100**，存"还没晋升到长期图谱的经历"。
+
+三条数据流：
+1. `add_experience(raw_text, nodes, edges, assertion_type)` — 本轮抽取的记忆草稿
+2. `get_promotion_candidates()` — 晋升候选
+3. `add_expression({...})` / `last_unannotated_expression()` / `annotate_expression(...)` — **表达事件**（她说的话 + 结果），这是 Reflection Evolution 的基础设施
+
+表达事件字段：`user_text, answer, behavior, context, context_ids, dialogue_act, response_expectation, topics, silence_chosen`。
+
+### 8.3 自我模型
+
+两个模块，容易混淆，职责如下：
+
+| 模块 | 行数 | 职责 |
+|---|---|---|
+| `self_graph.py` | 864 | **Self 节点的图操作原语**：偏好即边权、情绪即节点、目标即节点、经历连 Self |
+| `self_model.py` | 852 | **持续性主体模型**：重要性门槛、知识溯源、防污染 |
+
+`self_graph.py` 的模块头写着最硬的设计约束：
+
+> *"禁止新增 PersonalityManager / EmotionManager / ... 或任何独立保存状态的 Python 对象。即：不要存储结果，而是存储关系。"*
+
+`self_model.py` 的三个组件：
+
+- `SelfGraphManager` — Self 空间的结构化读写接口
+- `evaluate_importance(parsed, context)` — **无状态**重要性评估函数
+- `SelfMemoryUpdater` — 编排器：接收 NLP 输出 → 评估 → 决策 → 写入
+
+**重要性评分权重**（`config.py:355-382`）：
+
+| 因子 | 权重 | 含义 |
+|---|---|---|
+| `explicit_statement` | 0.40 | 用户明确说"我喜欢/我相信/我是" |
+| `repeat_count` | 0.25 | 相似内容重复出现次数 |
+| `emotion_intensity` | 0.15 | 当前激活情绪节点数 × 激活度 |
+| `llm_confidence` | 0.10 | LLM 抽取置信度 |
+| `temporal_recency` | 0.10 | 最近强化距今（30 天内线性衰减） |
+
+门槛：`importance_threshold=0.5`；`source="single_observation"` 需要 `min_observations≥2`；社交/情绪表达下重要性降权 0.4（`social_dialogue_weight_penalty`）。
+
+**知识溯源**：每个 belief/preference 携带 `provenance` 字段（`confidence, source, evidence_count, first_observed, last_reinforced`）。
+
+### 8.4 好奇心引擎 `curiosity_engine.py`（726 行）
+
+模块头明确：*"好奇心不是聊天技巧，而是 Fascinator 的一种认知机制。目标不是提高聊天能力，而是模拟'遇到不知道的东西会产生好奇'。"*
+
+**触发条件**（满足任一，信号边直达 `好奇` 节点）：
+
+| 信号 | 图路径 |
+|---|---|
+| 输入出现未知节点 | `未知概念 -[触发]-> 好奇` |
+| 未知属性 | `未知属性 -[触发]-> 好奇` |
+| 未知关系 | `未知关系 -[触发]-> 好奇` |
+| 未知信息 | `未知信息 -[触发]-> 好奇` |
+| 用户表达情绪 | `需要确认 -[触发]-> 好奇` |
+
+**P0-2 的重要改造**（模块注释）：原来的 `CURIOSITY_CHAIN` 是 15 条边组成的"好奇心应该如何发展"的**剧本**（未知→知识缺口→好奇→生成→等待→更新→完善→结束）。现在只保留 **7 条信号边**——六个未知/确认信号直达 `好奇`，好奇驱动 `生成好奇问题`。回答后的记忆更新由 `resolve_curiosity` 直接激活相应节点，不靠剧本接力边。
+
+**限定**：一次输入最多生成 1 个问题；`等待回答` 状态存在时禁止再次生成（避免连环追问）。
+
+**状态图内化**：活跃好奇问题挂在 `等待回答` 节点的属性上，**没有图外工作记忆，重启不丢失**。
+
+### 8.5 反思引擎 `reflection_engine.py`（559 行）
+
+三种触发：
+
+| 类型 | 条件 |
+|---|---|
+| `periodic` | 每 20 轮对话（`periodic_interval_turns`） |
+| `event` | 累计情绪激活度 > 3.0（`emotion_trigger_threshold`） |
+| `user` | 用户主动要求（`POST /api/self/reflection`） |
+
+还有第四种：`continuous_cognition` 的**离线反思自问**（长时间静默 + 有未反思表达时触发）。
+
+**流程**：收集输入 → LLM 分析 6 个必答问题 → 解析候选 → 审批。候选带 `confidence + importance + approval_status`。
+
+`auto_approve_threshold=0.75` 以上的候选自动批准，其余进 `pending`（**pending 状态的候选不影响 Self Model 实际取值**）。
+
+`docs/fas_cognitive_architecture_v2.md` §7.6 提出了对反思的检验标准：
+
+> *"任何一条反思，三个月后必须能回答'它改变了哪条边/哪个节点'——答不出即该反思无效，反思模板需带'预期落点'字段。"*
+
+### 8.6 驱动力 `drive_engine.py`（287 行）
+
+Phase 3 MVP，目前只有 **Curiosity Drive** 一个。路线图：Curiosity → Social → Learning → Consistency。
+
+原则：*"不是 if-else 规则 — 驱动力来自图谱状态统计"*。
+
+`DriveEvaluator.evaluate()` 读取图信号算 `CuriosityDrive` 节点激活：
+- 未知信号节点数（`未知概念/未知关系/未知属性/未知事件/未知信息`）权重 0.5
+- 知识缺口激活倍率 0.8
+- `UnknownObject` 数量权重 0.3
+- 好奇心链路倍率 1.2
+
+### 8.7 行为倾向 `disposition_store.py`（392 行）
+
+这是**人格学习**的落地机制（Reflection Evolution R2）。
+
+**图结构**（self 空间）：
+
+```
+情境:用户分享 -[产生]-> 倾向:追问@用户分享 -[指向]-> 行为:追问
+情境:用户分享 -[激活 weight=strength]-> 行为:追问
+```
+
+`pair` 节点 `extra_attrs` 存证据计数 / 正负反馈 / 证据引用；激活边权重与 `strength` 同步。
+
+**封闭词表**（防节点爆炸，节点总数上界 ~20）：
+
+- 行为词表：`respond`(回应) / `ask`(追问) / `acknowledge`(确认) / `elaborate`(详述) / `empathize`(共情) / `share`(分享) / `continue`(延续) / `closing`(收尾) / `silence`(沉默)
+- 情境词表：`情境:熟悉关系` / `情境:用户分享` / `情境:用户情绪表达` / `情境:用户提问` / `情境:用户观点` / `情境:主动发起` …
+- 修饰符：`MODIFIER_EMOTION_LOW`、`MODIFIER_FAMILIAR`
+
+**候选→稳定规则**：一次经历只能产生 `candidate`；`stable` 需要**真实经历证据** `positive_count+negative_count >= 4` 且正反馈占优势（2026-09-18：旧版误把出厂引用计入 `evidence_count`，现只数真实 outcome）。
+
+**基线人格**（`personality_baseline.py`，106 行）播种 6 条出厂先验：
+
+```python
+("情境:熟悉关系", "respond", 0.45)      # 熟悉的人面前自然接话
+("情境:熟悉关系", "empathize", 0.35)    # 亲密关系的基础敏感度
+("情境:用户分享", "respond", 0.40)
+("情境:用户情绪表达", "empathize", 0.30)
+("情境:用户提问", "respond", 0.45)
+("情境:用户观点", "respond", 0.30)
+```
+
+这些是**低强度种子**，之后由真实经历 outcome 强化/衰减。同时管理**心情瞬态**（valence ∈ [-1,1]，每小时向 0 衰减 0.15，正向事件 +0.12、负向 -0.18）。
+
+### 8.8 知识包 `knowledge_pack_manager.py`（556 行）
+
+**V4 架构的核心**：把知识分装成"包"，启动时合并成唯一的运行时图谱。
+
+```
+knowledge_packs/
+├── common/                  knowledge_graph.json + metadata.json + embeddings/
+├── computer/                knowledge_graph.json + metadata.json
+├── minecraft/               knowledge_graph.json + metadata.json
+└── user_teaching_2026-07/   knowledge_graph.json + metadata.json
+```
+
+**启动合并流程**（`app.py:112-194`）：
+
+```python
+pack_mgr.scan_packs()
+kg = pack_mgr.merge_runtime_graph()              # 合并所有 enabled pack
+if _rename_map: 应用重命名映射                    # data/rename_map.json
+if data/runtime_graph.json 存在:                  # overlay 运行时持久化的修改
+    加载并对账（新节点直接加；已有节点更新 label/weight；边去重后追加）
+kg.rebuild_indexes()                             # 重建派生邻接索引
+```
+
+设计原则（模块头）：*"KnowledgeGraph 无需知道 Pack 存在；运行时始终只有一个 KnowledgeGraph；认知流程完全不变。"*
+
+支持操作：`enable / disable / create / delete / rename / import / export / reload`。
+
+### 8.9 能力注册表 `capability_registry.py`（582 行）
+
+**"发育阶段"的核心**：把 FAS 的能力当成一张清单来管理，有"已获得/缺失"状态、依赖关系、缺口分析。
+
+能力记录结构：
+
+```json
+{
+  "id": "nlp_extraction",
+  "name": "NLP实体关系提取",
+  "description": "从自然语言中提取实体、关系和言语行为分类",
+  "status": "acquired",
+  "category": "perception",
+  "related_modules": ["nlp_processor.py"],
+  "related_nodes": ["NLP处理器"],
+  "dependencies": [],
+  "acquired_at": "2026/07/24 11:20:44"
+}
+```
+
+关键方法：`register()` / `update_status()` / `analyze_gaps()`（缺口分析）/ `get_next_development_target()`（下一个发育目标）/ `sync_all_to_graph()`（把能力同步为图节点 `self_capability`）。
+
+### 8.10 对话日志与恢复
+
+**`chat_log.py`（188 行）** — 记录每轮用户输入与系统回复，落 `data/chat_log.json`。设计原则：*"简单：只记录原始文本，不做图谱分析。独立于图谱：这是对话记录，不是认知状态。"*
+
+**`chat_log_replay.py`（227 行）** — **事故恢复工具**，本身就是一个很有价值的技术案例。
+
+模块头记录了事故经过：
+
+> *2026-09-13 21:21，一次"一致性迁移"脚本误把 `KnowledgeGraph.load()` 当成实例方法调用（它其实是 classmethod，返回新实例，那句等于没加载），随后 `save()` 用空图覆写了 `data/runtime_graph.json`：894 节点 / 2136 边 → 162 节点。*
+
+恢复策略：把 `chat_log.json` 重新过一遍**在线那条记忆抽取路径**（`app` 的 `/api/memory/replay`），而不是自己实现一遍。
+
+安全约束（模块注释强调"不是建议，是事故教训"）：
+1. 只用 `user_input` 作记忆来源，**绝不用 `system_response`**（她的回复不是用户陈述，拿它抽取等于伪造用户经历）
+2. 默认 dry-run，结果落 `data/recovery_candidates.json`，要写图必须显式 `--apply`
+3. 每轮打印进度同时写盘，可中断
+4. `graph_model.save()` 新增"意外缩小"守卫（节点数腰斩时自动留副本）
+
+### 8.11 时间感知 `temporal_awareness.py`（146 行）
+
+论文语义：*"时间是认知的索引维度之一。"*
+
+**图结构**（semantic 空间）：
+- 时段节点：凌晨 / 深夜 / 晚上 / 傍晚 / 下午 / 上午 / 清晨（`type=time_of_day`）
+- 常识：`睡眠-[理想时段]->理想睡眠时段`、`熬夜-[偏离]->理想睡眠时段`、`熬夜-[可能影响]->健康`
+- 接地：事件/状态节点 `-[发生于时段]->` 时段节点
+
+时间指示语正则：`现在|今晚|熬夜|还没睡|半夜|凌晨|通宵|几点|这么晚|很晚|早起|清晨|大半夜`
+
+理想睡眠窗口：23:00 – 7:00（常量 `IDEAL_SLEEP_START/END`）。
+
+### 8.12 叙事触发 `narrative_trigger.py`（114 行）
+
+判断依据从"这段文字够不够长"变成"**这段输入是否描述了多个相互关联的事件/状态变化**"。
+
+```
+narrative_score = event + temporal + causal + shared_context + state_transition + multi_clause_bonus
+```
+
+阈值：balanced 0.45 / economy 0.60。零 LLM，纯规则+词表。
+
+词表：时间连接词（然后/之后/随后/最后/接着/于是/首先/第二天/后来…）、因果连接词（因为/所以/导致/由于/结果/使得/因此…）、状态变化动词（打开/关上/变成/开始/结束/发现/出现…）。
+
+---
+
+## 9. 自主性：无输入时她在做什么
+
+### 9.1 持续认知循环 `continuous_cognition.py`（568 行）
+
+**唯一的后台线程**（`continuous-cognition`，daemon）。tick 间隔 **2.5 秒**。
+
+```mermaid
+stateDiagram-v2
+    [*] --> Tick
+    Tick --> BusyCheck: 每 2.5s
+    BusyCheck --> Tick: /api/nlp 处理中<br/>set_busy(True) → 让位
+    BusyCheck --> Decay: 空闲
+    Decay --> Diffuse: engine.decay_step()
+    Diffuse --> Reignite: engine.diffuse_step()<br/>（手动 auto 模式开启时跳过）
+    Reignite --> Pulse: 每 3 tick<br/>记忆再点火
+    Pulse --> Think: 每 4 tick（≈10s）<br/>认知脉冲（零 LLM）
+    Think --> Autonomy: 每 12 tick（≈30s）<br/>低频自由思考（1 次 LLM）
+    Autonomy --> Monitor: 每 4 tick<br/>自主行动决策
+    Monitor --> Index: 每 4 tick<br/>状态检测器轮询
+    Index --> OfflineReflect: 每 5 tick<br/>新节点增量编入 FAISS
+    OfflineReflect --> Tick: 长时间静默+有未反思表达<br/>触发离线自问
+```
+
+| 节拍 | 频率 | 做什么 | LLM |
+|---|---|---|---|
+| tick | 2.5s | 衰减 + 扩散一步 | 零 |
+| `reignite_memory` | 每 3 tick | 从 episodic 空间挑最近的记忆事件重新点亮（`reignite_boost=1.2`） | 零 |
+| `_pulse` | 每 4 tick (≈10s) | **认知脉冲**：评估图状态 → 形成/增强交流意图（CI） | 零 |
+| `_free_think` | 每 12 tick | 低频自由思考，最小间隔 15 分钟 | 1 次 |
+| `autonomy.tick()` | 每 4 tick (≈10s) | 自主行动决策 | 零 |
+| `regulation.poll_due()` | 每 4 tick | 状态检测器轮询 | 零 |
+| `flush_pending` | 每 5 tick | 把新节点增量编入 FAISS | 零（只编码） |
+| `_maybe_offline_reflect` | 每 tick 检查 | 长时间静默 + 有未反思表达 → 反思自问 | 1 次 |
+
+**认知脉冲评分**（`_pulse` `:152`）：
+
+```python
+score = (0.5 × min(top_act / 3.0, 1.0)      # 峰值激活
+       + 0.25 × social                       # 情绪在场 + 与用户关联度
+       + 0.15 × affordance                   # 可供性（好奇心活跃/上次结果正面）
+       + 0.10 × min(user_relevant / 3.0, 1.0))  # 用户相关节点数
+```
+
+- `form_threshold = 0.55` — 意图形成阈值
+- `express_threshold = 0.78` — **高于形成阈值**：能形成意图 ≠ 该主动说出来
+- `discard_below = 0.10` — 丢弃
+- 冷却：主动表达后 5 分钟；每小时最多 6 次
+
+与已有 CI 重叠 ≥40% → 视为同一认知状态，**增强而非新建**（防节点爆炸）。
+
+### 9.2 自主行动闭环 `autonomy.py`（980 行）
+
+**通用自主层，不认识 Minecraft**。
+
+```mermaid
+flowchart LR
+    A["具身感知<br/>embodiment.perceive()"] --> B["图更新<br/>感知节点/未知节点/扩散"]
+    B --> C["候选生成<br/>图激活·驱动力·新颖性·<br/>未完成目标·最近结果·环境变化"]
+    C --> D["目标竞争<br/>结构化评分"]
+    D --> E{"score ≥ 0.35?"}
+    E -->|否| IDLE["如实 idle<br/>'没有任何可解释的依据'"]
+    E -->|是| F["可行性检查<br/>锁·能力·目标在场·重试上限·冷却"]
+    F -->|不可行| BLOCK["放弃/如实报告"]
+    F -->|可行| G["执行<br/>embodiment.execute(intent)"]
+    G --> H["结果反馈<br/>episodic 节点 + 情绪 + 抑制链 + 检测器"]
+    H --> A
+```
+
+**八种语义意图**：`observe` / `approach` / `follow` / `explore` / `collect` / `rest` / `communicate` / `withdraw`
+
+**评分公式**（`DEFAULT_WEIGHTS` `autonomy.py:65-73`）：
+
+```
+score = 0.30·drive      # 相关驱动力强度（CuriosityDrive 等）
+      + 0.25·attention  # basis 节点在图中的真实激活值
+      + 0.20·novelty    # 新颖性（未知对象）
+      + 0.10·tendency   # 行为倾向（情境:主动发起）
+      - 0.35·risk       # 风险惩罚
+      - 0.25·recency    # 刚做过同类动作
+      - 0.30·failure    # 最近失败过
+```
+
+所有分量归一化到 `[0,1]`，权重表是"最小可替换接口"——想改"她更看重什么"就改这张表。
+
+**候选生成表**（只在有真实信号时产生）：
+
+| 信号来源 | 产生的意图 |
+|---|---|
+| 感知到不认识的生物（图里有 `UnknownEntity_*`） | `observe` / `approach`（保持安全距离） |
+| 敌对生物进入危险距离 / 血量或饥饿过低 | `withdraw`（安全优先，压过探索）/ `rest` |
+| 同伴玩家在场 | `follow`；只有**已备内容**时才 `communicate`（不编台词） |
+| 附近有安全清单内的材料 | `collect`（只挖 木头/圆石/沙子/泥土/煤矿，**绝不碰箱子/工作台/建筑**） |
+| 很久没探索 | `explore`（方向轮转 = 访问最少的方向，确定性） |
+| 都没有但有可看的东西 | `observe`（低分兜底） |
+
+**"没有依据就不产生意图"**：`basis` 为空的候选不会被评分通过，循环进入 `idle` 并在 `state_reason` 里说明"没有任何可解释的依据（不编造想法）"。
+
+**频率控制**：最小间隔 12s、同类动作冷却窗口 180s、失败退避 45s、同一 `(意图,目标)` 最多 3 次、在飞动作 20s 超时。
+
+**安全约束**（AUTONOMY.md §11）：
+- Bot 未连接 → 能力面为空 → 不执行任何动作
+- 用户交互 → 让位 + 打断在飞动作（安静期默认 20s）
+- **不做攻击**：能力面不含 `attack`
+- **不碰用户资产**：箱子/工作台/熔炉被显式拒绝
+- 失败不无限重试：最多 3 次 + 退避，到上限如实"放弃"
+
+**LLM 边界**：
+
+| 级别 | 位置 | 状态 |
+|---|---|---|
+| Mode 0（默认） | 感知/候选/竞争/可行性/执行/反馈/冷却/重试 | **零 LLM 调用**（测试断言：多次 tick 后 LLM 计数为 0） |
+| Mode 1 | `POST /api/autonomy/goals {"text":"..."}` 自然语言 → 结构化目标 | 已实现，需预算余量 |
+| Mode 2 | 动作失败且 `llm_mode>=2` 时只打标记 `needs_reflection` | 已实现；**自主循环自己绝不调 LLM** |
+
+### 9.3 内部状态层 `internal_state.py`（587 行）
+
+**角色**：需求 / 神经调制变量 / 性格的**唯一可写状态源**。
+
+三层分工（模块头 §B）：
+1. **图谱层**：只承载"可解释状态节点"（每个变量一个**镜像节点**，in-place 更新，绝不按轮次建节点）
+2. **运行时状态层（本模块）**：数值真源，落盘 `data/internal_state.json`（原子写）
+3. **控制器层**：每轮/每 tick 确定性更新
+
+三条不变量（实现与测试共同保证）：
+- **I1**：运行时状态只有本模块一个写入口，其它模块只读
+- **I2**：每轮/每 tick 生成 `cycle_id`，所有状态写入都带它
+- **I3**：数值写入一律经 `apply_delta/set_value`：先裁剪到范围，再记历史与来源
+
+**四个调制变量**（功能抽象，模块头明确声明"不声称精确复现人体内分泌系统"）：
+
+| 变量 | 初值 | 基线 | 每分钟回归率 | 语义 |
+|---|---|---|---|---|
+| `dopamine` | 0.50 | 0.50 | 0.02 | 奖励与学习调制（**拆 tonic 慢变量 / phasic RPE 脉冲**） |
+| `cortisol` | 0.30 | 0.30 | 0.05 | 压力与威胁调制 |
+| `serotonin` | 0.55 | 0.55 | 0.01 | 稳定性与抑制调制 |
+| `oxytocin` | 0.40 | 0.40 | 0.03 | 社交联结调制 |
+
+**四个需求**：
+
+| 需求 | 初值 | 设定点 | 理想区间 | 基权重 | 关联性格 | 关联调制 | 目标类型 |
+|---|---|---|---|---|---|---|---|
+| `safety` | 0.20 | 0.0 | [0, 0.30] | 1.00 | caution, risk_tolerance | cortisol | rest, withdraw |
+| `exploration` | 0.55 | 0.30 | [0.20, 0.50] | 0.85 | exploration_bias, novelty_preference | dopamine | observe, approach, explore |
+| `competence` | 0.40 | 0.25 | [0.15, 0.45] | 0.75 | persistence | dopamine, cortisol | collect, goal_progress |
+| `social` | 0.35 | 0.30 | [0.20, 0.50] | 0.80 | social_openness, feedback_sensitivity | oxytocin | follow, communicate |
+
+**八个性格维度**（出厂中性偏好奇/友好）：
+
+`exploration_bias` 0.55 / `risk_tolerance` 0.45 / `social_openness` 0.60 / `persistence` 0.50 / `caution` 0.50 / `novelty_preference` 0.55 / `resource_thrift` 0.50 / `feedback_sensitivity` 0.60
+
+**周期 API**：
+
+```python
+begin_cycle(kind="turn", meta) → cycle_id      # /api/nlp 开头调用
+end_cycle(cycle_id, outcome={...})             # /api/nlp 结尾调用
+apply_delta(kind, name, delta, source, cycle_id, reason)  # 唯一写入口
+set_value(kind, name, value, ...)
+explain(cycle_id)                              # 可解释性查询
+```
+
+---
+
+## 10. 认知调节：锁 / 状态检测器 / 触发器
+
+三项**全程确定性（无 LLM 参与运行）**的基础机制。代码：`cognitive_locks.py`（505）、`state_monitors.py`（434）、`cognitive_triggers.py`（506）、`cognitive_regulation.py`（215，协调器）。
+
+### 10.1 事件链路
+
+```mermaid
+flowchart LR
+    A["状态提交 / 轮询<br/>（确定性）"] --> B["StateMonitor<br/>状态+变化识别"]
+    B --> C["状态事件<br/>（去重）"]
+    C --> D["TriggerEngine<br/>结构化条件评估"]
+    D --> E["认知事件<br/>动作派发"]
+    E --> F1["激活图谱节点<br/>（受锁约束）"]
+    E --> F2["record 记录"]
+    E --> F3["notify 通知<br/>llm_mode≥1 时进认知层"]
+```
+
+### 10.2 锁 `cognitive_locks.py`
+
+**锁控制"某个认知对象是否参与某个认知过程"**。它**不是**删除、不是隐藏、不是负权边：
+
+| 对比 | 区别 |
+|---|---|
+| vs 删除 | 删除是数据操作；锁不改对象数据一个字节 |
+| vs 负权边 | 负权边是关系语义（参与计算）；锁是控制机制 |
+| vs 隐藏 | 隐藏是展示层白名单；锁是认知过程级、可解释、可审计、可解除 |
+
+**两种锁型**：
+
+| 锁型 | 语义 | 扩散中的表现 |
+|---|---|---|
+| `blocking` | 阻止参与 | 不被种子激活、不发射、不接收 → 激活值恒为 0 |
+| `non_blocking` | 允许内部处理，限制认知输出 | 照常传播（下游能收到），但不进 Top-K / 活跃快照 / 回答区 |
+
+**作用范围**：
+
+| scope | blocking | non_blocking |
+|---|---|---|
+| `diffusion` | 不参与扩散 | 参与扩散，不进输出 |
+| `topk` | 不进 Top-K | 同左 |
+| `action` | 不进可执行队列 | 同左 |
+| `all` | 三者都拦 | 三者都过滤 |
+
+未知 scope 会被**存下但当惰性处理**（不做任何拦截）——"不假装支持没实现的钩子"。
+
+**组合规则**：同类型锁之间是**并集**（任一生效即拦）；`priority` 不改变并集语义，只决定对外展示的原因取哪条。
+
+**生命周期**：创建 → 启用/禁用 → 更新 → 删除 → 过期（`expires_at` 自动停用并留审计）→ 悬空锁（目标被删后保留并标记 `target_missing`，不静默消失）。所有状态变化进审计环 `history`（最近 200 条）。
+
+### 10.3 状态检测器 `state_monitors.py`
+
+**状态与事件分离**：`current_value` 是"现在是什么"（持久化），`state_changed` 是"发生了什么变化"（带 previous/current/delta/时间戳/事件 id）。
+
+**相同状态重复提交不产生事件**（去重），只刷新观测计数与时间。
+
+字段：`state_type`（number/bool/string/enum/object）、`unit`/`schema`/`epsilon`（校验）、`source`/`mode`/`poll_interval_s`（数据来源）、`changes`（最近 50 条变化）。
+
+运行方式：`event`（外部事件提交，本阶段主用）/ `manual`（显式提交）/ `poll`（调度器定期查询，接口就绪但**本阶段不内置任何数据源**）。
+
+校验失败**不污染当前状态**，只记 `last_error`。
+
+### 10.4 触发器 `cognitive_triggers.py`
+
+条件必须**结构化**，运行时不交给 LLM 判断：
+
+```json
+{"op": "gt|gte|lt|lte|eq|ne|changed|in|all|any|not",
+ "field": "current|previous|delta|observation_count|confidence",
+ "value": ..., "values": [...], "conditions": [...]}
+```
+
+`field` 只允许读事件/检测器里确实存在的量，**不接受任意表达式求值**。
+
+| 要素 | 实现 |
+|---|---|
+| 触发时机 | `fire_mode=edge`（默认，条件"不满足→满足"跃变才触发，上一轮结果持久化）/ `level`（为真即触发，靠冷却约束） |
+| 冷却 | `cooldown_s`；冷却期内请求被**明确拒绝并写入日志**（不静默） |
+| 一次性 | `once=true` 触发后自动停用，保留记录 |
+| 优先级 | 同轮多触发器按降序派发 |
+| 触发记录 | `log` 环（最近 200 条，含 `fired` 与 `skipped`+原因） |
+| 错误可见 | 条件评估异常记 `last_error` + `error_count`，不中断引擎 |
+
+动作类型：`activate_nodes`（走 `engine.activate_from_inputs`，因此**自动受锁约束**）、`record`、`notify`。
+
+### 10.5 LLM 介入边界
+
+| 级别 | 位置 | 状态 |
+|---|---|---|
+| **Mode 0 确定性** | 状态更新、变化判定、去重、条件评估、锁判定、触发调度、冷却 | **全部实现，链路中没有任何 LLM 调用** |
+| **Mode 1 结构化辅助** | `POST /api/regulation/triggers/parse`：自然语言 → 候选触发器定义（不落盘，人工确认后再创建） | 已实现（`nl_to_trigger`，需注入 LLM 函数；解析失败如实报错不猜测） |
+| **Mode 2 认知推理** | 触发事件带 `llm_mode=2` 标记，由认知层按需取用 | 接口已实现：`drain_cognitive_events(llm_mode_min=1)` 把事件交给回答层渲染【认知触发】块；**Mode 0 的事件永不进入任何 LLM 通路** |
+
+**取用即推进水位**：旧事件不会在后续每轮反复进入 prompt。
+
+---
+
+## 11. 具身与环境接口
+
+### 11.1 对话通道抽象 `conversation_channel.py`（363 行）
+
+**问题**：FAS 的对话入口原本只有 Web 一条。游戏聊天框里的对话"被丢在地上"。
+
+**通用做法**：把"在哪说话"抽象成**通道**，而不是给某个游戏写死一条路。
+
+```mermaid
+flowchart LR
+    subgraph CH["通道（只负责收发，无认知逻辑）"]
+        A1["Web 前端"]
+        A2["游戏内聊天<br/>minecraft_channel.py"]
+        A3["未来：IM 桥 / 语音转写"]
+    end
+    A1 -->|"POST /api/nlp"| P
+    A2 --> HUB["ChannelHub<br/>轮询 2s"]
+    A3 --> HUB
+    HUB -->|"归一化 → 去重 → 身份判定 → 策略过滤"| P["认知管线<br/>同一个 turn"]
+    P -->|"回复文本"| HUB
+    HUB -->|"通道.send()"| A2
+    P -->|"直接返回"| A1
+```
+
+**通道画像（profile）** 承载"这个场合该怎么说话"，不写死在代码里：回复长度上限、是否去 Markdown、轮询间隔、消息最大年龄、是否回复他人、被点名才回答的名单。
+
+**三条硬约束**（模块头）：
+1. 不让每个通道各自调 LLM 或各自维护对话状态
+2. **不把"别人说的话"当成用户说的话**
+3. **不假装配送**：send 失败要如实记录，回复不会"看起来发了"
+
+**身份判定**（`minecraft_channel.py`）：
+
+| sender | 处理 |
+|---|---|
+| 自己的 bot 名 | `self` → 过滤（否则自己回自己） |
+| 用户（默认 Hellucigen） | `user` → 完整认知回合 + 回复 |
+| 其他人 | `other` → 默认只观察；**被点名（喊 Haru/哈鲁/Fascinator/fas）才回答** |
+
+通道消息走的是应用自己的 HTTP 入口（`app.test_client().post("/api/nlp", ...)`），**认知逻辑只有一份**。
+
+### 11.2 Minecraft 全栈
+
+```mermaid
+flowchart TB
+    subgraph MC1["认知层"]
+        AUT["autonomy.py<br/>语义意图<br/>observe / approach / follow / explore<br/>/ collect / rest / communicate / withdraw"]
+    end
+    subgraph MC2["适配层"]
+        EMB2["minecraft_embodiment.py<br/>语义意图 → bot 动作<br/>真实回执回传"]
+        SESS["minecraft_session.py<br/>连接生命周期状态机"]
+        REF["minecraft_reflex.py<br/>游戏内指令解析（纯函数）"]
+    end
+    subgraph MC3["桥"]
+        PY["minecraft_bridge.py<br/>HTTP 客户端 (urllib)"]
+    end
+    subgraph MC4["Node 进程"]
+        BOT["bot.js (Mineflayer)<br/>HTTP :5010"]
+        GAME["Minecraft 服务器"]
+    end
+    AUT --> EMB2
+    REF --> BRIDGE2["Action/minecraft.py"]
+    EMB2 --> PY
+    BRIDGE2 --> PY
+    PY -->|"/state /goto /dig /say<br/>/action_result /stop_goto /look_at"| BOT
+    BOT <-->|"mineflayer 协议"| GAME
+    BOT -->|"chat 记录（带 seq）"| PY
+    PY -->|"感知"| PERC["minecraft_perception.py"]
+    PERC -->|"图节点"| KG2["知识图谱"]
+```
+
+**各文件职责**：
+
+| 文件 | 行数 | 职责 |
+|---|---|---|
+| `minecraft_bridge.py` | 205 | Python 侧 HTTP 桥客户端。`get_state / say / move / call / get_action_result / health / look_at / dig / goto_* / stop_goto / equip / inventory`。**失败策略：桥不可达一律返回 None/False，图谱与对话继续** |
+| `bot.js` | 19KB | Node/Mineflayer 侧。HTTP 服务 + 动作端点 + `/action_result` 异步回执 + `/dig` 逐块结果 + 实体相对坐标 |
+| `Action/minecraft.py` | 162 | 具体动作面（`follow_player / stop / jump / dig_block / attack / move_forward`）+ `BLOCK_MAP` 中文名→英文名 |
+| `minecraft_embodiment.py` | 345 | **具身适配器**：语义意图 → bot 动作。定义了 `CAPABILITIES` 集合与可采集材料**白名单** |
+| `minecraft_perception.py` | 127 | **原子感知**：把游戏状态拆成固定身份的动态状态节点（in-place 更新），不是单 blob 节点 |
+| `minecraft_reflex.py` | 124 | 游戏内指令解析（纯函数，零 LLM），**第一步判否定** |
+| `minecraft_session.py` | 153 | 连接生命周期状态机 |
+| `minecraft_channel.py` | 129 | 游戏内聊天作为对话通道 |
+
+**感知节点**（`minecraft_perception.py`）：`Haru的位置 / Haru的血量 / Haru的饥饿 / Haru的手持物 / 附近的玩家 / 附近的方块 / 附近的生物`，落 cognitive 空间，`type=dynamic_state`。
+
+建节点时会接一条 **`Haru -[当前状态]-> 槽位`** 边。注释解释了为什么：
+
+> *"没有这条边时状态节点是孤岛——扩散到不了它、语言层里也没有'这是 Haru 的状态'这个锚点，于是被问'你在哪里'只能靠猜（实测她答成'我在Haru这里，和你一起'）。锚点选 Haru 而不是 Self：Haru 节点出度小，加边几乎不影响 Self 出边的权重归一化。"*
+
+**未知检测**：附近出现的图外玩家/实体 → 建 `UnknownPlayer_N` / `UnknownEntity_N` 节点 + `observed` 边 + 激活 `未知信息`（好奇心信号）。
+
+**连接状态机**：`disconnected → requesting_port → awaiting_port → connecting → connected / failed / cancelled`。**端口必须来自用户明确输入——不猜测、不扫描**。
+
+**MODE0 反射指令**（完全绕过 LLM，`app.py:2690`）：支持 `follow / approach / stop / jump / dig / attack / move`，每类有独立的具名正则。取不到目标就如实拒绝。
+
+### 11.3 视觉（Eye + Vision）
+
+两条不同的视觉路径：
+
+**Eye — 屏幕 OCR**（`eye/screen_ocr.py`，97 行）
+
+| 函数 | 作用 |
+|---|---|
+| `capture_screen(region=None)` | 截屏 |
+| `recognize_text(region=None, min_score=0.5)` | OCR 识别，返回 `{count, texts:[{text, box, center}], ...}` |
+| `salient_texts(eye_result, top_n=5)` | 提取显著文本 |
+
+触发条件：文本同时匹配"看看/看一下/瞧瞧/识别/读一下/截屏" + "屏幕/显示屏/画面"。结果注入图谱为 `eye_text_{ts}` 节点（`declarative-episodic`，`type=eye_perception`），带显著文本+屏幕方位。
+
+**Vision — 对象检测**（`vision/`，7 个文件）
+
+| 文件 | 行数 | 职责 |
+|---|---|---|
+| `vision_processor.py` | 468 | 主处理器：`process_image / process_file / process_video_frame / get_objects / confirm_object` |
+| `object_detector.py` | 238 | 检测（OpenCV 轮廓 + 可选模型） |
+| `object_embedding.py` | 283 | 对象嵌入（SigLIP / CLIP） |
+| `object_memory.py` | 266 | 对象记忆（跨帧追踪同一对象） |
+| `faiss_index.py` | 218 | 对象向量索引 |
+| `low_level_attrs.py` | 148 | 低级属性（颜色/形状/纹理） |
+| `vision_graph_bridge.py` | 279 | 对象 → 图节点 |
+
+默认**禁用**，需前端手动开启（`/api/vision/enable`）。
+
+### 11.4 听觉（Ear）
+
+`ear/` 模块（5 个文件 + 1232 行）。前身是"The Ear of Fascinator"结课设计（完整版在 `legacy/ear_standalone/`，含 Demucs 人声分离与说话人分离）。
+
+| 文件 | 行数 | 职责 |
+|---|---|---|
+| `ear_processor.py` | 360 | 主处理器：`process_file / process_array`，音频分类 |
+| `pipeline_speech.py` | 247 | 语音流水线（VAD → ASR 转录） |
+| `pipeline_sound.py` | 127 | 环境声流水线（分类） |
+| `feature_extractor.py` | 149 | 特征提取 |
+| `audio_router.py` | 87 | 音频路由：按类型分发到不同流水线 |
+
+**输出结构**：`{audio_type: speech|music|sound|mixed, summary: {transcript, top_sounds, ...}, timeline: [...]}`
+
+**音频类型 → 图节点**映射：`speech→语音`、`music→音乐`、`sound→环境声`、`mixed→混合音频`。转录文本建 `ear_text_{hash}` 节点。
+
+**懒加载**（`_lazy_import`）：重依赖按需导入，不用时不占启动时间。默认**禁用**。
+
+### 11.5 行动引擎
+
+两套并行的动作系统，容易混淆：
+
+| 系统 | 位置 | 机制 |
+|---|---|---|
+| **Action 注册表** | `Action/__init__.py`（146）、`Action/minecraft.py`、`Action/wasd.py` | `discover_actions()` 自动发现 + `get_action_func(name)` 取函数。这是**具身动作面** |
+| **Action System** | `actions/action_engine.py`（362） | Phase 4 MVP，**认知层 Capability**：`ActionSelector.evaluate(user_input)` 从图谱状态选能力，产出 Intent 并 `persist_intent` |
+
+另有两个"万物皆图"的动作实现：
+
+- **网络搜索** `actions/web_search.py`（98 行）— `do_web_search(query, top_n=5)`，返回 `[{title, snippet, url}]`
+- **文件操作** `actions/file_action.py` — `execute_file_action(action, name, content, dir)`，默认目录"桌面"
+
+### 11.6 程序性节点沙箱
+
+`Node.execution` 字段是 Python 代码字符串，在受限沙箱执行（`app.py` 的 `/api/actions/execute`）。
+
+可访问变量：`graph`、`node`、`result`
+
+可用内置：`print, len, range, min, max, sum, sorted, str, int, float, bool, dict, list, set, tuple, enumerate, zip`
+
+**风险提示**：这是白名单式的沙箱，不是真正的安全边界。当前环境下 `execution` 字段主要由系统自己写入（见 `Action/__init__.py` 编译按键为代码），但 `/api/nodes` 的 POST/PUT 允许外部写入 `execution`，且服务默认只监听本地。若要暴露到公网，这是**必须先加固的点**。
+
+---
+
+## 12. API 接口总览
+
+145 个端点，`app.py` 单文件。按功能分组：
+
+### 12.1 图与节点（9）
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| GET | `/` | 前端页面 |
+| GET | `/api/graph` | 图谱渲染数据（支持阈值/邻域模式） |
+| GET | `/api/graph/auto` | 自动选择全图/邻域 |
+| POST | `/api/nodes` | 创建节点 |
+| PUT/DELETE | `/api/nodes/<id>` | 改/删节点 |
+| POST | `/api/edges` | 创建边 |
+| PUT/DELETE | `/api/edges` | 改/删边（`/api/edges` 带 body） |
+
+### 12.2 激活与扩散（8）
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| POST | `/api/activate` | 注入激活值 |
+| POST | `/api/activate/reset` | 清空所有激活 |
+| POST | `/api/diffuse/step` | 单步扩散 |
+| POST | `/api/diffuse/round` | 完整扩散轮 |
+| POST | `/api/diffuse/start` | 启动自动扩散 |
+| POST | `/api/diffuse/stop` | 停止自动扩散 |
+| GET | `/api/diffuse/status` | 扩散状态 |
+| GET | `/api/topk` | Top-K 候选集 |
+
+### 12.3 对话主流程（7）
+
+| 方法 | 路径 | 说明 |
+|---|---|---|
+| POST | `/api/nlp` | **主入口**：文本解析 + 图谱激活 + 扩散 + 回答 |
+| GET | `/api/nlp/logs` | NLP 处理日志 |
+| POST | `/api/memory/approve` | 审核并写入记忆草稿 |
+| POST | `/api/memory/replay` | 从对话日志重放抽取（事故恢复用） |
+| GET | `/api/buffer` | 情景缓冲区快照 |
+| POST | `/api/buffer/promote` | 手动晋升 |
+| POST | `/api/buffer/clear` | 清空缓冲 |
+
+### 12.4 语义检索（3）
+
+`POST /api/embedding/debug`、`GET /api/embedding/stats`、`POST /api/embedding/rebuild`
+
+### 12.5 行动队列（3）
+
+`GET /api/actions/queue`、`POST /api/actions/execute`、`GET /api/actions/log`，另有 `GET /api/actions/registered`
+
+### 12.6 自我（12）
+
+`GET /api/self`、`POST /api/self/diffuse`、`POST /api/self/preference`、`POST /api/self/emotion`、`POST /api/self/goal`、`POST /api/self/thought`、`GET /api/self/dispositions`、`POST /api/self/reflection`、`GET /api/self/reflection/candidates`、`POST /api/self/reflection/approve`、`POST /api/self/experience`、`GET /api/self/emotion/current`、`GET /api/self/preferences`、`GET /api/self/goals`、`GET /api/self/model`、`GET /api/self/model/beliefs`、`GET /api/self/model/preferences`、`GET /api/self/model/audit`
+
+### 12.7 认知调节（17）
+
+`GET /api/regulation/state`、`/locks`（GET/POST）、`/locks/check`、`/locks/<id>`（GET/PUT/DELETE）、`/monitors`（GET/POST）、`/monitors/<id>`（GET/PUT/DELETE）、`/monitors/<id>/observe`、`/triggers`（GET/POST）、`/triggers/log`、`/triggers/parse`、`/triggers/<id>`（GET/PUT/DELETE）、`/events`
+
+### 12.8 自主行动（10）
+
+`GET /api/autonomy/state`、`POST /mode`、`/pause`、`/resume`、`/stop`、`/step`、`GET/POST /goals`、`DELETE /goals/<index>`、`GET /log`
+
+### 12.9 对话通道（4）
+
+`GET /api/channels/state`、`POST /api/channels/<id>`（启停）、`POST /api/channels/<id>/send`、`GET /api/channels/recent`
+
+### 12.10 内部状态（10）
+
+`GET /api/internal/state`、`/explain`、`/cycles`、`/rewards`、`/history`、`POST /modulator/<name>`、`/need/<name>`、`/traits`、`/reset`、`GET|POST /snapshot`
+
+### 12.11 驱动力与能力（6）
+
+`GET /api/drive`、`POST /api/drive/evaluate`、`GET /api/action/capabilities`、`/intents`、`/state`、`GET /api/cognition/state`
+
+### 12.12 学习与知识包（12）
+
+`GET /api/learning/explore`、`POST /api/learning/import`、`GET /api/packs`、`/packs/enabled`、`POST /packs/enable`、`/disable`、`/create`、`/delete`、`/rename`、`/import`、`GET /packs/export`、`POST /packs/reload`
+
+### 12.13 感知（9）
+
+`GET /api/ear/status`、`POST /api/ear/enable`、`/disable`、`/process`、`GET /api/eye/status`、`POST /api/eye/capture`、`GET /api/vision/status`、`POST /api/vision/enable`、`/disable`、`/process`、`GET /api/vision/objects`、`POST /api/vision/confirm`
+
+### 12.14 其他（19）
+
+`GET/PUT /api/config`、`GET /api/search`、`PUT /api/search/<node_id>`、`PUT /api/search`、`GET /api/evolution`、`/evolution/stats`、`POST /api/llm/switch`、`GET /api/llm/status`、`GET /api/mc/status`、`POST /api/mc/say`、`GET /api/proactive/poll`、`POST /api/conversation/gap/*`（5 个）、`GET /api/chat/log`、`/chat/log/search`、`/chat/log/stats`、`POST /api/chat/log/clear`
+
+---
+
+## 13. 前端
+
+`index.html`（2305 行，单文件，无框架、无构建步骤）。
+
+**12 个标签页**：
+
+| 标签 | 内容 |
+|---|---|
+| **Top-K** | 当前认知焦点列表 |
+| **Queue** | 行动队列 |
+| **Ear** | 听觉状态与控制 |
+| **Vision** | 视觉状态与控制 |
+| **Eye** | 屏幕 OCR 控制 |
+| **Config** | 超参数实时调整 |
+| **Packs** | 知识包管理（启停/导入导出） |
+| **Learn** | 学习模块 |
+| **Chat** | 对话日志查看 |
+| **Reg** | 认知调节（锁/检测器/触发器三面板） |
+| **Auto** | 自主行动（状态/意图/候选/目标/日志 + ON/STOP/PAUSE/RESUME/STEP）+ 对话通道模块 |
+| **Internal** | 内部状态（调制变量/需求/性格 + 历史） |
+
+主视图是 **Canvas 图谱可视化**：节点大小/颜色反映激活度，支持邻域渲染（节点 >2500 时自动切换，默认 2 级深度）。
+
+73 处 `api()` 调用，全部走统一的 fetch 封装。
+
+---
+
+## 14. 配置参数全集
+
+`config.py` 的 `DEFAULT_CONFIG`，全部可运行时热更新（`PUT /api/config`）。
+
+> **2026-09-22 收尾清洗**：从 `DEFAULT_CONFIG` 删除了一批**全仓零引用**的死键（逐个 grep 核实无人读取）：`k_top`、`edge_decay_factor`、`reflection_interval`、`preference_decay_per_day`/`preference_min_weight`/`preference_max_weight`/`preference_increment`、顶层 `confidence_*` 三项、整段 `drive_system`、`graph_spaces`、`relation_categories`、`auto_gap_detection`、`render_full_max_nodes`、`render_neighbor_depth`、`llm_provider`、`ollama_model`、`deepseek_model`/`deepseek_api_key`/`deepseek_base_url`、`cognitive_cleanup_threshold`。原因：LLM 后端/模型名/密钥的实际真源是 `data/llm_config.json` 与环境变量（`DEEPSEEK_API_KEY` 等）；偏好的语义由 `喜欢` 边权与 disposition 承载；驱动动力学参数在 CognitiveField 各段。下方各表已同步移除这些行。
+
+### 14.1 扩散核心
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `lambda_decay` | 0.05 | 每轮激活衰减率 |
+| `inter_round_decay` | 0.75 | 回合间衰减率（比轮内强得多） |
+| `inter_decay_floor` | 0.5 | 回合间衰减地板 |
+| `beta_spread` | 1.0 | 扩散传播增益 β |
+| `max_depth` | 6 | 最大扩散跳数 |
+| `theta_threshold` | 0.01 | 收敛判定阈值 |
+| `min_spread_threshold` | 0.05 | 点火阈值（弱信号不传递） |
+| `activation_epsilon` | 1e-4 | 激活吸附阈值（浮点噪声归零） |
+| `emission_ratio` | 0.5 | 单步最大发射比例 |
+| `emission_transfer` | 1.0 | 发射即转移比例（0.0 = 旧的复制语义，仅对照实验用） |
+
+### 14.2 认知聚焦与语义召回
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `activation_max` | 5.0 | 激活上限 |
+| `faiss_recall_topk` | 8 | 每个输入词的语义召回广度 |
+| `input_similarity_floor` | 0.5 | 相似度地板（低于此不激活） |
+| `input_default_bonus` | 0.5 | 无相似度时的种子强度 |
+| `cosine_threshold` | 0.6 | 余弦相似度阈值 |
+| `edge_relation_factor` | 0.75 | 关系名匹配的边激活系数 |
+
+### 14.3 行动与阈值
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `theta_action` | 0.5 | procedural 触发阈值 |
+| `thought_threshold` | 0.2 | 内部思考触发阈值 |
+| `auto_interval` | 1.5 | 自动扩散间隔（秒） |
+
+### 14.4 偏好与置信度
+
+（整节已删除——见 §14 开头的收尾清洗说明：这些全局键从未被读取，偏好/置信度语义由边权、disposition 与 `self_model`/`reflection` 子段承载。）
+
+### 14.5 空间与关系传播规则
+
+见 §4.1 / §4.2 的两张表（`propagation_rules` / `relation_propagation`）。
+
+### 14.6 各子系统的嵌套配置
+
+| 键 | 内容 |
+|---|---|
+| `reflection` | 定期间隔 20 轮、情绪阈值 3.0、最少经历 5 条、自动批准 0.75、每轮最多 5 候选 |
+| `action_system` | Ask 阈值 1.5、最低偏好置信 0.6、缓存 TTL 3s |
+| `self_model` | 重要性门槛 0.5、5 个因子权重、最小观察 2 次、置信度增量 0.05 |
+| `continuous_cognition` | tick 2.5s、脉冲 4 tick、形成 0.55、表达 0.78、丢弃 0.10、冷却 300s、每小时 6 次 |
+| `autonomy` | 见 §9.2（最小间隔 12s、安静期 20s、分数阈值 0.35、7 个评分权重、llm_mode 0） |
+
+### 14.7 安全与运行边界
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `allow_api_execution_write` | False | 是否允许经 HTTP API 写节点 `execution`（会被 exec 执行的代码）。开启后仍只接受回环地址来源 |
+| `api_token` | "" | API 访问 token（§18.2 #19，2026-09-22）。空 → 回环继续零摩擦；非回环绑定时启动自动生成并持久化 `data/api_token.json`。解析优先级：本项 > `FAS_API_TOKEN` 环境变量 > token 文件 |
+| `api_token_require_loopback` | False | true 时对回环来源也强制 token（收紧开关；Origin 核验不受此项影响、恒开） |
+| `graph_snapshot_interval_s` | 1800 | 运行图谱快照时间闸（秒），落盘成功后按闸复制副本到 `data/graph_snapshots/`；0=关闭（§18.3 P1，2026-09-22） |
+| `graph_snapshot_keep` | 12 | 快照只保留最近 N 份，更旧的自动删除 |
+| `mc_bridge_poll_interval_s` | 30 | MC 桥活性 poll 检测器的轮询间隔（由 CC 既有 tick 的 `poll_due()` 驱动，无新定时器；§18.2 #7/#11，2026-09-22） |
+| `topic_termination_inhibit_sec` | 600 | 话题终止抑制时长（秒），由 `dialogue_decision.mark_termination()` 消费；2026-09-22 起抑制期状态载体是 `LockRegistry` 的 system 锁（expires_at/审计/可解除），未绑定时回退进程浮点（§18.2 #10） |
+
+### 14.8 显示与其他
+
+`hide_temp_nodes` true（前端消费）、`temp_node_pattern`（思考/记忆/反思/情绪 + ear_text + UnknownObject 的临时节点正则）、`auto_open_browser` true、`embedding_device` auto。（`render_full_max_nodes`/`render_neighbor_depth` 已在收尾清洗中删除——前端从不读它们。）
+
+另有不属于 DEFAULT_CONFIG 的启动环境变量：`FAS_HOST`（默认 `127.0.0.1`，设为 `0.0.0.0` 才开放局域网——非回环来源此后需 token，见 §18.2 #19）、`FAS_API_TOKEN`（API token，高于文件低于运行时 config）、`PORT`、`FAS_NO_BROWSER`。
+
+---
+
+## 15. 持久化文件地图
+
+```mermaid
+flowchart LR
+    subgraph F1["核心状态"]
+        RG["data/runtime_graph.json<br/>651 节点 / 1084 边<br/>（异步写，带缩小守卫）"]
+        IS["data/internal_state.json<br/>调制 / 需求 / 性格 / 周期 / 奖励台账"]
+        CL2["data/chat_log.json<br/>每轮输入与回复"]
+    end
+    subgraph F2["子系统状态"]
+        LK["data/cognitive_locks.json"]
+        SM["data/state_monitors.json"]
+        TG["data/cognitive_triggers.json"]
+        AU["data/autonomy.json"]
+        RC["data/recovery_candidates.json"]
+        RM["data/rename_map.json"]
+        RPT["data/relation_phrase_table.json"]
+        CR["data/capability_registry.json"]
+    end
+    subgraph F3["缓存（可重建）"]
+        FX["data/faiss/<br/>FAISS 索引缓存"]
+        FXRT["data/faiss_runtime/"]
+    end
+    subgraph F4["配置"]
+        LC["data/llm_config.json<br/>（gitignored）"]
+        LS["data/llm_secret.json<br/>（gitignored，只存 API Key）"]
+        AT["data/api_token.json<br/>（gitignored，非回环绑定自动生成，2026-09-22）"]
+    end
+    subgraph F5["备份"]
+        BK["data/runtime_graph.json.bak.*"]
+        GS["data/graph_snapshots/<br/>周期快照 runtime_graph_YYYYmmdd_HHMMSS.json<br/>（自动轮转保最近 N 份，gitignored）"]
+        SBL["data/server.log / server_play.log<br/>minecraft_bot/haru.log"]
+    end
+    subgraph F6["知识源（Pack，只读合并）"]
+        KP["knowledge_packs/<br/>common / computer /<br/>minecraft / user_teaching_2026-07<br/>knowledge_graph.json + metadata.json"]
+    end
+    KP -->|"启动合并"| RG
+    RG -->|"overlay"| RG
+```
+
+**存盘机制**（`app.py:1298-1401`）：**异步写盘线程**。
+
+```python
+_save(force=False)         # 标记脏 + 请求写入（默认节流）
+_write_graph_once()        # 真正落盘
+_save_writer_loop()        # 后台线程
+_start_save_writer()       # 启动
+_flush_save_at_exit()      # atexit 兜底
+```
+
+这样 `/api/nlp` 主路径不会因为序列化 651 节点而阻塞。
+
+落盘成功后另走一步**周期快照**（`graph_rotation.maybe_rotate`，2026-09-22，§18.3 P1）：按 `graph_snapshot_interval_s` 时间闸复制当前图谱文件进 `data/graph_snapshots/` 并把旧副本轮转掉（保留 `graph_snapshot_keep` 份）。缩小守卫拦"一次写坏"，快照保证"任意时刻都回得去"；快照失败只记 WARNING，绝不影响主落盘。
+
+---
+
+## 16. 测试与质量保障
+
+72 个脚本式测试文件（不是 pytest 风格，而是 `check(条件, 说明)` + `FAILURES` 列表的自定义运行器）：**71 个离线回归 + 1 个活体冒烟**（`test_cog.py`，需要运行中的服务器与可用 LLM，服务器未起时报 SKIP 而非失败）。2026-09-22 收尾全套件 72/72 通过（103s）。
+
+运行方式（每个文件可独立跑）：
+
+```bash
+E:/Miniforge.envs/Fascinator/python.exe -X utf8 tests/test_energy_conservation.py
+```
+
+### 测试清单
+
+| 文件 | 覆盖内容 |
+|---|---|
+| `test_energy_conservation.py` | **扩散能量守恒**：空闲长跑不饱和、对照组旧语义确实会饱和、回合内排序不被压平、锚点只在回合内有效 |
+| `test_activation_recall.py` | 激活召回 |
+| `test_atomicity.py` | 原子性写盘 |
+| `test_autonomy.py` / `test_autonomy_integration.py` | 自主行动（含"多次 tick 后 LLM 计数为 0"断言） |
+| `test_chat_log_replay.py` | 对话日志重放恢复 |
+| `test_cog.py` | **活体端到端冒烟**（需运行中的服务器 + LLM；未运行时报 SKIP），打真实对话观察 `dialogue_act` 分类 |
+| `test_action_sandbox.py` | **动作沙箱与 execution 写入闸门**：`__import__` 逃逸被拦、`ctypes/time` 未受影响、三处写入口过闸、默认监听回环 |
+| `test_cognition_modes.py` | LLM 参与模式与预算 |
+| `test_cognitive_locks.py` | 锁（7 个介入点全覆盖） |
+| `test_cognitive_triggers.py` | 触发器（冷却/once/优先级/条件评估） |
+| `test_continuous_cognition.py` | 持续认知循环 |
+| `test_conversation_channel.py` | 对话通道（身份判定/送达诚实） |
+| `test_dialogue_decision.py` | 交流决策 |
+| `test_disposition.py` | 行为倾向（candidate→stable） |
+| `test_internal_state.py` | 内部状态（三条不变量） |
+| `test_minecraft_*.py`（4 个） | 具身/感知/反射/会话 |
+| `test_narrative.py` / `test_narrative_trigger.py` | 叙事抽取与评分 |
+| `test_personality.py` | 基线人格 |
+| `test_state_monitors.py` | 状态检测器（去重/校验失败不污染） |
+| `test_temporal_awareness.py` | 时间感知 |
+| `test_world_state_grounding.py` | 世界状态接地 |
+| `test_known_limits_fixes.py` | **§18.5 B 批次五项修复验收**（2026-09-22）：#10 抑制锁承载/审计/零扩散介入、#7 桥失联回写状态机护栏、#11 poll 数据源驱动、#19 守卫判定矩阵、P1 快照轮转（63 断言） |
+| `test_mc_closed_loop_sim.py` | **Minecraft 模拟环境闭环长时验收**（2026-09-22 收尾新增）：真实栈（AutonomousLoop/ActionManager/MinecraftEmbodiment/capability_graph/embodied_mapper）+ 假桥假世界读数；16 项检查：不卡死、决策随世界变化、不刷同一动作、失败被结算并被下轮消费、LLM 零调用护栏、图谱增长与激活有界、陌生生物入图、血量槽位接地、停机后可恢复 |
+| `test_screen_observe_action.py` / `_autonomy.py` / `test_eye_salience.py` | 视觉观察链（ScreenObserver 真执行、autonomy 零改动、图谱显著性，2026-09-22） |
+
+上表为**代表性清单**（覆盖每类不变量各一）；`tests/` 目录实际有 71 个离线套件，逐跑以目录为准。
+
+另有 `scripts/` 下的验证脚本：`verify_p0_1.py` / `verify_p0_2.py` / `verify_p0_all.py`（含 V1b 作用域地雷闸门）/ `verify_event_normalize.py` / `bench_diffusion.py`（扩散性能基准，结果在 `scripts/bench_baseline.json`）/ `check_unbound_scope.py`（2026-09-22 补：全仓 AST 扫"函数内先读后绑"，防 fas_log 型局部 import 毒化，import 型命中须为 0）。
+
+---
+
+## 17. 运行手册
+
+### 17.1 环境要求
+
+- Python 3.10+（本机用 `E:/Miniforge.envs/Fascinator/python.exe`）
+- Node.js（Minecraft bot 用，本机在 `E:/Nodejs/node.exe`，不在 PATH）
+- BGE 模型：`E:/Models/bge-small-zh-v1.5` 或环境变量 `BGE_MODEL_PATH` 或项目根目录
+- LLM：默认走小米 MiMo API，需要 API Key（`data/llm_secret.json` 或 `MIMO_API_KEY`）
+
+### 17.2 安装
+
+```bash
+pip install -r requirements.txt
+# GPU 版 torch（可选，嵌入编码快 6 倍）
+pip install torch --index-url https://download.pytorch.org/whl/cu130
+```
+
+### 17.3 初始化（首次）
+
+```bash
+python init_jieba_pos.py      # 从 jieba 词典导入实词节点
+python seed_speech_acts.py    # 初始化基础设施节点与意图树
+```
+
+### 17.4 启动
+
+```bash
+python app.py                 # 默认端口 5000，自动打开浏览器
+```
+
+环境变量：
+- `PORT=8080` — 自定义端口
+- `FAS_HOST=0.0.0.0` — 开放到局域网（默认 `127.0.0.1`；服务无鉴权，开放前确认网络可信）
+- `FASCINATOR_GRAPH=my_graph.json` — 自定义图谱路径（旧兼容）
+- `FAS_NO_BROWSER=1` — 不自动开浏览器
+- `HF_HUB_OFFLINE=1` / `TRANSFORMERS_OFFLINE=1` — `app.py` 启动时自动设置（避免 HF 不可达时阻塞）
+
+**启动/停机守卫（2026-09-22 收尾新增，沙盒验收 12/12 通过）**：
+- **单实例端口预检**：`app.run` 之前用不带 `SO_REUSEADDR` 的裸 bind 探测目标端口。被占 → 打人话错误（提醒"先确认/停止旧实例，绝不盲杀 python/node 进程——内存态图谱/词表会丢"）并 `SystemExit(2)`。Windows 上 Werkzeug 带 `SO_REUSEADDR` 能"劫持"已监听端口悄悄起第二个大脑，预检堵死这条路。
+- **拒启实例零落盘**：预检失败退出时跳过 atexit 图谱保存——否则第二个进程会把"启动瞬间的旧副本"盖回盘上，毁掉在跑实例的增量。
+- **浏览器定时器在预检之后**才挂（拒启不白开页面）。
+- **优雅停机（Ctrl-C）**：`finally` 依次 `action_manager.cancel("FAS 停机")`（在飞动作如实取消，不假成功）→ `channel_hub.stop()` → `cc.stop()` → MC 桥在线则 `/quit`（不留孤儿 node 进程）→ fas_log `server_stopped`。图谱落盘与 fas_log 收口走既有 atexit。
+- **同批修复的 P0**：`app.py` 原把模块级 `import time` 放在 persona 构造之后数百行，而 `_state_clock()` 的回退路径在导入期就调 `time.time()`——任何冷启动必炸 `NameError`（沙盒实测复现）。`import time` 已上移至顶部导入块。
+
+### 17.5 启动时的关键副作用
+
+启动过程会做（`app.py:112-799`）：
+1. 合并 Knowledge Pack → Runtime Graph
+2. 应用重命名映射、overlay 运行时修改、重建派生索引
+3. Bootstrap 认知类型化（Self 节点修复、graph_space 补全、relation_category 补全）
+4. **重置所有节点/边的 activation 为 0**（"服务器重启 = 认知重置"）
+5. 创建扩散引擎、NLP、Self Model、情景缓冲、持续认知循环、人格基线、反思引擎、LLM 预算、认知调节、Minecraft 桥/会话/自主循环、内部状态、对话通道、驱动力、行动系统、复合短语处理器、Embedding 管理器、Ear/Vision 处理器、能力注册表
+6. 播种基础设施节点（社交互动、LLM回答、网络搜索、文件操作、看屏幕、情绪节点、能力节点及其边）
+7. 引导焦点事件指针（指向 episodic 空间 timestamp 最新的头部事件）
+8. 异步存盘线程启动，持续认知循环线程启动（**Ear/Vision 默认禁用**）
+
+### 17.6 启动 Minecraft 具身
+
+1. 在 Minecraft 里开局域网世界，记下端口
+2. 在对话里说"进入 Minecraft 世界，端口 12345"（或前端 Auto 面板）
+3. `_ensure_mc_bot()` 会启动 `node bot.js`（等待 20 秒探活）
+4. 连接成功后，游戏聊天框里说话即进入认知管线
+
+---
+
+## 18. 成熟度评估与已知限制
+
+### 18.1 各子系统成熟度
+
+| 子系统 | 成熟度 | 说明 |
+|---|---|---|
+| 知识图谱数据模型 | 🟢 稳定 | 索引/锁/回调/持久化完整，有回归测试 |
+| 激活扩散引擎 | 🟢 稳定 | 能量守恒修复完毕，有专门护栏测试 |
+| NLP 感知器 | 🟢 可用 | 依赖 LLM，有降级 |
+| 情景记忆/事件框架 | 🟢 可用 | 时间锚点 + 父子事件结构完整 |
+| 认知调节三件套 | 🟢 稳定 | 7 个介入点全测，无 LLM 参与 |
+| 对话通道 | 🟢 可用 | 只有 Minecraft 一个非 Web 通道 |
+| 持续认知循环 | 🟢 可用 | 单线程，节拍清晰 |
+| 自主行动闭环 | 🟡 可用但受限 | 见下方限制 |
+| 内部状态层 | 🟡 骨架完成 | Phase 1 只做状态容器，**需求/奖励的更新逻辑在 Phase 2-5 尚未接入** |
+| 自我模型 | 🟡 结构完整 | 重要性门槛与溯源完整；belief/preference 产出稀疏是 **P0-7 设计后果**（只有 FAS 第一人称主语边算自我证据），现全链路有 trace 可归因 |
+| 行为倾向 | 🟢 闭环已通 | **2026-09-18 修复**：旧版 turn 级反馈被静默丢弃（apply_outcome 不建 pair），现 outcome 四态 + 多来源证据 + 首条经历建 candidate + stable 降级不删；8 项验收见 `docs/self_learning_loop_fix.md` |
+| 好奇心 | 🟢 已重构 | 2026-09-18 重构为探索驱动力 + 统一行为竞争（见 `docs/curiosity_refactor_plan.md`） |
+| 反思引擎 | 🟡 机制完整、落地弱 | 自评"任何一条反思三个月后必须能回答它改变了哪条边" |
+| 驱动力 | 🟢 四路已接 | Curiosity/Social/Learning/Consistency 四条 Drive 图节点（`drive_engine.DRIVE_NODE_IDS`）+ 评估管线 + tension 态持久化；2026-09-22 核销"其余三个是 planned"的旧表述 |
+| 视觉/听觉 | 🟡 可调用 | 默认禁用，需要手动开；2026-09-22 视觉观察链改走动作层（SCREEN_OBSERVE 由 `eye/observer.py` 的 ScreenObserver 真执行 + 图谱显著性注入，离线三件套测试锁定） |
+| 能力注册表 | 🟢 可用 | 有缺口分析与下一目标 |
+| 前端 | 🟢 可用 | 12 标签页，Canvas 可视化 |
+
+### 18.2 已知限制（代码/文档中明确记录的）
+
+**扩散与图**
+
+1. ~~**负权边在传播中被丢弃**~~：**2026-09-22 核账发现已实现**（2026-09-20 补账轮）——`w<0` 的边产生抑制性贡献，归一化分母只计激发权重，激与抑在同一更新规则内竞争（`diffusion_engine.py:24/366/1015-1017`，旧 `max(0.0, weight)` 钳位已不存在）。回归见 `tests/test_dynamics.py`。
+2. **锁只拦"参与"，不拦"已产生的输出快照"**：新建 blocking 锁会清残留激活，但若某个消费者已缓存快照，需等下一次输出刷新。
+
+**自主行动**（AUTONOMY.md §12）
+
+3. **寻路取消是"尽力而为"**：`/stop_goto` 调 `pathfinder.setGoal(null)`，已发出的移动指令可能要一拍才停，无逐帧中断。
+4. **`rest` 不找避难所**：只是"停住不动"，不假装会生存策略。
+5. **`explore` 是方向轮转**，不做未探索区域建模。
+6. **`observe` 对无坐标目标退化为"看一眼周围"**。
+7. ~~**bot 生命周期仍由人工启动**：掉线后会话节点不会自动回 disconnected~~：**后半句 2026-09-22 已修**（§18.5）——MC 桥活性 poll 检测器（CC 既有 tick 驱动，间隔 `mc_bridge_poll_interval_s`）在 health True→False 翻转时经 `MinecraftSession.on_bridge_lost()` 把 connected 回写 disconnected 并记经历事件；**bot 进程启动仍为人工**（设计保留：局域网开局域网开，端口不猜不扫）。
+8. ~~**奖赏只到"情绪 + 表达抑制 + 图留痕"**~~：**2026-09-22 核账发现已实现**（2026-09-20 补账轮）：事件级奖赏评估在 `reward.py`，结果写回 disposition（"由代码计算，写入 self 图"；旧四态字段有兼容投影），并明确"激素不是人格"边界。强化学习仍无（本就不在原路线上）。
+
+**架构**
+
+9. ~~**三处重复的 INFRA 过滤**~~（**2026-09-15 已修**）：收敛为 `graph_model.ENGINE_PART_LABELS` 单一真源，`is_cognitive_visible` 与三个下游模块共用；语义零变化（仍不含 `self_capability` 旁路）。
+10. ~~**`dialogue_decision._inhibit_until` 未合并**：话题终止抑制期仍是进程级浮点时间戳、无解除 API、无审计~~：**2026-09-22 已修**（§18.5）——绑定 `LockRegistry` 后抑制期表达为一条 `target_type="system"` 的 non_blocking 锁（带 `expires_at`、进审计历史、`release_termination()` 显式解除、`termination_state()` 可读、/api/regulation 可见）；system 锁不参与任何扩散拦截（实测 gate 集合恒空）。未绑定注册表时回退原浮点通道（离线部署语义不变）。~~硬编码 600s~~（**2026-09-15 已改**为 `config.topic_termination_inhibit_sec` 可配置）。
+11. ~~**轮询型检测器无内置数据源**~~：**2026-09-22 已接线**（§18.5）——`mode=poll` 数据源注入点有了第一个真实用户：MC 桥活性检测器 `register_poller(health)`，由 CC 既有 tick 的 `poll_due()` 驱动（无新定时器）。未注册 poller 的检测器仍静默跳过（这是保留语义，不是缺陷）。
+12. **`app.py` 单文件过大**：~~6035 行~~ → 现 **7939 行**：全部路由仍在一个文件，改一处要全文搜。属结构重构议题，不在行为缺陷之列。
+
+**待实现**（`docs/fas_cognitive_architecture_v2.md` §四/§7）
+
+13. ~~**Hebbian 共激活强化未实现**~~：**2026-09-22 核账发现已实现**（2026-09-20 补账轮）：`diffusion_engine.py:268 _hebbian()` 按论文 `w += ε·a(u)·a(v)` 增量；护栏在 `config.py:1749`——默认 enabled、ε=0.0015、max_gain=0.5、类别白名单（semantic/emotional_relation）。
+14. **参数节点化部分接线**：`p(t) = clip(p0 + Σ α·a(m,t), pmin, pmax)`（论文 §3.3）——当前按"**最小接线、勿一次性硬接**"路线走：情绪调制与部分参数已活（config 注释与 internal_state 镜像可证），但**没有**把每个超参数都建成图节点并逐周期更新。此项是"有意的未完成"，不是缺陷。
+15. ~~**Soft forgetting 未实现**~~：**2026-09-22 核账发现已实现**（2026-09-20 补账轮）：`diffusion_engine.py:301` 消费 `config.py:1757 "soft_forgetting"`（last_access 驱动可及性衰减，数据保留）。
+16. ~~**发言提纲机制未实现**~~：**2026-09-22 核账发现已实现**：`cognitive_context.py:296` 起"决定 → 提纲 → 措辞"——LLM 只在提纲内自由措辞，不再从上下文堆自行推断该说什么。回归见 `tests/test_cognitive_context.py`。
+17. ~~**话题预期（预测误差基线）未实现**~~：**2026-09-22 核账发现已实现**（2026-09-20 补账轮）：`app.py:3543-3565` 每轮计算并记录 `prediction_error` 认知事件，`cognitive_field.py` 有对应消费面。
+
+**安全**
+
+18. **程序性节点沙箱与 execution 写入**（**2026-09-15 已修，见 §18.4**）：原状态是"`/api/nodes` 的 POST/PUT 可写 `execution` + 沙箱白名单含裸 `__import__`（实测 `__import__('os')` 可逃逸）+ 绑定 `0.0.0.0`"，三者叠加构成局域网可达的任意代码执行。现为：受控 import 白名单 + 写入闸门（默认关、开后仍限回环）+ 默认监听 `127.0.0.1`。
+19. ~~**无认证**：所有 API 无鉴权~~：**2026-09-22 已修**（§18.5）——两道独立防线（`api_guard.py` 纯函数判定 + `app.py` Flask 粘合）：Origin/Referer 核验**常开**（恶意网页借 127.0.0.1 打 CSRF/DNS rebinding 的路被截死，与 token 无关）；token 核验按需——生效时（config/`FAS_API_TOKEN`/非回环绑定自动生成）**只强制非回环来源**，回环默认零摩擦不变（`api_token_require_loopback` 可收紧），`?token=` 引导换 httpOnly cookie。本机默认用法完全不受影响。
+
+### 18.3 风险点排序
+
+| 优先级 | 风险 | 影响 | 建议 |
+|---|---|---|---|
+| ~~P0~~ | ~~无认证 + 可写 `execution` 字段~~（**2026-09-15 已修**：受控 import 白名单 + 写入闸门默认关 + 默认监听 127.0.0.1，见 §18.4；~~剩余 token 鉴权~~ **2026-09-22 已补**，见 §18.5 #19） | ~~任意代码执行~~ | ~~剩余：加 token 鉴权（P1）~~ 已闭环 |
+| P1 | `app.py` 单文件过大（7939 行） | 维护成本、合并冲突 | 按功能域拆 Blueprint |
+| ~~P1~~ | ~~图数据只有单文件 + 手动备份~~（**2026-09-22 已修**：落盘后周期快照 + 自动轮转，见 §18.5 / §15） | ~~事故已发生过一次（见 §8.10）~~ | 恢复演练：挑一份快照比对节点数即可 |
+| ~~P2~~ | ~~人格通路产出为 0~~（**2026-09-18 闭环已修通**：outcome 四态 + 多来源证据 + 首条经历建 candidate + 降级不删；8 项验收 `tests/test_self_learning_loop.py`，见 `docs/self_learning_loop_fix.md`） | ~~核心研究假设未验证~~ | 剩余：真实环境数天积累（门槛不该绕过，属设计而非缺陷） |
+| P2 | Hebbian 未实现 | 论文核心机制缺失 | 按 V2 设计实现（ε=1e-5~1e-4 + w 上限 + 弱化通道） |
+| P3 | 视觉/听觉默认禁用未验证 | 功能存在但未被使用 | 补充端到端测试 |
+
+### 18.4 安全修复记录（2026-09-15）
+
+针对 §18.2 #18/#19 的实测漏洞做的三层修复，全部有回归测试锁定（`tests/test_action_sandbox.py`，32 条断言；另对真实服务器做了 18 项端到端验证，全部通过）：
+
+| # | 问题（修复前实测） | 修复 | 位置 |
+|---|---|---|---|
+| 1 | 沙箱白名单含裸 `__import__`，`exec("__import__('os').getcwd()")` 实测成功返回工作目录 | 换成受控 `_action_safe_import`，只放行 `ALLOWED_ACTION_IMPORTS`（含现有 12 个动作节点实际需要的 `ctypes`/`time`；`os`/`subprocess`/`socket`/`shutil` 等一律 ImportError） | `diffusion_engine.py` 模块顶部 + 沙箱内建表 |
+| 2 | 无鉴权的 `POST /api/nodes`、`PUT /api/nodes/<id>`、`PUT /api/search/<id>` 三处可写 `execution`（代码注入面） | 新增 `_execution_write_denied()` 闸门：`config.allow_api_execution_write` 默认 **False**；打开后仍只接受回环来源。判据用**值**而非键（前端建点恒带 `execution:null`，不能误伤）；写 null/空串是清除代码，属降级，照常放行 | `app.py`（config 定义后 + 三处路由） |
+| 3 | `app.run(host="0.0.0.0")` 把注入面暴露到局域网（§18.2 #18 原文"默认只监听本地"与代码不符） | 默认 `127.0.0.1`，`FAS_HOST` 环境变量显式放开；非回环监听时打 `[SECURITY]` 告警日志，日志不再无条件宣称局域网可达 | `app.py` 启动块 |
+
+连带的小修（零行为变化）：
+
+- **INFRA 过滤收敛**：`graph_model.ENGINE_PART_LABELS` 单一真源，替换 `continuous_cognition` / `dialogue_decision` / `cognition_modes` 三处重复字面量（§18.2 #9）。
+- **话题终止抑制可配置**：`config.topic_termination_inhibit_sec`（默认 600），`app.py` 调 `mark_termination()` 时传入，`dialogue_decision` 不再硬编码（§18.2 #10）。
+- **`.gitignore` 补漏**：`node_modules/`（此前 6542 个依赖文件可被 `git add .` 带入库）、`payload.json`/`resp.json`（HANDOFF 流程临时文件，含真实用户输入与回复）、`data/recovery_candidates.json`（重放抽取出的真实经历）、`data/internal_state.json`/`autonomy.json`/`state_monitors.json`（运行时状态）。
+- **`tests/test_cog.py` 诚实化**：服务器未运行时明确报 SKIP（退出码 0），不再伪装；并注明它是活体冒烟、不计入离线断言数。
+
+#### 18.4.1 隐私入库专项审计（2026-09-15，同日追加）
+
+用户明确要求"真实经历等个人信息千万不要提交"后做的全量审计：
+
+**已经公开在 GitHub（提交 `9fc4d75`，可达 origin/main）的**：
+
+| 文件 | 内容 | 处置 |
+|---|---|---|
+| `data/migration_report_episodic.md` | **真实情景经历节点**（如 `用户 -[喝了]→ 奶茶`、`用户 -[玩]→ Minecraft`） | `git rm --cached` 退出跟踪 + gitignore；历史清除见下方"待拍板" |
+| `data/migration_report.md`（117KB） | 图谱节点名清单（含用户 ID `Hellucigen`、事件名） | 同上 |
+| `data/migration_report_applied.md` | 同类，程度较轻 | 同上 |
+
+**核实后未泄漏的**：`data/runtime_graph.json`、`data/chat_log.json`、`data/recovery_candidates.json`、`payload.json`、`resp.json`、`data/llm_secret.json` 均从未进过任何提交；历史里的 `data/llm_config.json` `api_key` 为空串，无密钥泄漏。
+
+**已装上的防线**：
+
+1. `.git/hooks/pre-commit` 防呆钩（本地，不入库）：黑名单路径（图谱/对话/重放/迁移报告/临时文件/运行时状态/日志/node_modules）一旦**新增或修改**进暂存区，提交直接失败并给出提示；**删除**这些文件（清理操作）照常放行。已实测：强塞 `data/runtime_graph.json` 提交被拦，退出跟踪的删除可正常提交。误报绕过：`git commit --no-verify`。
+2. `.gitignore` 追加 `data/migration_report*.md`。
+
+**处置执行记录（2026-09-15，接"都做"指令）**：
+
+1. ✅ **本地历史已重写**：`git filter-repo --invert-paths` 抹掉三个迁移报告的全部历史 blob（`rev-list --objects --all` 复查为空），全史 25 个提交哈希变更（`bc1c917→f5279ac`、`1c00f5d→7d35139`）。重写前已做双重备份：完整历史 bundle（`C:\Users\Hellucigen\fascinator-backup-20260915.bundle`）+ `data/` 全量快照（`fascinator-privacy-backup-20260915\`）。重写后工作区/图谱/测试全部完好。
+2. ✅ **当前代码已全部入库**（提交 `7d35139`，74 文件 +14942/−3888）——此前 9,801 行未跟踪的自主/调节/具身代码一并解决；提交由隐私防呆钩把关通过。
+3. ⏳ **force push 待网络**：github.com:443 直连超时，系统代理 127.0.0.1:7897 未运行（ProxyEnable=0 且端口无监听）。代理开启后执行 `git push --force origin main`。
+4. ⏳ **仓库转 Private 需手动**：本机无 gh CLI、凭据非交互取不到。GitHub 网页 → Settings → General → Danger Zone → Change visibility → Private（**请在 push 之前先做**）。
+5. 提醒：已经公开过的内容无法保证无人 clone/爬取；转 Private + force push + GitHub Settings 里的 Repository cleanup（或联系 support 清缓存）能把暴露面降到最低。
+
+### 18.5 B 批次修复记录（2026-09-22）
+
+§18.2 的五项"活着且可修"限制（B 项）一轮收口，每项带离线断言，全套件在 `tests/test_known_limits_fixes.py`（63 项全绿）。判定基线：**以现有设计为主**——文档与代码有出入的地方，代码是权威，文档改叙述。
+
+| # | 限制 | 修复机制 | 位置 |
+|---|---|---|---|
+| #10 | 抑制期进程浮点、无解除 API/审计 | 绑定 `LockRegistry` 后表达为 `target_type="system"` non_blocking 锁（expires_at + 审计 + `release_termination`/`termination_state`）；`LockRegistry.TARGET_TYPES` 增 `"system"`，派生 gate 集合恒空（实测零扩散介入）；未绑定时回退浮点，离线单测不受影响 | `cognitive_locks.py`、`dialogue_decision.py`、`app.py`（`bind_lock_registry`） |
+| #19 | API 无鉴权 | 两道独立防线：Origin/Referer 常开（截 CSRF/DNS rebinding），token 按需生效且**只强制非回环来源**（回环零摩擦不变，`api_token_require_loopback` 收紧）；非回环绑定自动生成 token 存 `data/api_token.json`（gitignored）；`?token=` 引导换 httpOnly/Lax cookie；守卫自身异常 fail-open 并 ERROR 日志，**判定拒绝不经过该路径** | `api_guard.py`（新，纯函数）、`app.py`（before/after_request + 启动引导） |
+| P1 | 图数据单文件 + 手动备份 | 单写入器落盘成功后按时间闸复制快照到 `data/graph_snapshots/`，自动轮转保最近 N 份（默认 1800s / 12 份，均 config 可调）；快照失败只记日志绝不影响主落盘 | `graph_rotation.py`（新，纯函数）、`app.py:_write_graph_once` |
+| #7 | bot 掉线不回写 | `MinecraftSession.on_bridge_lost()`：仅 `connected` 态翻到 `disconnected` 并留 `lost_reason`，awaiting/connecting 等期不被波及 | `minecraft_session.py`、`app.py:_wire_bridge_liveness` |
+| #11 | poll 检测器无数据源 | 注册 `minecraft_bridge` 的 boolean poll 检测器，数据源 = `bridge.health()`；订阅者只在 True→False 边沿触发上调用 #7 的回写（去重靠 `observe()`，重复 False 不刷屏）。**不新建定时器**：由 CC 既有 `monitor_poll_every_ticks` 的 `poll_due()` 驱动 | `app.py:_wire_bridge_liveness` |
+
+已知副作用（均为有意设计，记录以便排障）：① 首轮 poll 的 `None→True`"出现"事件不动作（只认消失边沿）；② 恢复 True 不自动重连（回写单向，重连仍走用户指令）；③ 首次落盘即出一张基线快照；④ `?token=` 引导的 cookie 未带 `Secure` 旗（http 局域网下 Secure 会被浏览器丢弃，故不加）。
+
+### 18.6 稳定化收尾记录（2026-09-22，Stabilization Sprint）
+
+本轮不做新设计，只做收尾/联调/验收/稳定化。修复都有针对性测试或全套件背书：**72/72 离线+活体套件通过、bench 扩散指纹维持已接受态（130 处历史差异，零恶化）、`verify_p0_all` 全过、MC 模拟闭环 16 项、启动/守卫/停机/重启沙盒验收 12 项**（真实图谱与用户数据全程零接触，验收在临时副本上进行）。
+
+| 类别 | 修复 | 位置 |
+|---|---|---|
+| P0 冷启动崩溃 | 模块级 `import time` 晚于 persona 构造的调用点，任何冷启动必炸 NameError（沙盒复现）；上移至顶部导入块 | `app.py` |
+| P1 结算正确性 | 动作超时被三连结算（统计×3）；普通取消在清 current 处与 `_settle` 各加一次（双计）——统一为**单一归属结算**（cancelled/interrupted/success/failed 互斥计数） | `action_system.py` |
+| P1 节拍 | CC 每拍把 autonomy 忙线返回的 `action_progress` 又 tick 一遍 → 技能链 2× 速度推进；改为同拍只推进一次 | `continuous_cognition.py` |
+| P1 前沿不变量 | 三处直写激活漏 `mark_active`：网络 marker 写回（`step_network_markers`）、`等待回答` +2.0 强化、MC 夜生存需求 boost（进 lit 集合）——修复后能量照常进扩散前沿 | `drive_engine.py`、`curiosity_engine.py`、`embodied_mapper.py` |
+| P1 预算漏洞 | 离线反思此前不查 LLM 预算就调模型；补 `can_call("reflect")` 门（预算不足压力保留、下拍重试） | `continuous_cognition.py` |
+| P1 假成功动作 | 用户说"别跟了"走的是 `Action/minecraft.py` 里**重复定义覆盖前者的** `stop_follow`：裸 urllib 打硬编码端口、引用未定义 `_json` → 异常吞掉恒报 success。删影子版本，保留桥委托版并补 `global` 复位跟随状态 | `Action/minecraft.py`、`app.py` |
+| P2 停机与双实例 | 见 §17.4 启动/停机守卫（端口预检拒启+零落盘、优雅停机 finally、bot /quit） | `app.py` |
+| P1 热路径作用域地雷（报告后追加，用户实测发现） | `process_nlp` 内两处**函数体局部** `import fas_log`（narrative/explore_ask 支路）把 `fas_log` 变成整个函数的局部名 → 函数开头 `fas_log.new_trace()` 必抛 UnboundLocalError，**每次 /api/nlp 500、对话全停**。删两处局部 import（模块顶已有）。教训：py_compile 不查作用域、测试从不 import app.py、当轮启动冒烟只打了 `/api/embedding/stats` 没打核心路由——冒烟覆盖≠能启动。已补常驻静态防线 `scripts/check_unbound_scope.py`（全仓 AST 扫"先读后绑"，import 型须为 0；2026-09-22 基线：除已删两处外全仓 import 型为 0，assign 型 62 处命中逐条核查均为 comprehension/for 变量假阳性） | `app.py` |
+| P2 观测 | DRIVE 段此前零 emit → 补**仅主导驱变化时**一条 `dominant_shift`（不刷屏）；对话回合补 `duration_ms`；死 import（`demand_score`/`mode_for_demand` 顶部引用）清理，`mode_for_demand` 标注 DEPRECATED（运行时真路由在 `cognitive_demand`） | `drive_engine.py`、`app.py`、`cognition_modes.py` |
+| P3 卫生 | 19 个零引用配置死键删除（§14 清洗说明）；`conversation_gap_detector` 标"未接线手动工具"+日志环形上限 200（防内存无界增长）；`action_concepts.concept_for_node` 零引用删除；生产码 TODO/FIXME 实数为 0（仅中文"XXXXX"误报） | `config.py`、`conversation_gap_detector.py`、`action_concepts.py` |
+| P1 MC 闭环雷·接线签名（报告后追加，用户实测"进游戏呆呆站着"发现） | `MonitorRegistry.list()` 不接受 `target_type`——§18.5 B 批次接线时照抄了**锁注册表**的过滤签名，两个注册表 API 不同形 → 每次启动 `[MCSession] 桥活性接线失败`，桥失联回写整条从未生效。`list()` 补 `target_id`/`target_type` 过滤（与 `cognitive_locks.list` 同形） | `state_monitors.py` |
+| P1 MC 闭环雷·可见性竞态（同上） | `navigate_to_entity` 在连接瞬间（实体尚未同步/渲染距离外）**0.0s `entity_not_visible` 死刑**，而 `_mc_on_connected` 的"去找用户"是一次性提案 → 首跳即死、不再重试。补**可见宽限**：目标暂不可见时进入 pending 轮询等待（`navigate_visible_grace_s` 默认 20s，置 0 保持旧行为），期间出现即出发，到期仍不可见才如实失败 | `skills/movement.py`、`config.py` |
+| P1 MC 闭环雷·经验先验投毒（同上） | causal 分量把**任何**历史阻碍理由判满额惩罚（−0.30）：一次暂态 `entity_not_visible` 就把"去找用户"一系**永久**压到门槛之下——§13（2026-09-21）刚拆掉的硬禁令从经验通道复活。按 AUTONOMY.md §5"失败必须真实返回"清单区分：暂态"世界没准备好"（not_connected/entity_not_visible/no_target_coords 等）不进 causal 惩罚（recency/failure 软降温本来就在处理刚失败的动作），结构性阻碍（tool_missing 等）照判 | `autonomy.py` |
+
+新增验收：`tests/test_mc_closed_loop_sim.py`——模拟世界假输入跑真认知—行动—反馈闭环（任务书 §十一/§十二 十项观察全过；LLM 零调用护栏为 monkeypatch 后端构造即抛）。
+
+本轮明确**不修**的（记录为已知限制，非遗漏）：① `MODE5_DEEP` 为保留档，运行时路由无产出者——设计如此（DEEP 需显式触发）；② 每轮 NLP 解析的 LLM 调用不计入回合预算（感知层定位，由 `nlp_fast_parse` 与供应商侧限流兜底；"MODE0=零 LLM"的严格含义是**认知决策链**零 LLM）；③ MC 具身的实机（真 Minecraft 服务器）演示本轮未跑，闭环正确性以模拟环境验收为准；④ `dialogue_decision` 的好奇心 +0.10 闭集增益与 autonomy 旧 need_deltas 表是文档认可的历史债，改造属于设计工作不属收尾。
+
+**事后补记（同日晚）：`/api/nlp` 生产回归与冒烟缺口教训。** 收尾报告交付后，用户真实日志暴露一个仍在流血的 P1：`process_nlp` 函数体内残留两处局部 `import fas_log`（叙事抽取、探索追问分支）。Python 的作用域规则是**局部 import 使该名字在整个函数内变为局部名**，于是函数开头的 `fas_log.new_trace("nlp")` 必然 `UnboundLocalError`——每一次对话回合 500。修复：删除这两处局部 import（模块顶部已有）。逃逸收尾验收的原因有三：`py_compile` 不查作用域地雷；测试全部是独立脚本、从不 import app.py；启动冒烟只打了 `/api/embedding/stats`，**没打核心路由 `/api/nlp`**——"链路贯通：是"当时说得早了。补强两道：① 常驻静态扫描器 `scripts/check_unbound_scope.py`（AST，绑定形态全覆盖：参数/元组解包/for/with/except/walrus/局部 import），验收标准 = **import 型命中 0**；全仓现扫 import 型 0，assign 型 62 处已人工核查均为 comprehension 变量假阳性（含 app.py 热路径 4 处 `e`/`fq` 命中逐处验看）。② 规矩：改动 `app.py` 后的启动冒烟**必须打一发 `/api/nlp`**（简单假输入即可）并验证 200 + 回复结构，不能只打只读统计端点。该规矩当日已执行：沙盒（临时副本、端口 5199、真实图谱零接触）冷启动 51s + `POST /api/nlp {"text":"你好"}` → **200，含 `answer`/`cycle_id` 完整回复结构**，服务端日志无 UnboundLocalError、无新 Traceback，6/6 项通过。
+
+**事后补记 2（同更晚）：Haru 进了 Minecraft"呆呆站着"——三颗雷与一个模拟盲区。** 用户重启后对话已恢复（真实日志 `/api/nlp` 200），但进 MC 找人不行动。逐段回捞日志+代码定位三处（各见上表新增三行）：启动期 `MonitorRegistry.list() got an unexpected keyword argument 'target_type'` 说明 §18.5 的桥失联回写**从未接通过**（B 批次验收测试只复刻了调用形状、没有走 app 的接线函数本体——"测试不 import app.py"主题的又一变体）；`结算 navigate_to_entity@… 失败（entity_not_visible） 0.0s` 说明"去找用户"在实体同步完成前就发出且**即时判死无重试**；而这次失败又被经验通道记成永久阻碍（`comps["causal"]=1.0`，−0.30），把整个"找人"家族压到门槛之下——即使之后用户可见也不会再走过去。日志里 disposition explore 0.55→0.49 / APPROACH 0.25→0.19 属正常软降权通道，未动。三处修复都落在既有机制上（注册表补齐与锁注册表同形的过滤；技能 pending 状态机内加宽限轮询，参照 `follow_entity` 的 `gone_since` 先例；causal 按 AUTONOMY.md §5 暂态/结构二分），**无新架构、无新线程/定时器、无新激活直写点**。新增 `tests/test_mc_approach_race.py`（17 项）逐条钉死：过滤签名、宽限 pending→出现即出发→到期如实失败→grace=0 旧行为、暂态不罚/结构照罚/混合结构性主导。修后 `test_mc_closed_loop_sim` "不连续 3 次刷同一"守卫变红，bisect 定罪：不是 causal 修复，是**模拟观察面盲区**——`busy_tick` 的轮询拍没记进 phases，宽限拉长在飞期后，busy 间隙里真实发生的 gather/explore 被藏掉，表面上看成了"连刷四次看猪"。把内部拍并入决策流后守卫**原断言一字未改**通过。当日全套件 73/73、`verify_p0_all` 全过、import 型地雷 0。实机（真服务器）演示仍待用户网络环境（本节不修清单③），本轮结论以模拟闭环+单测为准，需如实待实机复核。**当日 17:40 实机复核坐销**：重启日志首次出现 `桥活性检测器已接线（mon_1）` INFO，且 17:40:57 即真实纠正上一进程残留态（`桥失联回写：connected → disconnected`，17:43:10 恢复 True）；17:42:21 `后台连接完成` 后 `navigate_to_entity@Hellucigen 结算成功 2.08s`（事故日志中同一动作 0.0s 判死），成功奖赏回灌 explore 0.49→0.59 / APPROACH 0.19→0.29（恰好抵消事故降权），随后自主提交 `inspect_entity@pig` 成功——三雷实机确认解除。
+
+---
+
+## 19. 附录：文件清单
+
+### 根目录核心模块（按行数降序）
+
+| 文件 | 行数 | 一句话职责 |
+|---|---|---|
+| `app.py` | 7939 | Flask 后端入口，145 个路由，主对话管线 `process_nlp()`；含 API 守卫/快照轮转/桥活性接线的粘合层 |
+| `diffusion_engine.py` | 1383 | 激活扩散引擎（本系统的心脏）；负权抑制、Hebbian、软遗忘均在此 |
+| `nlp_processor.py` | 1139 | NLP 感知器：LLM 驱动的言语行为解析与三元组抽取 |
+| `compound_phrase_handler.py` | 986 | 复合短语判定：关系型 vs 词汇化 vs 绝对名词 |
+| `autonomy.py` | 980 | 通用自主行动闭环（零 LLM） |
+| `self_graph.py` | 864 | Self 节点的图操作原语（偏好/情绪/目标/经历） |
+| `self_model.py` | 852 | 持续性主体模型（重要性门槛 + 知识溯源） |
+| `curiosity_engine.py` | 726 | 好奇心认知机制 |
+| `graph_model.py` | 616 | Node / Edge / KnowledgeGraph 数据模型 |
+| `internal_state.py` | 587 | 需求 / 调制变量 / 性格的唯一状态源 |
+| `capability_registry.py` | 582 | 能力注册表（发育阶段核心） |
+| `continuous_cognition.py` | 568 | 持续认知循环（唯一的后台线程） |
+| `reflection_engine.py` | 559 | 反思循环 |
+| `knowledge_pack_manager.py` | 556 | 知识包管理器（V4） |
+| `prompt_templates.py` | 509 | 提示词模板集合 |
+| `cognitive_triggers.py` | 506 | 触发器引擎 |
+| `cognitive_locks.py` | 505 | 认知锁注册表 |
+| `embedding_manager.py` | 452 | FAISS + BGE 语义检索层 |
+| `state_monitors.py` | 434 | 状态检测器 |
+| `config.py` | 393 | 全部超参数默认值 |
+| `disposition_store.py` | 392 | 行为倾向存储（人格学习） |
+| `conversation_channel.py` | 363 | 对话通道抽象 |
+| `episodic_buffer.py` | 321 | 情景缓冲区 |
+| `llm_provider.py` | 294 | LLM 后端（MiMo / DeepSeek / Ollama） |
+| `drive_engine.py` | 287 | 驱动力引擎（Phase 3 MVP） |
+| `cognition_modes.py` | 246 | LLM 参与模式 + 预算管理 |
+| `chat_log_replay.py` | 227 | 对话日志重放（事故恢复工具） |
+| `cognitive_regulation.py` | 215 | 认知调节协调器 |
+| `minecraft_bridge.py` | 205 | Minecraft HTTP 桥（Python 侧） |
+| `chat_log.py` | 188 | 对话日志 |
+| `graph_evolution_log.py` | 187 | 图演化日志 |
+| `minecraft_session.py` | 153 | Minecraft 连接生命周期状态机 |
+| `dialogue_decision.py` | 155 | 交流决策层 |
+| `temporal_awareness.py` | 146 | 时间感知锚定 |
+| `conversation_gap_detector.py` | 130 | 对话缺口检测 |
+| `minecraft_channel.py` | 129 | 游戏内聊天通道 |
+| `minecraft_perception.py` | 127 | Minecraft 原子感知 |
+| `minecraft_reflex.py` | 124 | 游戏内指令解析（纯函数） |
+| `narrative_trigger.py` | 114 | 叙事触发评分 |
+| `atomicity_analyzer.py` | 109 | 原子化分析器 |
+| `personality_baseline.py` | 106 | 基线人格（出厂先验 + 心情瞬态） |
+| `api_guard.py` | 102 | API 访问守卫纯判定（Origin 常开 + token 按需，§18.2 #19） |
+| `graph_rotation.py` | 70 | 图谱周期快照 + 轮转纯函数（§18.3 P1） |
+| `json_store.py` | 41 | 原子 JSON 落盘原语 |
+| `index.html` | 2305 | 前端单文件应用 |
+| `minecraft_bot/bot.js` | 19KB | Mineflayer bot（Node 侧，HTTP :5010） |
+
+### 子目录
+
+| 目录 | 内容 |
+|---|---|
+| `Action/` | 具身动作面（`__init__.py` 自动发现注册表、`minecraft.py`、`wasd.py`） |
+| `actions/` | 认知层行动（`action_engine.py`、`web_search.py`、`file_action.py`） |
+| `ear/` | 听觉子系统（5 文件，1232 行） |
+| `eye/` | 屏幕感知（`screen_ocr.py` OCR+方位、`observer.py` 显著性观察+ScreenObserver+EmbodimentRouter） |
+| `vision/` | 视觉子系统（7 文件） |
+| `minecraft_bot/` | Node/Mineflayer bot |
+| `knowledge_packs/` | 4 个知识包（common / computer / minecraft / user_teaching） |
+| `data/` | 全部持久化状态（图谱、内部状态、日志、缓存、配置） |
+| `tests/` | 72 个离线回归测试套件（含 §18.5 B 批次验收 `test_known_limits_fixes.py`、§18.6 模拟闭环验收 `test_mc_closed_loop_sim.py`、§18.6 事后补记 2 的 MC 三雷验收 `test_mc_approach_race.py`）+ 1 个活体冒烟 |
+| `scripts/` | 验证/迁移/基准脚本 |
+| `docs/` | 架构设计文档（V2 认知架构、机制审计、语言架构、原创愿景等 8 篇）与审计报告 3 份 |
+| `reports/` | 原子化审计报告、迁移日志 |
+| `prototype/` | Utopia：核心图谱引擎的清洁版原型（FastAPI） |
+| `legacy/` | 历史版本（`ear_standalone/` = Ear 子系统原版结课设计） |
+| `Try/` | 实验性代码（LangChain / OneKE / UIE 尝试） |
+
+### 关键设计文档
+
+| 文档 | 内容 |
+|---|---|
+| `README.md` | 项目总览、API 文档、超参数说明、快速启动 |
+| `AUTONOMY.md` | 自主行动闭环完整设计（Phase D） |
+| `COGNITIVE_REGULATION.md` | 锁 / 状态检测器 / 触发器设计 |
+| `INTERNAL_MOTIVATION_DESIGN.md` | 内部动机系统设计（45KB） |
+| `docs/fas_cognitive_architecture_v2.md` | **认知架构 V2 总纲**（最重要的一篇） |
+| `docs/fas_original_vision.md` | 论文原始愿景 |
+| `docs/fas_mechanism_audit.md` | 机制审计（37KB） |
+| `docs/fas_unwanted_mechanisms.md` | 应移除的机制清单 |
+| `docs/fas_language_architecture.md` | 语言架构 |
+| `docs/fas_scale_performance.md` | 规模与性能 |
+| `docs/fas_refactoring_plan.md` | 重构计划 |
+| `docs/audits/FAS_Audit_Report_*.md` | 三份阶段性审计报告 |
+| `STYLE_GUIDE.md` | 代码风格指南 |
+
+---
+
+*报告生成时间：2026-09-14 · 基于工作区当前代码快照 · 所有行号引用对应本快照 · 最后稳定化收尾更新：2026-09-22（§17.4 / §18.6）*
+*2026-09-22 修订：§18 全面核账（A 项销账附现行证据指针）、§18.5 B 批次修复记录、§14.7/§15/§19 同步；本轮新增的行号引用按 2026-09-22 工作区核实，旧快照的行号引用在 app.py 多次合入后可能漂移，以函数/字段名为准*
+
+</script>
+
+<script type="module">
+const toast = (m) => {
+  const t = document.getElementById('toast');
+  t.textContent = m; t.style.display = 'block';
+  setTimeout(() => { t.style.display = 'none'; }, 6000);
+};
+
+const mdText = document.getElementById('md-source').textContent;
+
+let markedOk = false, mermaidOk = false;
+
+// ── 1. 渲染 Markdown ──
+try {
+  const { marked } = await import('https://cdn.jsdelivr.net/npm/marked@12/lib/marked.esm.js');
+  marked.setOptions({ gfm: true, breaks: false });
+  document.getElementById('content').innerHTML = marked.parse(mdText);
+  markedOk = true;
+} catch (e) {
+  // CDN 不可达：退化为纯文本展示（保留全文，只是不排版）
+  const pre = document.createElement('pre');
+  pre.style.whiteSpace = 'pre-wrap';
+  pre.textContent = mdText;
+  document.getElementById('content').innerHTML = '';
+  document.getElementById('content').appendChild(pre);
+  toast('无法加载 Markdown 渲染库（CDN 不可达），已退化为纯文本。联网后刷新即可。');
+}
+
+// ── 2. 渲染 Mermaid 图 ──
+if (markedOk) {
+  try {
+    const mermaid = (await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs')).default;
+    const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    mermaid.initialize({ startOnLoad: false, theme: dark ? 'dark' : 'default',
+                         securityLevel: 'loose', flowchart: { htmlLabels: true } });
+    const blocks = document.querySelectorAll('pre > code.language-mermaid');
+    for (let i = 0; i < blocks.length; i++) {
+      const src = blocks[i].textContent;
+      const holder = document.createElement('div');
+      holder.className = 'mermaid';
+      try {
+        const { svg } = await mermaid.render('mmd-' + i, src);
+        holder.innerHTML = svg;
+      } catch (err) {
+        holder.style.textAlign = 'left';
+        holder.innerHTML = '<pre style="margin:0"><code></code></pre>';
+        holder.querySelector('code').textContent = src;
+      }
+      blocks[i].closest('pre').replaceWith(holder);
+    }
+    mermaidOk = true;
+  } catch (e) {
+    toast('无法加载 Mermaid（CDN 不可达），架构图以源码形式展示。');
+  }
+}
+</script>
+</body>
+</html>

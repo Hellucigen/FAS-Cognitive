@@ -1,0 +1,200 @@
+conditions=['D-flat', 'D-noact', 'D-nodemand', 'fas_full', 'llm_direct', 'llm_history', 'llm_rag', 'random_ctx'] tasks=['T1', 'T2', 'T3', 'T4'] seeds=20 scipy=True
+comparison                  task                      metric                A(mean)  B(mean)       p      r n_pairs
+fas_full vs llm_direct      T1                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs llm_direct      T1                        decisions                7.95      8.0 0.85547  0.028      20
+fas_full vs llm_direct      T1                        target_utilization     0.4989   0.5345 0.56272  0.134      20
+fas_full vs llm_direct      T1                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_direct      T1                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_direct      T1                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_direct      T1                        prompt_tokens          2021.0   1250.5   8e-05  0.793      20
+fas_full vs llm_direct      T1                        efficiency               0.49   0.8683 0.00045  0.785      20
+fas_full vs llm_direct      T2                        success                   1.0      1.0                     20
+fas_full vs llm_direct      T2                        decisions                2.75     2.35 0.17869  0.378      20
+fas_full vs llm_direct      T2                        target_utilization     0.7785   0.9001 0.17869  0.378      20
+fas_full vs llm_direct      T2                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_direct      T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_direct      T2                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_direct      T2                        prompt_tokens           747.2    486.9 0.00271  0.668      20
+fas_full vs llm_direct      T2                        efficiency             1.4736   2.1791 0.00144   0.71      20
+fas_full vs llm_direct      T3                        success                  0.95     0.95     1.0  0.316      20
+fas_full vs llm_direct      T3                        decisions                8.35     7.05 0.05665  0.375      20
+fas_full vs llm_direct      T3                        target_utilization     0.4879   0.5982 0.07766  0.405      20
+fas_full vs llm_direct      T3                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_direct      T3                        t_reroute                 1.1      0.4 0.12244  0.385      20
+fas_full vs llm_direct      T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_direct      T3                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_direct      T3                        prompt_tokens          2215.9   1119.2     0.0  0.877      20
+fas_full vs llm_direct      T3                        efficiency             0.4793   0.9418   3e-05  0.826      20
+fas_full vs llm_direct      T4                        success                  0.85     0.85     1.0  0.043      20
+fas_full vs llm_direct      T4                        decisions                 7.0      7.6 0.35453  0.192      20
+fas_full vs llm_direct      T4                        target_utilization     0.3228   0.2734 0.10739  0.369      20
+fas_full vs llm_direct      T4                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_direct      T4                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_direct      T4                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_direct      T4                        prompt_tokens          1878.7   1326.4 0.00121  0.685      20
+fas_full vs llm_direct      T4                        efficiency             0.5307   0.7095 0.07585  0.401      20
+fas_full vs llm_history     T1                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs llm_history     T1                        decisions                7.95     7.65  0.5273  0.129      20
+fas_full vs llm_history     T1                        target_utilization     0.4989    0.559  0.2857   0.24      20
+fas_full vs llm_history     T1                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_history     T1                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_history     T1                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_history     T1                        prompt_tokens          2021.0   2043.5 0.89832  0.033      20
+fas_full vs llm_history     T1                        efficiency               0.49   0.5321 0.52167   0.15      20
+fas_full vs llm_history     T2                        success                   1.0      1.0                     20
+fas_full vs llm_history     T2                        decisions                2.75      2.2 0.01874  0.725      20
+fas_full vs llm_history     T2                        target_utilization     0.7785   0.9334 0.01874  0.725      20
+fas_full vs llm_history     T2                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_history     T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_history     T2                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_history     T2                        prompt_tokens           747.2    539.3 0.00122  0.718      20
+fas_full vs llm_history     T2                        efficiency             1.4736   1.9354 0.00125  0.718      20
+fas_full vs llm_history     T3                        success                  0.95      1.0 0.31731    1.0      20
+fas_full vs llm_history     T3                        decisions                8.35     5.85 0.00324  0.695      20
+fas_full vs llm_history     T3                        target_utilization     0.4879   0.7246 0.00128  0.775      20
+fas_full vs llm_history     T3                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_history     T3                        t_reroute                 1.1      0.2 0.03906  0.533      20
+fas_full vs llm_history     T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_history     T3                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_history     T3                        prompt_tokens          2215.9   1436.6 0.00143  0.676      20
+fas_full vs llm_history     T3                        efficiency             0.4793    0.779 0.00048  0.726      20
+fas_full vs llm_history     T4                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs llm_history     T4                        decisions                 7.0      4.6 0.00627  0.672      20
+fas_full vs llm_history     T4                        target_utilization     0.3228   0.6527 0.00071  0.821      20
+fas_full vs llm_history     T4                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_history     T4                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_history     T4                        wasted_eats               0.0     0.05 0.31731    1.0      20
+fas_full vs llm_history     T4                        prompt_tokens          1878.7  1159.15 0.00831  0.576      20
+fas_full vs llm_history     T4                        efficiency             0.5307   1.3705  0.0073  0.584      20
+fas_full vs llm_rag         T1                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs llm_rag         T1                        decisions                7.95      5.7 0.00292  0.718      20
+fas_full vs llm_rag         T1                        target_utilization     0.4989   0.7323 0.00307  0.718      20
+fas_full vs llm_rag         T1                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_rag         T1                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_rag         T1                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_rag         T1                        retrieval_precision    0.5149      1.0   9e-05  0.877      20
+fas_full vs llm_rag         T1                        prompt_tokens          2021.0   1345.6 0.00194  0.693      20
+fas_full vs llm_rag         T1                        efficiency               0.49   0.7973 0.00249  0.676      20
+fas_full vs llm_rag         T2                        success                   1.0      1.0                     20
+fas_full vs llm_rag         T2                        decisions                2.75      2.3 0.18499  0.337      20
+fas_full vs llm_rag         T2                        target_utilization     0.7785    0.925 0.18499  0.337      20
+fas_full vs llm_rag         T2                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_rag         T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_rag         T2                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_rag         T2                        retrieval_precision    0.5237      1.0   7e-05  0.877      20
+fas_full vs llm_rag         T2                        prompt_tokens           747.2    584.6 0.05057  0.434      20
+fas_full vs llm_rag         T2                        efficiency             1.4736   1.9014 0.04232  0.451      20
+fas_full vs llm_rag         T3                        success                  0.95      1.0 0.31731    1.0      20
+fas_full vs llm_rag         T3                        decisions                8.35      5.8 0.00078  0.821      20
+fas_full vs llm_rag         T3                        target_utilization     0.4879   0.7139 0.00118  0.786      20
+fas_full vs llm_rag         T3                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_rag         T3                        t_reroute                 1.1     0.05 0.00757  0.724      20
+fas_full vs llm_rag         T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_rag         T3                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_rag         T3                        retrieval_precision    0.5424      1.0   9e-05  0.877      20
+fas_full vs llm_rag         T3                        prompt_tokens          2215.9   1393.8 0.00025  0.818      20
+fas_full vs llm_rag         T3                        efficiency             0.4793   0.7744   6e-05  0.801      20
+fas_full vs llm_rag         T4                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs llm_rag         T4                        decisions                 7.0     5.15 0.02711  0.511      20
+fas_full vs llm_rag         T4                        target_utilization     0.3228   0.5144 0.01601  0.534      20
+fas_full vs llm_rag         T4                        distractor_rate           0.0      0.0                     20
+fas_full vs llm_rag         T4                        obsolete_actions          0.0      0.0                     20
+fas_full vs llm_rag         T4                        wasted_eats               0.0      0.0                     20
+fas_full vs llm_rag         T4                        retrieval_precision    0.6224      1.0   9e-05  0.877      20
+fas_full vs llm_rag         T4                        prompt_tokens          1878.7   1309.0 0.02395  0.501      20
+fas_full vs llm_rag         T4                        efficiency             0.5307   1.0217 0.03031  0.484      20
+fas_full vs random_ctx      T1                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs random_ctx      T1                        decisions                7.95      5.5 0.00183  0.789      20
+fas_full vs random_ctx      T1                        target_utilization     0.4989   0.7562 0.00227  0.763      20
+fas_full vs random_ctx      T1                        distractor_rate           0.0      0.0                     20
+fas_full vs random_ctx      T1                        obsolete_actions          0.0      0.0                     20
+fas_full vs random_ctx      T1                        wasted_eats               0.0      0.0                     20
+fas_full vs random_ctx      T1                        retrieval_precision    0.5149      1.0   9e-05  0.877      20
+fas_full vs random_ctx      T1                        prompt_tokens          2021.0  1261.35 0.00026  0.751      20
+fas_full vs random_ctx      T1                        efficiency               0.49   0.8493 0.00032  0.743      20
+fas_full vs random_ctx      T2                        success                   1.0      1.0                     20
+fas_full vs random_ctx      T2                        decisions                2.75      2.2 0.01242  0.688      20
+fas_full vs random_ctx      T2                        target_utilization     0.7785   0.9417 0.00713  0.766      20
+fas_full vs random_ctx      T2                        distractor_rate           0.0      0.0                     20
+fas_full vs random_ctx      T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs random_ctx      T2                        wasted_eats               0.0      0.0                     20
+fas_full vs random_ctx      T2                        retrieval_precision    0.5237      1.0   7e-05  0.877      20
+fas_full vs random_ctx      T2                        prompt_tokens           747.2   534.45 0.00092  0.735      20
+fas_full vs random_ctx      T2                        efficiency             1.4736   1.9894 0.00106  0.726      20
+fas_full vs random_ctx      T3                        success                  0.95      1.0 0.31731    1.0      20
+fas_full vs random_ctx      T3                        decisions                8.35      6.3 0.01199   0.58      20
+fas_full vs random_ctx      T3                        target_utilization     0.4879   0.6673 0.01301   0.59      20
+fas_full vs random_ctx      T3                        distractor_rate           0.0      0.0                     20
+fas_full vs random_ctx      T3                        t_reroute                 1.1     0.35 0.06995  0.564      20
+fas_full vs random_ctx      T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs random_ctx      T3                        wasted_eats               0.0      0.0                     20
+fas_full vs random_ctx      T3                        retrieval_precision    0.5424      1.0   9e-05  0.877      20
+fas_full vs random_ctx      T3                        prompt_tokens          2215.9   1533.9 0.00558  0.601      20
+fas_full vs random_ctx      T3                        efficiency             0.4793   0.7272 0.00315  0.634      20
+fas_full vs random_ctx      T4                        success                  0.85      1.0 0.08326  0.926      20
+fas_full vs random_ctx      T4                        decisions                 7.0     6.55 0.55346  0.128      20
+fas_full vs random_ctx      T4                        target_utilization     0.3228   0.4263 0.16245  0.339      20
+fas_full vs random_ctx      T4                        distractor_rate           0.0      0.0                     20
+fas_full vs random_ctx      T4                        obsolete_actions          0.0      0.0                     20
+fas_full vs random_ctx      T4                        wasted_eats               0.0      0.0                     20
+fas_full vs random_ctx      T4                        retrieval_precision    0.6224      1.0   9e-05  0.877      20
+fas_full vs random_ctx      T4                        prompt_tokens          1878.7   1796.9 0.81236  0.058      20
+fas_full vs random_ctx      T4                        efficiency             0.5307    0.795 0.34881  0.217      20
+fas_full vs D-noact         T2                        success                   1.0      1.0                     20
+fas_full vs D-noact         T2                        decisions                2.75     2.45 0.10672  0.495      20
+fas_full vs D-noact         T2                        target_utilization     0.7785   0.8501 0.18749  0.396      20
+fas_full vs D-noact         T2                        distractor_rate           0.0      0.0                     20
+fas_full vs D-noact         T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-noact         T2                        wasted_eats               0.0      0.0                     20
+fas_full vs D-noact         T2                        retrieval_precision    0.5237   0.5473 0.12332  0.435      20
+fas_full vs D-noact         T2                        prompt_tokens           747.2   651.65  0.1817  0.403      20
+fas_full vs D-noact         T2                        efficiency             1.4736   1.6307 0.25845  0.338      20
+fas_full vs D-noact         T3                        success                  0.95      0.9  0.5637  0.617      20
+fas_full vs D-noact         T3                        decisions                8.35      8.2 0.89668  0.013      20
+fas_full vs D-noact         T3                        target_utilization     0.4879   0.4857 0.79595  0.065      20
+fas_full vs D-noact         T3                        distractor_rate           0.0      0.0                     20
+fas_full vs D-noact         T3                        t_reroute                 1.1      1.3 0.64548  0.165      20
+fas_full vs D-noact         T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-noact         T3                        wasted_eats               0.0      0.0                     20
+fas_full vs D-noact         T3                        retrieval_precision    0.5424   0.5753 0.00747  0.649      20
+fas_full vs D-noact         T3                        prompt_tokens          2215.9  2202.55 0.84463  0.046      20
+fas_full vs D-noact         T3                        efficiency             0.4793   0.4574  0.9133  0.026      20
+fas_full vs D-nodemand      T2                        success                   1.0      1.0                     20
+fas_full vs D-nodemand      T2                        decisions                2.75     2.25 0.02939  0.483      20
+fas_full vs D-nodemand      T2                        target_utilization     0.7785   0.9168 0.02939  0.483      20
+fas_full vs D-nodemand      T2                        distractor_rate           0.0      0.0                     20
+fas_full vs D-nodemand      T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-nodemand      T2                        wasted_eats               0.0      0.0                     20
+fas_full vs D-nodemand      T2                        retrieval_precision    0.5237   0.5615 0.01288  0.634      20
+fas_full vs D-nodemand      T2                        prompt_tokens           747.2   571.25 0.00162  0.701      20
+fas_full vs D-nodemand      T2                        efficiency             1.4736   1.8354 0.00162  0.701      20
+fas_full vs D-nodemand      T3                        success                  0.95      1.0 0.31731    1.0      20
+fas_full vs D-nodemand      T3                        decisions                8.35     6.55 0.05778  0.443      20
+fas_full vs D-nodemand      T3                        target_utilization     0.4879   0.6405 0.05847  0.425      20
+fas_full vs D-nodemand      T3                        distractor_rate           0.0      0.0                     20
+fas_full vs D-nodemand      T3                        t_reroute                 1.1      1.0 0.75098  0.015      20
+fas_full vs D-nodemand      T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-nodemand      T3                        wasted_eats               0.0      0.0                     20
+fas_full vs D-nodemand      T3                        retrieval_precision    0.5424    0.608 0.00549  0.637      20
+fas_full vs D-nodemand      T3                        prompt_tokens          2215.9   1681.4 0.04844  0.442      20
+fas_full vs D-nodemand      T3                        efficiency             0.4793   0.6406 0.04405  0.451      20
+fas_full vs D-flat          T2                        success                   1.0      1.0                     20
+fas_full vs D-flat          T2                        decisions                2.75      2.5 0.26828  0.279      20
+fas_full vs D-flat          T2                        target_utilization     0.7785   0.8501 0.21141  0.337      20
+fas_full vs D-flat          T2                        distractor_rate           0.0      0.0                     20
+fas_full vs D-flat          T2                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-flat          T2                        wasted_eats               0.0      0.0                     20
+fas_full vs D-flat          T2                        retrieval_precision    0.5237    0.735   8e-05  0.877      20
+fas_full vs D-flat          T2                        prompt_tokens           747.2   587.55  0.0428  0.451      20
+fas_full vs D-flat          T2                        efficiency             1.4736   1.8433 0.02003  0.518      20
+fas_full vs D-flat          T3                        success                  0.95      0.8 0.17971  0.784      20
+fas_full vs D-flat          T3                        decisions                8.35      7.9 0.56774  0.129      20
+fas_full vs D-flat          T3                        target_utilization     0.4879   0.5252 0.52278  0.155      20
+fas_full vs D-flat          T3                        distractor_rate           0.0      0.0                     20
+fas_full vs D-flat          T3                        t_reroute              0.8947   1.8947 0.10852  0.405      19
+fas_full vs D-flat          T3                        obsolete_actions          0.0      0.0                     20
+fas_full vs D-flat          T3                        wasted_eats               0.0      0.0                     20
+fas_full vs D-flat          T3                        retrieval_precision    0.5424   0.8898   9e-05  0.877      20
+fas_full vs D-flat          T3                        prompt_tokens          2215.9   1710.1 0.03332  0.476      20
+fas_full vs D-flat          T3                        efficiency             0.4793   0.5833  0.2471  0.259      20
+written E:\Project\Fascinator\experiments\core_routing\statistics.csv

@@ -1,0 +1,19 @@
+{
+ "duration_s": 0.22,
+ "event_count": 4,
+ "counters": {},
+ "episode": "S6-EpC-pickaxe",
+ "goal": "wooden_pickaxe",
+ "success": true,
+ "success_tick": 13,
+ "graph": {
+  "nodes": 259,
+  "edges": 327
+ },
+ "inv": {
+  "oak_planks": 3,
+  "stick": 2,
+  "wooden_pickaxe": 1
+ },
+ "ok": true
+}

@@ -1,0 +1,17 @@
+condition,mode,task,seed,success,decisions,steps_to_craft,first_action,unparseable,explores,craft_menu_visible_steps,prompt_tokens,completion_tokens,llm_calls,latency_s,harness_valid,failure_class,failure_reason,step0_n_nodes,graph_edges_final
+fas_full,full,B1,16,1,2,2,gather_oak_log,0,0,1,924,155,2,8.4,True,none,,3,36
+D-noact,no-diffusion,B1,16,0,8,,gather_oak_log,1,6,0,2604,807,8,37.6,True,none,,2,56
+D-flat,flat,B1,16,1,2,2,gather_oak_log,0,0,1,695,236,2,47.0,True,none,,8,59
+llm_direct,baseline-direct,B1,16,0,8,,gather_oak_log,1,6,0,1317,799,8,25.8,True,none,,0,
+fas_full,full,B1,17,1,3,3,gather_oak_log,1,0,2,1485,407,3,12.7,True,none,,3,74
+D-noact,no-diffusion,B1,17,0,8,,gather_oak_log,0,7,0,2595,909,8,32.6,True,none,,2,83
+D-flat,flat,B1,17,1,2,2,gather_oak_log,0,0,1,695,228,2,7.2,True,none,,8,69
+llm_direct,baseline-direct,B1,17,0,8,,gather_oak_log,0,7,0,1308,741,8,24.7,True,none,,0,
+fas_full,full,B1,18,1,2,2,gather_oak_log,0,0,1,924,159,2,4.6,True,none,,3,69
+D-noact,no-diffusion,B1,18,0,8,,gather_oak_log,0,6,0,2595,812,8,30.2,True,none,,2,87
+D-flat,flat,B1,18,1,2,2,gather_oak_log,0,0,1,695,191,2,6.8,True,none,,8,69
+llm_direct,baseline-direct,B1,18,0,8,,gather_oak_log,1,6,0,1317,707,8,23.8,True,none,,0,
+fas_full,full,B1,19,1,2,2,gather_oak_log,0,0,1,924,248,2,7.2,True,none,,3,69
+D-noact,no-diffusion,B1,19,0,8,,gather_oak_log,1,6,0,2595,998,8,26.5,True,none,,2,87
+D-flat,flat,B1,19,1,2,2,gather_oak_log,0,0,1,695,131,2,11.5,True,none,,8,69
+llm_direct,baseline-direct,B1,19,0,8,,gather_oak_log,1,6,0,1317,1008,8,27.5,True,none,,0,

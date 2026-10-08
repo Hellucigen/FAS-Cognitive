@@ -1,0 +1,18 @@
+{
+ "duration_s": 1.66,
+ "event_count": 4,
+ "counters": {},
+ "episode": "S6-EpA-planks",
+ "goal": "oak_planks",
+ "success": true,
+ "success_tick": 6,
+ "graph": {
+  "nodes": 239,
+  "edges": 274
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "ok": true
+}

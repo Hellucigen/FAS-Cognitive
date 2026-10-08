@@ -1,0 +1,16 @@
+{
+ "duration_s": 1.06,
+ "event_count": 4,
+ "counters": {},
+ "ablation": "-GoalFormation",
+ "seed": 1,
+ "success": false,
+ "success_tick": null,
+ "graph": {
+  "nodes": 238,
+  "edges": 273
+ },
+ "inv": {},
+ "action_count": 11,
+ "ok": true
+}

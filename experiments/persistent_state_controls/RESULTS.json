@@ -1,0 +1,159 @@
+{
+ "summary": {
+  "C1": {
+   "T2_success": "10/10",
+   "T2_rate": 1.0,
+   "T3_mean_fails": 2.8
+  },
+  "C2": {
+   "T2_success": "0/10",
+   "T2_rate": 0.0,
+   "T3_mean_fails": 7.7
+  },
+  "C3": {
+   "T2_success": "10/10",
+   "T2_rate": 1.0,
+   "T3_mean_fails": 12.0
+  },
+  "C4": {
+   "T2_success": "10/10",
+   "T2_rate": 1.0,
+   "T3_mean_fails": 11.7
+  },
+  "C5": {
+   "T2_success": "10/10",
+   "T2_rate": 1.0,
+   "T3_mean_fails": "-"
+  }
+ },
+ "tests": [
+  {
+   "cmp": "H_A C1 vs C3",
+   "task": "T2",
+   "type": "McNemar",
+   "n": 10,
+   "wins": 0,
+   "losses": 0,
+   "p": 1.0,
+   "p_bonf": 1.0,
+   "risk_diff": 0.0,
+   "sig_bonf": false
+  },
+  {
+   "cmp": "H_B C1 vs C4",
+   "task": "T2",
+   "type": "McNemar",
+   "n": 10,
+   "wins": 0,
+   "losses": 0,
+   "p": 1.0,
+   "p_bonf": 1.0,
+   "risk_diff": 0.0,
+   "sig_bonf": false
+  },
+  {
+   "cmp": "H_C C3 vs C2",
+   "task": "T2",
+   "type": "McNemar",
+   "n": 10,
+   "wins": 10,
+   "losses": 0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "risk_diff": 1.0,
+   "sig_bonf": true
+  },
+  {
+   "cmp": "H_C C4 vs C2",
+   "task": "T2",
+   "type": "McNemar",
+   "n": 10,
+   "wins": 10,
+   "losses": 0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "risk_diff": 1.0,
+   "sig_bonf": true
+  },
+  {
+   "cmp": "H_A C1 vs C3",
+   "task": "T3",
+   "type": "Wilcoxon",
+   "n": 10,
+   "median_diff": -8.0,
+   "HL": -9.0,
+   "CI95": [
+    -11.0,
+    -7.5
+   ],
+   "r": 1.0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "sig_bonf": true
+  },
+  {
+   "cmp": "H_B C1 vs C4",
+   "task": "T3",
+   "type": "Wilcoxon",
+   "n": 10,
+   "median_diff": -8.0,
+   "HL": -9.0,
+   "CI95": [
+    -10.0,
+    -7.5
+   ],
+   "r": 1.0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "sig_bonf": true
+  },
+  {
+   "cmp": "H_C C3 vs C2",
+   "task": "T3",
+   "type": "Wilcoxon",
+   "n": 10,
+   "median_diff": 5.0,
+   "HL": 4.5,
+   "CI95": [
+    3.0,
+    5.5
+   ],
+   "r": 1.0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "sig_bonf": true
+  },
+  {
+   "cmp": "H_C C4 vs C2",
+   "task": "T3",
+   "type": "Wilcoxon",
+   "n": 10,
+   "median_diff": 4.0,
+   "HL": 4.0,
+   "CI95": [
+    3.0,
+    5.0
+   ],
+   "r": 1.0,
+   "p": 0.001953,
+   "p_bonf": 0.015625,
+   "sig_bonf": true
+  }
+ ],
+ "alpha_bonferroni": 0.00625,
+ "interpretation": "C1 与 C3、C4 均未检出显著差异(功效有限):本任务上持久化是主要因素,图结构与激活的独立贡献未被证明;中心表述应为 persistent experience-derived state。",
+ "per_task_p": {
+  "T2": {
+   "C1vC3": 1.0,
+   "C1vC4": 1.0,
+   "C3vC2": 0.001953,
+   "C4vC2": 0.001953
+  },
+  "T3": {
+   "C1vC3": 0.001953,
+   "C1vC4": 0.001953,
+   "C3vC2": 0.001953,
+   "C4vC2": 0.001953
+  }
+ }
+}

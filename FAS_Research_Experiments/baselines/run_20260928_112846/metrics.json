@@ -1,0 +1,19 @@
+{
+ "duration_s": 0.04,
+ "event_count": 4,
+ "counters": {},
+ "baseline": "graph_retrieval",
+ "seed": 1,
+ "success": true,
+ "success_tick": 6,
+ "action_count": 2,
+ "graph": {
+  "nodes": 236,
+  "edges": 275
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "ok": true
+}

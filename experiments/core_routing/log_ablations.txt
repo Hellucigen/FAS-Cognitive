@@ -1,0 +1,292 @@
+[routing] D-noact T2 seed1: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed1: succ=1 dec=6 dist=0.0
+[routing] D-nodemand T2 seed1: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed1: succ=1 dec=9 dist=0.0
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7017.19it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 3404.47it/s]
+[routing] D-flat T2 seed1: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12825.51it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6393.62it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10897.49it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6311.64it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7093.92it/s]
+[routing] D-flat T3 seed1: succ=1 dec=6 dist=0.0
+[routing] D-noact T2 seed2: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed2: succ=1 dec=10 dist=0.0
+[routing] D-nodemand T2 seed2: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed2: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12889.91it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8339.04it/s]
+[routing] D-flat T2 seed2: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6019.72it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11534.86it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4394.99it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9156.18it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11761.28it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9368.77it/s]
+[routing] D-flat T3 seed2: succ=1 dec=7 dist=0.0
+[routing] D-noact T2 seed3: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed3: succ=1 dec=10 dist=0.0
+[routing] D-nodemand T2 seed3: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed3: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5671.11it/s]
+[routing] D-flat T2 seed3: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6386.90it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8785.05it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10856.57it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8338.81it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6153.82it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10902.67it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5891.11it/s]
+[routing] D-flat T3 seed3: succ=1 dec=8 dist=0.0
+[routing] D-noact T2 seed4: succ=1 dec=3 dist=0.0
+[routing] D-noact T3 seed4: succ=1 dec=7 dist=0.0
+[routing] D-nodemand T2 seed4: succ=1 dec=3 dist=0.0
+[routing] D-nodemand T3 seed4: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8322.50it/s]
+[routing] D-flat T2 seed4: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10838.78it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6166.05it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 14254.05it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8804.79it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7467.85it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10846.68it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9450.53it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9872.88it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7408.22it/s]
+[routing] D-flat T3 seed4: succ=1 dec=10 dist=0.0
+[routing] D-noact T2 seed5: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed5: succ=0 dec=11 dist=0.0
+[routing] D-nodemand T2 seed5: succ=1 dec=3 dist=0.0
+[routing] D-nodemand T3 seed5: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 35464.52it/s]
+[routing] D-flat T2 seed5: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8862.96it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20292.71it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5044.05it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9982.42it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5179.32it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9086.06it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5046.36it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12821.10it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11310.12it/s]
+[routing] D-flat T3 seed5: succ=0 dec=10 dist=0.0
+[routing] D-noact T2 seed6: succ=1 dec=3 dist=0.0
+[routing] D-noact T3 seed6: succ=1 dec=11 dist=0.0
+[routing] D-nodemand T2 seed6: succ=1 dec=3 dist=0.0
+[routing] D-nodemand T3 seed6: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7848.29it/s]
+[routing] D-flat T2 seed6: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15587.31it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6415.93it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 16868.45it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10096.82it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9482.73it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22900.31it/s]
+[routing] D-flat T3 seed6: succ=1 dec=7 dist=0.0
+[routing] D-noact T2 seed7: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed7: succ=1 dec=7 dist=0.0
+[routing] D-nodemand T2 seed7: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed7: succ=1 dec=9 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12761.21it/s]
+[routing] D-flat T2 seed7: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15637.24it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 19994.33it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11826.67it/s]
+[routing] D-flat T3 seed7: succ=1 dec=4 dist=0.0
+[routing] D-noact T2 seed8: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed8: succ=1 dec=9 dist=0.0
+[routing] D-nodemand T2 seed8: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed8: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20229.30it/s]
+[routing] D-flat T2 seed8: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9434.36it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5431.85it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15583.23it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10094.42it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20233.43it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22058.93it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 14186.82it/s]
+[routing] D-flat T3 seed8: succ=1 dec=8 dist=0.0
+[routing] D-noact T2 seed9: succ=1 dec=3 dist=0.0
+[routing] D-noact T3 seed9: succ=1 dec=11 dist=0.0
+[routing] D-nodemand T2 seed9: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed9: succ=1 dec=10 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 21610.71it/s]
+[routing] D-flat T2 seed9: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 16714.13it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9496.03it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10839.97it/s]
+[routing] D-flat T3 seed9: succ=1 dec=4 dist=0.0
+[routing] D-noact T2 seed10: succ=1 dec=3 dist=0.0
+[routing] D-noact T3 seed10: succ=1 dec=8 dist=0.0
+[routing] D-nodemand T2 seed10: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed10: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10110.19it/s]
+[routing] D-flat T2 seed10: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15534.46it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17327.80it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9850.67it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10592.81it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20045.48it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5044.82it/s]
+[routing] D-flat T3 seed10: succ=1 dec=7 dist=0.0
+[routing] D-noact T2 seed11: succ=1 dec=3 dist=0.0
+[routing] D-noact T3 seed11: succ=1 dec=5 dist=0.0
+[routing] D-nodemand T2 seed11: succ=1 dec=4 dist=0.0
+[routing] D-nodemand T3 seed11: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23541.15it/s]
+[routing] D-flat T2 seed11: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8361.76it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23593.38it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22333.55it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 19954.14it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6723.01it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10933.09it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12827.17it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12947.07it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5102.65it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6381.97it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5913.45it/s]
+[routing] D-flat T3 seed11: succ=1 dec=12 dist=0.0
+[routing] D-noact T2 seed12: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed12: succ=1 dec=6 dist=0.0
+[routing] D-nodemand T2 seed12: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed12: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17753.40it/s]
+[routing] D-flat T2 seed12: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 27941.04it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8706.71it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10871.23it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5646.48it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17834.21it/s]
+[routing] D-flat T3 seed12: succ=1 dec=6 dist=0.0
+[routing] D-noact T2 seed13: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed13: succ=1 dec=13 dist=0.0
+[routing] D-nodemand T2 seed13: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed13: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7212.47it/s]
+[routing] D-flat T2 seed13: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15508.57it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10871.63it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6392.38it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6733.95it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4702.36it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17737.54it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5618.57it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4556.31it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6737.46it/s]
+[routing] D-flat T3 seed13: succ=0 dec=10 dist=0.0
+[routing] D-noact T2 seed14: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed14: succ=0 dec=11 dist=0.0
+[routing] D-nodemand T2 seed14: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed14: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5798.31it/s]
+[routing] D-flat T2 seed14: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7433.55it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5131.04it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6905.89it/s]
+[routing] D-flat T3 seed14: succ=1 dec=4 dist=0.0
+[routing] D-noact T2 seed15: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed15: succ=1 dec=7 dist=0.0
+[routing] D-nodemand T2 seed15: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed15: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4118.66it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4595.54it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4772.90it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6103.74it/s]
+[routing] D-flat T2 seed15: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5037.56it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5567.83it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5907.24it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4718.53it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5211.23it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5236.70it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4728.26it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4908.13it/s]
+[routing] D-flat T3 seed15: succ=1 dec=9 dist=0.0
+[routing] D-noact T2 seed16: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed16: succ=1 dec=5 dist=0.0
+[routing] D-nodemand T2 seed16: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed16: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5214.79it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9963.72it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5438.39it/s]
+[routing] D-flat T2 seed16: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5904.43it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5151.46it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5713.65it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7448.43it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5079.76it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6438.68it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5441.77it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5632.71it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5059.65it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5453.23it/s]
+[routing] D-flat T3 seed16: succ=0 dec=11 dist=0.0
+[routing] D-noact T2 seed17: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed17: succ=1 dec=5 dist=0.0
+[routing] D-nodemand T2 seed17: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed17: succ=1 dec=9 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5460.53it/s]
+[routing] D-flat T2 seed17: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5673.38it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6034.97it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6126.85it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5401.70it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5890.53it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5590.52it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7079.41it/s]
+[routing] D-flat T3 seed17: succ=1 dec=8 dist=0.0
+[routing] D-noact T2 seed18: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed18: succ=1 dec=7 dist=0.0
+[routing] D-nodemand T2 seed18: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed18: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8846.90it/s]
+[routing] D-flat T2 seed18: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6134.93it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4814.49it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7273.24it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9391.52it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20110.45it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6953.62it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9470.06it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7814.52it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15559.62it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9414.67it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10904.67it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15606.92it/s]
+[routing] D-flat T3 seed18: succ=1 dec=13 dist=0.0
+[routing] D-noact T2 seed19: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed19: succ=1 dec=9 dist=0.0
+[routing] D-nodemand T2 seed19: succ=1 dec=2 dist=0.0
+[routing] D-nodemand T3 seed19: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8306.02it/s]
+[routing] D-flat T2 seed19: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22814.34it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 13643.45it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8816.78it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10837.21it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4707.86it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17720.65it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8777.54it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15215.39it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4546.98it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10913.46it/s]
+[routing] D-flat T3 seed19: succ=1 dec=11 dist=0.0
+[routing] D-noact T2 seed20: succ=1 dec=2 dist=0.0
+[routing] D-noact T3 seed20: succ=1 dec=10 dist=0.0
+[routing] D-nodemand T2 seed20: succ=1 dec=3 dist=0.0
+[routing] D-nodemand T3 seed20: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15538.51it/s]
+[routing] D-flat T2 seed20: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6868.14it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5060.51it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8242.11it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8834.57it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8695.52it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7438.20it/s]
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6209.12it/s]
+[routing] D-flat T3 seed20: succ=1 dec=8 dist=0.0
+done: 120 task-runs -> experiments/core_routing/ablations\summary.csv

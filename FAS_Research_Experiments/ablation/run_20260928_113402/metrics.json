@@ -1,0 +1,16 @@
+{
+ "duration_s": 1.09,
+ "event_count": 4,
+ "counters": {},
+ "ablation": "-Prior",
+ "seed": 1,
+ "success": false,
+ "success_tick": null,
+ "graph": {
+  "nodes": 247,
+  "edges": 299
+ },
+ "inv": {},
+ "action_count": 15,
+ "ok": true
+}

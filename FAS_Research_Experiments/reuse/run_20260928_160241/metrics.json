@@ -1,0 +1,46 @@
+{
+ "duration_s": 1.91,
+ "event_count": 379,
+ "counters": {},
+ "episode": "ep2_A",
+ "actions_total": 9,
+ "actions_redundant": 8,
+ "actions_invalid": 0,
+ "first_relevant_action_idx": null,
+ "first_relevant_ticks": null,
+ "types": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "targets": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "inventory": {},
+ "graph": {
+  "nodes": 245,
+  "edges": 282
+ },
+ "causal": {
+  "aggregations": 1,
+  "hypotheses": 4,
+  "promoted": []
+ },
+ "success": false,
+ "success_tick": null,
+ "ok": true
+}

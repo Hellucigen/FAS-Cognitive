@@ -1,0 +1,19 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260928_172142",
+ "family": "transfer",
+ "label": "C-ep1-practice",
+ "mode": "sandbox",
+ "seed": 2,
+ "timestamp": "2026-09-28 17:21:42.755",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "episode": "ep1",
+  "task": "crafting_table",
+  "seed": 2
+ }
+}

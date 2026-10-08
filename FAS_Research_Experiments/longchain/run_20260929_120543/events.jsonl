@@ -1,0 +1,32 @@
+{"ts": "2026-09-29 12:05:43.761", "t_rel_s": 0.018, "step": 0, "tag": "RUN_START", "event": "run 开始 mode=sandbox label=H-L1", "fields": {"experiment_id": "auto", "run_id": "run_20260929_120543"}}
+{"ts": "2026-09-29 12:05:45.276", "t_rel_s": 1.533, "step": 1, "tag": "GRAPH", "event": "快照 graph_start", "fields": {"snapshot": "graph_start", "key": "graph_start", "note": "", "graph": "graph_graph_start.json", "graph_nodes": 217}}
+{"ts": "2026-09-29 12:05:45.293", "t_rel_s": 1.549, "step": 2, "tag": "ACTSNAP", "event": "{\"tick\": 0, \"rank_iron\": 2}", "fields": {"tick": 0}}
+{"ts": "2026-09-29 12:05:45.487", "t_rel_s": 1.744, "step": 3, "tag": "ACTSNAP", "event": "{\"tick\": 10, \"rank_iron\": 13}", "fields": {"tick": 10}}
+{"ts": "2026-09-29 12:05:45.683", "t_rel_s": 1.939, "step": 4, "tag": "ACTSNAP", "event": "{\"tick\": 20, \"rank_iron\": 22}", "fields": {"tick": 20}}
+{"ts": "2026-09-29 12:05:45.890", "t_rel_s": 2.146, "step": 5, "tag": "ACTSNAP", "event": "{\"tick\": 30, \"rank_iron\": 22}", "fields": {"tick": 30}}
+{"ts": "2026-09-29 12:05:46.096", "t_rel_s": 2.352, "step": 6, "tag": "ACTSNAP", "event": "{\"tick\": 40, \"rank_iron\": 22}", "fields": {"tick": 40}}
+{"ts": "2026-09-29 12:05:46.317", "t_rel_s": 2.574, "step": 7, "tag": "ACTSNAP", "event": "{\"tick\": 50, \"rank_iron\": 22}", "fields": {"tick": 50}}
+{"ts": "2026-09-29 12:05:46.542", "t_rel_s": 2.799, "step": 8, "tag": "ACTSNAP", "event": "{\"tick\": 60, \"rank_iron\": 22}", "fields": {"tick": 60}}
+{"ts": "2026-09-29 12:05:46.783", "t_rel_s": 3.039, "step": 9, "tag": "ACTSNAP", "event": "{\"tick\": 70, \"rank_iron\": 22}", "fields": {"tick": 70}}
+{"ts": "2026-09-29 12:05:47.023", "t_rel_s": 3.279, "step": 10, "tag": "ACTSNAP", "event": "{\"tick\": 80, \"rank_iron\": 22}", "fields": {"tick": 80}}
+{"ts": "2026-09-29 12:05:47.279", "t_rel_s": 3.535, "step": 11, "tag": "ACTSNAP", "event": "{\"tick\": 90, \"rank_iron\": 22}", "fields": {"tick": 90}}
+{"ts": "2026-09-29 12:05:47.537", "t_rel_s": 3.793, "step": 12, "tag": "ACTSNAP", "event": "{\"tick\": 100, \"rank_iron\": 22}", "fields": {"tick": 100}}
+{"ts": "2026-09-29 12:05:47.798", "t_rel_s": 4.054, "step": 13, "tag": "ACTSNAP", "event": "{\"tick\": 110, \"rank_iron\": 22}", "fields": {"tick": 110}}
+{"ts": "2026-09-29 12:05:47.925", "t_rel_s": 4.181, "step": 14, "tag": "ACTSNAP", "event": "{\"tick\": 120, \"rank_iron\": 21}", "fields": {"tick": 120}}
+{"ts": "2026-09-29 12:05:47.960", "t_rel_s": 4.216, "step": 15, "tag": "ACTSNAP", "event": "{\"tick\": 130, \"rank_iron\": 29}", "fields": {"tick": 130}}
+{"ts": "2026-09-29 12:05:47.991", "t_rel_s": 4.247, "step": 16, "tag": "ACTSNAP", "event": "{\"tick\": 140, \"rank_iron\": 29}", "fields": {"tick": 140}}
+{"ts": "2026-09-29 12:05:48.029", "t_rel_s": 4.285, "step": 17, "tag": "ACTSNAP", "event": "{\"tick\": 150, \"rank_iron\": 29}", "fields": {"tick": 150}}
+{"ts": "2026-09-29 12:05:48.147", "t_rel_s": 4.403, "step": 18, "tag": "ACTSNAP", "event": "{\"tick\": 160, \"rank_iron\": 6}", "fields": {"tick": 160}}
+{"ts": "2026-09-29 12:05:48.416", "t_rel_s": 4.672, "step": 19, "tag": "ACTSNAP", "event": "{\"tick\": 170, \"rank_iron\": 16}", "fields": {"tick": 170}}
+{"ts": "2026-09-29 12:05:48.578", "t_rel_s": 4.834, "step": 20, "tag": "ACTSNAP", "event": "{\"tick\": 180, \"rank_iron\": 20}", "fields": {"tick": 180}}
+{"ts": "2026-09-29 12:05:48.633", "t_rel_s": 4.89, "step": 21, "tag": "ACTSNAP", "event": "{\"tick\": 190, \"rank_iron\": 10}", "fields": {"tick": 190}}
+{"ts": "2026-09-29 12:05:48.741", "t_rel_s": 4.997, "step": 22, "tag": "ACTSNAP", "event": "{\"tick\": 200, \"rank_iron\": 12}", "fields": {"tick": 200}}
+{"ts": "2026-09-29 12:05:48.812", "t_rel_s": 5.068, "step": 23, "tag": "ACTSNAP", "event": "{\"tick\": 210, \"rank_iron\": 15}", "fields": {"tick": 210}}
+{"ts": "2026-09-29 12:05:48.890", "t_rel_s": 5.146, "step": 24, "tag": "ACTSNAP", "event": "{\"tick\": 220, \"rank_iron\": 10}", "fields": {"tick": 220}}
+{"ts": "2026-09-29 12:05:48.973", "t_rel_s": 5.229, "step": 25, "tag": "ACTSNAP", "event": "{\"tick\": 230, \"rank_iron\": 9}", "fields": {"tick": 230}}
+{"ts": "2026-09-29 12:05:49.077", "t_rel_s": 5.333, "step": 26, "tag": "ACTSNAP", "event": "{\"tick\": 240, \"rank_iron\": 12}", "fields": {"tick": 240}}
+{"ts": "2026-09-29 12:05:49.169", "t_rel_s": 5.425, "step": 27, "tag": "ACTSNAP", "event": "{\"tick\": 250, \"rank_iron\": 11}", "fields": {"tick": 250}}
+{"ts": "2026-09-29 12:05:49.231", "t_rel_s": 5.487, "step": 28, "tag": "RESULT", "event": "背包获 iron_ingot @tick259", "fields": {"tick": 259}}
+{"ts": "2026-09-29 12:05:50.554", "t_rel_s": 6.81, "step": 29, "tag": "EPISODE", "event": "{\"episode\": \"lc_L1\", \"actions_total\": 42, \"actions_redundant\": 23, \"actions_failed\": 10, \"fail_reasons\": [\"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:tool_missing:wooden_pickaxe\", \"failed:timeout\", \"failed:tool_missing:wooden_pickaxe\", \"failed:to", "fields": {}}
+{"ts": "2026-09-29 12:05:50.577", "t_rel_s": 6.833, "step": 30, "tag": "GRAPH", "event": "快照 graph_end", "fields": {"snapshot": "graph_end", "key": "graph_end", "note": "", "graph": "graph_graph_end.json", "graph_nodes": 448}}
+{"ts": "2026-09-29 12:05:50.578", "t_rel_s": 6.834, "step": 31, "tag": "RUN_END", "event": "run 结束 ok", "fields": {"duration_s": 6.83, "event_count": 31, "counters": "{}", "episode": "lc_L1", "actions_total": 42, "actions_redundant": 23, "actions_failed": 10, "fail_reasons": "['failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:tool_missing:wooden_pickaxe', 'failed:t", "path_len_unique": 19, "inventory": "{'oak_planks': 3, 'wooden_pickaxe': 1, 'oak_log': 12, 'coal': 1, 'stone_pickaxe': 1, 'raw_iron': 1, 'iron_ingot': 1}", "graph_delta": "{'nodes': 231, 'edges': 615}", "writeback_promoted": "['explore_area(oak_log)|obs:minecraft:block:birch_log:appeared', 'explore_area(oak_log)|obs:minecraft:block:birch_log:disappeared', 'explore_area(oak_log)|obs:minecraft:block:coal_ore:appeared', 'expl", "graph": "{'nodes': 448, 'edges': 862}", "success": true, "success_tick": 259, "ok": true}}

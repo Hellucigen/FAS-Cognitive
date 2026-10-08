@@ -1,0 +1,7 @@
+{
+  "host": "127.0.0.1",
+  "port": 50656,
+  "username": "Haru",
+  "auth": "offline",
+  "bridge_port": 5010
+}

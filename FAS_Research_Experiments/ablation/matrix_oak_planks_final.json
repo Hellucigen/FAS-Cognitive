@@ -1,0 +1,520 @@
+{
+ "goal": "oak_planks",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "max_ticks": 120,
+ "elapsed_s": 3.7,
+ "results": {
+  "full": [
+   {
+    "ablation": "full",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "full",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "full",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Diffusion": [
+   {
+    "ablation": "-Diffusion",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Episodic": [
+   {
+    "ablation": "-Episodic",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Episodic",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Episodic",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Prior": [
+   {
+    "ablation": "-Prior",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Prior",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Prior",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Gap": [
+   {
+    "ablation": "-Gap",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Gap",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Gap",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Writeback": [
+   {
+    "ablation": "-Writeback",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Writeback",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Writeback",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Episodic-Writeback": [
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Diffusion-Episodic": [
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-Diffusion-Gap": [
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-RelevantSelf": [
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "-GoalFormation": [
+   {
+    "ablation": "-GoalFormation",
+    "seed": 1,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 237,
+     "edges": 269
+    },
+    "inv": {},
+    "action_count": 8
+   },
+   {
+    "ablation": "-GoalFormation",
+    "seed": 2,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 237,
+     "edges": 269
+    },
+    "inv": {},
+    "action_count": 8
+   },
+   {
+    "ablation": "-GoalFormation",
+    "seed": 3,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 237,
+     "edges": 269
+    },
+    "inv": {},
+    "action_count": 8
+   }
+  ]
+ }
+}

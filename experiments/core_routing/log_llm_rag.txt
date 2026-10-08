@@ -1,0 +1,162 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8329.48it/s]
+[routing] llm_rag T1 seed1: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7606.72it/s]
+[routing] llm_rag T2 seed1: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8671.22it/s]
+[routing] llm_rag T3 seed1: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7458.13it/s]
+[routing] llm_rag T4 seed1: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6948.59it/s]
+[routing] llm_rag T1 seed2: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9386.48it/s]
+[routing] llm_rag T2 seed2: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7048.92it/s]
+[routing] llm_rag T3 seed2: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6703.48it/s]
+[routing] llm_rag T4 seed2: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5898.23it/s]
+[routing] llm_rag T1 seed3: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6156.24it/s]
+[routing] llm_rag T2 seed3: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 3871.20it/s]
+[routing] llm_rag T3 seed3: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6699.11it/s]
+[routing] llm_rag T4 seed3: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9375.84it/s]
+[routing] llm_rag T1 seed4: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6992.48it/s]
+[routing] llm_rag T2 seed4: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6767.00it/s]
+[routing] llm_rag T3 seed4: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5449.44it/s]
+[routing] llm_rag T4 seed4: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7846.43it/s]
+[routing] llm_rag T1 seed5: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6083.05it/s]
+[routing] llm_rag T2 seed5: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10587.16it/s]
+[routing] llm_rag T3 seed5: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8384.36it/s]
+[routing] llm_rag T4 seed5: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6985.42it/s]
+[routing] llm_rag T1 seed6: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7455.89it/s]
+[routing] llm_rag T2 seed6: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12632.91it/s]
+[routing] llm_rag T3 seed6: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7036.09it/s]
+[routing] llm_rag T4 seed6: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9456.53it/s]
+[routing] llm_rag T1 seed7: succ=1 dec=9 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8783.75it/s]
+[routing] llm_rag T2 seed7: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17754.46it/s]
+[routing] llm_rag T3 seed7: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23600.85it/s]
+[routing] llm_rag T4 seed7: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 14254.73it/s]
+[routing] llm_rag T1 seed8: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10863.30it/s]
+[routing] llm_rag T2 seed8: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17685.92it/s]
+[routing] llm_rag T3 seed8: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10435.79it/s]
+[routing] llm_rag T4 seed8: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17694.33it/s]
+[routing] llm_rag T1 seed9: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4709.42it/s]
+[routing] llm_rag T2 seed9: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8693.24it/s]
+[routing] llm_rag T3 seed9: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11672.31it/s]
+[routing] llm_rag T4 seed9: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8737.88it/s]
+[routing] llm_rag T1 seed10: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4710.69it/s]
+[routing] llm_rag T2 seed10: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10009.60it/s]
+[routing] llm_rag T3 seed10: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10912.26it/s]
+[routing] llm_rag T4 seed10: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17815.00it/s]
+[routing] llm_rag T1 seed11: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17749.17it/s]
+[routing] llm_rag T2 seed11: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23572.83it/s]
+[routing] llm_rag T3 seed11: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20125.40it/s]
+[routing] llm_rag T4 seed11: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11262.22it/s]
+[routing] llm_rag T1 seed12: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 15656.15it/s]
+[routing] llm_rag T2 seed12: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23675.91it/s]
+[routing] llm_rag T3 seed12: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10032.53it/s]
+[routing] llm_rag T4 seed12: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23640.20it/s]
+[routing] llm_rag T1 seed13: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11754.32it/s]
+[routing] llm_rag T2 seed13: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8237.09it/s]
+[routing] llm_rag T3 seed13: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10866.07it/s]
+[routing] llm_rag T4 seed13: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11836.54it/s]
+[routing] llm_rag T1 seed14: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23574.70it/s]
+[routing] llm_rag T2 seed14: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 11442.67it/s]
+[routing] llm_rag T3 seed14: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 19935.44it/s]
+[routing] llm_rag T4 seed14: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10095.11it/s]
+[routing] llm_rag T1 seed15: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5490.23it/s]
+[routing] llm_rag T2 seed15: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6893.10it/s]
+[routing] llm_rag T3 seed15: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 10121.18it/s]
+[routing] llm_rag T4 seed15: succ=1 dec=8 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 2425.66it/s]
+[routing] llm_rag T1 seed16: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17517.39it/s]
+[routing] llm_rag T2 seed16: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23687.21it/s]
+[routing] llm_rag T3 seed16: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 17556.63it/s]
+[routing] llm_rag T4 seed16: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23546.74it/s]
+[routing] llm_rag T1 seed17: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22924.99it/s]
+[routing] llm_rag T2 seed17: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 22099.86it/s]
+[routing] llm_rag T3 seed17: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20203.23it/s]
+[routing] llm_rag T4 seed17: succ=1 dec=3 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9883.69it/s]
+[routing] llm_rag T1 seed18: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7040.42it/s]
+[routing] llm_rag T2 seed18: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23753.34it/s]
+[routing] llm_rag T3 seed18: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 8343.95it/s]
+[routing] llm_rag T4 seed18: succ=1 dec=7 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6008.30it/s]
+[routing] llm_rag T1 seed19: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 6292.03it/s]
+[routing] llm_rag T2 seed19: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 12801.80it/s]
+[routing] llm_rag T3 seed19: succ=1 dec=4 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 20325.96it/s]
+[routing] llm_rag T4 seed19: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23559.78it/s]
+[routing] llm_rag T1 seed20: succ=1 dec=6 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 4759.78it/s]
+[routing] llm_rag T2 seed20: succ=1 dec=2 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7234.72it/s]
+[routing] llm_rag T3 seed20: succ=1 dec=5 dist=0.0
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 7049.58it/s]
+[routing] llm_rag T4 seed20: succ=1 dec=6 dist=0.0
+done: 80 task-runs -> experiments/core_routing/llm_rag\summary.csv

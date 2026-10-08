@@ -1,0 +1,52 @@
+{
+  "status": "STOPPED_AT_PREFLIGHT",
+  "post_hoc": true,
+  "preregistration": "PREREGISTRATION_REVISION.md (frozen 2026-10-05)",
+  "formal_runs_executed": 0,
+  "planned_runs": 30,
+  "preflight": {
+    "pass": false,
+    "n_seeds": 10,
+    "failure_count": 60,
+    "failures_by_criterion_condition": {
+      "P1 C4b": 10, "P1 C4c": 10,
+      "P2 C4b": 10, "P2 C4c": 10,
+      "P3 C4b": 10, "P3 C4c": 10
+    },
+    "C3b_failures": 0,
+    "metrics_identical_across_seeds": true,
+    "per_condition_step0": {
+      "C1":  {"present": true,  "slot": 7,  "chars": 684, "node_lines": 8},
+      "C3b": {"present": true,  "slot": 6,  "chars": 515, "node_lines": 16, "char_ratio_vs_C1": 0.753},
+      "C4b": {"present": false, "slot": null, "chars": 239, "node_lines": 8, "char_ratio_vs_C1": 0.349},
+      "C4c": {"present": false, "slot": null, "chars": 239, "node_lines": 8, "char_ratio_vs_C1": 0.349}
+    },
+    "structural_checks": {
+      "neg_edges_C4b": 2,
+      "neg_edges_C4c": 0,
+      "facts_eq_C3_all_seeds": true,
+      "C4b_C4c_failure_visibility_diff": false
+    },
+    "truncation_diagnosis": {
+      "failure_node": "结果:tool_missing:stone_pickaxe",
+      "in_two_hop_set": true,
+      "two_hop_set_size": 51,
+      "rank_1based": 43,
+      "discovery_edge_weight": 0.5,
+      "slot8_weight": 0.8,
+      "top8_weights": [1.0, 1.0, 1.0, 1.0, 0.8178, 0.8, 0.8, 0.8],
+      "edges_into_failure_node": [
+        ["动作:gather_iron_ore", "关联", 0.5],
+        ["事件:failed:gather_iron_ore", "结果", 0.9]
+      ]
+    }
+  },
+  "hypotheses": {
+    "H_R1": "unanswered (not run)",
+    "H_R2": "unanswered (C4b fails presentation-equivalence gate under frozen rule)",
+    "H_R3": "unanswered (same)",
+    "H_R4": "unanswered (not run)"
+  },
+  "regression": {"pytest": "82 passed", "run_all_regression": "108/108 PASS"},
+  "invalid_runs": []
+}

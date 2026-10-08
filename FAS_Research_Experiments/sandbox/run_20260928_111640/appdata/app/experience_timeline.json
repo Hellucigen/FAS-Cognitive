@@ -1,0 +1,3764 @@
+{
+  "raw": [
+    {
+      "id": "ev_832b07c3ad",
+      "ts": 1790565402.0139043,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 0.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_461ff44f8f",
+      "ts": 1790565402.029476,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "appeared",
+        "target": "oak_log"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_c078d5dc2b",
+      "ts": 1790565402.029476,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "appeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8cb0367aa3",
+      "ts": 1790565402.0427244,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_log",
+        "before": 0,
+        "after": 2
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8fa56a5474",
+      "ts": 1790565402.0437222,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_1fb8d9d741",
+      "ts": 1790565402.0755024,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log",
+        "action": "gather_resource",
+        "result": "success",
+        "before": 3,
+        "after": 0,
+        "pos": {
+          "x": 5.0,
+          "y": 65.0,
+          "z": 0.0
+        },
+        "positions": [
+          {
+            "x": 5.0,
+            "y": 65.0,
+            "z": 0.0
+          },
+          {
+            "x": 5.0,
+            "y": 66.0,
+            "z": 0.0
+          },
+          {
+            "x": 5.0,
+            "y": 67.0,
+            "z": 0.0
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a6fbc9843e",
+      "ts": 1790565402.0775032,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "oak_planks",
+        "params": {
+          "item": "oak_planks",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 oak_planks",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_planks 可由 配方:oak_planks:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_ca5da5273b",
+      "ts": 1790565402.0785022,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 oak_planks",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_06efbe93b2",
+      "ts": 1790565402.0976143,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_planks",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_planks",
+        "before": 0,
+        "after": 4
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_231ddfabea",
+      "ts": 1790565402.0996146,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "stick",
+        "params": {
+          "item": "stick",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 stick",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：stick 可由 配方:stick:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_418c362707",
+      "ts": 1790565402.0996146,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 stick",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_972fb41af4",
+      "ts": 1790565402.1096547,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:stick",
+      "content": {
+        "change": "count_increased",
+        "target": "stick",
+        "before": 0,
+        "after": 4
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a17b089621",
+      "ts": 1790565402.110685,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "oak_planks",
+        "params": {
+          "item": "oak_planks",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 oak_planks",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_planks 可由 配方:oak_planks:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_e2af67173f",
+      "ts": 1790565402.1116855,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 oak_planks",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_109c13b042",
+      "ts": 1790565402.1314034,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "crafting_table",
+        "params": {
+          "item": "crafting_table",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 crafting_table",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：需要工作台：crafting_table 可由 配方:crafting_table:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_29f7d9f36c",
+      "ts": 1790565402.1314034,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 crafting_table",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a5ee6aa5e2",
+      "ts": 1790565402.156144,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:crafting_table",
+      "content": {
+        "change": "count_increased",
+        "target": "crafting_table",
+        "before": 0,
+        "after": 1
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_1b04eb8e73",
+      "ts": 1790565402.1571674,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "oak_planks",
+        "params": {
+          "item": "oak_planks",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 oak_planks",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_planks 可由 配方:oak_planks:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8ff61d03f3",
+      "ts": 1790565402.1571674,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 oak_planks",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_ca95af2187",
+      "ts": 1790565402.185205,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "place_block",
+      "content": {
+        "target": "crafting_table",
+        "params": {
+          "item": "crafting_table"
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "放置工作台以便合成",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：wooden_pickaxe 可由 配方:wooden_pickaxe:table:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_0d07b5a8a3",
+      "ts": 1790565402.1867259,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "appeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_5452c24a69",
+      "ts": 1790565402.1867259,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "place_block",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "放置工作台以便合成",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_9c46c002d7",
+      "ts": 1790565402.206812,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "appeared",
+        "target": "crafting_table",
+        "action": "place_block",
+        "result": "success",
+        "before": 0,
+        "after": 1,
+        "pos": {
+          "x": 5,
+          "y": 64,
+          "z": -1
+        },
+        "positions": [
+          {
+            "x": 5,
+            "y": 64,
+            "z": -1
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_093e98042b",
+      "ts": 1790565402.2083242,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "wooden_pickaxe",
+        "params": {
+          "item": "wooden_pickaxe",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 wooden_pickaxe",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：wooden_pickaxe 可由 配方:wooden_pickaxe:table:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_496ea51af6",
+      "ts": 1790565402.2083242,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 wooden_pickaxe",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_0ba298f75f",
+      "ts": 1790565402.2274752,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:wooden_pickaxe",
+      "content": {
+        "change": "count_increased",
+        "target": "wooden_pickaxe",
+        "before": 0,
+        "after": 1
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a88ccad03e",
+      "ts": 1790565402.2284758,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "stone",
+        "params": {
+          "resource": "stone",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 cobblestone",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 5.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：cobblestone 可由方块 stone 产出（工具已备）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_233034448d",
+      "ts": 1790565402.2517555,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "disappeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_ec69fe5fb8",
+      "ts": 1790565402.2517555,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:cobblestone",
+      "content": {
+        "change": "count_increased",
+        "target": "cobblestone",
+        "before": 0,
+        "after": 2
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_311b0a8666",
+      "ts": 1790565402.2517555,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "挖到 cobblestone",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_43074b399e",
+      "ts": 1790565402.2648385,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:stone",
+      "content": {
+        "change": "disappeared",
+        "target": "stone",
+        "action": "gather_resource",
+        "result": "success",
+        "before": 3,
+        "after": 0,
+        "pos": {
+          "x": 7.0,
+          "y": 63.0,
+          "z": 2.0
+        },
+        "positions": [
+          {
+            "x": 7.0,
+            "y": 63.0,
+            "z": 2.0
+          },
+          {
+            "x": 8.0,
+            "y": 63.0,
+            "z": 3.0
+          },
+          {
+            "x": 9.0,
+            "y": 63.0,
+            "z": 4.0
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_7f7816bdb5",
+      "ts": 1790565402.286749,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 2,
+          "search_radius": 16
+        },
+        "reason": [
+          "UnknownBlock_oak_log",
+          "oak_log",
+          "CuriosityDrive",
+          "Haru的位置"
+        ],
+        "motivation": "cognitive_state",
+        "expected_effect": "获得 oak_log",
+        "urgency": 0.5,
+        "priority": 0.5,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 9.0,
+              "y": 64.0,
+              "z": 4.0
+            }
+          }
+        },
+        "explain": "gather_resource mot=cognitive_state drive=0.00 att=1.00 nov=1.00 tend=0.00 int=0.00 risk=0.00 rec=0.26 fail=0.00 hab=0.60 sal=0.30 → 0.321"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_64f9b54243",
+      "ts": 1790565402.2998888,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "获得 oak_log",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_6229a9319a",
+      "ts": 1790565402.3058639,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log",
+        "action": "gather_resource",
+        "result": "success",
+        "before": 2,
+        "after": 0,
+        "pos": {
+          "x": 7.0,
+          "y": 65.0,
+          "z": 0.0
+        },
+        "positions": [
+          {
+            "x": 7.0,
+            "y": 65.0,
+            "z": 0.0
+          },
+          {
+            "x": 7.0,
+            "y": 66.0,
+            "z": 0.0
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_223e29dc1e",
+      "ts": 1790565402.3058639,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_log",
+        "before": 0,
+        "after": 2
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_ad5903194e",
+      "ts": 1790565402.3071778,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_direction",
+      "content": {
+        "target": "west",
+        "params": {
+          "direction": "west",
+          "max_time": 45.0,
+          "night_stop": false
+        },
+        "reason": [
+          "CuriosityDrive",
+          "Haru的位置"
+        ],
+        "motivation": "curiosity",
+        "expected_effect": "往west走走看，了解周边",
+        "urgency": 0.35,
+        "priority": 0.35,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 9.0,
+              "y": 64.0,
+              "z": 4.0
+            }
+          }
+        },
+        "explain": "空闲：去少走的方向探索一阵"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_373810d46d",
+      "ts": 1790565402.3147237,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_5ca83fc072",
+      "ts": 1790565402.3147237,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "disappeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_6e73a1efd8",
+      "ts": 1790565402.334528,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:cobblestone",
+      "content": {
+        "change": "count_decreased",
+        "target": "cobblestone",
+        "before": 3,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_7b3ecef66f",
+      "ts": 1790565402.334528,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_decreased",
+        "target": "oak_log",
+        "before": 2,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_96b924c0af",
+      "ts": 1790565402.334528,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_planks",
+      "content": {
+        "change": "count_decreased",
+        "target": "oak_planks",
+        "before": 3,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_e5feed662c",
+      "ts": 1790565402.334528,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:stick",
+      "content": {
+        "change": "count_decreased",
+        "target": "stick",
+        "before": 2,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f3b3e25a04",
+      "ts": 1790565402.334528,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:wooden_pickaxe",
+      "content": {
+        "change": "count_decreased",
+        "target": "wooden_pickaxe",
+        "before": 1,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f3ecf8414b",
+      "ts": 1790565402.4135647,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "explore_direction",
+      "content": {
+        "change": "failed:timeout",
+        "reason": "timeout",
+        "expected_effect": "往west走走看，了解周边",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_bc811ab0c0",
+      "ts": 1790565402.4348829,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": -51.0,
+              "y": 64.0,
+              "z": -11.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f07fe104d6",
+      "ts": 1790565402.4414093,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "appeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_1cfaf1265a",
+      "ts": 1790565402.4414093,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "appeared",
+        "target": "oak_log"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_cc1d2020d8",
+      "ts": 1790565402.4531455,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_log",
+        "before": 0,
+        "after": 2
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a57b44fcd7",
+      "ts": 1790565402.4531455,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_78787ba99e",
+      "ts": 1790565402.4673066,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log",
+        "action": "gather_resource",
+        "result": "success",
+        "before": 3,
+        "after": 0,
+        "pos": {
+          "x": 7.0,
+          "y": 67.0,
+          "z": 0.0
+        },
+        "positions": [
+          {
+            "x": 7.0,
+            "y": 67.0,
+            "z": 0.0
+          },
+          {
+            "x": 6.0,
+            "y": 65.0,
+            "z": 0.0
+          },
+          {
+            "x": 6.0,
+            "y": 66.0,
+            "z": 0.0
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_5783390eb1",
+      "ts": 1790565402.471307,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "oak_planks",
+        "params": {
+          "item": "oak_planks",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 oak_planks",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_planks 可由 配方:oak_planks:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f4655f5225",
+      "ts": 1790565402.471307,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 oak_planks",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_1b2b5990d4",
+      "ts": 1790565402.4956505,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_decreased",
+        "target": "oak_log",
+        "before": 2,
+        "after": 0
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_e332f761c2",
+      "ts": 1790565402.503401,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_8f4ec9cd26",
+      "ts": 1790565402.5111194,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_018943f2e1",
+      "ts": 1790565402.5111194,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "progress",
+        "reward_change": 0.3
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_f327cdfe0a",
+      "ts": 1790565402.5276086,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "block:oak_log",
+      "content": {
+        "change": "disappeared",
+        "target": "oak_log",
+        "action": "gather_resource",
+        "result": "success",
+        "before": 1,
+        "after": 0,
+        "pos": {
+          "x": 6.0,
+          "y": 67.0,
+          "z": 0.0
+        },
+        "positions": [
+          {
+            "x": 6.0,
+            "y": 67.0,
+            "z": 0.0
+          }
+        ]
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_7d928a1273",
+      "ts": 1790565402.5285883,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_log",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_log",
+        "before": 0,
+        "after": 1
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_00963a6d28",
+      "ts": 1790565402.5331218,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "oak_planks",
+        "params": {
+          "item": "oak_planks",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 oak_planks",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_planks 可由 配方:oak_planks:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_cb686aa448",
+      "ts": 1790565402.5331218,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 oak_planks",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_76b21daed6",
+      "ts": 1790565402.5416377,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:oak_planks",
+      "content": {
+        "change": "count_increased",
+        "target": "oak_planks",
+        "before": 0,
+        "after": 4
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_a853aaf6d9",
+      "ts": 1790565402.5451763,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "target": "stick",
+        "params": {
+          "item": "stick",
+          "count": 1
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "合成 stick",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：stick 可由 配方:stick:hand:0 产出（原料已齐）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_10f0b4cc96",
+      "ts": 1790565402.5451763,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "craft_item",
+      "content": {
+        "change": "succeeded",
+        "reason": "",
+        "expected_effect": "合成 stick",
+        "outcome": "goal_success",
+        "reward_change": 0.6
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_6092191286",
+      "ts": 1790565402.562029,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "self",
+      "subject": "inventory:stick",
+      "content": {
+        "change": "count_increased",
+        "target": "stick",
+        "before": 0,
+        "after": 4
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_6f2c87745b",
+      "ts": 1790565402.567664,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_43baa76ecc",
+      "ts": 1790565402.5758927,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:not_found_in_radius",
+        "reason": "not_found_in_radius",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "goal_failure",
+        "reward_change": -0.5
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_ac7edf842d",
+      "ts": 1790565402.605563,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_area",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "goal": "oak_log",
+          "direction": "west",
+          "max_time": 240.0,
+          "max_distance": 32.0,
+          "night_stop": false
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "定向找到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": 0.0
+            }
+          }
+        },
+        "explain": "explore_area mot=user_goal drive=0.80 att=0.18 nov=0.30 tend=0.00 int=0.00 risk=0.00 rec=0.00 fail=0.00 → 0.345"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_938e1ada95",
+      "ts": 1790565402.6120484,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "appeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_99d0df3f79",
+      "ts": 1790565402.6120484,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "disappeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_60bf53e543",
+      "ts": 1790565402.6120484,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "disappeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_5a0aecf694",
+      "ts": 1790565402.683806,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "explore_area",
+      "content": {
+        "change": "failed:timeout",
+        "reason": "timeout",
+        "expected_effect": "定向找到 oak_log",
+        "outcome": "blocked",
+        "reward_change": -0.2
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_d24bc43337",
+      "ts": 1790565402.7048528,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "resource": "oak_log",
+          "quantity": 3,
+          "search_radius": 24,
+          "timeout": 600.0
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "挖到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": -15.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_84216d2c6c",
+      "ts": 1790565402.7048528,
+      "ts_str": "11:16:42",
+      "event_type": "SELF_STATE_CHANGE",
+      "actor": "self",
+      "subject": "gather_resource",
+      "content": {
+        "change": "failed:not_found_in_radius",
+        "reason": "not_found_in_radius",
+        "expected_effect": "挖到 oak_log",
+        "outcome": "goal_failure",
+        "reward_change": -0.5
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_99bef11a54",
+      "ts": 1790565402.7159588,
+      "ts_str": "11:16:42",
+      "event_type": "ACTION",
+      "actor": "self",
+      "subject": "explore_area",
+      "content": {
+        "target": "oak_log",
+        "params": {
+          "goal": "oak_log",
+          "direction": "west",
+          "max_time": 240.0,
+          "max_distance": 32.0,
+          "night_stop": false
+        },
+        "reason": [
+          "物品:cobblestone",
+          "实验目标",
+          "目标:获得cobblestone"
+        ],
+        "motivation": "user_goal",
+        "expected_effect": "定向找到 oak_log",
+        "urgency": 0.6,
+        "priority": 0.7,
+        "source": "autonomy",
+        "internal_state": {
+          "game": {
+            "health": 20,
+            "food": 20,
+            "pos": {
+              "x": 7.0,
+              "y": 64.0,
+              "z": -15.0
+            }
+          }
+        },
+        "explain": "目标 cobblestone：oak_log 可由方块 oak_log 产出（无需工具）"
+      },
+      "source": "action_system",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_954503535c",
+      "ts": 1790565402.7236009,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "appeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_b3b56b31f7",
+      "ts": 1790565402.7311568,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "disappeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_b5f3a808c9",
+      "ts": 1790565402.7397146,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "appeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_767fc0e183",
+      "ts": 1790565402.7397146,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "appeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_caaffcea5a",
+      "ts": 1790565402.7397146,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:stone",
+      "content": {
+        "change": "disappeared",
+        "target": "stone"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    },
+    {
+      "id": "ev_4bd38cfcca",
+      "ts": 1790565402.746479,
+      "ts_str": "11:16:42",
+      "event_type": "OBSERVATION",
+      "actor": "minecraft",
+      "subject": "block:crafting_table",
+      "content": {
+        "change": "disappeared",
+        "target": "crafting_table"
+      },
+      "source": "minecraft",
+      "confidence": 1.0,
+      "meta": {}
+    }
+  ],
+  "causal": {
+    "aggregations": {
+      "gather_resource(oak_log)": {
+        "obs": 6,
+        "outcomes": {
+          "self:self:gather_resource:succeeded:late_confirmed": {
+            "support": 6,
+            "contra": 4,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 6,
+                "contra": 4
+              }
+            }
+          },
+          "obs:self:inventory:crafting_table:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 2,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:block:oak_log:disappeared": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "obs:minecraft:block:stone:appeared": {
+            "support": 6,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 6,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 2,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 2
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 6,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 6,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 2,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 2
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 6,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 6,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:disappeared": {
+            "support": 6,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 6,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "self:self:gather_resource:succeeded": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 3,
+            "contra": 3,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 3
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:disappeared": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:appeared": {
+            "support": 3,
+            "contra": 3,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 3
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 4,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 2,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "late_confirmed": 6,
+        "late_confirmed_last": "2026/09/28 11:16:42",
+        "last_seen": "2026/09/28 11:16:43",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "craft_item(oak_planks)": {
+        "obs": 5,
+        "outcomes": {
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 4,
+            "contra": 1,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 1
+              }
+            }
+          },
+          "obs:self:inventory:crafting_table:count_increased": {
+            "support": 2,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 5,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 5,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 5,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 5,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:craft_item:succeeded": {
+            "support": 5,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 5,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 3,
+            "contra": 2,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 3,
+                "contra": 2
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 4,
+            "contra": 1,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 4,
+                "contra": 1
+              }
+            }
+          }
+        },
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "craft_item(stick)": {
+        "obs": 2,
+        "outcomes": {
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:crafting_table:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:craft_item:succeeded": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "craft_item(crafting_table)": {
+        "obs": 1,
+        "outcomes": {
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:crafting_table:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:craft_item:succeeded": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "place_block(crafting_table)": {
+        "obs": 1,
+        "outcomes": {
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:place_block:succeeded": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "craft_item(wooden_pickaxe)": {
+        "obs": 1,
+        "outcomes": {
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:craft_item:succeeded": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "gather_resource(stone)": {
+        "obs": 1,
+        "outcomes": {
+          "self:self:gather_resource:succeeded:late_confirmed": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:wooden_pickaxe:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "self:self:gather_resource:succeeded": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_log:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:cobblestone:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:oak_planks:count_increased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:inventory:stick:count_decreased": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "late_confirmed": 1,
+        "late_confirmed_last": "2026/09/28 11:16:42",
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "explore_direction(west)": {
+        "obs": 1,
+        "outcomes": {
+          "self:self:explore_direction:succeeded:late_confirmed": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:self:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:oak_log:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:disappeared": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:42",
+            "last": "2026/09/28 11:16:42",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "late_confirmed": 1,
+        "late_confirmed_last": "2026/09/28 11:16:42",
+        "last_seen": "2026/09/28 11:16:42",
+        "first_seen": "2026/09/28 11:16:42"
+      },
+      "explore_area(oak_log)": {
+        "obs": 2,
+        "outcomes": {
+          "self:self:explore_area:succeeded:late_confirmed": {
+            "support": 1,
+            "contra": 0,
+            "first": "2026/09/28 11:16:43",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 1,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:disappeared": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:43",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:disappeared": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:43",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:stone:appeared": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:43",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          },
+          "obs:minecraft:block:crafting_table:appeared": {
+            "support": 2,
+            "contra": 0,
+            "first": "2026/09/28 11:16:43",
+            "last": "2026/09/28 11:16:43",
+            "contexts": {
+              "game.food=20|game.health=20": {
+                "support": 2,
+                "contra": 0
+              }
+            }
+          }
+        },
+        "late_confirmed": 1,
+        "late_confirmed_last": "2026/09/28 11:16:43",
+        "last_seen": "2026/09/28 11:16:43",
+        "first_seen": "2026/09/28 11:16:43"
+      }
+    },
+    "hypotheses": {
+      "craft_item(oak_planks)|obs:self:inventory:oak_log:count_decreased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:oak_log:count_decreased",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.571,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:wooden_pickaxe:count_decreased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:wooden_pickaxe:count_decreased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_decreased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:oak_planks:count_decreased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:cobblestone:count_increased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:cobblestone:count_increased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:stick:count_increased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:stick:count_increased",
+        "observations": 5,
+        "support": 5,
+        "contradictions": 0,
+        "confidence": 0.714,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "hypothesis"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:oak_planks:count_increased",
+        "observations": 5,
+        "support": 5,
+        "contradictions": 0,
+        "confidence": 0.714,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "hypothesis"
+      },
+      "craft_item(oak_planks)|self:self:craft_item:succeeded": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "self:self:craft_item:succeeded",
+        "observations": 5,
+        "support": 5,
+        "contradictions": 0,
+        "confidence": 0.714,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "hypothesis"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:wooden_pickaxe:count_increased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:wooden_pickaxe:count_increased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:cobblestone:count_decreased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:cobblestone:count_decreased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:stick:count_decreased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:stick:count_decreased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.429,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "craft_item(oak_planks)|obs:self:inventory:oak_log:count_increased": {
+        "action": "craft_item(oak_planks)",
+        "outcome": "obs:self:inventory:oak_log:count_increased",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.571,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:self:block:oak_log:disappeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:self:block:oak_log:disappeared",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:stone:appeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:stone:appeared",
+        "observations": 6,
+        "support": 6,
+        "contradictions": 0,
+        "confidence": 0.75,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:43",
+        "status": "hypothesis"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:crafting_table:appeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:crafting_table:appeared",
+        "observations": 6,
+        "support": 6,
+        "contradictions": 0,
+        "confidence": 0.75,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:43",
+        "status": "hypothesis"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:crafting_table:disappeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:crafting_table:disappeared",
+        "observations": 6,
+        "support": 6,
+        "contradictions": 0,
+        "confidence": 0.75,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:43",
+        "status": "hypothesis"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:stone:disappeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:stone:disappeared",
+        "observations": 6,
+        "support": 6,
+        "contradictions": 0,
+        "confidence": 0.75,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:43",
+        "status": "hypothesis"
+      },
+      "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:self:inventory:oak_log:count_increased",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|self:self:gather_resource:succeeded": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "self:self:gather_resource:succeeded",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:self:inventory:oak_log:count_decreased": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:self:inventory:oak_log:count_decreased",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.375,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:oak_log:disappeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:oak_log:disappeared",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:minecraft:block:oak_log:appeared": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:minecraft:block:oak_log:appeared",
+        "observations": 3,
+        "support": 3,
+        "contradictions": 0,
+        "confidence": 0.375,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:self:inventory:stick:count_increased": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:self:inventory:stick:count_increased",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      },
+      "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased": {
+        "action": "gather_resource(oak_log)",
+        "outcome": "obs:self:inventory:oak_planks:count_increased",
+        "observations": 4,
+        "support": 4,
+        "contradictions": 0,
+        "confidence": 0.5,
+        "first_observed": "2026/09/28 11:16:42",
+        "last_observed": "2026/09/28 11:16:42",
+        "status": "weakened"
+      }
+    },
+    "promoted": []
+  }
+}

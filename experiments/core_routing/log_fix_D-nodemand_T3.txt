@@ -1,0 +1,6 @@
+[routing] D-nodemand T3 seed16: succ=1 dec=5 dist=0.0
+[routing] D-nodemand T3 seed17: succ=1 dec=7 dist=0.0
+[routing] D-nodemand T3 seed18: succ=1 dec=6 dist=0.0
+[routing] D-nodemand T3 seed19: succ=1 dec=8 dist=0.0
+[routing] D-nodemand T3 seed20: succ=1 dec=5 dist=0.0
+done: 5 task-runs -> experiments/core_routing/ablations\summary.csv

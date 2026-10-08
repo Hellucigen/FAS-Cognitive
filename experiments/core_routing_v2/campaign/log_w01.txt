@@ -1,0 +1,11 @@
+[w01] fas_full T1 seed4: succ=1 class=none
+[w01] fas_full T2 seed10: succ=1 class=none
+[w01] fas_full T3 seed15: succ=1 class=none
+[w01] fas_full T4 seed20: succ=1 class=none
+[w01] llm_direct T2 seed10: succ=1 class=none
+[w01] llm_direct T3 seed17: succ=1 class=none
+[w01] llm_history T1 seed10: succ=1 class=none
+[w01] llm_history T2 seed20: succ=1 class=none
+[w01] llm_history T4 seed16: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 23563.51it/s]
+OpenBLAS error: Memory allocation still failed after 10 retries, giving up.

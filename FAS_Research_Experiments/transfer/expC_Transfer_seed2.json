@@ -1,0 +1,134 @@
+{
+ "experiment": "C",
+ "condition": "Transfer",
+ "seed": 2,
+ "task1": "crafting_table",
+ "task2": "wooden_pickaxe",
+ "max_ticks": 400,
+ "ep1": {
+  "path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\transfer\\c1_ep1_graph_seed2.json",
+  "rounds": {
+   "1": 5,
+   "2": 5,
+   "3": 5,
+   "4": 5,
+   "5": 5,
+   "6": 5,
+   "7": 5,
+   "8": 5
+  },
+  "causal": {
+   "aggregations": 3,
+   "hypotheses": 13,
+   "promoted": [
+    "craft_item(crafting_table)|self:self:craft_item:succeeded",
+    "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased",
+    "craft_item(oak_planks)|self:self:craft_item:succeeded",
+    "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+    "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+    "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased",
+    "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+   ]
+  }
+ },
+ "ep2": {
+  "episode": "ep2_Transfer",
+  "actions_total": 8,
+  "actions_redundant": 2,
+  "actions_invalid": 0,
+  "types": [
+   "gather_resource",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "place_block",
+   "craft_item"
+  ],
+  "targets": [
+   "oak_log",
+   "oak_planks",
+   "stick",
+   "oak_planks",
+   "crafting_table",
+   "oak_planks",
+   "crafting_table",
+   "wooden_pickaxe"
+  ],
+  "inventory": {
+   "oak_planks": 3,
+   "stick": 2,
+   "wooden_pickaxe": 1
+  },
+  "graph": {
+   "nodes": 281,
+   "edges": 392
+  },
+  "causal": {
+   "aggregations": 6,
+   "hypotheses": 13,
+   "promoted": [
+    "craft_item(crafting_table)|self:self:craft_item:succeeded",
+    "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased",
+    "craft_item(oak_planks)|self:self:craft_item:succeeded",
+    "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+    "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+    "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased",
+    "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+   ]
+  },
+  "shared_structure_usage": {
+   "gather_resource@oak_log": 1,
+   "craft_item@oak_planks": 3,
+   "craft_item@crafting_table": 1
+  },
+  "recombination_event_idx": 4,
+  "no_transfer_ceiling": {
+   "gather_resource@oak_log": 1,
+   "craft_item@oak_planks": 3,
+   "craft_item@stick": 1,
+   "craft_item@crafting_table": 1,
+   "craft_item@wooden_pickaxe": 1
+  },
+  "inherited_wb_nodes": 8,
+  "start_activation": {
+   "oak_log": 5.0,
+   "oak_planks": 4.3229,
+   "crafting_table": 2.5798,
+   "物品:crafting_table": 2.9262,
+   "物品:wooden_pickaxe": 5.0,
+   "birch_log": 2.2759
+  },
+  "success": true,
+  "success_tick": 13,
+  "action_prior_t0": {
+   "gather_resource(oak_log)": {
+    "success_rate": 1.0,
+    "blockers": [],
+    "obs": 8
+   },
+   "craft_item(oak_planks)": {
+    "success_rate": 1.0,
+    "blockers": [],
+    "obs": 8
+   },
+   "craft_item(crafting_table)": {
+    "success_rate": 1.0,
+    "blockers": [],
+    "obs": 8
+   },
+   "craft_item(stick)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   },
+   "craft_item(wooden_pickaxe)": {
+    "success_rate": null,
+    "blockers": [],
+    "obs": 0
+   }
+  },
+  "transfer_benefit": null
+ }
+}

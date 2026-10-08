@@ -1,0 +1,23 @@
+{
+ "duration_s": 1.8,
+ "event_count": 6,
+ "counters": {},
+ "success_tick": 6,
+ "env_change_tick": 70,
+ "phase2_success": true,
+ "phase2_tick": 17,
+ "graph": {
+  "nodes": 244,
+  "edges": 291
+ },
+ "inv": {},
+ "goal_states": [
+  {
+   "type": "obtain",
+   "target": "oak_planks",
+   "success": true,
+   "last_success": 3400.0
+  }
+ ],
+ "ok": true
+}

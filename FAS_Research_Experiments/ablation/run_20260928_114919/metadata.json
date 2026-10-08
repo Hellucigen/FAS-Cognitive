@@ -1,0 +1,44 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260928_114919",
+ "family": "ablation",
+ "label": "-GoalFormation",
+ "mode": "sandbox",
+ "seed": 1,
+ "timestamp": "2026-09-28 11:49:19.801",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {
+  "mode": "off",
+  "goal_obtain": "cobblestone",
+  "attention_floor": 0.9,
+  "prior_extra": [
+   {
+    "result": "iron_ingot",
+    "kind": "smelt",
+    "tool": "furnace",
+    "inputs": {
+     "raw_iron": 1
+    },
+    "fuel": true,
+    "provenance": {
+     "knowledge_type": "prior",
+     "source": "offline_sim",
+     "version_verified": false,
+     "confidence": 0.6
+    }
+   }
+  ],
+  "seed": 1
+ },
+ "extra": {
+  "ablation": "-GoalFormation",
+  "goal": "cobblestone",
+  "switches": {
+   "goal_on": false
+  },
+  "max_ticks": 150
+ }
+}

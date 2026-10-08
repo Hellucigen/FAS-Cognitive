@@ -1,0 +1,122 @@
+{
+ "experiment": "A2",
+ "condition": "pilot",
+ "seed": 1,
+ "max_ticks": 250,
+ "ep1": {
+  "path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse_a2\\A1_pilot_graph_s1.json",
+  "stats": {
+   "episode": "A1_pilot_final",
+   "actions_total": 13,
+   "actions_redundant": 7,
+   "actions_invalid": 0,
+   "path_len_unique": 6,
+   "first_action": "gather_resource@oak_log",
+   "shared_action_hits": 10,
+   "types": [
+    "gather_resource",
+    "craft_item",
+    "craft_item",
+    "craft_item",
+    "craft_item",
+    "craft_item",
+    "place_block",
+    "craft_item",
+    "gather_resource",
+    "craft_item",
+    "craft_item",
+    "craft_item",
+    "craft_item"
+   ],
+   "targets": [
+    "oak_log",
+    "oak_planks",
+    "stick",
+    "oak_planks",
+    "crafting_table",
+    "oak_planks",
+    "crafting_table",
+    "oak_fence",
+    "oak_log",
+    "oak_planks",
+    "stick",
+    "oak_planks",
+    "oak_fence"
+   ],
+   "inventory": {
+    "oak_log": 1,
+    "oak_planks": 2,
+    "stick": 2,
+    "oak_fence": 3
+   },
+   "graph": {
+    "nodes": 253,
+    "edges": 319
+   },
+   "action_prior_sample": {},
+   "causal": {
+    "aggregations": 6,
+    "hypotheses": 6,
+    "promoted": []
+   },
+   "rounds_done": {
+    "1": 11,
+    "2": 7
+   }
+  }
+ },
+ "ep2": {
+  "episode": "A2_B2",
+  "actions_total": 8,
+  "actions_redundant": 2,
+  "actions_invalid": 0,
+  "path_len_unique": 6,
+  "first_action": "gather_resource@oak_log",
+  "shared_action_hits": 6,
+  "types": [
+   "gather_resource",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "place_block",
+   "craft_item"
+  ],
+  "targets": [
+   "oak_log",
+   "oak_planks",
+   "stick",
+   "oak_planks",
+   "crafting_table",
+   "oak_planks",
+   "crafting_table",
+   "wooden_pickaxe"
+  ],
+  "inventory": {
+   "oak_planks": 3,
+   "stick": 2,
+   "wooden_pickaxe": 1
+  },
+  "graph": {
+   "nodes": 263,
+   "edges": 348
+  },
+  "action_prior_sample": {},
+  "causal": {
+   "aggregations": 6,
+   "hypotheses": 1,
+   "promoted": []
+  },
+  "inherited_wb_nodes": 0,
+  "start_activation": {
+   "oak_log": 5.0,
+   "物品:oak_planks": 5.0,
+   "物品:stick": 4.9396,
+   "物品:crafting_table": 1.3606,
+   "物品:oak_fence": 5.0
+  },
+  "success": true,
+  "success_tick": 11
+ }
+}

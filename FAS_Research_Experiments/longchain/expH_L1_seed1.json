@@ -1,0 +1,292 @@
+{
+ "experiment": "H_longchain",
+ "condition": "L1",
+ "seed": 1,
+ "max_ticks": 1200,
+ "result": {
+  "episode": "lc_L1",
+  "actions_total": 42,
+  "actions_redundant": 23,
+  "actions_failed": 10,
+  "fail_reasons": [
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:timeout",
+   "failed:tool_missing:wooden_pickaxe",
+   "failed:tool_missing:iron_pickaxe",
+   "failed:furnace_empty"
+  ],
+  "path_len_unique": 19,
+  "types": [
+   "gather_resource",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "gather_resource",
+   "explore_area",
+   "explore_direction",
+   "gather_resource",
+   "explore_area",
+   "explore_direction",
+   "gather_resource",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "craft_item",
+   "place_block",
+   "craft_item",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "investigate_location",
+   "craft_item",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "gather_resource",
+   "investigate_location",
+   "craft_item",
+   "place_block",
+   "smelt_item",
+   "furnace_take"
+  ],
+  "targets": [
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "oak_log",
+   "east",
+   "oak_log",
+   "oak_log",
+   "north",
+   "oak_log",
+   "oak_planks",
+   "stick",
+   "oak_planks",
+   "crafting_table",
+   "oak_planks",
+   "crafting_table",
+   "wooden_pickaxe",
+   "stone",
+   "stone",
+   "stone",
+   "oak_log",
+   "stone",
+   "stone",
+   "coal_ore",
+   "crafting_table",
+   "stone_pickaxe",
+   "iron_ore",
+   "stone",
+   "stone",
+   "diamond_ore",
+   "crafting_table",
+   "furnace",
+   "furnace",
+   "iron_ingot",
+   "iron_ingot"
+  ],
+  "inventory": {
+   "oak_planks": 3,
+   "wooden_pickaxe": 1,
+   "oak_log": 12,
+   "coal": 1,
+   "stone_pickaxe": 1,
+   "raw_iron": 1,
+   "iron_ingot": 1
+  },
+  "graph_delta": {
+   "nodes": 231,
+   "edges": 615
+  },
+  "writeback_promoted": [
+   "explore_area(oak_log)|obs:minecraft:block:birch_log:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:birch_log:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:coal_ore:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:coal_ore:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:crafting_table:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:crafting_table:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:diamond_ore:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:diamond_ore:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:furnace:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:iron_ore:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:iron_ore:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:oak_log:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:oak_log:disappeared",
+   "explore_area(oak_log)|obs:minecraft:block:stone:appeared",
+   "explore_area(oak_log)|obs:minecraft:block:stone:disappeared",
+   "explore_area(oak_log)|obs:self:block:coal_ore:disappeared",
+   "explore_area(oak_log)|obs:self:block:crafting_table:appeared",
+   "explore_area(oak_log)|obs:self:block:furnace:appeared",
+   "explore_area(oak_log)|obs:self:block:iron_ore:disappeared",
+   "explore_area(oak_log)|obs:self:block:oak_log:disappeared",
+   "explore_area(oak_log)|obs:self:block:stone:disappeared",
+   "explore_area(oak_log)|obs:self:inventory:oak_log:count_increased",
+   "gather_resource(oak_log)|obs:minecraft:block:coal_ore:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:coal_ore:disappeared",
+   "gather_resource(oak_log)|obs:minecraft:block:crafting_table:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:crafting_table:disappeared",
+   "gather_resource(oak_log)|obs:minecraft:block:diamond_ore:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:diamond_ore:disappeared",
+   "gather_resource(oak_log)|obs:minecraft:block:furnace:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:iron_ore:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:iron_ore:disappeared",
+   "gather_resource(oak_log)|obs:minecraft:block:oak_log:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:oak_log:disappeared",
+   "gather_resource(oak_log)|obs:minecraft:block:stone:appeared",
+   "gather_resource(oak_log)|obs:minecraft:block:stone:disappeared",
+   "gather_resource(oak_log)|obs:self:block:coal_ore:disappeared",
+   "gather_resource(oak_log)|obs:self:block:crafting_table:appeared",
+   "gather_resource(oak_log)|obs:self:block:furnace:appeared",
+   "gather_resource(oak_log)|obs:self:block:iron_ore:disappeared",
+   "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+   "gather_resource(oak_log)|obs:self:block:stone:disappeared",
+   "gather_resource(oak_log)|obs:self:inventory:coal:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:cobblestone:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:crafting_table:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:furnace:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:raw_iron:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:stick:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:stone_pickaxe:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:wooden_pickaxe:count_increased",
+   "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+  ],
+  "graph": {
+   "nodes": 448,
+   "edges": 862
+  },
+  "success": true,
+  "success_tick": 259,
+  "rank_trace": [
+   {
+    "tick": 0,
+    "rank_iron": 2
+   },
+   {
+    "tick": 10,
+    "rank_iron": 13
+   },
+   {
+    "tick": 20,
+    "rank_iron": 22
+   },
+   {
+    "tick": 30,
+    "rank_iron": 22
+   },
+   {
+    "tick": 40,
+    "rank_iron": 22
+   },
+   {
+    "tick": 50,
+    "rank_iron": 22
+   },
+   {
+    "tick": 60,
+    "rank_iron": 22
+   },
+   {
+    "tick": 70,
+    "rank_iron": 22
+   },
+   {
+    "tick": 80,
+    "rank_iron": 22
+   },
+   {
+    "tick": 90,
+    "rank_iron": 22
+   },
+   {
+    "tick": 100,
+    "rank_iron": 22
+   },
+   {
+    "tick": 110,
+    "rank_iron": 22
+   },
+   {
+    "tick": 120,
+    "rank_iron": 21
+   },
+   {
+    "tick": 130,
+    "rank_iron": 29
+   },
+   {
+    "tick": 140,
+    "rank_iron": 29
+   },
+   {
+    "tick": 150,
+    "rank_iron": 29
+   },
+   {
+    "tick": 160,
+    "rank_iron": 6
+   },
+   {
+    "tick": 170,
+    "rank_iron": 16
+   },
+   {
+    "tick": 180,
+    "rank_iron": 20
+   },
+   {
+    "tick": 190,
+    "rank_iron": 10
+   },
+   {
+    "tick": 200,
+    "rank_iron": 12
+   },
+   {
+    "tick": 210,
+    "rank_iron": 15
+   },
+   {
+    "tick": 220,
+    "rank_iron": 10
+   },
+   {
+    "tick": 230,
+    "rank_iron": 9
+   },
+   {
+    "tick": 240,
+    "rank_iron": 12
+   },
+   {
+    "tick": 250,
+    "rank_iron": 11
+   }
+  ]
+ }
+}

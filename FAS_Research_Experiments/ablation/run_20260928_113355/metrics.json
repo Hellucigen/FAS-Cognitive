@@ -1,0 +1,23 @@
+{
+ "duration_s": 2.1,
+ "event_count": 4,
+ "counters": {},
+ "ablation": "-Diffusion",
+ "seed": 3,
+ "success": false,
+ "success_tick": null,
+ "graph": {
+  "nodes": 297,
+  "edges": 444
+ },
+ "inv": {
+  "oak_planks": 3,
+  "wooden_pickaxe": 1,
+  "oak_log": 6,
+  "stone_pickaxe": 1,
+  "raw_iron": 2,
+  "cobblestone": 3
+ },
+ "action_count": 40,
+ "ok": true
+}

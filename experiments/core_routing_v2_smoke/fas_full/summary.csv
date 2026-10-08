@@ -1,0 +1,13 @@
+condition,mode,task,seed,success,decisions,target_utilization,distractor_rate,first_action,prompt_tokens,completion_tokens,llm_calls,ctx_chars_mean,core_exceptions,step0_n_nodes,graph_edges_final,activated_edges_mean
+fas_full,full,T1,1,1,9,0.333,0.0,wait,4140,354,9,135.7,0,3,37,11.33
+fas_full,full,T2,1,1,2,1.0,0.0,gather_oak_log,942,80,2,89.5,0,3,30,6.0
+fas_full,full,T3,1,1,4,0.5,0.0,wait,1968,160,4,169.5,0,5,52,20.5
+fas_full,full,T4,1,0,10,0.2,0.0,wait,5051,396,10,173.6,0,4,53,22.8
+fas_full,full,T1,2,1,2,1.0,0.0,gather_oak_log,843,80,2,89.5,0,3,30,6.0
+fas_full,full,T2,2,1,5,0.4,0.0,wait,2524,191,5,129.2,0,3,37,11.0
+fas_full,full,T3,2,1,5,0.4,0.0,wait,2459,200,5,172.4,0,5,52,20.6
+fas_full,full,T4,2,1,8,0.25,0.0,wait,3842,320,8,143.8,0,4,44,14.75
+fas_full,full,T1,3,1,2,1.0,0.0,gather_oak_log,843,80,2,89.5,0,3,30,6.0
+fas_full,full,T2,3,1,2,1.0,0.0,gather_oak_log,942,71,2,89.5,0,3,30,6.0
+fas_full,full,T3,3,1,4,0.5,0.0,wait,2002,156,4,177.2,0,5,52,23.25
+fas_full,full,T4,3,1,7,0.429,0.0,wait,3433,280,7,158.9,0,4,53,18.43

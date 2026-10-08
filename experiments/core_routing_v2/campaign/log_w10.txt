@@ -1,0 +1,8 @@
+[w10] fas_full T1 seed13: succ=1 class=none
+[w10] fas_full T2 seed19: succ=1 class=none
+[w10] fas_full T4 seed5: succ=1 class=none
+[w10] llm_direct T1 seed12: succ=1 class=none
+[w10] llm_direct T2 seed19: succ=1 class=none
+[w10] llm_direct T4 seed9: succ=0 class=none
+[w10] llm_history T1 seed19: succ=1 class=none
+[w10] llm_history T3 seed15: succ=1 class=none

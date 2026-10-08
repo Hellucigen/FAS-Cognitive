@@ -1,0 +1,16 @@
+{
+ "duration_s": 1.91,
+ "event_count": 7,
+ "counters": {},
+ "completion_order": [
+  "oak_planks",
+  "raw_iron"
+ ],
+ "interrupt_at_tick": 45,
+ "goal_states": [],
+ "graph": {
+  "nodes": 268,
+  "edges": 362
+ },
+ "ok": true
+}

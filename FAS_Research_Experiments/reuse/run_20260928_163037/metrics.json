@@ -1,0 +1,44 @@
+{
+ "duration_s": 0.09,
+ "event_count": 10,
+ "counters": {},
+ "episode": "ep2_B",
+ "actions_total": 3,
+ "actions_redundant": 0,
+ "actions_invalid": 0,
+ "first_ore_action_idx": 1,
+ "first_noise_action_idx": 0,
+ "types": [
+  "gather_resource",
+  "gather_resource",
+  "craft_item"
+ ],
+ "targets": [
+  "birch_log",
+  "oak_log",
+  "oak_planks"
+ ],
+ "inventory": {
+  "birch_log": 2,
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "graph": {
+  "nodes": 260,
+  "edges": 336
+ },
+ "causal": {
+  "aggregations": 3,
+  "hypotheses": 0,
+  "promoted": []
+ },
+ "inherited_wb_nodes": 6,
+ "start_activation": {
+  "oak_log": 5.0,
+  "birch_log": 2.0,
+  "物品:oak_planks": 0.9
+ },
+ "success": true,
+ "success_tick": 9,
+ "ok": true
+}

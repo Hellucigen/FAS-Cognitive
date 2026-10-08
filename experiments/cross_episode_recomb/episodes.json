@@ -1,0 +1,80 @@
+[
+ {
+  "id": "E1",
+  "subject": "人",
+  "action": "发现",
+  "object": "苹果"
+ },
+ {
+  "id": "E2",
+  "subject": "苹果",
+  "action": "位于",
+  "object": "树"
+ },
+ {
+  "id": "E3",
+  "subject": "人",
+  "action": "拿取",
+  "object": "苹果"
+ },
+ {
+  "id": "E4",
+  "subject": "苹果",
+  "action": "放入",
+  "object": "篮子"
+ },
+ {
+  "id": "E5",
+  "subject": "人",
+  "action": "携带",
+  "object": "篮子"
+ },
+ {
+  "id": "E6",
+  "subject": "篮子",
+  "action": "位于",
+  "object": "厨房"
+ },
+ {
+  "id": "E7",
+  "subject": "钥匙",
+  "action": "打开",
+  "object": "门"
+ },
+ {
+  "id": "E8",
+  "subject": "门",
+  "action": "位于",
+  "object": "厨房"
+ },
+ {
+  "id": "E9",
+  "subject": "钥匙",
+  "action": "位于",
+  "object": "箱子"
+ },
+ {
+  "id": "E10",
+  "subject": "人",
+  "action": "需要",
+  "object": "钥匙"
+ },
+ {
+  "id": "E11",
+  "subject": "箱子",
+  "action": "位于",
+  "object": "地窖"
+ },
+ {
+  "id": "E12",
+  "subject": "地窖",
+  "action": "位于",
+  "object": "厨房"
+ },
+ {
+  "id": "E13",
+  "subject": "人",
+  "action": "吃",
+  "object": "面包"
+ }
+]

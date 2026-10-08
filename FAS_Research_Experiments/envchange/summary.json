@@ -1,0 +1,66 @@
+{
+ "experiment": "I 环境变化/信念更新",
+ "research_question": "§15",
+ "per_condition": {
+  "U0": {
+   "n": 5,
+   "runs": [
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    }
+   ]
+  },
+  "U1": {
+   "n": 5,
+   "runs": [
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    },
+    {
+     "phase2_success": true,
+     "phase2_done_tick": 4,
+     "phase2_failures": 0
+    }
+   ]
+  }
+ }
+}

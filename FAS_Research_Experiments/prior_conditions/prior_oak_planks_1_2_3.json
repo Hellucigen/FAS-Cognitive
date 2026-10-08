@@ -1,0 +1,149 @@
+{
+ "goal": "oak_planks",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "max_ticks": 200,
+ "results": {
+  "A": [
+   {
+    "prior_level": "A",
+    "seed": 1,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 276
+    },
+    "inv": {
+     "oak_log": 2
+    },
+    "action_count": 7
+   },
+   {
+    "prior_level": "A",
+    "seed": 2,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 276
+    },
+    "inv": {
+     "oak_log": 2
+    },
+    "action_count": 7
+   },
+   {
+    "prior_level": "A",
+    "seed": 3,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 276
+    },
+    "inv": {
+     "oak_log": 2
+    },
+    "action_count": 7
+   }
+  ],
+  "B": [
+   {
+    "prior_level": "B",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "prior_level": "B",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "prior_level": "B",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 233,
+     "edges": 268
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ],
+  "C": [
+   {
+    "prior_level": "C",
+    "seed": 1,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "prior_level": "C",
+    "seed": 2,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   },
+   {
+    "prior_level": "C",
+    "seed": 3,
+    "success": true,
+    "success_tick": 6,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "inv": {
+     "oak_log": 2,
+     "oak_planks": 4
+    },
+    "action_count": 2
+   }
+  ]
+ }
+}

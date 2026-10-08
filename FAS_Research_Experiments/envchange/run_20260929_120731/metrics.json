@@ -1,0 +1,23 @@
+{
+ "duration_s": 1.81,
+ "event_count": 5,
+ "counters": {},
+ "condition": "U1",
+ "seed": 5,
+ "phase1_done": [
+  4,
+  4,
+  4,
+  4
+ ],
+ "phase2_success": true,
+ "phase2_done_tick": 4,
+ "phase2_failures": 0,
+ "priors_phase1": {},
+ "priors_phase2": {},
+ "graph": {
+  "nodes": 242,
+  "edges": 297
+ },
+ "ok": true
+}

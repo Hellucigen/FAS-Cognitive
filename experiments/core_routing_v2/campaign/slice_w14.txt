@@ -1,0 +1,17 @@
+fas_full T1 17
+fas_full T3 4
+fas_full T4 9
+llm_direct T1 16
+llm_direct T3 6
+llm_direct T4 13
+llm_history T2 9
+llm_history T3 19
+llm_rag T1 16
+llm_rag T3 12
+random_ctx T1 7
+random_ctx T2 15
+random_ctx T4 7
+D-noact T2 14
+D-nodemand T2 5
+D-nodemand T3 12
+D-flat T2 19

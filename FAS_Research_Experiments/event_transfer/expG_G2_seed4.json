@@ -1,0 +1,29 @@
+{
+ "experiment": "G_event_transfer",
+ "condition": "G2",
+ "seed": 4,
+ "ep2": {
+  "episode": "ep2_G2",
+  "actions_total": 9,
+  "actions_redundant": 2,
+  "actions_invalid": 0,
+  "path_len_unique": 7,
+  "first_action": "gather_resource@birch_log",
+  "shared_action_hits": 6,
+  "inventory": {
+   "birch_log": 2,
+   "oak_planks": 3,
+   "stick": 2,
+   "wooden_pickaxe": 1
+  },
+  "graph": {
+   "nodes": 249,
+   "edges": 307
+  },
+  "ep1_mark_nodes": 0,
+  "ep1_mark_activated": 0,
+  "ep1_mark_activations": {},
+  "success": true,
+  "success_tick": 16
+ }
+}

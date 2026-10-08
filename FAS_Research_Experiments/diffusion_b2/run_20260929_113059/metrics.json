@@ -1,0 +1,42 @@
+{
+ "duration_s": 1.61,
+ "event_count": 9,
+ "counters": {},
+ "episode": "ep2_retr",
+ "success": true,
+ "success_tick": 9,
+ "actions_total": 3,
+ "actions_invalid": 0,
+ "lit_ticks": {
+  "oak_log": 0,
+  "birch_log": 0,
+  "物品:oak_log": 0
+ },
+ "final_mass": 17.193,
+ "final_rank_oak_log": 6,
+ "final_lit_ge005": [
+  "Haru的位置",
+  "Haru的手持物",
+  "Haru的血量",
+  "Haru的饥饿",
+  "MC白天",
+  "birch_log",
+  "oak_log",
+  "可采资源",
+  "当前Minecraft状态",
+  "探索缺口",
+  "物品:oak_log",
+  "物品:oak_planks",
+  "行动_652660964",
+  "行动_652660989",
+  "行动_652660994",
+  "附近的方块",
+  "附近的玩家",
+  "附近的生物"
+ ],
+ "graph": {
+  "nodes": 238,
+  "edges": 277
+ },
+ "ok": true
+}

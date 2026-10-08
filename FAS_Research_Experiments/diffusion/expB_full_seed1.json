@@ -1,0 +1,93 @@
+{
+ "experiment": "B",
+ "condition": "full",
+ "seed": 1,
+ "max_ticks": 150,
+ "ep2": {
+  "episode": "ep2_full",
+  "actions_total": 3,
+  "actions_redundant": 0,
+  "actions_invalid": 0,
+  "first_ore_action_idx": 1,
+  "first_noise_action_idx": 0,
+  "types": [
+   "gather_resource",
+   "gather_resource",
+   "craft_item"
+  ],
+  "targets": [
+   "birch_log",
+   "oak_log",
+   "oak_planks"
+  ],
+  "inventory": {
+   "birch_log": 2,
+   "oak_log": 2,
+   "oak_planks": 4
+  },
+  "graph": {
+   "nodes": 238,
+   "edges": 277
+  },
+  "success": true,
+  "success_tick": 9,
+  "diffusion_on": true,
+  "gap_reach_le2_lit_end": 5,
+  "activation_curves": [
+   {
+    "物品:oak_planks": 0.855,
+    "物品:oak_log": 0.0,
+    "物品:birch_log": 0.0,
+    "oak_log": 0.0,
+    "birch_log": 1.4963,
+    "缺口:用途(birch_log)": 0.7125,
+    "探索缺口": 0.9262
+   },
+   {
+    "物品:oak_planks": 0.7716,
+    "物品:oak_log": 0.0,
+    "物品:birch_log": 0.0,
+    "oak_log": 0.0,
+    "birch_log": 2.2323,
+    "缺口:用途(birch_log)": 0.1608,
+    "探索缺口": 1.0772
+   },
+   {
+    "物品:oak_planks": 0.8122,
+    "物品:oak_log": 0.0,
+    "物品:birch_log": 0.0,
+    "oak_log": 0.0,
+    "birch_log": 4.2241,
+    "缺口:用途(birch_log)": 0.0,
+    "探索缺口": 0.6111
+   },
+   {
+    "物品:oak_planks": 0.7331,
+    "物品:oak_log": 0.0,
+    "物品:birch_log": 0.0,
+    "oak_log": 0.0,
+    "birch_log": 5.0,
+    "缺口:用途(birch_log)": 0.0,
+    "探索缺口": 0.5516
+   },
+   {
+    "物品:oak_planks": 0.711,
+    "物品:oak_log": 0.0,
+    "物品:birch_log": 0.0,
+    "oak_log": 0.433,
+    "birch_log": 5.0,
+    "缺口:用途(birch_log)": 0.0,
+    "探索缺口": 0.4978
+   }
+  ],
+  "start_activation": {
+   "物品:oak_planks": 0.855,
+   "物品:oak_log": 0.0,
+   "物品:birch_log": 0.0,
+   "oak_log": 0.0,
+   "birch_log": 1.4963,
+   "缺口:用途(birch_log)": 0.7125,
+   "探索缺口": 0.9262
+  }
+ }
+}

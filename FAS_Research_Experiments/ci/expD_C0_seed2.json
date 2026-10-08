@@ -1,0 +1,2827 @@
+{
+ "experiment": "D_ci",
+ "condition": "C0",
+ "seed": 2,
+ "max_ticks": 60,
+ "result": {
+  "condition": "C0",
+  "seed": 2,
+  "seed_done_tick": 4,
+  "cc_on": true,
+  "ci_created": 4,
+  "ci_final": [
+   {
+    "id": "CI_653882453",
+    "kind": "attention_shift",
+    "status": "ready",
+    "activation": 0.4554,
+    "basis": [
+     "行动_653882451",
+     "Haru的手持物",
+     "当前Minecraft状态",
+     "Haru的位置",
+     "附近的方块",
+     "生存需求"
+    ],
+    "goal": null,
+    "illocutionary_act": null,
+    "explain": {
+     "concentration": 1.0,
+     "coherence": 0.24,
+     "continuity": 1.0,
+     "novelty": 0.0,
+     "drive_support": 0.0,
+     "focus_score": 0.716,
+     "top_activation": 3.194
+    },
+    "expression_eval": null,
+    "delivery": null,
+    "created": "2026/09/29 11:51:22"
+   },
+   {
+    "id": "CI_653882405",
+    "kind": "attention_shift",
+    "status": "ready",
+    "activation": 0.1457,
+    "basis": [
+     "物品:oak_log",
+     "Haru的位置",
+     "行动_653882401",
+     "Haru的手持物",
+     "当前Minecraft状态",
+     "附近的方块"
+    ],
+    "goal": null,
+    "illocutionary_act": null,
+    "explain": {
+     "concentration": 0.82,
+     "coherence": 0.17,
+     "continuity": 1.0,
+     "novelty": 0.0,
+     "drive_support": 0.0,
+     "focus_score": 0.596,
+     "top_activation": 2.453
+    },
+    "expression_eval": null,
+    "delivery": null,
+    "created": "2026/09/29 11:51:22"
+   },
+   {
+    "id": "CI_653882325",
+    "kind": "action",
+    "status": "discarded",
+    "activation": 0.0937,
+    "basis": [
+     "oak_log",
+     "可采资源",
+     "行动_653882310",
+     "物品:oak_planks",
+     "行动_653882302",
+     "oak_planks"
+    ],
+    "goal": null,
+    "illocutionary_act": null,
+    "explain": {
+     "concentration": 1.0,
+     "coherence": 0.62,
+     "continuity": 1.0,
+     "novelty": 0.0,
+     "drive_support": 0.0,
+     "focus_score": 0.772,
+     "top_activation": 2.99
+    },
+    "expression_eval": null,
+    "delivery": null,
+    "created": "2026/09/29 11:51:22"
+   },
+   {
+    "id": "CI_653882308",
+    "kind": "action",
+    "status": "discarded",
+    "activation": 0.0922,
+    "basis": [
+     "物品:oak_log",
+     "白天",
+     "可采资源",
+     "物品:oak_planks",
+     "行动_653882310",
+     "附近的方块"
+    ],
+    "goal": null,
+    "illocutionary_act": null,
+    "explain": {
+     "concentration": 0.64,
+     "coherence": 0.62,
+     "continuity": 1.0,
+     "novelty": 0.0,
+     "drive_support": 0.0,
+     "focus_score": 0.558,
+     "top_activation": 1.921
+    },
+    "expression_eval": null,
+    "delivery": null,
+    "created": "2026/09/29 11:51:22"
+   }
+  ],
+  "ci_statuses_final": [
+   "ready",
+   "ready",
+   "discarded",
+   "discarded"
+  ],
+  "ci_trace": [
+   {
+    "tick": 6,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.6945,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.2772,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.5,
+       "continuity": 0.92,
+       "novelty": 0.08,
+       "drive_support": 0.0,
+       "focus_score": 0.757,
+       "top_activation": 3.033
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.6895,
+    "cold_beats": 0
+   },
+   {
+    "tick": 8,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.5625,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1927,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.6104,
+    "cold_beats": 0
+   },
+   {
+    "tick": 10,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.4556,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1561,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.6457,
+    "cold_beats": 0
+   },
+   {
+    "tick": 12,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.369,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1265,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.6848,
+    "cold_beats": 0
+   },
+   {
+    "tick": 14,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.3321,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1139,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7061,
+    "cold_beats": 0
+   },
+   {
+    "tick": 16,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.2989,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1025,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.722,
+    "cold_beats": 0
+   },
+   {
+    "tick": 18,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.269,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7266,
+    "cold_beats": 0
+   },
+   {
+    "tick": 20,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.2421,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7384,
+    "cold_beats": 0
+   },
+   {
+    "tick": 22,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1961,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7585,
+    "cold_beats": 0
+   },
+   {
+    "tick": 24,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1765,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7779,
+    "cold_beats": 0
+   },
+   {
+    "tick": 26,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1588,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.7932,
+    "cold_beats": 0
+   },
+   {
+    "tick": 28,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1429,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.8052,
+    "cold_beats": 0
+   },
+   {
+    "tick": 30,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1157,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.8146,
+    "cold_beats": 0
+   },
+   {
+    "tick": 32,
+    "cis": [
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "ready",
+      "activation": 0.1041,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.8218,
+    "cold_beats": 0
+   },
+   {
+    "tick": 34,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.5301,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.0651,
+    "cold_beats": 0
+   },
+   {
+    "tick": 36,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.4294,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.9639,
+    "cold_beats": 0
+   },
+   {
+    "tick": 38,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.3865,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.9286,
+    "cold_beats": 0
+   },
+   {
+    "tick": 40,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.313,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.918,
+    "cold_beats": 0
+   },
+   {
+    "tick": 42,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.313,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.9107,
+    "cold_beats": 0
+   },
+   {
+    "tick": 44,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.313,
+      "basis": [
+       "行动_653882401",
+       "Haru的位置",
+       "生存需求",
+       "物品:oak_log",
+       "附近的方块",
+       "Haru的手持物"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.12,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.589,
+       "top_activation": 2.456
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.8924,
+    "cold_beats": 0
+   },
+   {
+    "tick": 46,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.3047,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.0925,
+    "cold_beats": 0
+   },
+   {
+    "tick": 48,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.2742,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.0014,
+    "cold_beats": 0
+   },
+   {
+    "tick": 50,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.2468,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.9592,
+    "cold_beats": 0
+   },
+   {
+    "tick": 52,
+    "cis": [
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.2468,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.9418,
+    "cold_beats": 0
+   },
+   {
+    "tick": 54,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.5078,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.2221,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.1151,
+    "cold_beats": 0
+   },
+   {
+    "tick": 56,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.457,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.1999,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.1217,
+    "cold_beats": 0
+   },
+   {
+    "tick": 58,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.4113,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.1799,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.081,
+    "cold_beats": 0
+   },
+   {
+    "tick": 60,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.4113,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.1799,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.0426,
+    "cold_beats": 0
+   },
+   {
+    "tick": 62,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.4113,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.1799,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 2.0079,
+    "cold_beats": 0
+   },
+   {
+    "tick": 64,
+    "cis": [
+     {
+      "id": "CI_653882453",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.3702,
+      "basis": [
+       "行动_653882451",
+       "生存需求",
+       "附近的方块",
+       "Haru的手持物",
+       "当前Minecraft状态"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.81,
+       "coherence": 0.0,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.564,
+       "top_activation": 2.421
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882405",
+      "kind": "attention_shift",
+      "status": "ready",
+      "activation": 0.1619,
+      "basis": [
+       "物品:oak_log",
+       "Haru的位置",
+       "行动_653882401",
+       "Haru的手持物",
+       "当前Minecraft状态",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.82,
+       "coherence": 0.17,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.596,
+       "top_activation": 2.453
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882325",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0937,
+      "basis": [
+       "oak_log",
+       "可采资源",
+       "行动_653882310",
+       "物品:oak_planks",
+       "行动_653882302",
+       "oak_planks"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 1.0,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.772,
+       "top_activation": 2.99
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     },
+     {
+      "id": "CI_653882308",
+      "kind": "action",
+      "status": "discarded",
+      "activation": 0.0922,
+      "basis": [
+       "物品:oak_log",
+       "白天",
+       "可采资源",
+       "物品:oak_planks",
+       "行动_653882310",
+       "附近的方块"
+      ],
+      "goal": null,
+      "illocutionary_act": null,
+      "explain": {
+       "concentration": 0.64,
+       "coherence": 0.62,
+       "continuity": 1.0,
+       "novelty": 0.0,
+       "drive_support": 0.0,
+       "focus_score": 0.558,
+       "top_activation": 1.921
+      },
+      "expression_eval": null,
+      "delivery": null,
+      "created": "2026/09/29 11:51:22"
+     }
+    ],
+    "thresholds": {
+     "form": 0.55,
+     "express": 0.78,
+     "form_base": 0.55,
+     "express_base": 0.78
+    },
+    "field_temp": 1.977,
+    "cold_beats": 0
+   }
+  ],
+  "reignitions": [],
+  "ambient_act_rises": [],
+  "episodic_ids": [
+   "物品:oak_planks",
+   "物品:oak_log",
+   "行动_653882302",
+   "行动_653882310"
+  ],
+  "graph": {
+   "nodes": 261,
+   "edges": 314
+  }
+ }
+}

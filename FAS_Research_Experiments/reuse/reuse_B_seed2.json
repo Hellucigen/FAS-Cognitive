@@ -1,0 +1,59 @@
+{
+ "experiment": "A",
+ "condition": "B",
+ "seed": 2,
+ "max_ticks": 300,
+ "ep1": {
+  "path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed2.json",
+  "causal": {
+   "aggregations": 2,
+   "hypotheses": 7,
+   "promoted": [
+    "craft_item(oak_planks)|self:self:craft_item:succeeded",
+    "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+    "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+    "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+   ]
+  }
+ },
+ "ep2": {
+  "episode": "ep2_B",
+  "actions_total": 3,
+  "actions_redundant": 0,
+  "actions_invalid": 0,
+  "first_ore_action_idx": 1,
+  "first_noise_action_idx": 0,
+  "types": [
+   "gather_resource",
+   "gather_resource",
+   "craft_item"
+  ],
+  "targets": [
+   "birch_log",
+   "oak_log",
+   "oak_planks"
+  ],
+  "inventory": {
+   "birch_log": 2,
+   "oak_log": 2,
+   "oak_planks": 4
+  },
+  "graph": {
+   "nodes": 260,
+   "edges": 336
+  },
+  "causal": {
+   "aggregations": 3,
+   "hypotheses": 0,
+   "promoted": []
+  },
+  "inherited_wb_nodes": 6,
+  "start_activation": {
+   "oak_log": 5.0,
+   "birch_log": 2.0,
+   "物品:oak_planks": 0.9
+  },
+  "success": true,
+  "success_tick": 9
+ }
+}

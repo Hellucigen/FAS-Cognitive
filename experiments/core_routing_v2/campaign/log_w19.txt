@@ -1,0 +1,72 @@
+[w19] fas_full T2 seed4: succ=1 class=none
+[w19] fas_full T3 seed9: succ=1 class=none
+[w19] fas_full T4 seed14: succ=1 class=none
+[w19] llm_direct T2 seed4: succ=1 class=none
+[w19] llm_direct T3 seed11: succ=1 class=none
+[w19] llm_direct T4 seed18: succ=1 class=none
+[w19] llm_history T2 seed14: succ=1 class=none
+[w19] llm_history T4 seed10: succ=1 class=none
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 5898.34it/s]
+Traceback (most recent call last):
+  File "E:\Project\Fascinator\scripts\combo_worker.py", line 68, in <module>
+    main()
+  File "E:\Project\Fascinator\scripts\combo_worker.py", line 34, in main
+    m = R.run_task(cond, task_key, seed, llm, log)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 765, in run_task
+    ctx_text = baseline_context(cond, store, obs_line,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 259, in baseline_context
+    + store.rag_block(q, RAG_K))
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\scripts\run_exp_routing_v2.py", line 228, in rag_block
+    self._matrix = emb.encode(texts)
+                   ^^^^^^^^^^^^^^^^^
+  File "E:\Project\Fascinator\embedding_manager.py", line 83, in encode
+    return self.model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\util\decorators.py", line 41, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\sentence_transformer\model.py", line 657, in encode
+    out_features = self.forward(features, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\base\model.py", line 492, in forward
+    input = module(input, **module_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\sentence_transformers\base\modules\transformer.py", line 1090, in forward
+    model_output = model_method(**filtered_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\utils\generic.py", line 1036, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\utils\output_capturing.py", line 252, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 665, in forward
+    attention_mask, encoder_attention_mask = self._create_attention_masks(
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\models\bert\modeling_bert.py", line 708, in _create_attention_masks
+    attention_mask = create_bidirectional_mask(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\masking_utils.py", line 1099, in create_bidirectional_mask
+    attention_mask = mask_interface(
+                     ^^^^^^^^^^^^^^^
+  File "E:\Miniforge.envs\Fascinator\Lib\site-packages\transformers\masking_utils.py", line 530, in sdpa_mask
+    batch_arange = torch.arange(batch_size, device=device)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: out of memory
+Search for `cudaErrorMemoryAllocation' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

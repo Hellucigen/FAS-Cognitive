@@ -1,0 +1,266 @@
+{
+ "experiment": "B2 扩散因果四条件",
+ "research_question": "R2",
+ "per_condition": {
+  "full": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 61.477,
+     "lit_set": 39,
+     "lit_ticks": {
+      "oak_log": 8,
+      "birch_log": 0,
+      "物品:oak_log": 9
+     },
+     "rank_oak_log": 12
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 61.477,
+     "lit_set": 39,
+     "lit_ticks": {
+      "oak_log": 8,
+      "birch_log": 0,
+      "物品:oak_log": 9
+     },
+     "rank_oak_log": 12
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 61.477,
+     "lit_set": 39,
+     "lit_ticks": {
+      "oak_log": 8,
+      "birch_log": 0,
+      "物品:oak_log": 9
+     },
+     "rank_oak_log": 12
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 61.477,
+     "lit_set": 39,
+     "lit_ticks": {
+      "oak_log": 8,
+      "birch_log": 0,
+      "物品:oak_log": 9
+     },
+     "rank_oak_log": 12
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 61.477,
+     "lit_set": 39,
+     "lit_ticks": {
+      "oak_log": 8,
+      "birch_log": 0,
+      "物品:oak_log": 9
+     },
+     "rank_oak_log": 12
+    }
+   ]
+  },
+  "nodiff": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 16.598,
+     "lit_set": 17,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 16.598,
+     "lit_set": 17,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 16.598,
+     "lit_set": 17,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 16.598,
+     "lit_set": 17,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 16.598,
+     "lit_set": 17,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 6
+    }
+   ]
+  },
+  "rand": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 45.188,
+     "lit_set": 49,
+     "lit_ticks": {
+      "oak_log": 3,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 12
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 47.982,
+     "lit_set": 55,
+     "lit_ticks": {
+      "oak_log": 1,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 13
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 47.554,
+     "lit_set": 54,
+     "lit_ticks": {
+      "oak_log": 5,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 7
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 43.772,
+     "lit_set": 53,
+     "lit_ticks": {
+      "oak_log": 9,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 9
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 44.325,
+     "lit_set": 53,
+     "lit_ticks": {
+      "oak_log": 2,
+      "birch_log": 0,
+      "物品:oak_log": null
+     },
+     "rank_oak_log": 8
+    }
+   ]
+  },
+  "retr": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 17.193,
+     "lit_set": 18,
+     "lit_ticks": {
+      "oak_log": 0,
+      "birch_log": 0,
+      "物品:oak_log": 0
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 17.193,
+     "lit_set": 18,
+     "lit_ticks": {
+      "oak_log": 0,
+      "birch_log": 0,
+      "物品:oak_log": 0
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 17.193,
+     "lit_set": 18,
+     "lit_ticks": {
+      "oak_log": 0,
+      "birch_log": 0,
+      "物品:oak_log": 0
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 17.193,
+     "lit_set": 18,
+     "lit_ticks": {
+      "oak_log": 0,
+      "birch_log": 0,
+      "物品:oak_log": 0
+     },
+     "rank_oak_log": 6
+    },
+    {
+     "success": true,
+     "success_tick": 9,
+     "final_mass": 17.193,
+     "lit_set": 18,
+     "lit_ticks": {
+      "oak_log": 0,
+      "birch_log": 0,
+      "物品:oak_log": 0
+     },
+     "rank_oak_log": 6
+    }
+   ]
+  }
+ }
+}

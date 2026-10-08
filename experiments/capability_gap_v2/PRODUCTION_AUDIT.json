@@ -1,0 +1,197 @@
+[
+ {
+  "mechanism": "graph_persistence",
+  "status": "OK",
+  "detail": {
+   "roundtrip": true,
+   "nodes": 2
+  }
+ },
+ {
+  "mechanism": "spreading_activation",
+  "status": "OK",
+  "detail": {
+   "seeds": [
+    "物品:oak_log",
+    "oak_log"
+   ],
+   "lit_count": 10,
+   "oak_planks_lit": true,
+   "top5": [
+    [
+     "物品:oak_log",
+     3.267543859649123
+    ],
+    [
+     "oak_log",
+     2.5
+    ],
+    [
+     "物品:oak_planks",
+     0.7465449860998474
+    ],
+    [
+     "可采资源",
+     0.6907894736842105
+    ],
+    [
+     "物品:stick",
+     0.1070997994289183
+    ]
+   ]
+  }
+ },
+ {
+  "mechanism": "negative_edge_inhibition",
+  "status": "OK",
+  "detail": {
+   "act_pos_only": 0.625,
+   "act_with_inhibition": 0.0,
+   "suppressed": true
+  }
+ },
+ {
+  "mechanism": "scalar_modulation",
+  "status": "OK",
+  "detail": {
+   "neutral": 1.0,
+   "high_arousal": 1.3,
+   "high_stress": 0.85,
+   "varies": true
+  }
+ },
+ {
+  "mechanism": "writeback_and_eventframe_switches",
+  "status": "OK",
+  "detail": {
+   "config_flags": {
+    "nlp_render_cognitive_context": true,
+    "experience_eventframe.enabled": false,
+    "experience_eventframe.success_side": true,
+    "experience_eventframe.failure_polarity": -0.8,
+    "experience_eventframe.success_polarity": 0.5,
+    "experience_eventframe.result_polarity": 0.9,
+    "experience_eventframe.reign_amt": 0.8,
+    "experience_eventframe.activation_cap": 3.0,
+    "experience_eventframe.ignition": true,
+    "experience_eventframe.retire_unknown": false,
+    "experience_eventframe.suppress_gap_anchor": false,
+    "experience_eventframe.flip_cooldown_s": 0,
+    "sandbox_writeback_switch": "scripts/sandbox_lab.py build_stack(writeback_on) 参数级消融(生产 CausalLearner kg=None)"
+   }
+  }
+ },
+ {
+  "mechanism": "ledger_presence",
+  "status": "OK",
+  "detail": {
+   "internal_state": [
+    "LEDGER_LIMIT"
+   ],
+   "autonomy": []
+  }
+ },
+ {
+  "mechanism": "continuous_cognition_lifecycle",
+  "status": "OK",
+  "detail": {
+   "constructor_ok": true,
+   "tick_return": "NoneType",
+   "thresholds": {
+    "form": 0.55,
+    "express": 0.78,
+    "discard": 0.1
+   }
+  }
+ },
+ {
+  "mechanism": "self_model_runtime",
+  "status": "OK",
+  "detail": {
+   "methods": [
+    "config",
+    "kg",
+    "manager",
+    "process_reflection_candidates",
+    "process_turn"
+   ],
+   "self_node_ensured": "err:AttributeError(\"'SelfMemoryUpdater' object has no attribute '_ensure_self'\")"
+  }
+ },
+ {
+  "mechanism": "drives_curiosity",
+  "status": "OK",
+  "detail": {
+   "state_keys": [
+    "active",
+    "asked_at",
+    "asked_at_str",
+    "question",
+    "target",
+    "target_node",
+    "trigger_type",
+    "unknown_nodes",
+    "unknown_relations"
+   ]
+  }
+ },
+ {
+  "mechanism": "episodic_buffer_forgetting",
+  "status": "OK",
+  "detail": {
+   "capacity": 100,
+   "methods": [
+    "add_experience",
+    "add_expression",
+    "annotate_expression",
+    "capacity",
+    "check_promotion",
+    "cleanup",
+    "clear",
+    "find_by_node",
+    "find_by_text",
+    "get_all",
+    "get_expressions",
+    "get_promotion_candidates"
+   ]
+  }
+ },
+ {
+  "mechanism": "memory_reuse_activation_inheritance",
+  "status": "OK",
+  "detail": {
+   "before_save": {
+    "R1": 3.125,
+    "R2": 0.625,
+    "R3": 0.0
+   },
+   "after_load": {
+    "R1": 3.125,
+    "R2": 0.625,
+    "R3": 0.0
+   },
+   "activation_inherited": true
+  }
+ },
+ {
+  "mechanism": "demand_gap_routing",
+  "status": "OK",
+  "detail": {
+   "demand_present": true,
+   "gap_present": true,
+   "routing_present": true
+  }
+ },
+ {
+  "mechanism": "embedding_flat_retrieval",
+  "status": "OK",
+  "detail": {
+   "k": 8,
+   "top3": [
+    "oak_planks",
+    "物品:oak_planks",
+    "配方:oak_planks:hand:0"
+   ]
+  }
+ }
+]

@@ -1,0 +1,27 @@
+{
+ "duration_s": 0.13,
+ "event_count": 4,
+ "counters": {},
+ "episode": "ep2_G1",
+ "actions_total": 9,
+ "actions_redundant": 2,
+ "actions_invalid": 0,
+ "path_len_unique": 7,
+ "first_action": "gather_resource@birch_log",
+ "shared_action_hits": 6,
+ "inventory": {
+  "birch_log": 2,
+  "oak_planks": 3,
+  "stick": 2,
+  "wooden_pickaxe": 1
+ },
+ "graph": {
+  "nodes": 257,
+  "edges": 315
+ },
+ "ep1_mark_nodes": 8,
+ "ep1_mark_activated": 0,
+ "success": true,
+ "success_tick": 16,
+ "ok": true
+}

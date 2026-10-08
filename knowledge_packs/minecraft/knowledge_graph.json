@@ -1,0 +1,321 @@
+{
+  "nodes": [
+    {
+      "id": "前进",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {
+        "category": "movement",
+        "direction": "forward"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "后退",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {
+        "category": "movement",
+        "direction": "backward"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "左移",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {
+        "category": "movement",
+        "direction": "left"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "右移",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {
+        "category": "movement",
+        "direction": "right"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "W键(Minecraft)",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.7,
+      "extra_attrs": {
+        "category": "keybind",
+        "game": "minecraft",
+        "key": "W"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "A键(Minecraft)",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.7,
+      "extra_attrs": {
+        "category": "keybind",
+        "game": "minecraft",
+        "key": "A"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "S键(Minecraft)",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.7,
+      "extra_attrs": {
+        "category": "keybind",
+        "game": "minecraft",
+        "key": "S"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "D键(Minecraft)",
+      "weight": 0.5,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.7,
+      "extra_attrs": {
+        "category": "keybind",
+        "game": "minecraft",
+        "key": "D"
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "id": "Minecraft",
+      "weight": 0.6,
+      "activation": 0.0,
+      "label": "declarative-semantic",
+      "execution": null,
+      "confidence": 0.8,
+      "extra_attrs": {
+        "category": "game",
+        "aliases": [
+          "Mc",
+          "MC",
+          "我的世界",
+          "Minecraft"
+        ]
+      },
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    }
+  ],
+  "edges": [
+    {
+      "src": "Minecraft",
+      "dst": "前进",
+      "relation": "has_movement",
+      "weight": 0.8,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "Minecraft",
+      "dst": "后退",
+      "relation": "has_movement",
+      "weight": 0.8,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "Minecraft",
+      "dst": "左移",
+      "relation": "has_movement",
+      "weight": 0.8,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "Minecraft",
+      "dst": "右移",
+      "relation": "has_movement",
+      "weight": 0.8,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "前进",
+      "dst": "W键(Minecraft)",
+      "relation": "bound_to",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "后退",
+      "dst": "S键(Minecraft)",
+      "relation": "bound_to",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "左移",
+      "dst": "A键(Minecraft)",
+      "relation": "bound_to",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "右移",
+      "dst": "D键(Minecraft)",
+      "relation": "bound_to",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "W键(Minecraft)",
+      "dst": "W键",
+      "relation": "same_as",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "A键(Minecraft)",
+      "dst": "A键",
+      "relation": "same_as",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "S键(Minecraft)",
+      "dst": "S键",
+      "relation": "same_as",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "D键(Minecraft)",
+      "dst": "D键",
+      "relation": "same_as",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "前进",
+      "dst": "按下W",
+      "relation": "triggers",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "左移",
+      "dst": "按下A",
+      "relation": "triggers",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "后退",
+      "dst": "按下S",
+      "relation": "triggers",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "右移",
+      "dst": "按下D",
+      "relation": "triggers",
+      "weight": 0.9,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "前进",
+      "dst": "长按W",
+      "relation": "triggers",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "左移",
+      "dst": "长按A",
+      "relation": "triggers",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "后退",
+      "dst": "长按S",
+      "relation": "triggers",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    },
+    {
+      "src": "右移",
+      "dst": "长按D",
+      "relation": "triggers",
+      "weight": 0.85,
+      "activation": 0.0,
+      "created": "2026/07/21 00:00:00",
+      "last_access": "2026/07/21 00:00:00"
+    }
+  ]
+}

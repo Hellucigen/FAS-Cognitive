@@ -1,0 +1,6 @@
+relation,edge_count,source_count,target_count,mean_source_out_degree,mean_target_out_degree,target_sink_fraction,forward_2hop_reach,reverse_2hop_reach
+产生,8,8,8,2.375,0.0,1.0,0,0
+属于,18,18,1,1.889,0.0,1.0,0,0
+掉落,13,13,11,2.231,0.0,1.0,0,0
+需要,11,8,5,2.375,0.0,1.0,0,0
+需要工具,3,3,2,3.0,0.0,1.0,0,0

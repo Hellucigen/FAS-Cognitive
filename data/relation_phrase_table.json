@@ -1,0 +1,201 @@
+{
+  "_description": "关系短语表 — 将同义表面形式归一化到语义槽位。不进入 graph_space，不建 Concept 节点。",
+  "_principles": [
+    "surface_forms 扩展需经过组合性测试（可替换性 + 语义透明度）",
+    "head_category_constraint 限定中心语类别，避免误匹配",
+    "relation 映射到现有 relation_category 体系（semantic_relation 子类型）"
+  ],
+  "slots": {
+    "FLAGSHIP": {
+      "surface_forms": ["代表产品", "招牌产品", "主打产品", "拳头产品", "招牌菜", "主打菜", "代表作", "代表作品", "招牌", "主打", "核心产品", "旗舰产品"],
+      "relation": "HAS_SALIENT_ATTRIBUTE",
+      "attribute_type": "FLAGSHIP",
+      "head_category_constraint": ["产品", "菜品", "商品", "作品", "菜", "服务"],
+      "description": "一个实体的代表性/标志性产物"
+    },
+    "FOUNDER": {
+      "surface_forms": ["创始人", "创办人", "创立者", "创建者", "奠基人"],
+      "relation": "FOUNDED_BY",
+      "attribute_type": "FOUNDER",
+      "head_category_constraint": ["人"],
+      "description": "创建某个组织/公司的人"
+    },
+    "HEADQUARTERS": {
+      "surface_forms": ["总部", "总部所在地", "总部地址", "公司地址", "所在地", "大本营"],
+      "relation": "HAS_HEADQUARTERS",
+      "attribute_type": "HEADQUARTERS",
+      "head_category_constraint": ["地点", "城市", "地址"],
+      "description": "组织/公司的主要办公地点"
+    },
+    "CEO": {
+      "surface_forms": ["CEO", "首席执行官", "总裁", "总经理", "掌门人", "老板"],
+      "relation": "HAS_CEO",
+      "attribute_type": "CEO",
+      "head_category_constraint": ["人"],
+      "description": "组织的最高管理者"
+    },
+    "FOUNDING_DATE": {
+      "surface_forms": ["成立时间", "成立日期", "创办时间", "创立于", "创建时间", "创立年份", "成立年份"],
+      "relation": "FOUNDED_AT",
+      "attribute_type": "FOUNDING_DATE",
+      "head_category_constraint": ["时间", "日期", "年份"],
+      "description": "组织/公司成立的日期"
+    },
+    "EMPLOYEE_COUNT": {
+      "surface_forms": ["员工人数", "员工数", "雇员数", "团队规模", "人员规模"],
+      "relation": "HAS_EMPLOYEE_COUNT",
+      "attribute_type": "EMPLOYEE_COUNT",
+      "head_category_constraint": ["数量", "规模"],
+      "description": "组织的员工数量"
+    },
+    "LOCATION": {
+      "surface_forms": ["位置", "在哪里", "地点", "地址", "位于", "坐落于", "在哪儿"],
+      "relation": "LOCATED_AT",
+      "attribute_type": "LOCATION",
+      "head_category_constraint": ["地点", "位置", "地址", "城市"],
+      "description": "实体所在的地理位置"
+    },
+    "WEBSITE": {
+      "surface_forms": ["官网", "官方网站", "网址", "网站", "主页"],
+      "relation": "HAS_WEBSITE",
+      "attribute_type": "WEBSITE",
+      "head_category_constraint": ["网站", "网址", "链接"],
+      "description": "组织/个人的官方网站"
+    },
+    "CREATOR": {
+      "surface_forms": ["作者", "创造者", "发明者", "发明人", "设计者", "开发者", "制作人"],
+      "relation": "CREATED_BY",
+      "attribute_type": "CREATOR",
+      "head_category_constraint": ["人"],
+      "description": "创造/发明某物的人"
+    },
+    "PUBLICATION_DATE": {
+      "surface_forms": ["发布时间", "出版时间", "发行日期", "发布日期", "上市时间", "推出时间"],
+      "relation": "PUBLISHED_AT",
+      "attribute_type": "PUBLICATION_DATE",
+      "head_category_constraint": ["时间", "日期"],
+      "description": "作品/产品的发布时间"
+    },
+    "PRICE": {
+      "surface_forms": ["价格", "价钱", "售价", "定价", "单价", "费用", "多少钱"],
+      "relation": "HAS_PRICE",
+      "attribute_type": "PRICE",
+      "head_category_constraint": ["价格", "金额", "费用"],
+      "description": "商品/服务的价格"
+    },
+    "SIZE": {
+      "surface_forms": ["大小", "尺寸", "面积", "体积"],
+      "relation": "HAS_SIZE",
+      "attribute_type": "SIZE",
+      "head_category_constraint": ["大小", "尺寸", "规模", "面积"],
+      "description": "实体的物理/组织规模"
+    },
+    "COLOR": {
+      "surface_forms": ["颜色", "色彩", "色调"],
+      "relation": "HAS_COLOR",
+      "attribute_type": "COLOR",
+      "head_category_constraint": ["颜色", "色彩"],
+      "description": "物体的颜色属性"
+    },
+    "MATERIAL": {
+      "surface_forms": ["材质", "材料", "成分", "用料"],
+      "relation": "MADE_OF",
+      "attribute_type": "MATERIAL",
+      "head_category_constraint": ["材料", "材质", "原料"],
+      "description": "物体的构成材料"
+    },
+    "PARENT_COMPANY": {
+      "surface_forms": ["母公司", "母公司是", "隶属于", "所属集团", "控股公司"],
+      "relation": "OWNED_BY",
+      "attribute_type": "PARENT_COMPANY",
+      "head_category_constraint": ["公司", "集团", "企业"],
+      "description": "拥有/控股该实体的上级组织"
+    },
+    "POPULATION": {
+      "surface_forms": ["人口", "人口数", "居民数", "常住人口"],
+      "relation": "HAS_POPULATION",
+      "attribute_type": "POPULATION",
+      "head_category_constraint": ["数量", "人口", "规模"],
+      "description": "地区/城市的人口数量"
+    },
+    "CAPITAL": {
+      "surface_forms": ["首都", "首府", "省会"],
+      "relation": "HAS_CAPITAL",
+      "attribute_type": "CAPITAL",
+      "head_category_constraint": ["城市", "地点"],
+      "description": "国家/省份的行政中心"
+    },
+    "LANGUAGE": {
+      "surface_forms": ["语言", "官方语言", "通用语言", "母语"],
+      "relation": "HAS_LANGUAGE",
+      "attribute_type": "LANGUAGE",
+      "head_category_constraint": ["语言"],
+      "description": "地区/人群使用的语言"
+    },
+    "MEMBERS": {
+      "surface_forms": ["成员", "成员国", "会员", "成员单位", "组成部分"],
+      "relation": "HAS_MEMBER",
+      "attribute_type": "MEMBERS",
+      "head_category_constraint": ["成员", "国家", "组织", "人"],
+      "description": "组织/团体的成员"
+    },
+    "GENRE": {
+      "surface_forms": ["类型", "种类", "分类", "类别", "流派", "风格", "题材"],
+      "relation": "HAS_GENRE",
+      "attribute_type": "GENRE",
+      "head_category_constraint": ["类型", "种类", "风格", "流派"],
+      "description": "作品/产品的分类归属"
+    },
+    "INGREDIENT": {
+      "surface_forms": ["配料", "食材", "佐料", "调料", "原料"],
+      "relation": "HAS_INGREDIENT",
+      "attribute_type": "INGREDIENT",
+      "head_category_constraint": ["食材", "原料", "配料"],
+      "description": "菜品/食品的组成成分"
+    },
+    "TASTE": {
+      "surface_forms": ["味道", "口味", "风味", "滋味"],
+      "relation": "HAS_TASTE",
+      "attribute_type": "TASTE",
+      "head_category_constraint": ["味道", "口味"],
+      "description": "食品的味道属性"
+    },
+    "CAPACITY": {
+      "surface_forms": ["容量", "容积", "承载量", "容纳人数", "座位数"],
+      "relation": "HAS_CAPACITY",
+      "attribute_type": "CAPACITY",
+      "head_category_constraint": ["容量", "数量", "规模"],
+      "description": "场所/容器的容纳能力"
+    },
+    "CUSTOMER": {
+      "surface_forms": ["用户群", "目标用户", "受众", "面向人群", "客户群", "消费群体"],
+      "relation": "TARGETS_AUDIENCE",
+      "attribute_type": "CUSTOMER",
+      "head_category_constraint": ["人群", "用户", "受众"],
+      "description": "产品/服务的目标用户群体"
+    },
+    "COMPETITOR": {
+      "surface_forms": ["竞争对手", "竞品", "对标产品", "同行"],
+      "relation": "COMPETES_WITH",
+      "attribute_type": "COMPETITOR",
+      "head_category_constraint": ["公司", "产品", "品牌"],
+      "description": "市场中的竞争对象"
+    }
+  },
+  "_relational_head_patterns": {
+    "_description": "高置信度关系名词中心语 — 这些词作中心语时整个短语天然需要论元，无需配价测试直接判定为关系型",
+    "heads": [
+      "产品", "创始人", "总部", "位置", "地址", "价格", "颜色", "材质",
+      "味道", "类型", "种类", "成员", "作者", "发明人", "设计者",
+      "原料", "成分", "语言", "首都", "省会", "面积", "人口",
+      "时间", "日期", "网址", "官网", "容量", "规模", "人数"
+    ]
+  },
+  "_absolute_head_whitelist": {
+    "_description": "绝对名词白名单 — 这些中心语标识的短语即使在'__的X'框架下也保持语义自足",
+    "heads": [
+      "人", "地方", "东西", "事", "问题", "情况", "方法", "原因",
+      "结果", "效果", "作用", "关系", "区别", "联系", "影响"
+    ]
+  }
+}

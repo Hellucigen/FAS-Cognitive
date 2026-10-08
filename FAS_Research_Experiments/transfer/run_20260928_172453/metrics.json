@@ -1,0 +1,30 @@
+{
+ "duration_s": 2.18,
+ "event_count": 27,
+ "counters": {},
+ "rounds": {
+  "1": 5,
+  "2": 5,
+  "3": 5,
+  "4": 5,
+  "5": 5,
+  "6": 5,
+  "7": 5,
+  "8": 5
+ },
+ "causal": {
+  "aggregations": 3,
+  "hypotheses": 13,
+  "promoted": [
+   "craft_item(crafting_table)|self:self:craft_item:succeeded",
+   "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased",
+   "craft_item(oak_planks)|self:self:craft_item:succeeded",
+   "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+   "gather_resource(oak_log)|obs:self:inventory:oak_log:count_increased",
+   "gather_resource(oak_log)|obs:self:inventory:oak_planks:count_increased",
+   "gather_resource(oak_log)|self:self:gather_resource:succeeded"
+  ]
+ },
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\transfer\\c1_ep1_graph_seed2.json",
+ "ok": true
+}

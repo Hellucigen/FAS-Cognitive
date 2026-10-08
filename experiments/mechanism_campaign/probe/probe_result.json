@@ -1,0 +1,6 @@
+{
+ "off_no_spread": true,
+ "full_spread": false,
+ "not_saturated": true,
+ "multi_identifiable": true
+}

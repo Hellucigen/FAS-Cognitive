@@ -1,0 +1,9 @@
+{
+  "name": "minecraft",
+  "type": "semantic",
+  "enabled": true,
+  "priority": 8,
+  "description": "Minecraft game knowledge - WASD movement directions and corresponding actions",
+  "author": "Fascinator",
+  "version": "1.0"
+}

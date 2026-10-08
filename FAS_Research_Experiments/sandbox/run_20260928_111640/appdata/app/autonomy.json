@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "cobblestone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 cobblestone",
+      "created": "2026/09/28 11:16:42",
+      "created_ts": 1790565402.3147237,
+      "last_considered": 2264.0,
+      "last_success_at": 2264.0
+    },
+    {
+      "type": "obtain",
+      "target": "cobblestone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 cobblestone",
+      "created": "2026/09/28 11:16:42",
+      "created_ts": 1790565402.3800569,
+      "last_considered": 2264.0,
+      "last_success_at": 2264.0
+    },
+    {
+      "type": "obtain",
+      "target": "cobblestone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 cobblestone",
+      "created": "2026/09/28 11:16:42",
+      "created_ts": 1790565402.487878,
+      "last_considered": 2264.0,
+      "last_success_at": 2264.0
+    }
+  ],
+  "explore_dirs": {
+    "north": 5,
+    "east": 4,
+    "south": 4,
+    "west": 4
+  },
+  "last_novel_ts": 1790565400.5627322,
+  "updated_at": "2026/09/28 11:16:42"
+}

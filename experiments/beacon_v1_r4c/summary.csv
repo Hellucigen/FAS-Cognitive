@@ -1,0 +1,2 @@
+condition,mode,task,seed,success,decisions,steps_to_craft,first_action,unparseable,explores,craft_menu_visible_steps,prompt_tokens,completion_tokens,llm_calls,latency_s,harness_valid,failure_class,failure_reason,step0_n_nodes,graph_edges_final
+llm_direct,baseline-direct,B1,15,0,8,,wait,1,5,0,1319,758,8,49.8,True,none,,0,

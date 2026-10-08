@@ -1,0 +1,141 @@
+{
+ "experiment": "J 先验依赖边界（多 episode）",
+ "research_question": "§16",
+ "per_condition": {
+  "P0": {
+   "n": 5,
+   "runs": [
+    {
+     "n_success": 0,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 29,
+      "edges": 59
+     }
+    },
+    {
+     "n_success": 0,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 29,
+      "edges": 59
+     }
+    },
+    {
+     "n_success": 0,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 29,
+      "edges": 59
+     }
+    },
+    {
+     "n_success": 0,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 29,
+      "edges": 59
+     }
+    },
+    {
+     "n_success": 0,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 29,
+      "edges": 59
+     }
+    }
+   ]
+  },
+  "P1": {
+   "n": 5,
+   "runs": [
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 24,
+      "edges": 50
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 24,
+      "edges": 50
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 24,
+      "edges": 50
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 24,
+      "edges": 50
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 24,
+      "edges": 50
+     }
+    }
+   ]
+  },
+  "P2": {
+   "n": 5,
+   "runs": [
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 25,
+      "edges": 51
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 25,
+      "edges": 51
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 25,
+      "edges": 51
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 25,
+      "edges": 51
+     }
+    },
+    {
+     "n_success": 5,
+     "rounds": 5,
+     "graph_growth": {
+      "nodes": 25,
+      "edges": 51
+     }
+    }
+   ]
+  }
+ }
+}

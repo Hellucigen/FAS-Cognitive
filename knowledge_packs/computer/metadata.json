@@ -1,0 +1,9 @@
+{
+  "name": "computer",
+  "type": "semantic",
+  "enabled": true,
+  "priority": 8,
+  "description": "Computer interaction knowledge - keyboard keys (WASD) and press actions",
+  "author": "Fascinator",
+  "version": "1.0"
+}

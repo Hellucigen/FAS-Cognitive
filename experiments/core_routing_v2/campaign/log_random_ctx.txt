@@ -1,0 +1,18 @@
+[preflight] {"graph_nodes": 37, "graph_edges": 20, "propagation_probe_seed": "物品:oak_log", "propagation_newly_lit": 1, "demand_keys": ["action", "curiosity", "emotion", "knowledge"], "gap_type": "dict", "routing_mode": "graph_only"}
+[v2] random_ctx T1 seed1: succ=1 dec=3 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T2 seed1: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T3 seed1: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T4 seed1: succ=1 dec=5 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T1 seed2: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T2 seed2: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T3 seed2: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T4 seed2: succ=1 dec=5 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T1 seed3: succ=1 dec=3 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T2 seed3: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T3 seed3: succ=1 dec=3 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T4 seed3: succ=1 dec=6 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T1 seed4: succ=1 dec=3 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T2 seed4: succ=1 dec=4 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T3 seed4: succ=1 dec=2 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T4 seed4: succ=1 dec=7 edges=None aedges=None step0=0 exc=0
+[v2] random_ctx T1 seed5: succ=1 dec=3 edges=None aedges=None step0=0 exc=0

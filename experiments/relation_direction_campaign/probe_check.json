@@ -1,0 +1,7 @@
+{
+ "reach_differs": true,
+ "shared_reachable_in_B": true,
+ "activation_spreads": true,
+ "shared_activates": true,
+ "no_hidden_rules": true
+}

@@ -1,0 +1,21 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260929_112743",
+ "family": "reuse_a2",
+ "label": "A2-B0",
+ "mode": "sandbox",
+ "seed": 3,
+ "timestamp": "2026-09-29 11:27:43.142",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "episode": "ep2",
+  "condition": "B0",
+  "goal": "wooden_pickaxe",
+  "seed": 3,
+  "inherit": false
+ }
+}

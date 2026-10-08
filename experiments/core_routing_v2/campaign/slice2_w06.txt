@@ -1,0 +1,10 @@
+llm_rag T2 17
+llm_rag T4 13
+random_ctx T1 18
+random_ctx T3 7
+random_ctx T4 14
+D-noact T2 19
+D-noact T3 18
+D-nodemand T3 8
+D-flat T2 13
+D-flat T3 18

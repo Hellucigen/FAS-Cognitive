@@ -1,0 +1,20 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260929_115731",
+ "family": "hebbian",
+ "label": "F-H0",
+ "mode": "sandbox",
+ "seed": 4,
+ "timestamp": "2026-09-29 11:57:31.374",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "condition": "H0",
+  "seed": 4,
+  "rounds": 30,
+  "hebbian_on": true
+ }
+}

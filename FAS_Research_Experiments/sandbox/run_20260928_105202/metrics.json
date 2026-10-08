@@ -1,0 +1,205 @@
+{
+ "duration_s": 1.57,
+ "event_count": 6,
+ "counters": {},
+ "t1_planks": 5,
+ "t2_fence": null,
+ "t3_reuse": null,
+ "graph": {
+  "nodes": 236,
+  "edges": 272
+ },
+ "inv": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "calls": [
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": 5.0,
+    "y": 65.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 65.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 66.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 67.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/craft",
+   {
+    "item": "oak_planks",
+    "count": 1,
+    "table": null
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -11.0,
+    "y": 64.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -26.0,
+    "y": 64.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -41.0,
+    "y": 64.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -56.0,
+    "y": 64.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -55.0,
+    "y": 64.0,
+    "z": -16.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -39.0,
+    "y": 64.0,
+    "z": -15.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": -56.0,
+    "y": 64.0,
+    "z": -15.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ]
+ ],
+ "ok": true
+}

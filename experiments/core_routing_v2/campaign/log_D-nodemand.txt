@@ -1,0 +1,8 @@
+[preflight] {"graph_nodes": 37, "graph_edges": 20, "propagation_probe_seed": "物品:oak_log", "propagation_newly_lit": 1, "demand_keys": ["action", "curiosity", "emotion", "knowledge"], "gap_type": "dict", "routing_mode": "graph_only"}
+[v2] D-nodemand T2 seed1: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] D-nodemand T3 seed1: succ=1 dec=3 edges=52 aedges=20.33 step0=5 exc=0
+[v2] D-nodemand T2 seed2: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0
+[v2] D-nodemand T3 seed2: succ=1 dec=8 edges=63 aedges=26.12 step0=5 exc=0
+[v2] D-nodemand T2 seed3: succ=1 dec=3 edges=37 aedges=9.33 step0=3 exc=0
+[v2] D-nodemand T3 seed3: succ=1 dec=3 edges=52 aedges=20.33 step0=5 exc=0
+[v2] D-nodemand T2 seed4: succ=1 dec=2 edges=30 aedges=6.0 step0=3 exc=0

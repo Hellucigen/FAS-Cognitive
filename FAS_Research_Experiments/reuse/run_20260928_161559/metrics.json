@@ -1,0 +1,16 @@
+{
+ "duration_s": 2.85,
+ "event_count": 379,
+ "counters": {},
+ "graph_path": "E:\\Project\\Fascinator\\FAS_Research_Experiments\\reuse\\ep1_graph_seed1.json",
+ "causal": {
+  "aggregations": 4,
+  "hypotheses": 4,
+  "promoted": [
+   "explore_area(mystic_chunk)|obs:minecraft:block:mystic_ore:appeared",
+   "explore_area(mystic_chunk)|obs:minecraft:block:mystic_ore:disappeared",
+   "explore_area(mystic_chunk)|self:self:explore_area:succeeded"
+  ]
+ },
+ "ok": true
+}

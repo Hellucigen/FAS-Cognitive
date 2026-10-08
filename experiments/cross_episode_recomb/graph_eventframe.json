@@ -1,0 +1,435 @@
+{
+ "nodes": [
+  {
+   "id": "事件:E1",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "人",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "苹果",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E2",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "树",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E3",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "事件:E4",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "篮子",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E5",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "事件:E6",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "厨房",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E7",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "钥匙",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "门",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E8",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "事件:E9",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "箱子",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E10",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "事件:E11",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "地窖",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  },
+  {
+   "id": "事件:E12",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "事件:E13",
+   "label": "declarative-episodic",
+   "graph_space": "episodic"
+  },
+  {
+   "id": "面包",
+   "label": "declarative-semantic",
+   "graph_space": "semantic"
+  }
+ ],
+ "edges": [
+  {
+   "src": "事件:E1",
+   "dst": "人",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E1",
+   "dst": "苹果",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E2",
+   "dst": "苹果",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E2",
+   "dst": "树",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E2",
+   "dst": "事件:E1",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E3",
+   "dst": "人",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E3",
+   "dst": "苹果",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E3",
+   "dst": "事件:E2",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E4",
+   "dst": "苹果",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E4",
+   "dst": "篮子",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E4",
+   "dst": "事件:E3",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E5",
+   "dst": "人",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E5",
+   "dst": "篮子",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E5",
+   "dst": "事件:E4",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E6",
+   "dst": "篮子",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E6",
+   "dst": "厨房",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E6",
+   "dst": "事件:E5",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E7",
+   "dst": "钥匙",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E7",
+   "dst": "门",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E7",
+   "dst": "事件:E6",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E8",
+   "dst": "门",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E8",
+   "dst": "厨房",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E8",
+   "dst": "事件:E7",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E9",
+   "dst": "钥匙",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E9",
+   "dst": "箱子",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E9",
+   "dst": "事件:E8",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E10",
+   "dst": "人",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E10",
+   "dst": "钥匙",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E10",
+   "dst": "事件:E9",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E11",
+   "dst": "箱子",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E11",
+   "dst": "地窖",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E11",
+   "dst": "事件:E10",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E12",
+   "dst": "地窖",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E12",
+   "dst": "厨房",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E12",
+   "dst": "事件:E11",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E13",
+   "dst": "人",
+   "relation": "主体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E13",
+   "dst": "面包",
+   "relation": "客体",
+   "weight": 0.9,
+   "relation_category": "cognitive_relation"
+  },
+  {
+   "src": "事件:E13",
+   "dst": "事件:E12",
+   "relation": "后继",
+   "weight": 0.6,
+   "relation_category": "cognitive_relation"
+  }
+ ],
+ "episode_of": {
+  "人": [
+   "E1",
+   "E10",
+   "E13",
+   "E3",
+   "E5"
+  ],
+  "苹果": [
+   "E1",
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "树": [
+   "E2"
+  ],
+  "篮子": [
+   "E4",
+   "E5",
+   "E6"
+  ],
+  "厨房": [
+   "E12",
+   "E6",
+   "E8"
+  ],
+  "钥匙": [
+   "E10",
+   "E7",
+   "E9"
+  ],
+  "门": [
+   "E7",
+   "E8"
+  ],
+  "箱子": [
+   "E11",
+   "E9"
+  ],
+  "地窖": [
+   "E11",
+   "E12"
+  ],
+  "面包": [
+   "E13"
+  ]
+ }
+}

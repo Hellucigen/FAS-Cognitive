@@ -1,0 +1,7 @@
+graph,input_cond,seed,graph_nodes,graph_edges,reverse_added,injected,reach1,reach2,reach3,activated_nodes,activated_edges,activation_mean,activation_std,activation_gini,activation_entropy,top1,top5_mass,top10_mass,shared_node,shared_activation,shared_node_ids,shared_mass,multi_input_enrichment,spearman_score_act,core_exception_count
+F,I1,1,44,53,0,配方:wooden_pickaxe:table:0,3,0,0,6,4,1.6667,1.3176,0.4167,2.1038,3.75,9.583,10.0,物品:stick,0.4167,物品:stick,0.4167,5.75,0.2648,0
+F,I2,1,44,53,0,配方:stone_pickaxe:table:0,3,0,0,6,4,1.6667,1.3176,0.4167,2.1038,3.75,9.583,10.0,物品:stick,0.4167,物品:stick,0.4167,5.75,0.2747,0
+F,I3,1,44,53,0,配方:wooden_pickaxe:table:0;配方:stone_pickaxe:table:0,5,0,0,9,7,1.5278,1.2108,0.4175,2.7093,3.75,12.083,13.75,物品:stick,0.8333,物品:stick,0.8333,5.75,0.3253,0
+B,I1,1,44,106,53,配方:wooden_pickaxe:table:0,3,10,6,22,43,0.4545,1.0242,0.8237,2.2292,3.75,9.431,9.811,物品:stick,0.2525,物品:stick,0.2525,5.75,0.5424,0
+B,I2,1,44,106,53,配方:stone_pickaxe:table:0,3,9,6,21,39,0.4762,1.0478,0.8164,2.2137,3.75,9.431,9.806,物品:stick,0.239,物品:stick,0.239,5.75,0.513,0
+B,I3,1,44,106,53,配方:wooden_pickaxe:table:0;配方:stone_pickaxe:table:0,5,12,6,27,57,0.5093,1.0322,0.7916,2.8142,3.75,12.194,13.305,物品:stick,0.4753,物品:stick,0.4753,5.75,0.6454,0

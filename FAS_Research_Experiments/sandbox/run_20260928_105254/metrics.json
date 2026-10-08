@@ -1,0 +1,138 @@
+{
+ "duration_s": 1.56,
+ "event_count": 7,
+ "counters": {},
+ "t1_planks": 5,
+ "t2_fence": 1,
+ "t3_reuse": 0,
+ "graph": {
+  "nodes": 243,
+  "edges": 284
+ },
+ "inv": {},
+ "calls": [
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/goto",
+   {
+    "x": 5.0,
+    "y": 65.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 65.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 66.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 5.0,
+    "y": 67.0,
+    "z": 0.0
+   }
+  ],
+  [
+   "/collect_item",
+   {
+    "radius": 6
+   }
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/stop_goto",
+   {}
+  ],
+  [
+   "/craft",
+   {
+    "item": "oak_planks",
+    "count": 1,
+    "table": null
+   }
+  ],
+  [
+   "/craft",
+   {
+    "item": "stick",
+    "count": 1,
+    "table": null
+   }
+  ],
+  [
+   "/find_blocks",
+   {
+    "block": "oak_log",
+    "radius": 24,
+    "count": 8
+   }
+  ],
+  [
+   "/dig_pos",
+   {
+    "x": 6.0,
+    "y": 65.0,
+    "z": 0.0
+   }
+  ]
+ ],
+ "ok": true
+}

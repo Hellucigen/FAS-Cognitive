@@ -1,0 +1,62 @@
+{
+ "graph_nodes": 44,
+ "graph_edges": 53,
+ "per_relation": [
+  {
+   "relation": "产生",
+   "edge_count": 8,
+   "source_count": 8,
+   "target_count": 8,
+   "mean_source_out_degree": 2.375,
+   "mean_target_out_degree": 0.0,
+   "target_sink_fraction": 1.0,
+   "forward_2hop_reach": 0,
+   "reverse_2hop_reach": 0
+  },
+  {
+   "relation": "属于",
+   "edge_count": 18,
+   "source_count": 18,
+   "target_count": 1,
+   "mean_source_out_degree": 1.889,
+   "mean_target_out_degree": 0.0,
+   "target_sink_fraction": 1.0,
+   "forward_2hop_reach": 0,
+   "reverse_2hop_reach": 0
+  },
+  {
+   "relation": "掉落",
+   "edge_count": 13,
+   "source_count": 13,
+   "target_count": 11,
+   "mean_source_out_degree": 2.231,
+   "mean_target_out_degree": 0.0,
+   "target_sink_fraction": 1.0,
+   "forward_2hop_reach": 0,
+   "reverse_2hop_reach": 0
+  },
+  {
+   "relation": "需要",
+   "edge_count": 11,
+   "source_count": 8,
+   "target_count": 5,
+   "mean_source_out_degree": 2.375,
+   "mean_target_out_degree": 0.0,
+   "target_sink_fraction": 1.0,
+   "forward_2hop_reach": 0,
+   "reverse_2hop_reach": 0
+  },
+  {
+   "relation": "需要工具",
+   "edge_count": 3,
+   "source_count": 3,
+   "target_count": 2,
+   "mean_source_out_degree": 3.0,
+   "mean_target_out_degree": 0.0,
+   "target_sink_fraction": 1.0,
+   "forward_2hop_reach": 0,
+   "reverse_2hop_reach": 0
+  }
+ ],
+ "global_forward_2hop_max": 0
+}

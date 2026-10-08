@@ -1,0 +1,20 @@
+{
+ "duration_s": 1.85,
+ "event_count": 5,
+ "counters": {},
+ "success": true,
+ "success_tick": 30,
+ "hypotheses": [],
+ "hyp_count": 0,
+ "graph": {
+  "nodes": 260,
+  "edges": 338
+ },
+ "inv": {
+  "oak_planks": 3,
+  "wooden_pickaxe": 1,
+  "oak_log": 6,
+  "stone_pickaxe": 1
+ },
+ "ok": true
+}

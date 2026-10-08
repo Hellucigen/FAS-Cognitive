@@ -1,0 +1,26 @@
+{
+ "duration_s": 1.81,
+ "event_count": 13,
+ "counters": {},
+ "condition": "C2",
+ "seed": 4,
+ "seed_done_tick": 4,
+ "cc_on": true,
+ "ci_created": 2,
+ "ci_statuses_final": [
+  "ready",
+  "discarded"
+ ],
+ "reactivation_hits": [],
+ "episodic_ids": [
+  "物品:oak_planks",
+  "物品:oak_log",
+  "行动_653762483",
+  "行动_653762492"
+ ],
+ "graph": {
+  "nodes": 259,
+  "edges": 303
+ },
+ "ok": true
+}

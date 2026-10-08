@@ -1,0 +1,6 @@
+{"ts": "2026-09-29 12:07:27.539", "t_rel_s": 0.018, "step": 0, "tag": "RUN_START", "event": "run 开始 mode=sandbox label=I-U1", "fields": {"experiment_id": "auto", "run_id": "run_20260929_120727"}}
+{"ts": "2026-09-29 12:07:29.078", "t_rel_s": 1.558, "step": 1, "tag": "GRAPH", "event": "快照 graph_start", "fields": {"snapshot": "graph_start", "key": "graph_start", "note": "", "graph": "graph_graph_start.json", "graph_nodes": 217}}
+{"ts": "2026-09-29 12:07:29.209", "t_rel_s": 1.689, "step": 2, "tag": "PHASE1", "event": "{\"done\": [4, 4, 4, 4], \"priors\": {}}", "fields": {}}
+{"ts": "2026-09-29 12:07:29.210", "t_rel_s": 1.69, "step": 3, "tag": "EVENT", "event": "环境改变：旧橡木带消失，新带出现在视野外", "fields": {}}
+{"ts": "2026-09-29 12:07:29.255", "t_rel_s": 1.734, "step": 4, "tag": "GRAPH", "event": "快照 graph_end", "fields": {"snapshot": "graph_end", "key": "graph_end", "note": "", "graph": "graph_graph_end.json", "graph_nodes": 242}}
+{"ts": "2026-09-29 12:07:29.255", "t_rel_s": 1.734, "step": 5, "tag": "RUN_END", "event": "run 结束 ok", "fields": {"duration_s": 1.73, "event_count": 5, "counters": "{}", "condition": "U1", "seed": 3, "phase1_done": "[4, 4, 4, 4]", "phase2_success": true, "phase2_done_tick": 4, "phase2_failures": 0, "priors_phase1": "{}", "priors_phase2": "{}", "graph": "{'nodes': 242, 'edges': 297}", "ok": true}}

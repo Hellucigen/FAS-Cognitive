@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "stone",
+      "source": "experiment_obtain",
+      "text": "实验目标：自主获得 stone",
+      "created": "2026/09/28 11:08:15",
+      "created_ts": 1790564895.496608,
+      "last_considered": 2760.0,
+      "last_success_at": 2760.0
+    },
+    {
+      "type": "obtain",
+      "target": "stone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 stone",
+      "created": "2026/09/28 11:08:16",
+      "created_ts": 1790564896.0415933,
+      "last_considered": 2760.0,
+      "last_success_at": 2760.0
+    },
+    {
+      "type": "obtain",
+      "target": "stone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 stone",
+      "created": "2026/09/28 11:08:16",
+      "created_ts": 1790564896.578389,
+      "last_considered": 2760.0,
+      "last_success_at": 2760.0
+    }
+  ],
+  "explore_dirs": {
+    "north": 120,
+    "east": 120,
+    "south": 120,
+    "west": 120
+  },
+  "last_novel_ts": 1790564894.086158,
+  "updated_at": "2026/09/28 11:08:17"
+}

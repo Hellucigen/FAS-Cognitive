@@ -1,0 +1,21 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260929_113821",
+ "family": "emotion",
+ "label": "C-E1_high",
+ "mode": "sandbox",
+ "seed": 1,
+ "timestamp": "2026-09-29 11:38:21.186",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "episode": "ep2",
+  "condition": "E1_high",
+  "seed": 1,
+  "arousal": 1.0,
+  "stress": 0.0
+ }
+}

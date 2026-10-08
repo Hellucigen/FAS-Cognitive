@@ -1,0 +1,66 @@
+{
+ "psa": {
+  "T2_B0-direct": "0/10",
+  "T2_B1-h128": "10/10",
+  "T2_B1-h2048": "9/10",
+  "T2_B1-h512": "10/10",
+  "T2_B2-rag": "10/10",
+  "T2_FAS-full": "10/10",
+  "T2_FAS-reset": "0/10",
+  "T2_FAS-sham": "10/10",
+  "T3_B0-direct_mean": 11.2,
+  "T3_B1-h2048_mean": 0.0,
+  "T3_B2-rag_mean": 0.0,
+  "T3_FAS-full_mean": 2.8,
+  "T3_FAS-reset_mean": 7.7,
+  "H1_T2_full_vs_reset": {
+   "wins": 10,
+   "losses": 0,
+   "p": 0.001953
+  },
+  "H5_T3": {
+   "p": 0.000977,
+   "mean_full": 2.8,
+   "mean_reset": 7.7
+  },
+  "T2_sham": "10/10",
+  "T2_B0": "0/10"
+ },
+ "ctl": {
+  "T2_C3": "10/10",
+  "T2_C4": "10/10",
+  "T3_C3_mean": 12.0,
+  "T3_C4_mean": 11.7,
+  "T3_C2_mean": 7.7
+ },
+ "cv": {
+  "C_P3": {
+   "fas": "9/10",
+   "history": "0/10",
+   "direct": "0/10"
+  },
+  "E_fails": {},
+  "E2_p": NaN,
+  "F_failure_ON_gathers": 6.0,
+  "F_failure_OFF_gathers": 1.0,
+  "I": {
+   "I1-fas-A": "0/10",
+   "I2-fas-B": "0/10",
+   "I3-fas-AB": "0/10",
+   "I4-fas-ABC": "2/10",
+   "I5-llm-raw-AB": "10/10",
+   "I6-llm-ret-AB": "8/10",
+   "I7-fas-nodiff-ABC": "0/10",
+   "I3-rich": "0/10",
+   "I3-k16": "0/10",
+   "I3-k32": "0/10"
+  },
+  "T_ef_mean_fails": 7.8,
+  "T_fas_mean_fails": 12.0,
+  "T2b_P3": {
+   "fas": "10/10",
+   "fas-sg": "10/10",
+   "history": "10/10"
+  }
+ }
+}

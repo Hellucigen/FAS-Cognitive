@@ -1,0 +1,102 @@
+======================================================================
+P-C: C 实验 P3 payload(有经历)与零经历对照
+======================================================================
+--- with P1 experience ---
+[cognitive-context mode=full]
+selected nodes:
+- dirt (act 5.0)
+- 物品:oak_planks (act 5.0)
+- 物品:oak_log (act 5.0)
+- 实体:hunger (act 5.0)
+- 动作:gather_oak_log (act 3.2075)
+- 可采资源 (act 2.3726)
+- 动作:craft_oak_planks (act 2.1209)
+- 动作:gather_dirt (act 1.8501)
+selected edges:
+- dirt-属于->可采资源
+- 物品:oak_log-相关->物品:oak_planks
+- dirt-关联->实体:hunger
+- dirt-关联->物品:oak_log
+- 实体:hunger-关联->物品:oak_log
+- 动作:gather_oak_log-关联->dirt
+- dirt-关联->动作:gather_oak_log
+- 动作:gather_oak_log-关联->实体:hunger
+demand (top): language=0.32, memory=0.0, knowledge=0.0
+gap (top): knowledge, memory
+routing: {"kg": 0.0, "memory": 0.0, "action": 0.0, "external_tool": 0.0, "emotion_system": 0.0, "llm_language": 0.0, "llm_interpret": 0.0, "llm_reasoning": 0.0}
+--- ZERO experience control ---
+[cognitive-context mode=full]
+selected nodes:
+- 物品:oak_log (act 3.9111)
+- 实体:hunger (act 2.7236)
+- dirt (act 2.375)
+- 物品:oak_planks (act 1.1875)
+- 可采资源 (act 0.4904)
+selected edges:
+- dirt-属于->可采资源
+- 物品:oak_log-相关->物品:oak_planks
+- dirt-关联->实体:hunger
+- dirt-关联->物品:oak_log
+- 实体:hunger-关联->物品:oak_log
+demand (top): language=0.32, memory=0.0, knowledge=0.0
+gap (top): knowledge, memory
+routing: {"kg": 0.0, "memory": 0.0, "action": 0.0, "external_tool": 0.0, "emotion_system": 0.0, "llm_language": 0.0, "llm_interpret": 0.0, "llm_reasoning": 0.0}
+gate(with exp): ['oak_planks'] | gate(zero exp): ['oak_planks']
+======================================================================
+P-E: E 失败后 payload + 失败证据节点激活 + 负边计数
+======================================================================
+action result: False tool_missing:stone_pickaxe
+[cognitive-context mode=full]
+selected nodes:
+- 物品:oak_log (act 5.0)
+- 物品:iron_ore (act 5.0)
+- 实体:hunger (act 5.0)
+- dirt (act 4.6312)
+- 动作:gather_iron_ore (act 3.0289)
+- 物品:oak_planks (act 1.9209)
+- 可采资源 (act 0.9582)
+- 物品:oak_fence (act 0.094)
+selected edges:
+- dirt-属于->可采资源
+- 物品:oak_log-相关->物品:oak_planks
+- 物品:oak_planks-相关->物品:oak_fence
+- dirt-关联->实体:hunger
+- dirt-关联->物品:iron_ore
+- dirt-关联->物品:oak_log
+- 实体:hunger-关联->物品:iron_ore
+- 实体:hunger-关联->物品:oak_log
+demand (top): language=0.15, memory=0.0, knowledge=0.0
+gap (top): knowledge, memory
+routing: {"kg": 0.0, "memory": 0.0, "action": 0.0, "external_tool": 0.0, "emotion_system": 0.0, "llm_language": 0.0, "llm_interpret": 0.0, "llm_reasoning": 0.0}
+  node 动作:gather_iron_ore                                   act=3.029
+  node 结果:tool_missing:stone_pickaxe                        act=0.000
+negative edges in graph: 0
+======================================================================
+P-I: I3 测试 step-0 payload + Layer1-6 检查
+======================================================================
+[cognitive-context mode=full]
+selected nodes:
+- dirt (act 5.0)
+- 物品:oak_log (act 5.0)
+- 实体:hunger (act 5.0)
+- 物品:oak_planks (act 4.7497)
+- 动作:gather_oak_log (act 3.7199)
+- 动作:craft_oak_planks (act 2.4256)
+- 可采资源 (act 2.3726)
+- 动作:craft_stick (act 2.1464)
+selected edges:
+- dirt-属于->可采资源
+- dirt-关联->实体:hunger
+- dirt-关联->物品:oak_log
+- 实体:hunger-关联->物品:oak_log
+- 动作:gather_oak_log-关联->dirt
+- dirt-关联->动作:gather_oak_log
+- 动作:gather_oak_log-关联->实体:hunger
+- 实体:hunger-关联->动作:gather_oak_log
+demand (top): language=0.16, memory=0.0, knowledge=0.0
+gap (top): knowledge, memory
+routing: {"kg": 0.0, "memory": 0.0, "action": 0.0, "external_tool": 0.0, "emotion_system": 0.0, "llm_language": 0.0, "llm_interpret": 0.0, "llm_reasoning": 0.0}
+L1 knowledge nodes: ['oak_planks', 'stick', '物品:oak_planks', '物品:stick', '配方:oak_planks:hand:0', '配方:stick:hand:0', '动作:craft_oak_planks', '结果:crafted:oak_planks']
+L2 action->result edges: [('动作:gather_oak_log', 'dirt'), ('动作:gather_oak_log', '实体:hunger'), ('动作:gather_oak_log', '物品:oak_log'), ('动作:gather_oak_log', '结果:got:oak_log'), ('动作:craft_oak_planks', 'dirt'), ('动作:craft_oak_planks', '实体:hunger')]
+L2 node.created present: False | edge.created present: True
+L6 episode identity anywhere: False

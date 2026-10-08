@@ -1,0 +1,103 @@
+{
+ "duration_s": 2.55,
+ "event_count": 9,
+ "counters": {},
+ "rounds": [
+  15
+ ],
+ "hypotheses": [
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:oak_log:count_decreased",
+   "support": 4,
+   "conf": 0.571,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:wooden_pickaxe:count_decreased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_decreased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:cobblestone:count_increased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:stick:count_increased",
+   "support": 5,
+   "conf": 0.714,
+   "status": "hypothesis"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:oak_planks:count_increased",
+   "support": 5,
+   "conf": 0.714,
+   "status": "hypothesis"
+  },
+  {
+   "key": "craft_item(oak_planks)|self:self:craft_item:succeeded",
+   "support": 5,
+   "conf": 0.714,
+   "status": "hypothesis"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:wooden_pickaxe:count_increased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:cobblestone:count_decreased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:stick:count_decreased",
+   "support": 3,
+   "conf": 0.429,
+   "status": "weakened"
+  },
+  {
+   "key": "craft_item(oak_planks)|obs:self:inventory:oak_log:count_increased",
+   "support": 4,
+   "conf": 0.571,
+   "status": "weakened"
+  },
+  {
+   "key": "gather_resource(oak_log)|obs:self:block:oak_log:disappeared",
+   "support": 4,
+   "conf": 0.5,
+   "status": "weakened"
+  }
+ ],
+ "hyp_count": 23,
+ "aggregations": {
+  "gather_resource(oak_log)": 6,
+  "craft_item(oak_planks)": 5,
+  "craft_item(stick)": 2,
+  "craft_item(crafting_table)": 1,
+  "place_block(crafting_table)": 1,
+  "craft_item(wooden_pickaxe)": 1,
+  "gather_resource(stone)": 1,
+  "explore_direction(west)": 1,
+  "explore_area(oak_log)": 2
+ },
+ "graph": {
+  "nodes": 263,
+  "edges": 350
+ },
+ "inv": {
+  "oak_planks": 2,
+  "stick": 4
+ },
+ "ok": true
+}

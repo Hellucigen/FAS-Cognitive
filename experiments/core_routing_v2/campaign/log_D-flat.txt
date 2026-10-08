@@ -1,0 +1,7 @@
+[preflight] {"graph_nodes": 37, "graph_edges": 20, "propagation_probe_seed": "物品:oak_log", "propagation_newly_lit": 1, "demand_keys": ["action", "curiosity", "emotion", "knowledge"], "gap_type": "dict", "routing_mode": "graph_only"}
+Loading weights:   0%|          | 0/71 [00:00<?, ?it/s]Loading weights: 100%|██████████| 71/71 [00:00<00:00, 9957.05it/s]
+[v2] D-flat T2 seed1: succ=1 dec=4 edges=37 aedges=9.0 step0=8 exc=0
+[v2] D-flat T3 seed1: succ=1 dec=4 edges=52 aedges=20.0 step0=8 exc=0
+[v2] D-flat T2 seed2: succ=1 dec=2 edges=30 aedges=6.0 step0=8 exc=0
+[v2] D-flat T3 seed2: succ=1 dec=13 edges=63 aedges=28.46 step0=8 exc=0
+[v2] D-flat T2 seed3: succ=1 dec=2 edges=30 aedges=6.0 step0=8 exc=0

@@ -1,0 +1,71 @@
+{
+  "observation_window": "2026-09-27 18:56:50 ~ 19:38:17 (observer sys_events last 19:37:17)",
+  "metrics": {
+    "observation_latency": {
+      "value": "N/A",
+      "rationale": "Case A unavailable: no resource goal ever formed, so no intervention->observation cycle for a targeted block. Routine perception cadence: mc_perception_updated every ~20 s; bridge /state polled every 4 s by observer (state refresh cadence is bridge-driven, sub-second)."
+    },
+    "revalidation_latency": {
+      "value": "N/A",
+      "rationale": "No queued action ever became stale in-session (all actions settled->next within one poll cycle). P1b revalidate hook (action_system.py:352-359, autonomy._revalidate_queued_action) verified present by code inspection; per-module tests 103/103 pass pre-run."
+    },
+    "goal_invalid_latency": {
+      "value": "N/A",
+      "rationale": "No goals existed at any point (goals=[] in 151 autonomy snapshots; single autonomy_goals_snapshot logged with empty goals). Goal lifecycle P5 (stale/demote path autonomy.py:1180) never invoked in-session."
+    },
+    "recovery_latency": {
+      "value": "N/A",
+      "rationale": "No in-session action failures to recover from. All settled actions show result success (amble xN, explore_direction x5).",
+      "evidence": "33 action_settled events, none failed/cancelled/timeout"
+    },
+    "repeated_failure_count": {
+      "value": 0,
+      "rationale": "No resource candidate executed in-session. Two transient night-preemptions of explore_direction@south (19:06:10, 19:09:59) are transient blockers, correctly excluded from repeated-failure accounting (cf. design: transient blockers do not enter _attempts/causal priors)."
+    },
+    "candidate_score_change": {
+      "value": "observed (mechanism-level)",
+      "rationale": "Live candidate explain strings show active causal priors applying score down-weights: gather_resource@grass_block causal=['Digging aborted'] pb=-0.00; explore_direction@west causal=['preempted:night','not_connected'] pb=-0.03 (cross-session learned rule). Candidate landscape otherwise stable across 151 snapshots: follow_entity@Hellucigen 0.211, screen_observe 0.13-0.16, gather_resource@grass_block 0.027-0.051.",
+      "environment_response_evidence": "19:37:48 first appearance of collect_dropped_item 0.201 (resource_opportunity) coincident with user activity (dropped item) - new observation -> new candidate without threshold crossing (no action taken)."
+    },
+    "settlement_accuracy": {
+      "value": "N/A in-session / design-verified",
+      "rationale": "Zero bridge failures or slow commands in-session (302 bridge_command events, 0 ok=False, 0 latency>=1000ms). Exactly-once settle + timeout->failed->backoff verified by code inspection and prior runtime record: craft_item(furnace) failed bridge_error:timed out -> settled as failure, causal persistence confidence 0.333."
+    },
+    "knowledge_reuse_count": {
+      "value": 3,
+      "rationale": "Causal table holds 12 persisted aggregations; 2 rules observed active on the in-session candidate set (Digging aborted on gather; preempted:night + not_connected on explore_direction@west) - i.e. 3 rule instances referenced by live candidate explain strings at 19:35-19:38. Two in-session transient night-preemptions aggregated but (by design) produce no outcomes, hence no behavior-reversing reuse of the same-day failure."
+    }
+  },
+  "case_status": {
+    "A": "unavailable",
+    "B": "unavailable",
+    "C": "not_observed",
+    "D": "partially_confirmed_mechanism_level"
+  },
+  "in_session_summary": {
+    "duration_min": 41.3,
+    "action_proposed": 34,
+    "action_started": 29,
+    "action_settled": 33,
+    "settled_success": 33,
+    "settled_failed": 0,
+    "goals_ever_observed": 0,
+    "causal_attributed_events": 5,
+    "replay_batches_logged": 6,
+    "bridge_commands": 302,
+    "bridge_failures": 0,
+    "bridge_slow_ge_1000ms": 0,
+    "llm_calls_total": 2,
+    "llm_calls_on_minecraft_action_path": 0,
+    "graph_nodes_start": 3749,
+    "graph_nodes_end": 3787,
+    "graph_edges_start": 9875,
+    "graph_edges_end": 9934,
+    "drop_interventions": 0,
+    "setblock_interventions": 2
+  },
+  "interventions": [
+    {"ts": "19:04:31", "type": "setblock_stone", "result": "ok", "cleanup": "air"},
+    {"ts": "19:04:40", "type": "setblock_air", "result": "ok", "cleanup": "-"}
+  ]
+}

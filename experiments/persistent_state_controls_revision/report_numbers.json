@@ -1,0 +1,76 @@
+{
+ "preflight_pass": false,
+ "n_seeds": 10,
+ "n_failures": 60,
+ "failures_by_criterion_condition": {
+  "P1 C4b": 10,
+  "P1 C4c": 10,
+  "P2 C4b": 10,
+  "P2 C4c": 10,
+  "P3 C4b": 10,
+  "P3 C4c": 10
+ },
+ "C3b_failures": 0,
+ "metrics_identical_across_seeds": true,
+ "C1": {
+  "present": true,
+  "slot": 7,
+  "chars": 684,
+  "n_node_lines": 8,
+  "n_lines": 22
+ },
+ "C3b": {
+  "present": true,
+  "slot": 6,
+  "fail_lines": 4,
+  "chars": 515,
+  "n_node_lines": 16
+ },
+ "C4b": {
+  "present": false,
+  "slot": null,
+  "chars": 239,
+  "n_node_lines": 8
+ },
+ "C4c": {
+  "present": false,
+  "slot": null,
+  "chars": 239,
+  "n_node_lines": 8
+ },
+ "C3b_char_ratio_vs_C1": 0.753,
+ "C4b_char_ratio_vs_C1": 0.349,
+ "neg_edges_C4b": 2,
+ "neg_edges_C4c": 0,
+ "facts_eq_C3_all_seeds": true,
+ "C4b_C4c_present_diff_all": false,
+ "C4b_two_hop_set_size": 51,
+ "C4b_failure_node_rank_1based": 43,
+ "C4b_failure_discovery_weight": 0.5,
+ "C4b_slot8_weight": 0.8,
+ "C4b_top8_weights": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.8178,
+  0.8,
+  0.8,
+  0.8
+ ],
+ "edges_into_failure_node": [
+  [
+   "动作:gather_iron_ore",
+   "关联",
+   0.5
+  ],
+  [
+   "事件:failed:gather_iron_ore",
+   "结果",
+   0.9
+  ]
+ ],
+ "C4c_failure_node_in_two_hop_set": true,
+ "C4c_failure_node_weight": 0.5,
+ "formal_runs_executed": 0
+}

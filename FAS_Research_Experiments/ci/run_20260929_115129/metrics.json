@@ -1,0 +1,67 @@
+{
+ "duration_s": 1.75,
+ "event_count": 13,
+ "counters": {},
+ "condition": "C1",
+ "seed": 1,
+ "seed_done_tick": 4,
+ "cc_on": false,
+ "ci_created": 0,
+ "ci_statuses_final": [],
+ "reignitions": [],
+ "ambient_act_rises": [
+  {
+   "tick": 7,
+   "node": "物品:oak_planks",
+   "from": 4.47,
+   "to": 4.532
+  },
+  {
+   "tick": 7,
+   "node": "物品:oak_log",
+   "from": 3.566,
+   "to": 3.853
+  },
+  {
+   "tick": 8,
+   "node": "物品:oak_log",
+   "from": 3.853,
+   "to": 4.126
+  },
+  {
+   "tick": 9,
+   "node": "物品:oak_log",
+   "from": 4.126,
+   "to": 4.386
+  },
+  {
+   "tick": 10,
+   "node": "物品:oak_log",
+   "from": 4.386,
+   "to": 4.633
+  },
+  {
+   "tick": 11,
+   "node": "物品:oak_log",
+   "from": 4.633,
+   "to": 4.869
+  },
+  {
+   "tick": 12,
+   "node": "物品:oak_log",
+   "from": 4.869,
+   "to": 5.0
+  }
+ ],
+ "episodic_ids": [
+  "物品:oak_planks",
+  "物品:oak_log",
+  "行动_653891199",
+  "行动_653891207"
+ ],
+ "graph": {
+  "nodes": 242,
+  "edges": 279
+ },
+ "ok": true
+}

@@ -1,0 +1,136 @@
+{
+ "isolated": {
+  "num_nodes": 26,
+  "num_edges": 13,
+  "num_components": 13,
+  "largest_component": 2,
+  "largest_component_fraction": 0.077,
+  "isolated_entity_dup": [],
+  "episode_isolated_components": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "leakage": [],
+  "shortcut": [],
+  "num_shared_entities": 0,
+  "shared_entities": {}
+ },
+ "shared": {
+  "num_nodes": 10,
+  "num_edges": 13,
+  "num_components": 1,
+  "largest_component": 10,
+  "largest_component_fraction": 1.0,
+  "isolated_entity_dup": [],
+  "episode_isolated_components": [
+   10
+  ],
+  "leakage": [],
+  "shortcut": [],
+  "num_shared_entities": 8,
+  "shared_entities": {
+   "人": [
+    "E1",
+    "E10",
+    "E13",
+    "E3",
+    "E5"
+   ],
+   "厨房": [
+    "E12",
+    "E6",
+    "E8"
+   ],
+   "地窖": [
+    "E11",
+    "E12"
+   ],
+   "箱子": [
+    "E11",
+    "E9"
+   ],
+   "篮子": [
+    "E4",
+    "E5",
+    "E6"
+   ],
+   "苹果": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ],
+   "钥匙": [
+    "E10",
+    "E7",
+    "E9"
+   ],
+   "门": [
+    "E7",
+    "E8"
+   ]
+  }
+ },
+ "eventframe": {
+  "num_nodes": 23,
+  "num_edges": 38,
+  "num_components": 1,
+  "largest_component": 23,
+  "largest_component_fraction": 1.0,
+  "isolated_entity_dup": [],
+  "episode_isolated_components": [
+   23
+  ],
+  "leakage": [],
+  "shortcut": [],
+  "num_shared_entities": 8,
+  "shared_entities": {
+   "人": [
+    "E1",
+    "E10",
+    "E13",
+    "E3",
+    "E5"
+   ],
+   "厨房": [
+    "E12",
+    "E6",
+    "E8"
+   ],
+   "地窖": [
+    "E11",
+    "E12"
+   ],
+   "箱子": [
+    "E11",
+    "E9"
+   ],
+   "篮子": [
+    "E4",
+    "E5",
+    "E6"
+   ],
+   "苹果": [
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+   ],
+   "钥匙": [
+    "E10",
+    "E7",
+    "E9"
+   ],
+   "门": [
+    "E7",
+    "E8"
+   ]
+  }
+ }
+}

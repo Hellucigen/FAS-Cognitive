@@ -1,0 +1,47 @@
+========================================================================
+P1: Hebbian 连续强化轨迹(同一边,扩散使用 10 次)
+========================================================================
+weight trajectory: [0.5, 0.500713, 0.50244, 0.504686, 0.507178, 0.509786, 0.51245, 0.515141, 0.517844, 0.520553, 0.523264]
+deltas: [0.000713, 0.001727, 0.002246, 0.002492, 0.002608, 0.002664, 0.002691, 0.002703, 0.002709, 0.002711]
+upper bound (w0*1.5) = 0.750 | final w = 0.5233 | monotone increase: True
+step-like jump detected: False
+========================================================================
+P2: CausalLearner 阈值链(同一动作+同一结果 ×10)
+========================================================================
+  iter  1: support=0 conf=0.000 hypotheses=0 promoted=0
+  iter  2: support=1 conf=0.333 hypotheses=0 promoted=0
+  iter  3: support=2 conf=0.500 hypotheses=0 promoted=0
+  iter  4: support=3 conf=0.600 hypotheses=2 promoted=0
+  iter  5: support=4 conf=0.667 hypotheses=2 promoted=0
+  iter  6: support=5 conf=0.714 hypotheses=2 promoted=0
+  iter  7: support=6 conf=0.750 hypotheses=2 promoted=0
+  iter  8: support=7 conf=0.778 hypotheses=2 promoted=0
+  iter  9: support=8 conf=0.800 hypotheses=2 promoted=2
+  iter 10: support=9 conf=0.818 hypotheses=2 promoted=2
+  thresholds: MIN_SUPPORT=3 HYP_CONF=0.60 | KG_SUPPORT=5 KG_CONF=0.80 (c=0 → 晋升实际要求 s≥8)
+  promotion fired at iteration: 9
+========================================================================
+P3: J 协议真实核算(重放 1 种子,checkpoint 转储聚合内容)
+========================================================================
+  cycle 10: distinct action sigs=3 | top: [('gather_resource(oak_log)', 1), ('craft_item(oak_planks)', 1), ('explore_direction(west)', 1)]
+    agg gather_resource(oak_log) obs=1 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'obs:self:inventory:oak_log:count_increased': (1, 0), 'self:self:gather_resource:succeeded': (1, 0), 'obs:self:block:oak_log:disappeared': (1, 0)}
+    agg craft_item(oak_planks) obs=1 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'self:self:craft_item:succeeded': (1, 0)}
+    agg explore_direction(west) obs=1 outcomes(sup,contra)={}
+    hypotheses=0 promoted=0
+  cycle 50: distinct action sigs=5 | top: [('gather_resource(oak_log)', 1), ('craft_item(oak_planks)', 1), ('explore_direction(west)', 1), ('explore_direction(north)', 1), ('amble(None)', 1)]
+    agg gather_resource(oak_log) obs=1 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'obs:self:inventory:oak_log:count_increased': (1, 0), 'self:self:gather_resource:succeeded': (1, 0), 'obs:self:block:oak_log:disappeared': (1, 0)}
+    agg craft_item(oak_planks) obs=1 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'self:self:craft_item:succeeded': (1, 0)}
+    agg explore_direction(west) obs=1 outcomes(sup,contra)={}
+    agg explore_direction(north) obs=1 outcomes(sup,contra)={'self:self:explore_direction:succeeded': (1, 0)}
+    agg amble obs=1 outcomes(sup,contra)={}
+    hypotheses=0 promoted=0
+  cycle 100: distinct action sigs=7 | top: [('gather_resource(oak_log)', 2), ('explore_direction(west)', 2), ('amble(None)', 2), ('craft_item(oak_planks)', 1), ('explore_direction(north)', 1), ('explore_direction(east)', 1)]
+    agg gather_resource(oak_log) obs=2 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'obs:self:inventory:oak_log:count_increased': (1, 0), 'self:self:gather_resource:succeeded': (2, 0), 'obs:self:block:oak_log:disappeared': (2, 0), 'obs:minecraft:block:oak_log:disappeared': (1, 0)}
+    agg craft_item(oak_planks) obs=1 outcomes(sup,contra)={'obs:self:inventory:oak_planks:count_increased': (1, 0), 'self:self:craft_item:succeeded': (1, 0)}
+    agg explore_direction(west) obs=2 outcomes(sup,contra)={'obs:minecraft:block:oak_log:disappeared': (1, 0)}
+    agg explore_direction(north) obs=1 outcomes(sup,contra)={'self:self:explore_direction:succeeded': (1, 0)}
+    agg amble obs=2 outcomes(sup,contra)={'self:self:amble:failed:timeout': (1, 0)}
+    agg explore_direction(east) obs=1 outcomes(sup,contra)={'self:self:explore_direction:succeeded': (1, 0), 'obs:minecraft:block:oak_log:disappeared': (1, 0), 'obs:self:block:oak_log:disappeared': (1, 0), 'obs:minecraft:block:oak_log:appeared': (1, 0)}
+    agg explore_direction(south) obs=1 outcomes(sup,contra)={'self:self:explore_direction:succeeded': (1, 0), 'obs:minecraft:block:oak_log:disappeared': (1, 0), 'obs:self:block:oak_log:disappeared': (1, 0), 'obs:minecraft:block:oak_log:appeared': (1, 0)}
+    hypotheses=0 promoted=0
+  (hebbian weights not tracked by J metrics — see P1)

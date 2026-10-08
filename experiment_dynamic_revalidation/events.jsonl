@@ -1,0 +1,9 @@
+1790506610 BASELINE_START baseline_5min no intervention
+1790506951 ENV_CONTROL_VERIFIED setblock works via /say (bot has op on LAN world)
+1790507192 CASE_A_START watch_5min resource_goal_pending
+1790507234 CONFIG_CHECK autonomy_mode url /api/autonomy/state confirmed on；无experiment_mode（EXPERIMENT_MODE 未设置，默认行为）
+1790507441 CASE_A_CONCLUSION unavailable goal_never_formed 5min_window
+1790507441 CASE_B_START watch_5min resource_candidate_failure_expected
+1790507801 CASE_B_WINDOW_END no_resource_candidate_fired watch_extends_globally
+1790507801 EXTENDED_PASSIVE_WATCH start until_1955 natural_goal_oracle
+{"ts": 1790509144, "event": "EXPERIMENT_END", "status": {"A": "unavailable", "B": "unavailable", "C": "not_observed", "D": "partially_confirmed_mechanism_level"}, "duration_min": 49.1}

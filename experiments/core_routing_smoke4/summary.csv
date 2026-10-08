@@ -1,0 +1,5 @@
+condition,task,seed,success,decisions,target_utilization,distractor_rate,t_reroute,obsolete_actions,wasted_eats,retrieval_precision,prompt_tokens,completion_tokens,efficiency
+fas_full,T3,1,1,12,0.167,0.0,1,0,0,0.54,3295,480,0.3035
+llm_direct,T3,1,1,10,0.4,0.0,0,0,0,,1661,400,0.602
+llm_rag,T3,1,1,5,0.8,0.0,0,0,0,1.0,1107,188,0.9033
+llm_history,T3,1,1,5,0.8,0.0,0,0,0,,1156,200,0.8651

@@ -1,0 +1,52 @@
+{
+ "duration_s": 0.0,
+ "event_count": 2,
+ "counters": {},
+ "episodes": {
+  "S6-EpA-planks": {
+   "episode": "S6-EpA-planks",
+   "goal": "oak_planks",
+   "success": true,
+   "success_tick": 6,
+   "graph": {
+    "nodes": 239,
+    "edges": 274
+   },
+   "inv": {
+    "oak_log": 2,
+    "oak_planks": 4
+   }
+  },
+  "S6-EpB-stick": {
+   "episode": "S6-EpB-stick",
+   "goal": "stick",
+   "success": true,
+   "success_tick": 7,
+   "graph": {
+    "nodes": 246,
+    "edges": 290
+   },
+   "inv": {
+    "oak_log": 2,
+    "oak_planks": 2,
+    "stick": 4
+   }
+  },
+  "S6-EpC-pickaxe": {
+   "episode": "S6-EpC-pickaxe",
+   "goal": "wooden_pickaxe",
+   "success": true,
+   "success_tick": 13,
+   "graph": {
+    "nodes": 259,
+    "edges": 327
+   },
+   "inv": {
+    "oak_planks": 3,
+    "stick": 2,
+    "wooden_pickaxe": 1
+   }
+  }
+ },
+ "ok": true
+}

@@ -1,0 +1,65 @@
+{
+ "experiment": "J_prior_boundary",
+ "result": {
+  "condition": "P2",
+  "prior_level": "C",
+  "seed": 3,
+  "episodes": [
+   {
+    "round": 1,
+    "success": true,
+    "done_tick": 4,
+    "graph": {
+     "nodes": 234,
+     "edges": 269
+    },
+    "promoted": 0
+   },
+   {
+    "round": 2,
+    "success": true,
+    "done_tick": 4,
+    "graph": {
+     "nodes": 236,
+     "edges": 276
+    },
+    "promoted": 0
+   },
+   {
+    "round": 3,
+    "success": true,
+    "done_tick": 4,
+    "graph": {
+     "nodes": 238,
+     "edges": 283
+    },
+    "promoted": 0
+   },
+   {
+    "round": 4,
+    "success": true,
+    "done_tick": 4,
+    "graph": {
+     "nodes": 240,
+     "edges": 290
+    },
+    "promoted": 0
+   },
+   {
+    "round": 5,
+    "success": true,
+    "done_tick": 4,
+    "graph": {
+     "nodes": 242,
+     "edges": 297
+    },
+    "promoted": 0
+   }
+  ],
+  "n_success": 5,
+  "graph_growth": {
+   "nodes": 25,
+   "edges": 51
+  }
+ }
+}

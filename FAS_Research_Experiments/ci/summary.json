@@ -1,0 +1,156 @@
+{
+ "experiment": "D 持续认知/交流意图",
+ "research_question": "R6",
+ "per_condition": {
+  "C0": {
+   "n": 5,
+   "runs": [
+    {
+     "ci_created": 3,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 4,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 4,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 4,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 4,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    }
+   ]
+  },
+  "C1": {
+   "n": 5,
+   "runs": [
+    {
+     "ci_created": 0,
+     "statuses": [],
+     "reignitions": 0,
+     "ambient_act_rises": 7
+    },
+    {
+     "ci_created": 0,
+     "statuses": [],
+     "reignitions": 0,
+     "ambient_act_rises": 7
+    },
+    {
+     "ci_created": 0,
+     "statuses": [],
+     "reignitions": 0,
+     "ambient_act_rises": 7
+    },
+    {
+     "ci_created": 0,
+     "statuses": [],
+     "reignitions": 0,
+     "ambient_act_rises": 7
+    },
+    {
+     "ci_created": 0,
+     "statuses": [],
+     "reignitions": 0,
+     "ambient_act_rises": 7
+    }
+   ]
+  },
+  "C2": {
+   "n": 5,
+   "runs": [
+    {
+     "ci_created": 3,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 4,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 3,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 3,
+     "statuses": [
+      "ready",
+      "discarded",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    },
+    {
+     "ci_created": 3,
+     "statuses": [
+      "ready",
+      "ready",
+      "discarded"
+     ],
+     "reignitions": 0,
+     "ambient_act_rises": 0
+    }
+   ]
+  }
+ }
+}

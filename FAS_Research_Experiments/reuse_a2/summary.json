@@ -1,0 +1,156 @@
+{
+ "experiment": "A2 写回→复用（升级环境）",
+ "research_question": "R1",
+ "per_condition": {
+  "B0": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    }
+   ]
+  },
+  "B1": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 0,
+     "ep1_promoted_graph": null
+    }
+   ]
+  },
+  "B2": {
+   "n": 5,
+   "runs": [
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 13,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 13,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 13,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 13,
+     "ep1_promoted_graph": null
+    },
+    {
+     "success": true,
+     "success_tick": 11,
+     "actions": 8,
+     "redundant": 2,
+     "shared_hits": 6,
+     "wb_nodes_inherited": 13,
+     "ep1_promoted_graph": null
+    }
+   ]
+  }
+ }
+}

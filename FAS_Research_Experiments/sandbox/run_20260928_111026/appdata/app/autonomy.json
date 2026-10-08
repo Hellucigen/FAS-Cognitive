@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "goals": [
+    {
+      "type": "obtain",
+      "target": "stone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 cobblestone",
+      "created": "2026/09/28 11:10:28",
+      "created_ts": 1790565028.3525388
+    },
+    {
+      "type": "obtain",
+      "target": "stone",
+      "source": "experiment_obtain",
+      "text": "重复观测：再次获得 cobblestone",
+      "created": "2026/09/28 11:10:28",
+      "created_ts": 1790565028.4164796
+    }
+  ],
+  "explore_dirs": {
+    "north": 3,
+    "east": 3,
+    "south": 3,
+    "west": 3
+  },
+  "last_novel_ts": 1790565026.5673804,
+  "updated_at": "2026/09/28 11:10:28"
+}

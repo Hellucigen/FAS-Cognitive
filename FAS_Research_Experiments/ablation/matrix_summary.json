@@ -1,0 +1,580 @@
+{
+ "goal": "cobblestone",
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "max_ticks": 150,
+ "elapsed_s": 5.6,
+ "results": {
+  "full": [
+   {
+    "ablation": "full",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "full",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "full",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Diffusion": [
+   {
+    "ablation": "-Diffusion",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Episodic": [
+   {
+    "ablation": "-Episodic",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Episodic",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Episodic",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Prior": [
+   {
+    "ablation": "-Prior",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Prior",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Prior",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Gap": [
+   {
+    "ablation": "-Gap",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Gap",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Gap",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Writeback": [
+   {
+    "ablation": "-Writeback",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Writeback",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Writeback",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Episodic-Writeback": [
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Episodic-Writeback",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Diffusion-Episodic": [
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion-Episodic",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-Diffusion-Gap": [
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-Diffusion-Gap",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 247,
+     "edges": 308
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-RelevantSelf": [
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 1,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 2,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   },
+   {
+    "ablation": "-RelevantSelf",
+    "seed": 3,
+    "success": true,
+    "success_tick": 15,
+    "graph": {
+     "nodes": 248,
+     "edges": 309
+    },
+    "inv": {
+     "oak_planks": 3,
+     "stick": 2,
+     "wooden_pickaxe": 1,
+     "cobblestone": 1
+    },
+    "action_count": 9
+   }
+  ],
+  "-GoalFormation": [
+   {
+    "ablation": "-GoalFormation",
+    "seed": 1,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 271
+    },
+    "inv": {},
+    "action_count": 9
+   },
+   {
+    "ablation": "-GoalFormation",
+    "seed": 2,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 271
+    },
+    "inv": {},
+    "action_count": 9
+   },
+   {
+    "ablation": "-GoalFormation",
+    "seed": 3,
+    "success": false,
+    "success_tick": null,
+    "graph": {
+     "nodes": 238,
+     "edges": 271
+    },
+    "inv": {},
+    "action_count": 9
+   }
+  ]
+ }
+}

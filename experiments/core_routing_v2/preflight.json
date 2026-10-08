@@ -1,0 +1,14 @@
+{
+ "graph_nodes": 37,
+ "graph_edges": 20,
+ "propagation_probe_seed": "物品:oak_log",
+ "propagation_newly_lit": 1,
+ "demand_keys": [
+  "action",
+  "curiosity",
+  "emotion",
+  "knowledge"
+ ],
+ "gap_type": "dict",
+ "routing_mode": "graph_only"
+}

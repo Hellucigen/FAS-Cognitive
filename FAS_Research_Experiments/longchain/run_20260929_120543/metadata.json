@@ -1,0 +1,18 @@
+{
+ "experiment_id": "auto",
+ "run_id": "run_20260929_120543",
+ "family": "longchain",
+ "label": "H-L1",
+ "mode": "sandbox",
+ "seed": 2,
+ "timestamp": "2026-09-29 12:05:43.745",
+ "git_commit": "468572655ad2d14d8c56517bc8b24cd67e58b0ec",
+ "mc_endpoint": "127.0.0.1:50656 (bridge 5010)",
+ "llm": "provider=mimo model=mimo-v2.6-flash",
+ "shields": [],
+ "cfg": {},
+ "extra": {
+  "condition": "L1",
+  "seed": 2
+ }
+}

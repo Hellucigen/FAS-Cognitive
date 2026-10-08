@@ -1,0 +1,54 @@
+{
+ "duration_s": 2.8,
+ "event_count": 12,
+ "counters": {},
+ "episode": "ep_control_real",
+ "actions_total": 4,
+ "actions_redundant": 1,
+ "actions_invalid": 2,
+ "types": [
+  "gather_resource",
+  "gather_resource",
+  "gather_resource",
+  "craft_item"
+ ],
+ "targets": [
+  "birch_log",
+  "birch_log",
+  "oak_log",
+  "oak_planks"
+ ],
+ "inventory": {
+  "oak_log": 2,
+  "oak_planks": 4
+ },
+ "graph": {
+  "nodes": 240,
+  "edges": 279
+ },
+ "causal": {
+  "aggregations": 3,
+  "hypotheses": 0,
+  "promoted": []
+ },
+ "shared_structure_usage": {
+  "gather_resource@oak_log": 1,
+  "craft_item@oak_planks": 1
+ },
+ "recombination_event_idx": null,
+ "no_transfer_ceiling": {
+  "gather_resource@oak_log": 1,
+  "craft_item@oak_planks": 1
+ },
+ "success": true,
+ "success_tick": 17,
+ "fail_tick": null,
+ "start_activation": {
+  "oak_log": 1.7218,
+  "birch_log": 5.0,
+  "物品:oak_planks": 1.3575,
+  "物品:birch_log": 0.0,
+  "行动经验:gather_resource(birch_log)": 0.0
+ },
+ "ok": true
+}
